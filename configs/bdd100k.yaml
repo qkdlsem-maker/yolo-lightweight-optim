@@ -1,0 +1,16 @@
+path: /home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/data/raw
+train: train/images
+val: val/images
+test: test/images
+
+names:
+  0: person
+  1: rider
+  2: car
+  3: bus
+  4: truck
+  5: bike
+  6: motor
+  7: traffic light
+  8: traffic sign
+  9: train

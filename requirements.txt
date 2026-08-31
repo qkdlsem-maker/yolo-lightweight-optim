@@ -1,0 +1,12 @@
+ultralytics==8.2.103
+torch>=2.1.0
+torchvision>=0.16.0
+opencv-python-headless
+pandas
+matplotlib
+seaborn
+tqdm
+pyyaml
+thop            # FLOPs/파라미터 수 계산
+torch-pruning   # 추후 pruning 실험용
+scikit-learn

@@ -1,0 +1,20 @@
+# Virtual Environment
+venv/
+
+# Data & Output
+data/
+outputs/
+logs/
+
+# Python Cache & Model Checkpoints
+__pycache__/
+*.pth
+*.pt
+*.onnx
+*.weights
+*.pt.tar
+
+# OS / Editor Files
+.DS_Store
+.vscode/
+.idea/

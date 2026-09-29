@@ -27,10 +27,8 @@ from ultralytics import YOLO
 from ultralytics.nn.tasks import DetectionModel
 from ultralytics.cfg import get_cfg
 from ultralytics.utils import DEFAULT_CFG
-from ultralytics.data.build import build_yolo_dataset
+from ultralytics.data.build import build_yolo_dataset, build_dataloader
 from ultralytics.data.utils import check_det_dataset
-from ultralytics.utils.torch_utils import init_seeds
-from seeded_loader import build_seeded_loader
 
 # P3, P4, P5 특징을 뽑을 레이어 인덱스 (yolov8n/l 공통 구조)
 FEAT_LAYERS = [15, 18, 21]
@@ -61,25 +59,11 @@ def get_channels(model, layers):
 
     handles = [model.model[i].register_forward_hook(mk_hook(i)) for i in layers]
     model_device = next(model.parameters()).device
-    was_training = model.training
-    try:
-        model.eval()  # Channel inspection must not update BatchNorm statistics.
-        with torch.no_grad():
-            model(torch.zeros(1, 3, 640, 640, device=model_device))
-    finally:
-        for h in handles:
-            h.remove()
-        model.train(was_training)
+    with torch.no_grad():
+        model(torch.randn(1, 3, 640, 640, device=model_device))
+    for h in handles:
+        h.remove()
     return [feats[i].shape[1] for i in layers]
-
-
-def enable_student_training(student):
-    """YOLO inference checkpoints can retain requires_grad=False on all weights."""
-    for name, parameter in student.named_parameters():
-        # DFL's fixed integral projection is intentionally not learned.
-        parameter.requires_grad_("dfl.conv.weight" not in name)
-    if not any(p.requires_grad for p in student.parameters()):
-        raise RuntimeError("Student has no trainable parameters")
 
 
 def register_feature_hooks(model, layers, store):
@@ -102,7 +86,6 @@ def main():
     parser.add_argument("--batch", type=int, default=64)
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--workers", type=int, default=8)
-    parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--kd-weight", type=float, default=1.0,
                          help="detection loss 대비 feature KD loss 가중치")
     parser.add_argument("--lr", type=float, default=0.001)
@@ -112,7 +95,6 @@ def main():
     parser.add_argument("--patience", type=int, default=20,
                          help="이 횟수만큼 mAP 개선 없으면 조기 종료")
     args = parser.parse_args()
-    init_seeds(args.seed, deterministic=True)
 
     device = torch.device(args.device)
     save_dir = os.path.join(args.project, args.name)
@@ -132,13 +114,9 @@ def main():
     teacher.eval()
     for p in teacher.parameters():
         p.requires_grad_(False)
-    enable_student_training(student)
     student.train()
 
     hyp = get_cfg(DEFAULT_CFG)
-    hyp.imgsz = args.imgsz
-    hyp.seed = args.seed
-    hyp.deterministic = True
     teacher.args = hyp
     student.args = hyp
 
@@ -156,7 +134,7 @@ def main():
     print(">>> 데이터셋 로드 중...")
     data_dict = check_det_dataset(args.data)
     train_set = build_yolo_dataset(hyp, data_dict["train"], args.batch, data_dict, mode="train", rect=False)
-    train_loader = build_seeded_loader(train_set, args.batch, args.workers, args.seed)
+    train_loader = build_dataloader(train_set, args.batch, args.workers, shuffle=True)
 
     # ---------- 4. optimizer (student + adapter 파라미터 모두 학습) ----------
     params = list(student.parameters()) + list(adapters.parameters())
@@ -171,7 +149,6 @@ def main():
 
     print(">>> KD 학습 시작...")
     for epoch in range(1, args.epochs + 1):
-        student.train()
         epoch_start = time.time()
         running_det, running_kd, n_batches = 0.0, 0.0, 0
 
@@ -200,9 +177,6 @@ def main():
                 total_loss = det_loss + args.kd_weight * kd_loss
 
             scaler.scale(total_loss).backward()
-            if epoch == 1 and n_batches == 0:
-                if not any(p.grad is not None for p in student.parameters()):
-                    raise RuntimeError("KD produced no student gradients; aborting invalid run")
             scaler.step(optimizer)
             scaler.update()
 
@@ -229,8 +203,7 @@ def main():
         #    (주의: YOLO.val()이 내부적으로 conv+BN을 fuse해서 구조를 영구 변경하므로,
         #     인스턴스를 재사용하면 다음 load_state_dict에서 키 불일치가 남 -> 매번 새로 로드)
         eval_yolo = YOLO(args.student_weights)
-        # Separate evaluation storage from the live trainable model.
-        eval_yolo.model.load_state_dict({k: v.detach().cpu().clone() for k, v in student.state_dict().items()})
+        eval_yolo.model.load_state_dict(student.state_dict(), assign=True)
         torch.save(student.state_dict(), os.path.join(weights_dir, "last_student_state_dict.pt"))
         eval_yolo.save(os.path.join(weights_dir, "last.pt"))
 
@@ -244,10 +217,7 @@ def main():
                 best_map50 = map50
                 no_improve_count = 0
                 torch.save(student.state_dict(), os.path.join(weights_dir, "best_student_state_dict.pt"))
-                # val() fuses the evaluation model. Keep released checkpoints unfused.
-                best_yolo = YOLO(args.student_weights)
-                best_yolo.model.load_state_dict({k: v.detach().cpu().clone() for k, v in student.state_dict().items()})
-                best_yolo.save(os.path.join(weights_dir, "best.pt"))
+                eval_yolo.save(os.path.join(weights_dir, "best.pt"))
                 print(f"  -> 새로운 best 갱신 (mAP50={best_map50:.4f}), best.pt 저장")
             else:
                 no_improve_count += 1

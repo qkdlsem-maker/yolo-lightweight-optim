@@ -1,0 +1,693 @@
+{
+  "config": {
+    "batch": 1,
+    "shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "device": 0,
+    "warmup": 100,
+    "blocks": 10,
+    "iterations_per_block": 200,
+    "seed": 20260922,
+    "model_boundary": "device-resident tensor through fused PyTorch model; excludes decoding, transfer, preprocessing, NMS",
+    "gpu_start": "index, name, utilization.gpu [%], power.draw [W], clocks.current.sm [MHz], temperature.gpu\n0, NVIDIA GeForce RTX 4090, 12 %, 45.71 W, 2520 MHz, 50\n1, NVIDIA GeForce RTX 4090, 96 %, 261.76 W, 2745 MHz, 64\n",
+    "shared_server_note": "A continuation used GPU 1 while timing used GPU 0; host resources were shared."
+  },
+  "raw_blocks": [
+    {
+      "block": 0,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.656691284179687,
+      "fps": 214.74474878704737
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.315548095703125,
+      "fps": 760.1394455027712
+    },
+    {
+      "block": 0,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.257251892089844,
+      "fps": 307.00726659441824
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.4533529663085938,
+      "fps": 688.0640994870806
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3454591369628905,
+      "fps": 743.2407068543928
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.5195388793945312,
+      "fps": 658.0943821578659
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3840437316894532,
+      "fps": 722.5205223676967
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2534561920166016,
+      "fps": 797.7941362204027
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3386151123046874,
+      "fps": 747.040722017776
+    },
+    {
+      "block": 0,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.5157093811035156,
+      "fps": 659.7570830312786
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.464105224609375,
+      "fps": 683.011018054936
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.518908233642578,
+      "fps": 658.3676208021103
+    },
+    {
+      "block": 1,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.657442016601562,
+      "fps": 214.71013411127316
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.3265371704101563,
+      "fps": 753.842426964038
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.5196987915039062,
+      "fps": 658.0251333952776
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3859443664550781,
+      "fps": 721.5296834444852
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.344884490966797,
+      "fps": 743.5582808164663
+    },
+    {
+      "block": 1,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.2570880126953123,
+      "fps": 307.0227135718319
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2464263916015625,
+      "fps": 802.2936667082895
+    },
+    {
+      "block": 1,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3396928405761719,
+      "fps": 746.4397582134741
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.522862091064453,
+      "fps": 656.6582790835762
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.339290313720703,
+      "fps": 746.6641024393617
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.5206752014160156,
+      "fps": 657.6026222225656
+    },
+    {
+      "block": 2,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.2570932006835935,
+      "fps": 307.02222453754825
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2487620544433593,
+      "fps": 800.7930705788093
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.4620672607421874,
+      "fps": 683.9630616531084
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.3265248107910157,
+      "fps": 753.8494507341278
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3767491149902344,
+      "fps": 726.3487509175505
+    },
+    {
+      "block": 2,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.657724304199219,
+      "fps": 214.69712131704313
+    },
+    {
+      "block": 2,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.344245147705078,
+      "fps": 743.9119283467155
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.384944610595703,
+      "fps": 722.0505371473826
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.5181877136230468,
+      "fps": 658.6800769277544
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2480865478515626,
+      "fps": 801.2264868340941
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.4987828063964843,
+      "fps": 667.2080809388885
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3221376037597656,
+      "fps": 756.3509253169245
+    },
+    {
+      "block": 3,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.656972351074219,
+      "fps": 214.73178808315902
+    },
+    {
+      "block": 3,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.2570111083984377,
+      "fps": 307.0299629686334
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.3067921447753905,
+      "fps": 765.2326377978638
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.44300537109375,
+      "fps": 692.9981135427329
+    },
+    {
+      "block": 3,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3287680053710937,
+      "fps": 752.5768200000597
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.4508076477050782,
+      "fps": 689.2712494187797
+    },
+    {
+      "block": 4,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.657745971679687,
+      "fps": 214.69612256234268
+    },
+    {
+      "block": 4,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.26045166015625,
+      "fps": 306.705973353421
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.5301324462890624,
+      "fps": 653.5381969222595
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.3133732604980468,
+      "fps": 761.3981722307853
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.329503631591797,
+      "fps": 752.1604125313395
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3241395568847656,
+      "fps": 755.2074060476285
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.240155487060547,
+      "fps": 806.3505023634008
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3624473571777345,
+      "fps": 733.9733126067106
+    },
+    {
+      "block": 4,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.4997299194335938,
+      "fps": 666.7867240907431
+    },
+    {
+      "block": 5,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.256780700683594,
+      "fps": 307.0516844410498
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.496273193359375,
+      "fps": 668.3271507089147
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.508679656982422,
+      "fps": 662.8312348296291
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.44468994140625,
+      "fps": 692.1900480781418
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3230532836914062,
+      "fps": 755.8274578404989
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3583209228515625,
+      "fps": 736.2030453750731
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3232794189453125,
+      "fps": 755.6982944668069
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.3024716186523437,
+      "fps": 767.7710482741202
+    },
+    {
+      "block": 5,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.6605313110351565,
+      "fps": 214.56781067690943
+    },
+    {
+      "block": 5,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2314832305908203,
+      "fps": 812.0289218394283
+    },
+    {
+      "block": 6,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.259862976074219,
+      "fps": 306.7613600140574
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.4969549560546875,
+      "fps": 668.0227724657518
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.440025634765625,
+      "fps": 694.4320822196735
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3647311401367188,
+      "fps": 732.7450591475622
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2292291259765624,
+      "fps": 813.5179836432438
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3250355529785156,
+      "fps": 754.6967307798828
+    },
+    {
+      "block": 6,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.6619699096679685,
+      "fps": 214.50159897561872
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.504075927734375,
+      "fps": 664.8600523155261
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.3078221130371093,
+      "fps": 764.6299829552012
+    },
+    {
+      "block": 6,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3271141052246094,
+      "fps": 753.5147098981014
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.310054473876953,
+      "fps": 763.3270371121415
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.5120222473144531,
+      "fps": 661.3659301482694
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.227289581298828,
+      "fps": 814.8036251898352
+    },
+    {
+      "block": 7,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.662092895507812,
+      "fps": 214.49594043129343
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.4994313049316406,
+      "fps": 666.9195158931208
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.4430924987792968,
+      "fps": 692.9562733129678
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.32561279296875,
+      "fps": 754.3680970070225
+    },
+    {
+      "block": 7,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.2564013671875,
+      "fps": 307.0874524486776
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3260493469238281,
+      "fps": 754.1197484994069
+    },
+    {
+      "block": 7,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.36311767578125,
+      "fps": 733.6123782760468
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.5100105285644532,
+      "fps": 662.2470380724343
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.367587127685547,
+      "fps": 731.214837984299
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3267301940917968,
+      "fps": 753.7327517329494
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.5057205200195312,
+      "fps": 664.1338725907971
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.3263937377929687,
+      "fps": 753.9239454371474
+    },
+    {
+      "block": 8,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.66239990234375,
+      "fps": 214.48181643477392
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2289292907714844,
+      "fps": 813.7164664471708
+    },
+    {
+      "block": 8,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.260113525390625,
+      "fps": 306.7377845009801
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.313930206298828,
+      "fps": 761.0754324743557
+    },
+    {
+      "block": 8,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.448805694580078,
+      "fps": 690.2236812989889
+    },
+    {
+      "block": 9,
+      "model": "yolov8l_baseline_fp32",
+      "mean_ms": 4.662067260742187,
+      "fps": 214.4971198551097
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp16",
+      "mean_ms": 1.5036058044433593,
+      "fps": 665.0679300684156
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_pruned_r45_finetuned_fp32",
+      "mean_ms": 1.306270751953125,
+      "fps": 765.538077389246
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_pruned_finetuned_fp16",
+      "mean_ms": 1.5037440490722656,
+      "fps": 665.0067879683046
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_pruned_finetuned_fp32",
+      "mean_ms": 1.3233760070800782,
+      "fps": 755.643138949163
+    },
+    {
+      "block": 9,
+      "model": "yolov8l_baseline_fp16",
+      "mean_ms": 3.2577639770507814,
+      "fps": 306.9590084009982
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_pruned_r15_finetuned_v2_fp32",
+      "mean_ms": 1.3663728332519531,
+      "fps": 731.8646680203751
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_pruned_r45_finetuned_fp16",
+      "mean_ms": 1.4479299926757812,
+      "fps": 690.6411256472389
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_baseline_fp16",
+      "mean_ms": 1.327092742919922,
+      "fps": 753.5268392770805
+    },
+    {
+      "block": 9,
+      "model": "yolov8n_baseline_fp32",
+      "mean_ms": 1.2322611236572265,
+      "fps": 811.5163099782789
+    }
+  ],
+  "summary": {
+    "yolov8n_baseline_fp32": {
+      "mean_ms": 1.2386079025268555,
+      "sd_ms": 0.009875508038324002,
+      "median_ms": 1.2362083053588866,
+      "fps_from_mean_ms": 807.3580008329699,
+      "block_cv_pct": 0.7973070427031189
+    },
+    "yolov8n_baseline_fp16": {
+      "mean_ms": 1.3305626831054687,
+      "sd_ms": 0.007493213009294309,
+      "median_ms": 1.3271034240722657,
+      "fps_from_mean_ms": 751.5617360213715,
+      "block_cv_pct": 0.5631612177643156
+    },
+    "yolov8l_baseline_fp32": {
+      "mean_ms": 4.659563720703125,
+      "sd_ms": 0.002440166697859428,
+      "median_ms": 4.659138641357422,
+      "fps_from_mean_ms": 214.6123671529275,
+      "block_cv_pct": 0.05236899512753543
+    },
+    "yolov8l_baseline_fp16": {
+      "mean_ms": 3.2579818420410156,
+      "sd_ms": 0.001536034296879103,
+      "median_ms": 3.2571725463867187,
+      "fps_from_mean_ms": 306.9384816993129,
+      "block_cv_pct": 0.047146803492214354
+    },
+    "yolov8n_pruned_r15_finetuned_v2_fp32": {
+      "mean_ms": 1.3714258880615235,
+      "sd_ms": 0.010475147369754027,
+      "median_ms": 1.36697998046875,
+      "fps_from_mean_ms": 729.1680933728583,
+      "block_cv_pct": 0.7638143235403255
+    },
+    "yolov8n_pruned_r15_finetuned_v2_fp16": {
+      "mean_ms": 1.507598678588867,
+      "sd_ms": 0.009916141004352343,
+      "median_ms": 1.5046631622314453,
+      "fps_from_mean_ms": 663.3064980768049,
+      "block_cv_pct": 0.6577440764032764
+    },
+    "yolov8n_pruned_finetuned_fp32": {
+      "mean_ms": 1.330484619140625,
+      "sd_ms": 0.009081694081131004,
+      "median_ms": 1.3261714935302735,
+      "fps_from_mean_ms": 751.6058326520988,
+      "block_cv_pct": 0.6825854241740106
+    },
+    "yolov8n_pruned_finetuned_fp16": {
+      "mean_ms": 1.5128756866455078,
+      "sd_ms": 0.009799601904203351,
+      "median_ms": 1.5110163879394531,
+      "fps_from_mean_ms": 660.9928421926691,
+      "block_cv_pct": 0.6477466715016065
+    },
+    "yolov8n_pruned_r45_finetuned_fp32": {
+      "mean_ms": 1.3129324645996094,
+      "sd_ms": 0.00819065168566632,
+      "median_ms": 1.3117138671875,
+      "fps_from_mean_ms": 761.6537993863675,
+      "block_cv_pct": 0.6238440975838109
+    },
+    "yolov8n_pruned_r45_finetuned_fp16": {
+      "mean_ms": 1.4497882232666015,
+      "sd_ms": 0.00806953608498005,
+      "median_ms": 1.4483678436279295,
+      "fps_from_mean_ms": 689.7559132787286,
+      "block_cv_pct": 0.556601023203107
+    }
+  }
+}

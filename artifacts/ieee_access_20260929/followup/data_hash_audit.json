@@ -1,0 +1,84 @@
+{
+  "images": {
+    "counts": {
+      "train": 70000,
+      "val": 10000,
+      "test": 20000
+    },
+    "distinct_hashes": {
+      "train": 69999,
+      "val": 9998,
+      "test": 20000
+    },
+    "cross_split": {
+      "train_val": {
+        "distinct_shared_sha256": 0,
+        "files_in_first": 0,
+        "files_in_second": 0
+      },
+      "train_test": {
+        "distinct_shared_sha256": 1,
+        "files_in_first": 1,
+        "files_in_second": 1
+      },
+      "val_test": {
+        "distinct_shared_sha256": 0,
+        "files_in_first": 0,
+        "files_in_second": 0
+      }
+    },
+    "examples": {
+      "train_val": [],
+      "train_test": [
+        {
+          "train": [
+            "abd2da13-659c6ce9.jpg"
+          ],
+          "test": [
+            "f8c5cd32-6a1fb52b.jpg"
+          ],
+          "sha256": "5c9d497621227e95e4eeedb14c83fd91e1277455193d752eb5cb2b9044cef186"
+        }
+      ],
+      "val_test": []
+    },
+    "total_bytes": 5791783234
+  },
+  "labels": {
+    "counts": {
+      "train": 70000,
+      "val": 10000,
+      "test": 20000
+    },
+    "distinct_hashes": {
+      "train": 70000,
+      "val": 10000,
+      "test": 20000
+    },
+    "cross_split": {
+      "train_val": {
+        "distinct_shared_sha256": 0,
+        "files_in_first": 0,
+        "files_in_second": 0
+      },
+      "train_test": {
+        "distinct_shared_sha256": 0,
+        "files_in_first": 0,
+        "files_in_second": 0
+      },
+      "val_test": {
+        "distinct_shared_sha256": 0,
+        "files_in_first": 0,
+        "files_in_second": 0
+      }
+    },
+    "examples": {
+      "train_val": [],
+      "train_test": [],
+      "val_test": []
+    },
+    "total_bytes": 69885018
+  },
+  "seconds": 9.876604557037354,
+  "scope": "Exact encoded-file equality only. This does not establish annotation origin, visual near-duplicates, video-level independence, or official split identity."
+}

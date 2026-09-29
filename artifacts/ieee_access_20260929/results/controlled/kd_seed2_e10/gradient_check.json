@@ -1,0 +1,5 @@
+{
+  "student_grad_tensors": 183,
+  "student_trainable_numel": 3012782,
+  "adapter_grad_tensors": 6
+}

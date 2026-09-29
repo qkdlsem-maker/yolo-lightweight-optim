@@ -1,0 +1,7 @@
+run,AP50,AP50_95,interpretation
+control_seed0_e10,0.4149716764806334,0.22471765961146747,identical control rerun; not independent
+control_seed1_e10,0.4149716764806334,0.22471765961146747,identical control rerun; not independent
+control_seed2_e10,0.4149716764806334,0.22471765961146747,identical control rerun; not independent
+kd_seed0_e10,0.40949770269747343,0.22246815429726038,different adapter initialization; fixed data sequence
+kd_seed1_e10,0.42008652416728864,0.22851700171370265,different adapter initialization; fixed data sequence
+kd_seed2_e10,0.42096113483191966,0.22738406108470458,different adapter initialization; fixed data sequence

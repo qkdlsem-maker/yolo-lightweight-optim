@@ -1,0 +1,27 @@
+[
+  {
+    "file": "data.yaml",
+    "bytes": 294,
+    "sha256": "5d08e937a5a939efa1e198c81ae155197a4b357dc76fee288c00e5dda5f59997"
+  },
+  {
+    "file": "train/labels/0000f77c-6257be58.txt",
+    "bytes": 265,
+    "sha256": "12b01ca93cd48f49d54b77c4dedac65a8b5a8efd97379828f2f0c6545fa20ab7"
+  },
+  {
+    "file": "val/labels/b1c66a42-6f7d68ca.txt",
+    "bytes": 1291,
+    "sha256": "845c76a578c408edda0ac2c8b5063ad8a41762abc52499a4dc782c05c6c87ead"
+  },
+  {
+    "file": "test/labels/cabc30fc-e7726578.txt",
+    "bytes": 341,
+    "sha256": "ef536d1d2e62a6b60d4902390f47da2f6056ce37e2aaa4a92509c4282b0ce930"
+  },
+  {
+    "file": "test/images/cabc30fc-e7726578.jpg",
+    "bytes": 51033,
+    "sha256": "368136137f8e7684b8cbcb9482b7198c1bcafec5d818c2770eac811d074f1b59"
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "runs": {
+    "mse_seed0_e20": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 188.48231887817383,
+        "feature_loss": 1.1548999398946762,
+        "seconds": 3.818013906478882,
+        "batches": 8,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 101.21648025512695,
+        "first_two_input_sha256": [
+          "3526462c7d48b4cbf74a04101e22af585428bb60dc5b6abe2aaa5075d19ec3fc",
+          "cb39c5bdc8254e18f6c5baf28f548e122241bdd21a9e551834dd7aa2ddf1d8da"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.0004041939973831177
+    },
+    "control_seed1_e20": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 189.51868629455566,
+        "feature_loss": 0.0,
+        "seconds": 2.4181933403015137,
+        "batches": 8,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 101.81398010253906,
+        "first_two_input_sha256": [
+          "d155fdf3f236fd5eed0437c275e6391e6ff00b58bdd732ef79c8ce8117ff0803",
+          "24cd2321822ef6c1d41b0425098442af7a3661f24fdeb366405d37386096c660"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.0005199611186981201
+    },
+    "control_seed0_e20": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 188.51513862609863,
+        "feature_loss": 0.0,
+        "seconds": 2.4170820713043213,
+        "batches": 8,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 101.08658218383789,
+        "first_two_input_sha256": [
+          "3526462c7d48b4cbf74a04101e22af585428bb60dc5b6abe2aaa5075d19ec3fc",
+          "cb39c5bdc8254e18f6c5baf28f548e122241bdd21a9e551834dd7aa2ddf1d8da"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.0004103332757949829
+    },
+    "cwd_seed0_e20": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 188.50184631347656,
+        "feature_loss": 0.9396713450551033,
+        "seconds": 3.911057710647583,
+        "batches": 8,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 104.01457214355469,
+        "first_two_input_sha256": [
+          "3526462c7d48b4cbf74a04101e22af585428bb60dc5b6abe2aaa5075d19ec3fc",
+          "cb39c5bdc8254e18f6c5baf28f548e122241bdd21a9e551834dd7aa2ddf1d8da"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.0004074573516845703
+    }
+  }
+}

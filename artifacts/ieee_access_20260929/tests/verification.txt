@@ -1,0 +1,3 @@
+PASS: frozen checkpoint is trainable, fixed DFL preserved, BatchNorm probe unchanged, optimizer updates student
+PASS: same seed reproduces two epochs; different seeds change order and augmentation draws
+

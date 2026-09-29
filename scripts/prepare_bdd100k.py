@@ -17,17 +17,19 @@ import os
 from pathlib import Path
 from tqdm import tqdm
 
+# Match configs/bdd100k.yaml. The archived experiments used an externally
+# converted dataset; this converter is not evidence of its provenance.
 CLASS_MAP = {
     "pedestrian": 0,
     "rider": 1,
     "car": 2,
-    "truck": 3,
-    "bus": 4,
-    "train": 5,
+    "truck": 4,
+    "bus": 3,
+    "train": 9,
     "motorcycle": 6,
-    "bicycle": 7,
-    "traffic light": 8,
-    "traffic sign": 9,
+    "bicycle": 5,
+    "traffic light": 7,
+    "traffic sign": 8,
 }
 
 IMG_W, IMG_H = 1280, 720  # BDD100K 원본 해상도 고정값

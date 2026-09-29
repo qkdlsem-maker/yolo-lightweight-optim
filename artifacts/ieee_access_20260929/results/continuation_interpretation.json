@@ -1,0 +1,15 @@
+{
+  "unique_control_count": 1,
+  "kd_adapter_initializations": 3,
+  "independent_data_orders": 1,
+  "control_AP50": 0.4149716764806334,
+  "KD_mean_AP50": 0.4168484538988939,
+  "KD_adapter_SD_AP50": 0.00638093985025404,
+  "mean_difference_pp": 0.18767774182605335,
+  "individual_difference_pp": [
+    -0.5473973783159947,
+    0.5114847686655266,
+    0.5989458351286281
+  ],
+  "baseline_AP50": 0.46342606800899394
+}

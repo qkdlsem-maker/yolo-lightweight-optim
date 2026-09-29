@@ -1,0 +1,44 @@
+{
+  "yolov8n_kd_w03": {
+    "parameter_tensors": 184,
+    "unchanged_parameter_tensors": 184,
+    "changed_parameters": [],
+    "max_parameter_difference": 0.0,
+    "changed_buffer_count": 171,
+    "max_buffer_difference": 10941.0
+  },
+  "yolov8n_kd_takd_s": {
+    "parameter_tensors": 184,
+    "unchanged_parameter_tensors": 184,
+    "changed_parameters": [],
+    "max_parameter_difference": 0.0,
+    "changed_buffer_count": 171,
+    "max_buffer_difference": 10941.0
+  },
+  "original_gradient_probe": {
+    "student_trainable_numel": 0,
+    "student_grad_tensors": 0,
+    "adapter_grad_tensors": 6,
+    "loss": 0.814915657043457,
+    "student_channels": [
+      64,
+      128,
+      256
+    ],
+    "teacher_channels": [
+      256,
+      512,
+      512
+    ]
+  },
+  "corrected_gradient_probe": {
+    "student_trainable_numel": 3012782,
+    "student_grad_tensors": 135,
+    "adapter_grad_tensors": 6
+  },
+  "c2f_conversion": {
+    "max_abs_diff": 7.152008056640625,
+    "mean_abs_diff": 0.04915327578783035,
+    "allclose_rtol1e-4_atol1e-5": false
+  }
+}

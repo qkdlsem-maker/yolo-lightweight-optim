@@ -1,6 +1,28 @@
 # 자율주행 경량 객체 탐지 최적화 실험
 
-KCI 논문: "지식증류/경량화 기반 자율주행 실시간 객체 탐지 최적화"
+IEEE Access 투고를 준비하는 YOLOv8 경량화 연구입니다. 게재 또는 심사 완료를 의미하지 않습니다.
+
+
+## 2026-09 검증 및 재현 자료
+
+중요: 기존 standalone KD 두 실행은 학생 가중치를 업데이트하지 않았습니다. 해당 점수를 KD 효과 또는 교사 크기의 효과로 해석하면 안 됩니다. 수정 코드에는 학생 학습 상태 복구, BN 통계를 바꾸지 않는 채널 확인, 검증용 가중치 분리, 명시적 데이터 시드가 포함됩니다.
+
+- [완료된 재평가·감사·실험 기록](artifacts/ieee_access_20260929/README.md): 기존 모델 9개 평가, 반복 실행시간, 원시 수치와 코드.
+- 9월 22일 추가 학습은 6회 완료됐지만 데이터로더 내부 시드가 고정되었습니다. 대조군 3회는 동일한 상태입니다. 독립 3시드 결과가 아니라 고정 데이터 조건에서 KD 어댑터 초기화를 바꾼 결과로만 해석합니다.
+- [독립 데이터 시드와 CWD 비교의 사전 명시 프로토콜](experiments/protocol_20260929.md): 후속 실험 계획입니다. 아래 실행 코드의 존재가 결과 완료를 의미하지 않습니다.
+- [후속 실험 실행 코드](experiments/confirmatory_kd.py): 대조군 / MSE / CWD, 명시적인 sampler·worker 시드, 입력 해시 비교, 가중치 업데이트 검사, 고정 최종 EMA 평가 및 재시작 지원.
+- [데이터 출처 감사](artifacts/ieee_access_20260929/DATA_PROVENANCE.md): Kaggle 배포본과 설정·라벨·이미지 표본의 동일성을 확인했습니다. 라벨 변환 및 test 라벨 생성 과정은 미확인입니다. test 라벨을 공식 평가에 사용하지 않습니다. train/val 간 동일 이미지 파일은 없었으며 train/test 간 1쌍이 발견됐습니다.
+
+검증 환경: Python 3.12.3, PyTorch 2.5.1+cu121, Ultralytics 8.2.103, Torch-Pruning 1.6.0, RTX 4090. 기존 결과의 원본 코드 기준은 커밋 `4f5be41e22ea8696800e94611688777a7cbb883a`입니다. 수정 코드가 과거의 결과를 생성했다고 소급해서 주장하지 않습니다. 데이터와 체크포인트 확보가 별도로 필요하며 결과 파일의 SHA-256으로 모델을 식별할 수 있습니다.
+
+```bash
+# 프로젝트 루트에서 후속 학습을 한 조건씩 실행하는 예
+python experiments/confirmatory_kd.py --arm control --seed 0 --device 0
+python experiments/confirmatory_kd.py --arm mse --seed 0 --device 0
+python experiments/confirmatory_kd.py --arm cwd --seed 0 --device 0
+```
+
+프로토콜의 전체 비교에는 각 조건의 seed 0, 1, 2가 모두 필요합니다. 완료 전 수치나 향상을 추정하여 기록하지 마십시오.
 
 ## 실험 환경
 - Linux, RTX 4090 x2

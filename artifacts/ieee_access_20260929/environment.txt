@@ -1,0 +1,6 @@
+Python 3.12.3
+PyTorch 2.5.1+cu121
+Ultralytics 8.2.103
+Torch-Pruning 1.6.0
+GPU NVIDIA GeForce RTX 4090, 24 GB per device
+Original repository commit 4f5be41e22ea8696800e94611688777a7cbb883a

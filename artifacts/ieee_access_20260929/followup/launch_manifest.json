@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-29T01:44:37Z",
+  "arms": [
+    "control",
+    "mse",
+    "cwd"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 20,
+  "status": "launched",
+  "script_sha256": "f3baa82158110bbbc46bcc9053f78101d3fd8e0c18ebd4e5751d5dbf7d96cae1",
+  "protocol_sha256": "1195bdb7e59547bebd2c6a6182c596effdea1ba583b06bb88c88c38aa4ba0106"
+}

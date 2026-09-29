@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "text": "F. Yu et al., \"BDD100K: A diverse driving dataset for heterogeneous multitask learning,\" in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR), 2020, pp. 2636-2645.",
+    "url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Yu_BDD100K_A_Diverse_Driving_Dataset_for_Heterogeneous_Multitask_Learning_CVPR_2020_paper.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 2,
+    "text": "Ultralytics, \"Ultralytics v8.2.103,\" software release, 2024. Accessed: Sep. 22, 2026.",
+    "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.2.103",
+    "status": "Official release verified; original reference year corrected"
+  },
+  {
+    "id": 3,
+    "text": "G. Hinton, O. Vinyals, and J. Dean, \"Distilling the knowledge in a neural network,\" arXiv:1503.02531, 2015.",
+    "url": "https://arxiv.org/abs/1503.02531",
+    "status": "Author preprint verified"
+  },
+  {
+    "id": 4,
+    "text": "G. Fang, X. Ma, M. Song, M. B. Mi, and X. Wang, \"DepGraph: Towards any structural pruning,\" in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR), 2023, pp. 16091-16101.",
+    "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Fang_DepGraph_Towards_Any_Structural_Pruning_CVPR_2023_paper.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 5,
+    "text": "D. Blalock, J. J. G. Ortiz, J. Frankle, and J. Guttag, \"What is the state of neural network pruning?\" in Proc. Mach. Learn. Syst. (MLSys), vol. 2, 2020, pp. 129-146.",
+    "url": "https://proceedings.mlsys.org/paper_files/paper/2020/hash/6c44dc73014d66ba49b28d483a8f8b0d-Abstract.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 6,
+    "text": "A. Romero, N. Ballas, S. E. Kahou, A. Chassang, C. Gatta, and Y. Bengio, \"FitNets: Hints for thin deep nets,\" in Proc. Int. Conf. Learn. Represent. (ICLR), 2015, arXiv:1412.6550.",
+    "url": "https://arxiv.org/abs/1412.6550",
+    "status": "Author preprint and author repository verified"
+  },
+  {
+    "id": 7,
+    "text": "T. Wang, L. Yuan, X. Zhang, and J. Feng, \"Distilling object detectors with fine-grained feature imitation,\" in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR), 2019, pp. 4933-4942.",
+    "url": "https://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Distilling_Object_Detectors_With_Fine-Grained_Feature_Imitation_CVPR_2019_paper.pdf",
+    "status": "Primary paper verified"
+  },
+  {
+    "id": 8,
+    "text": "Z. Yang, Z. Li, X. Jiang, Y. Gong, Z. Yuan, D. Zhao, and C. Yuan, \"Focal and global knowledge distillation for detectors,\" in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR), 2022, pp. 4643-4652.",
+    "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Yang_Focal_and_Global_Knowledge_Distillation_for_Detectors_CVPR_2022_paper.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 9,
+    "text": "C. Shu, Y. Liu, J. Gao, Z. Yan, and C. Shen, \"Channel-wise knowledge distillation for dense prediction,\" in Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV), 2021, pp. 5311-5320.",
+    "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Shu_Channel-Wise_Knowledge_Distillation_for_Dense_Prediction_ICCV_2021_paper.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 10,
+    "text": "Z. Zheng, R. Ye, P. Wang, D. Ren, W. Zuo, Q. Hou, and M.-M. Cheng, \"Localization distillation for dense object detection,\" in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR), 2022, pp. 9407-9416.",
+    "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Zheng_Localization_Distillation_for_Dense_Object_Detection_CVPR_2022_paper.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 11,
+    "text": "K. Liu, Y. Zhang, J. Zhang, J. Li, J. Wang, S. Wang, C. Yuan, and R. Guo, \"DFD: Distilling the feature disparity differently for detectors,\" in Proc. 41st Int. Conf. Mach. Learn. (ICML), vol. 235, 2024, pp. 32421-32430.",
+    "url": "https://proceedings.mlr.press/v235/liu24cd.html",
+    "status": "Primary conference record verified"
+  },
+  {
+    "id": 12,
+    "text": "S. I. Mirzadeh, M. Farajtabar, A. Li, N. Levine, A. Matsukawa, and H. Ghasemzadeh, \"Improved knowledge distillation via teacher assistant,\" in Proc. AAAI Conf. Artif. Intell., vol. 34, no. 4, 2020, pp. 5191-5198, doi: 10.1609/aaai.v34i04.5963.",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/5963",
+    "status": "Publisher metadata and DOI verified"
+  },
+  {
+    "id": 13,
+    "text": "J. H. Cho and B. Hariharan, \"On the efficacy of knowledge distillation,\" in Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV), 2019, pp. 4794-4802.",
+    "url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Cho_On_the_Efficacy_of_Knowledge_Distillation_ICCV_2019_paper.pdf",
+    "status": "Primary paper verified"
+  },
+  {
+    "id": 14,
+    "text": "Q. Lin and X. Yang, \"KSG-YOLO: Application of YOLO-based detection with knowledge distillation and structured pruning in green assembly building scenarios,\" IEEE Access, vol. 13, pp. 193462-193473, 2025, doi: 10.1109/ACCESS.2025.3632200.",
+    "url": "https://ieeexplore.ieee.org/document/11242141/",
+    "status": "Publisher abstract, journal, pages and DOI verified; full ablation table not audited"
+  },
+  {
+    "id": 15,
+    "text": "M. Sabaghian, M. A. Keyvanrad, and S. M. Moghadami, \"A novel compression framework for YOLOv8: Achieving real-time aerial object detection on edge devices via structured pruning and channel-wise distillation,\" arXiv:2509.12918v3, 2025.",
+    "url": "https://arxiv.org/abs/2509.12918v3",
+    "status": "Author preprint verified; not represented as a peer-reviewed journal article"
+  },
+  {
+    "id": 16,
+    "text": "V. J. Reddi et al., \"MLPerf inference benchmark,\" in Proc. ACM/IEEE 47th Annu. Int. Symp. Comput. Archit. (ISCA), 2020, pp. 446-459.",
+    "url": "https://arxiv.org/abs/1911.02549",
+    "status": "Author preprint and official MLCommons documentation verified"
+  },
+  {
+    "id": 17,
+    "text": "PyTorch Contributors, \"Autograd mechanics,\" PyTorch documentation. Accessed: Sep. 22, 2026.",
+    "url": "https://docs.pytorch.org/docs/2.14/notes/autograd.html",
+    "status": "Official documentation verified; experiment itself uses PyTorch 2.5.1"
+  },
+  {
+    "id": 18,
+    "text": "G. Fang et al., \"Torch-Pruning,\" software, version 1.6.0. Accessed: Sep. 22, 2026.",
+    "url": "https://github.com/VainF/Torch-Pruning",
+    "status": "Installed API signature and upstream official repository verified"
+  },
+  {
+    "id": 19,
+    "text": "H. Choi, \"yolo-lightweight-optim,\" code repository, commit 4f5be41e22ea8696800e94611688777a7cbb883a. Accessed: Sep. 22, 2026.",
+    "url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/tree/4f5be41e22ea8696800e94611688777a7cbb883a",
+    "status": "GitHub and server commit matched; author ownership is user-supplied"
+  },
+  {
+    "id": 20,
+    "text": "OpenAI, \"Codex,\" AI-assisted coding and writing system. Accessed: Sep. 22, 2026.",
+    "url": "https://openai.com/codex/",
+    "status": "Used in this revision; system disclosure"
+  }
+]

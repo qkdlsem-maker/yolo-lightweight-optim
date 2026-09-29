@@ -1,0 +1,37 @@
+{
+  "data_loader_rank": -1,
+  "internal_data_loader_seed": 6148914691236517204,
+  "data_loader_source": "def build_dataloader(dataset, batch, workers, shuffle=True, rank=-1):\n    \"\"\"Return an InfiniteDataLoader or DataLoader for training or validation set.\"\"\"\n    batch = min(batch, len(dataset))\n    nd = torch.cuda.device_count()  # number of CUDA devices\n    nw = min(os.cpu_count() // max(nd, 1), workers)  # number of workers\n    sampler = None if rank == -1 else distributed.DistributedSampler(dataset, shuffle=shuffle)\n    generator = torch.Generator()\n    generator.manual_seed(6148914691236517205 + RANK)\n    return InfiniteDataLoader(\n        dataset=dataset,\n        batch_size=batch,\n        shuffle=shuffle and sampler is None,\n        num_workers=nw,\n        sampler=sampler,\n        pin_memory=PIN_MEMORY,\n        collate_fn=getattr(dataset, \"collate_fn\", None),\n        worker_init_fn=seed_worker,\n        generator=generator,\n    )\n",
+  "controlled_checkpoints": {
+    "control_seed0_e10": {
+      "sha256": "90f18e70082528527d4178a8dfbbe8cd6e9a25a800a7a72b7c96375d71f313d6",
+      "state_sha256": "518787e9ddcc7d71055707aec4b7ad2650d6169cb7558a995aebdf425b2635ac",
+      "bytes": 6231822
+    },
+    "control_seed1_e10": {
+      "sha256": "74d84bf1b73a62d68d5e2f186800341325e30cb574c6b13ac9748ea3ce8aa261",
+      "state_sha256": "518787e9ddcc7d71055707aec4b7ad2650d6169cb7558a995aebdf425b2635ac",
+      "bytes": 6231822
+    },
+    "control_seed2_e10": {
+      "sha256": "4b3224304a717eede50c63b00c31366448053f3955168fe70be2ef8e24a783cd",
+      "state_sha256": "518787e9ddcc7d71055707aec4b7ad2650d6169cb7558a995aebdf425b2635ac",
+      "bytes": 6231822
+    },
+    "kd_seed0_e10": {
+      "sha256": "b2f60f64e107b30f9e989dada2d8f01b1cf344e33972df159e885dfbc78f0d26",
+      "state_sha256": "0d6bf058f4f2b0d0ee310456f349ae8534c4a06aa05f7c5e88f0121399de4462",
+      "bytes": 6231822
+    },
+    "kd_seed1_e10": {
+      "sha256": "71540c7b70dd7bb9c0122ef7e6845d60fefa882a7f070017b78f17a5e96f128d",
+      "state_sha256": "481c7a4ee0b4dceb74c0e8f83693880f7e8c18a29edb4652808ac9474f7a3ec2",
+      "bytes": 6231822
+    },
+    "kd_seed2_e10": {
+      "sha256": "879062560cc3e0e4dfe1757f98762262a572b3e658b2e90d24fb02242697d36c",
+      "state_sha256": "736f6344b594740087ab032547eb50deb9c33bf361180332363cea46d6d53a4f",
+      "bytes": 6231822
+    }
+  }
+}

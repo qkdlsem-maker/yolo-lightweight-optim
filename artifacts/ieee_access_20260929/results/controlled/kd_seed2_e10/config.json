@@ -1,0 +1,33 @@
+{
+  "arm": "kd",
+  "seed": 2,
+  "epochs": 10,
+  "batch": 64,
+  "lr": 0.001,
+  "optimizer": "SGD",
+  "momentum": 0.937,
+  "weight_decay": 0.0005,
+  "kd_weight": 0.3,
+  "student_source": "outputs/yolov8n_baseline/weights/best.pt",
+  "student_sha256": "24a99206fb524134d66db0a112c469199906981b18910b3d9603d8fddccf9304",
+  "teacher": "outputs/yolov8l_baseline/weights/best.pt",
+  "feature_layers": [
+    15,
+    18,
+    21
+  ],
+  "student_channels": [
+    64,
+    128,
+    256
+  ],
+  "teacher_channels": [
+    256,
+    512,
+    512
+  ],
+  "checkpoint_selection": "fixed final epoch",
+  "loss_scaling": "Ultralytics detection loss summed over batch plus weight times three per-element mean MSE losses",
+  "train_images": 70000,
+  "deterministic": true
+}

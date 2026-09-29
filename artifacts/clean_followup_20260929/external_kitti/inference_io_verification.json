@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "mapping": "BDD2 to Car, BDD0 to Pedestrian; all other classes dropped after NMS",
+  "coordinate_and_confidence_serialization_verified": true,
+  "blank_synthetic_image_FP32_prediction_verified": true,
+  "real_external_data_used": false
+}

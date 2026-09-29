@@ -1,0 +1,179 @@
+[
+  {
+    "name": "archived_nano",
+    "checkpoint": "outputs\\yolov8n_baseline\\weights\\best.pt",
+    "prior_hash_record": "review_20260929\\stratified\\yolov8n_baseline\\metrics.json",
+    "group": "archived"
+  },
+  {
+    "name": "archived_pruned_r15",
+    "checkpoint": "outputs\\yolov8n_pruned_r15_finetuned_v2\\weights\\best.pt",
+    "prior_hash_record": "review_20260929\\stratified\\yolov8n_pruned_r15_finetuned_v2\\metrics.json",
+    "group": "archived"
+  },
+  {
+    "name": "archived_pruned_r30",
+    "checkpoint": "outputs\\yolov8n_pruned_finetuned\\weights\\best.pt",
+    "prior_hash_record": "review_20260929\\stratified\\yolov8n_pruned_finetuned\\metrics.json",
+    "group": "archived"
+  },
+  {
+    "name": "archived_pruned_r45",
+    "checkpoint": "outputs\\yolov8n_pruned_r45_finetuned\\weights\\best.pt",
+    "prior_hash_record": "review_20260929\\stratified\\yolov8n_pruned_r45_finetuned\\metrics.json",
+    "group": "archived"
+  },
+  {
+    "name": "archived_recovery_kd",
+    "checkpoint": "outputs\\yolov8n_pruned_r45_kd\\weights\\best.pt",
+    "prior_hash_record": "review_20260929\\stratified\\yolov8n_pruned_r45_kd\\metrics.json",
+    "group": "archived"
+  },
+  {
+    "name": "earlier_control_seed0_e20",
+    "checkpoint": "review_20260929\\confirmatory\\control_seed0_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\control_seed0_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "control",
+    "seed": 0
+  },
+  {
+    "name": "earlier_control_seed1_e20",
+    "checkpoint": "review_20260929\\confirmatory\\control_seed1_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\control_seed1_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "control",
+    "seed": 1
+  },
+  {
+    "name": "earlier_control_seed2_e20",
+    "checkpoint": "review_20260929\\confirmatory\\control_seed2_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\control_seed2_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "control",
+    "seed": 2
+  },
+  {
+    "name": "earlier_mse_seed0_e20",
+    "checkpoint": "review_20260929\\confirmatory\\mse_seed0_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\mse_seed0_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "mse",
+    "seed": 0
+  },
+  {
+    "name": "earlier_mse_seed1_e20",
+    "checkpoint": "review_20260929\\confirmatory\\mse_seed1_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\mse_seed1_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "mse",
+    "seed": 1
+  },
+  {
+    "name": "earlier_mse_seed2_e20",
+    "checkpoint": "review_20260929\\confirmatory\\mse_seed2_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\mse_seed2_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "mse",
+    "seed": 2
+  },
+  {
+    "name": "earlier_cwd_seed0_e20",
+    "checkpoint": "review_20260929\\confirmatory\\cwd_seed0_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\cwd_seed0_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "cwd",
+    "seed": 0
+  },
+  {
+    "name": "earlier_cwd_seed1_e20",
+    "checkpoint": "review_20260929\\confirmatory\\cwd_seed1_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\cwd_seed1_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "cwd",
+    "seed": 1
+  },
+  {
+    "name": "earlier_cwd_seed2_e20",
+    "checkpoint": "review_20260929\\confirmatory\\cwd_seed2_e20\\ema_epoch20.pt",
+    "prior_hash_record": "review_20260929\\stratified\\cwd_seed2_e20\\metrics.json",
+    "group": "earlier_continuation",
+    "arm": "cwd",
+    "seed": 2
+  },
+  {
+    "name": "clean_nano",
+    "checkpoint": "review_20260929_clean\\base\\nano\\weights\\last.pt",
+    "prior_hash_record": "review_20260929_clean\\base_records\\nano\\COMPLETE.json",
+    "group": "clean_base"
+  },
+  {
+    "name": "clean_large",
+    "checkpoint": "review_20260929_clean\\base\\large\\weights\\last.pt",
+    "prior_hash_record": "review_20260929_clean\\base_records\\large\\COMPLETE.json",
+    "group": "clean_base"
+  },
+  {
+    "name": "clean_control_seed0_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\control_seed0_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "control",
+    "seed": 0
+  },
+  {
+    "name": "clean_control_seed1_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\control_seed1_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "control",
+    "seed": 1
+  },
+  {
+    "name": "clean_control_seed2_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\control_seed2_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "control",
+    "seed": 2
+  },
+  {
+    "name": "clean_mse_seed0_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\mse_seed0_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "mse",
+    "seed": 0
+  },
+  {
+    "name": "clean_mse_seed1_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\mse_seed1_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "mse",
+    "seed": 1
+  },
+  {
+    "name": "clean_mse_seed2_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\mse_seed2_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "mse",
+    "seed": 2
+  },
+  {
+    "name": "clean_cwd_seed0_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\cwd_seed0_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "cwd",
+    "seed": 0
+  },
+  {
+    "name": "clean_cwd_seed1_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\cwd_seed1_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "cwd",
+    "seed": 1
+  },
+  {
+    "name": "clean_cwd_seed2_e20",
+    "checkpoint": "review_20260929_clean\\confirmatory\\cwd_seed2_e20\\ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "cwd",
+    "seed": 2
+  }
+]

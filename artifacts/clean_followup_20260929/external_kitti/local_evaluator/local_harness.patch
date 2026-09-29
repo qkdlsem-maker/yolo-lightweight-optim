@@ -1,0 +1,383 @@
+--- evaluate_object_original.cpp
++++ evaluate_2d_local.cpp
+@@ -9,20 +9,7 @@
+ 
+ #include <dirent.h>
+ 
+-#include <boost/numeric/ublas/matrix.hpp>
+-#include <boost/numeric/ublas/io.hpp>
+-
+-#include <boost/geometry.hpp>
+-#include <boost/geometry/geometries/point_xy.hpp>
+-#include <boost/geometry/geometries/polygon.hpp>
+-#include <boost/geometry/geometries/adapted/c_array.hpp>
+-
+-#include "mail.h"
+-
+-BOOST_GEOMETRY_REGISTER_C_ARRAY_CS(cs::cartesian)
+-
+-typedef boost::geometry::model::polygon<boost::geometry::model::d2::point_xy<double> > Polygon;
+-
++#include <string>
+ 
+ using namespace std;
+ 
+@@ -31,7 +18,7 @@
+ =======================================================================*/
+ 
+ // holds the number of test images on the server
+-const int32_t N_TESTIMAGES = 7518;
++// Frame count is supplied to the local harness.
+ //const int32_t N_TESTIMAGES = 7480;
+ 
+ // easy, moderate and hard evaluation level
+@@ -210,7 +197,7 @@
+   if(precision.empty())
+     return;
+   for (int32_t i=0; i<precision.size(); i++)
+-    fprintf(fp_det,"%f ",precision[i]);
++    fprintf(fp_det,"%.17g ",precision[i]);
+   fprintf(fp_det,"\n");
+ 
+   // save orientation similarity, only if there were no invalid orientation entries in submission (alpha=-10)
+@@ -265,85 +252,6 @@
+ 
+ inline double imageBoxOverlap(tDetection a, tGroundtruth b, int32_t criterion=-1){
+   return imageBoxOverlap(a.box, b.box, criterion);
+-}
+-
+-// compute polygon of an oriented bounding box
+-template <typename T>
+-Polygon toPolygon(const T& g) {
+-    using namespace boost::numeric::ublas;
+-    using namespace boost::geometry;
+-    matrix<double> mref(2, 2);
+-    mref(0, 0) = cos(g.ry); mref(0, 1) = sin(g.ry);
+-    mref(1, 0) = -sin(g.ry); mref(1, 1) = cos(g.ry);
+-
+-    static int count = 0;
+-    matrix<double> corners(2, 4);
+-    double data[] = {g.l / 2, g.l / 2, -g.l / 2, -g.l / 2,
+-                     g.w / 2, -g.w / 2, -g.w / 2, g.w / 2};
+-    std::copy(data, data + 8, corners.data().begin());
+-    matrix<double> gc = prod(mref, corners);
+-    for (int i = 0; i < 4; ++i) {
+-        gc(0, i) += g.t1;
+-        gc(1, i) += g.t3;
+-    }
+-
+-    double points[][2] = {{gc(0, 0), gc(1, 0)},{gc(0, 1), gc(1, 1)},{gc(0, 2), gc(1, 2)},{gc(0, 3), gc(1, 3)},{gc(0, 0), gc(1, 0)}};
+-    Polygon poly;
+-    append(poly, points);
+-    return poly;
+-}
+-
+-// measure overlap between bird's eye view bounding boxes, parametrized by (ry, l, w, tx, tz)
+-inline double groundBoxOverlap(tDetection d, tGroundtruth g, int32_t criterion = -1) {
+-    using namespace boost::geometry;
+-    Polygon gp = toPolygon(g);
+-    Polygon dp = toPolygon(d);
+-
+-    std::vector<Polygon> in, un;
+-    intersection(gp, dp, in);
+-    union_(gp, dp, un);
+-
+-    double inter_area = in.empty() ? 0 : area(in.front());
+-    double union_area = area(un.front());
+-    double o;
+-    if(criterion==-1)     // union
+-        o = inter_area / union_area;
+-    else if(criterion==0) // bbox_a
+-        o = inter_area / area(dp);
+-    else if(criterion==1) // bbox_b
+-        o = inter_area / area(gp);
+-
+-    return o;
+-}
+-
+-// measure overlap between 3D bounding boxes, parametrized by (ry, h, w, l, tx, ty, tz)
+-inline double box3DOverlap(tDetection d, tGroundtruth g, int32_t criterion = -1) {
+-    using namespace boost::geometry;
+-    Polygon gp = toPolygon(g);
+-    Polygon dp = toPolygon(d);
+-
+-    std::vector<Polygon> in, un;
+-    intersection(gp, dp, in);
+-    union_(gp, dp, un);
+-
+-    double ymax = min(d.t2, g.t2);
+-    double ymin = max(d.t2 - d.h, g.t2 - g.h);
+-
+-    double inter_area = in.empty() ? 0 : area(in.front());
+-    double inter_vol = inter_area * max(0.0, ymax - ymin);
+-
+-    double det_vol = d.h * d.l * d.w;
+-    double gt_vol = g.h * g.l * g.w;
+-
+-    double o;
+-    if(criterion==-1)     // union
+-        o = inter_vol / (det_vol + gt_vol - inter_vol);
+-    else if(criterion==0) // bbox_a
+-        o = inter_vol / det_vol;
+-    else if(criterion==1) // bbox_b
+-        o = inter_vol / gt_vol;
+-
+-    return o;
+ }
+ 
+ vector<double> getThresholds(vector<double> &v, double n_groundtruth){
+@@ -706,226 +614,34 @@
+     return true;
+ }
+ 
+-void saveAndPlotPlots(string dir_name,string file_name,string obj_type,vector<double> vals[],bool is_aos){
+-
+-  char command[1024];
+-
+-  // save plot data to file
+-  FILE *fp = fopen((dir_name + "/" + file_name + ".txt").c_str(),"w");
+-  printf("save %s\n", (dir_name + "/" + file_name + ".txt").c_str());
+-  for (int32_t i=0; i<(int)N_SAMPLE_PTS; i++)
+-    fprintf(fp,"%f %f %f %f\n",(double)i/(N_SAMPLE_PTS-1.0),vals[0][i],vals[1][i],vals[2][i]);
+-  fclose(fp);
+-
+-  // create png + eps
+-  for (int32_t j=0; j<2; j++) {
+-
+-    // open file
+-    FILE *fp = fopen((dir_name + "/" + file_name + ".gp").c_str(),"w");
+-
+-    // save gnuplot instructions
+-    if (j==0) {
+-      fprintf(fp,"set term png size 450,315 font \"Helvetica\" 11\n");
+-      fprintf(fp,"set output \"%s.png\"\n",file_name.c_str());
+-    } else {
+-      fprintf(fp,"set term postscript eps enhanced color font \"Helvetica\" 20\n");
+-      fprintf(fp,"set output \"%s.eps\"\n",file_name.c_str());
+-    }
+-
+-    // set labels and ranges
+-    fprintf(fp,"set size ratio 0.7\n");
+-    fprintf(fp,"set xrange [0:1]\n");
+-    fprintf(fp,"set yrange [0:1]\n");
+-    fprintf(fp,"set xlabel \"Recall\"\n");
+-    if (!is_aos) fprintf(fp,"set ylabel \"Precision\"\n");
+-    else         fprintf(fp,"set ylabel \"Orientation Similarity\"\n");
+-    obj_type[0] = toupper(obj_type[0]);
+-    fprintf(fp,"set title \"%s\"\n",obj_type.c_str());
+-
+-    // line width
+-    int32_t   lw = 5;
+-    if (j==0) lw = 3;
+-
+-    // plot error curve
+-    fprintf(fp,"plot ");
+-    fprintf(fp,"\"%s.txt\" using 1:2 title 'Easy' with lines ls 1 lw %d,",file_name.c_str(),lw);
+-    fprintf(fp,"\"%s.txt\" using 1:3 title 'Moderate' with lines ls 2 lw %d,",file_name.c_str(),lw);
+-    fprintf(fp,"\"%s.txt\" using 1:4 title 'Hard' with lines ls 3 lw %d",file_name.c_str(),lw);
+-
+-    // close file
+-    fclose(fp);
+-
+-    // run gnuplot => create png + eps
+-    sprintf(command,"cd %s; gnuplot %s",dir_name.c_str(),(file_name + ".gp").c_str());
+-    system(command);
+-  }
+-
+-  // create pdf and crop
+-  sprintf(command,"cd %s; ps2pdf %s.eps %s_large.pdf",dir_name.c_str(),file_name.c_str(),file_name.c_str());
+-  system(command);
+-  sprintf(command,"cd %s; pdfcrop %s_large.pdf %s.pdf",dir_name.c_str(),file_name.c_str(),file_name.c_str());
+-  system(command);
+-  sprintf(command,"cd %s; rm %s_large.pdf",dir_name.c_str(),file_name.c_str());
+-  system(command);
+-}
+-
+-bool eval(string result_sha,Mail* mail){
+-
+-  // set some global parameters
++
++// Local harness: no email, shell commands, plotting, 3D or leaderboard actions.
++int main(int argc,char* argv[]) {
++  if(argc!=5) { std::cerr << "Usage: eval_2d GT_DIR DET_DIR OUT_DIR N_IMAGES\n"; return 2; }
++  const std::string gt_dir=argv[1], det_dir=argv[2], out_dir=argv[3];
++  const int count=std::stoi(argv[4]);
++  if(count<=0) return 2;
+   initGlobals();
+-
+-  // ground truth and result directories
+-  string gt_dir         = "data/object/label_2";
+-  string result_dir     = "results/" + result_sha;
+-  string plot_dir       = result_dir + "/plot";
+-
+-  // create output directories
+-  system(("mkdir " + plot_dir).c_str());
+-
+-  // hold detections and ground truth in memory
+-  vector< vector<tGroundtruth> > groundtruth;
+-  vector< vector<tDetection> >   detections;
+-
+-  // holds wether orientation similarity shall be computed (might be set to false while loading detections)
+-  // and which labels where provided by this submission
+-  bool compute_aos=true;
+-  vector<bool> eval_image(NUM_CLASS, false);
+-  vector<bool> eval_ground(NUM_CLASS, false);
+-  vector<bool> eval_3d(NUM_CLASS, false);
+-
+-  // for all images read groundtruth and detections
+-  mail->msg("Loading detections...");
+-  for (int32_t i=0; i<N_TESTIMAGES; i++) {
+-
+-    // file name
+-    char file_name[256];
+-    sprintf(file_name,"%06d.txt",i);
+-
+-    // read ground truth and result poses
+-    bool gt_success,det_success;
+-    vector<tGroundtruth> gt   = loadGroundtruth(gt_dir + "/" + file_name,gt_success);
+-    vector<tDetection>   det  = loadDetections(result_dir + "/data/" + file_name,
+-            compute_aos, eval_image, eval_ground, eval_3d, det_success);
+-    groundtruth.push_back(gt);
+-    detections.push_back(det);
+-
+-    // check for errors
+-    if (!gt_success) {
+-      mail->msg("ERROR: Couldn't read: %s of ground truth. Please write me an email!", file_name);
+-      return false;
+-    }
+-    if (!det_success) {
+-      mail->msg("ERROR: Couldn't read: %s", file_name);
+-      return false;
+-    }
+-  }
+-  mail->msg("  done.");
+-
+-  // holds pointers for result files
+-  FILE *fp_det=0, *fp_ori=0;
+-
+-  // eval image 2D bounding boxes
+-  for (int c = 0; c < NUM_CLASS; c++) {
+-    CLASSES cls = (CLASSES)c;
+-    //mail->msg("Checking 2D evaluation (%s) ...", CLASS_NAMES[c].c_str());
+-    if (eval_image[c]) {
+-      mail->msg("Starting 2D evaluation (%s) ...", CLASS_NAMES[c].c_str());
+-      fp_det = fopen((result_dir + "/stats_" + CLASS_NAMES[c] + "_detection.txt").c_str(), "w");
+-      if(compute_aos)
+-        fp_ori = fopen((result_dir + "/stats_" + CLASS_NAMES[c] + "_orientation.txt").c_str(),"w");
+-      vector<double> precision[3], aos[3];
+-      if(   !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, imageBoxOverlap, precision[0], aos[0], EASY, IMAGE)
+-         || !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, imageBoxOverlap, precision[1], aos[1], MODERATE, IMAGE)
+-         || !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, imageBoxOverlap, precision[2], aos[2], HARD, IMAGE)) {
+-        mail->msg("%s evaluation failed.", CLASS_NAMES[c].c_str());
+-        return false;
+-      }
+-      fclose(fp_det);
+-      saveAndPlotPlots(plot_dir, CLASS_NAMES[c] + "_detection", CLASS_NAMES[c], precision, 0);
+-      if(compute_aos){
+-        saveAndPlotPlots(plot_dir, CLASS_NAMES[c] + "_orientation", CLASS_NAMES[c], aos, 1);
+-        fclose(fp_ori);
+-      }
+-      mail->msg("  done.");
+-    }
+-  }
+-
+-  // don't evaluate AOS for birdview boxes and 3D boxes
+-  compute_aos = false;
+-
+-  // eval bird's eye view bounding boxes
+-  for (int c = 0; c < NUM_CLASS; c++) {
+-    CLASSES cls = (CLASSES)c;
+-    //mail->msg("Checking bird's eye evaluation (%s) ...", CLASS_NAMES[c].c_str());
+-    if (eval_ground[c]) {
+-      mail->msg("Starting bird's eye evaluation (%s) ...", CLASS_NAMES[c].c_str());
+-      fp_det = fopen((result_dir + "/stats_" + CLASS_NAMES[c] + "_detection_ground.txt").c_str(), "w");
+-      vector<double> precision[3], aos[3];
+-      if(   !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, groundBoxOverlap, precision[0], aos[0], EASY, GROUND)
+-         || !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, groundBoxOverlap, precision[1], aos[1], MODERATE, GROUND)
+-         || !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, groundBoxOverlap, precision[2], aos[2], HARD, GROUND)) {
+-        mail->msg("%s evaluation failed.", CLASS_NAMES[c].c_str());
+-        return false;
+-      }
+-      fclose(fp_det);
+-      saveAndPlotPlots(plot_dir, CLASS_NAMES[c] + "_detection_ground", CLASS_NAMES[c], precision, 0);
+-      mail->msg("  done.");
+-    }
+-  }
+-
+-  // eval 3D bounding boxes
+-  for (int c = 0; c < NUM_CLASS; c++) {
+-    CLASSES cls = (CLASSES)c;
+-    //mail->msg("Checking 3D evaluation (%s) ...", CLASS_NAMES[c].c_str());
+-    if (eval_3d[c]) {
+-      mail->msg("Starting 3D evaluation (%s) ...", CLASS_NAMES[c].c_str());
+-      fp_det = fopen((result_dir + "/stats_" + CLASS_NAMES[c] + "_detection_3d.txt").c_str(), "w");
+-      vector<double> precision[3], aos[3];
+-      if(   !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, box3DOverlap, precision[0], aos[0], EASY, BOX3D)
+-         || !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, box3DOverlap, precision[1], aos[1], MODERATE, BOX3D)
+-         || !eval_class(fp_det, fp_ori, cls, groundtruth, detections, compute_aos, box3DOverlap, precision[2], aos[2], HARD, BOX3D)) {
+-        mail->msg("%s evaluation failed.", CLASS_NAMES[c].c_str());
+-        return false;
+-      }
+-      fclose(fp_det);
+-      saveAndPlotPlots(plot_dir, CLASS_NAMES[c] + "_detection_3d", CLASS_NAMES[c], precision, 0);
+-      mail->msg("  done.");
+-    }
+-  }
+-
+-  // success
+-  return true;
+-}
+-
+-int32_t main (int32_t argc,char *argv[]) {
+-
+-  // we need 2 or 4 arguments!
+-  if (argc!=2 && argc!=4) {
+-    cout << "Usage: ./eval_detection result_sha [user_sha email]" << endl;
+-    return 1;
+-  }
+-
+-  // read arguments
+-  string result_sha = argv[1];
+-
+-  // init notification mail
+-  Mail *mail;
+-  if (argc==4) mail = new Mail(argv[3]);
+-  else         mail = new Mail();
+-  mail->msg("Thank you for participating in our evaluation!");
+-
+-  // run evaluation
+-  if (eval(result_sha,mail)) {
+-    mail->msg("Your evaluation results are available at:");
+-    mail->msg("http://www.cvlibs.net/datasets/kitti/user_submit_check_login.php?benchmark=object&user=%s&result=%s",argv[2], result_sha.c_str());
+-  } else {
+-    system(("rm -r results/" + result_sha).c_str());
+-    mail->msg("An error occured while processing your results.");
+-    mail->msg("Please make sure that the data in your zip archive has the right format!");
+-  }
+-
+-  // send mail and exit
+-  delete mail;
+-
++  std::vector<std::vector<tGroundtruth>> gt;
++  std::vector<std::vector<tDetection>> det;
++  bool aos=false;
++  std::vector<bool> ei(NUM_CLASS,false),eg(NUM_CLASS,false),e3(NUM_CLASS,false);
++  for(int i=0;i<count;++i) {
++    char name[32]; std::snprintf(name,sizeof(name),"%06d.txt",i);
++    bool a,b;
++    gt.push_back(loadGroundtruth(gt_dir+"/"+name,a));
++    det.push_back(loadDetections(det_dir+"/"+name,aos,ei,eg,e3,b));
++    if(!a || !b) { std::cerr << "Missing label/prediction " << name << std::endl; return 3; }
++  }
++  // Both prespecified classes are always evaluated; absent predictions score 0.
++  for(int c=0;c<2;++c) {
++    FILE* fp=std::fopen((out_dir+"/stats_"+CLASS_NAMES[c]+"_detection.txt").c_str(),"w");
++    if(!fp) return 4;
++    for(int d=0;d<3;++d) {
++      std::vector<double> precision,orientation;
++      if(!eval_class(fp,nullptr,(CLASSES)c,gt,det,false,imageBoxOverlap,precision,orientation,(DIFFICULTY)d,IMAGE)) return 5;
++    }
++    std::fclose(fp);
++  }
+   return 0;
+ }

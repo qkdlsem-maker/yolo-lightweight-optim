@@ -1,0 +1,18 @@
+[
+  {
+    "name": "yolov8n.pt",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt",
+    "bytes": 6549796,
+    "sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+    "pretraining_data_argument": "coco.yaml",
+    "classes": 80
+  },
+  {
+    "name": "yolov8l.pt",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt",
+    "bytes": 87792836,
+    "sha256": "64c9115303f6a25575f82200d1b22ec409fa6bd7d08d0313884fc20d919478cd",
+    "pretraining_data_argument": "coco.yaml",
+    "classes": 80
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "event": "preflight target-count reconciliation",
+  "before_full_training": true,
+  "initial_asserted_count": 1286871,
+  "observed_native_target_count": 1286870,
+  "reason": "Native Ultralytics removes one exact repeated source-label row",
+  "image": "75055858-7d04a650",
+  "source_row": "2 0.379688 0.459308 0.010926 0.016996",
+  "multiplicity": 2,
+  "source_labels_changed": false,
+  "optimizer_steps_before_this_preflight_stop": 0,
+  "resolution": "Preserve native deduplication; assert and disclose both source and effective counts; rerun only failed preflight"
+}

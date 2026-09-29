@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "images_per_case": 400,
+  "cases": {
+    "perfect": {
+      "car": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "pedestrian": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "missing": {
+      "car": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pedestrian": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "high_score_fp": {
+      "car": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "pedestrian": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "dontcare": {
+      "car": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "pedestrian": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "ignored_neighbor": {
+      "car": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "pedestrian": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "half_missing": {
+      "car": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "pedestrian": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "difficulty": {
+      "car": [
+        1.0,
+        0.5,
+        0.5
+      ],
+      "pedestrian": [
+        1.0,
+        0.5,
+        0.5
+      ]
+    },
+    "low_height_detection": {
+      "car": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "pedestrian": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "executable_sha256": "4524fb43a3b39662140f1f41a749d3cf42e395e18cd23420260fa796d89b64c9",
+  "real_model_scores_observed": false
+}

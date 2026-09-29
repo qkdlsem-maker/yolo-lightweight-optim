@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "verified_train_images": 69863,
+  "source_train_instances": 1286871,
+  "native_train_instances": 1286870,
+  "native_loader_removed_exact_duplicate": {
+    "image": "75055858-7d04a650",
+    "rows_removed": 1,
+    "source_file_unchanged": true
+  },
+  "base_smokes_finite": true,
+  "objective_smokes": {
+    "control": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 488.2362518310547,
+        "feature_loss": 0.0,
+        "seconds": 1.7189924716949463,
+        "batches": 2,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 1111.3463745117188,
+        "first_two_input_sha256": [
+          "5ffa72a01dba6289afbf9217c1e98a8da6087954d860d4b36b482369270b9b9d",
+          "65a1dc04e9f5aad16c21d00d3ade6b4c5e8980fcd923d43066fadd00eab452d9"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.00015490036457777023
+    },
+    "mse": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 488.2174987792969,
+        "feature_loss": 0.6677657961845398,
+        "seconds": 1.8524351119995117,
+        "batches": 2,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 1110.7656860351562,
+        "first_two_input_sha256": [
+          "5ffa72a01dba6289afbf9217c1e98a8da6087954d860d4b36b482369270b9b9d",
+          "65a1dc04e9f5aad16c21d00d3ade6b4c5e8980fcd923d43066fadd00eab452d9"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.00015373551286756992
+    },
+    "cwd": {
+      "epoch": {
+        "epoch": 1,
+        "lr": 0.0001,
+        "det_loss": 488.20237731933594,
+        "feature_loss": 0.2703572064638138,
+        "seconds": 1.8584485054016113,
+        "batches": 2,
+        "optimizer_steps_skipped": 0,
+        "median_unclipped_grad_norm": 1111.2007446289062,
+        "first_two_input_sha256": [
+          "5ffa72a01dba6289afbf9217c1e98a8da6087954d860d4b36b482369270b9b9d",
+          "65a1dc04e9f5aad16c21d00d3ade6b4c5e8980fcd923d43066fadd00eab452d9"
+        ]
+      },
+      "changed_parameter_tensors": 183,
+      "max_delta": 0.00015500839799642563
+    }
+  },
+  "paired_smoke_inputs": true,
+  "created_utc": "2026-09-29T11:13:11Z",
+  "data_manifest_sha256": "26282c2aa678e9fa73c886e6b7fba0e7d714ba61e1da55abbe501f56ef8e6b9d",
+  "confirmatory_script_sha256": "f3baa82158110bbbc46bcc9053f78101d3fd8e0c18ebd4e5751d5dbf7d96cae1"
+}

@@ -1,0 +1,23 @@
+{
+  "upstream_archive_sha256": "ce0b76b69c0c5f89690a0d65b7302bbbdb962a0c7e8aba6efc7050d1b04b4cf1",
+  "upstream_source_sha256": "b16410ba8914a732405ec937a16d1cd039b6e3bf7d9e8edb6dd3ec79c15892b4",
+  "adapted_source_sha256": "20c521ef2b30b37f34b52cdbfee3c6e7daa0d3650a603c2b209a5dd39f91c45e",
+  "executable_sha256": "4524fb43a3b39662140f1f41a749d3cf42e395e18cd23420260fa796d89b64c9",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "command": [
+    "g++",
+    "-O2",
+    "-std=c++11",
+    "review_20260929_clean/external_kitti/local_evaluator/evaluate_2d_local.cpp",
+    "-o",
+    "review_20260929_clean/external_kitti/local_evaluator/evaluate_2d_local"
+  ],
+  "matching_core_unchanged": true,
+  "changes": [
+    "local explicit paths and frame count",
+    "Car and Pedestrian always evaluated, including zero predictions",
+    "2D only; remove unused Boost 3D routines and leaderboard/mail/plot harness",
+    "17-digit precision serialization",
+    "R40 is computed externally as mean of precision slots 1 through 40"
+  ]
+}

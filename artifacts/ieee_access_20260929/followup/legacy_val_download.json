@@ -1,0 +1,8 @@
+{
+  "name": "legacy_val",
+  "url": "https://www.kaggle.com/api/v1/datasets/download/solesensei/solesensei_bdd100k/bdd100k_labels_release%2Fbdd100k%2Flabels%2Fbdd100k_labels_images_val.json",
+  "bytes": 208257864,
+  "sha256": "c835be652f0c002897be51e74deedd16a1dcee0b7230f19c0456fba772f694af",
+  "seconds": 6.298120737075806,
+  "keys_or_count": 10000
+}

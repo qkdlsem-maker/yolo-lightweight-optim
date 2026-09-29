@@ -1,0 +1,75 @@
+{
+  "method": "Same predictions and IoU true-positive flags; 52 zero-area targets cannot have positive IoU and only change target denominators. A full original-label baseline evaluation provides an independent check.",
+  "models": {
+    "yolov8l_baseline": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.5831740379773944,
+      "original_AP50_95_same_predictions": 0.3422684780112886,
+      "reconstructed_AP50": 0.5832727454486527,
+      "reconstructed_AP50_95": 0.34232511263329146,
+      "delta_AP50_pp": 0.009870747125828583,
+      "delta_AP50_95_pp": 0.0056634622002837975
+    },
+    "yolov8n_baseline": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4634468454867126,
+      "original_AP50_95_same_predictions": 0.2594650003183567,
+      "reconstructed_AP50": 0.4635372070747694,
+      "reconstructed_AP50_95": 0.25951422040889666,
+      "delta_AP50_pp": 0.009036158805680872,
+      "delta_AP50_95_pp": 0.004922009053998089
+    },
+    "yolov8n_pruned_finetuned": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.380542528399198,
+      "original_AP50_95_same_predictions": 0.2087106060144327,
+      "reconstructed_AP50": 0.380617362425205,
+      "reconstructed_AP50_95": 0.20875211565209412,
+      "delta_AP50_pp": 0.007483402600699796,
+      "delta_AP50_95_pp": 0.00415096376614188
+    },
+    "yolov8n_pruned_r15_finetuned_v2": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.42393268118702887,
+      "original_AP50_95_same_predictions": 0.23260040333947896,
+      "reconstructed_AP50": 0.42401345491178033,
+      "reconstructed_AP50_95": 0.23264548806560958,
+      "delta_AP50_pp": 0.00807737247514595,
+      "delta_AP50_95_pp": 0.004508472613062864
+    },
+    "yolov8n_pruned_r45_finetuned": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.3706407819875919,
+      "original_AP50_95_same_predictions": 0.20162354565165638,
+      "reconstructed_AP50": 0.3707081018917611,
+      "reconstructed_AP50_95": 0.20166420572664362,
+      "delta_AP50_pp": 0.006731990416919409,
+      "delta_AP50_95_pp": 0.004066007498723656
+    },
+    "yolov8n_pruned_r45_kd": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.366901291398951,
+      "original_AP50_95_same_predictions": 0.200426391844952,
+      "reconstructed_AP50": 0.3669682834599174,
+      "reconstructed_AP50_95": 0.2004682539246609,
+      "delta_AP50_pp": 0.006699206096638655,
+      "delta_AP50_95_pp": 0.0041862079708882005
+    },
+    "yolov8s_baseline": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.5357397213497548,
+      "original_AP50_95_same_predictions": 0.3062527664400805,
+      "reconstructed_AP50": 0.5358436231160024,
+      "reconstructed_AP50_95": 0.3063090824745047,
+      "delta_AP50_pp": 0.010390176624763825,
+      "delta_AP50_95_pp": 0.005631603442424193
+    }
+  }
+}

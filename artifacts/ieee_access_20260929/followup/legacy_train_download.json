@@ -1,0 +1,12 @@
+{
+  "url": "https://www.kaggle.com/api/v1/datasets/download/solesensei/solesensei_bdd100k/bdd100k_labels_release%2Fbdd100k%2Flabels%2Fbdd100k_labels_images_train.json",
+  "archive_sha256": "19bbed5312cae5cfc260dfcfa72eb6de0534142a6df9578e753a5e6dbfbbb136",
+  "archive_bytes": 96747465,
+  "files": [
+    {
+      "name": "bdd100k_labels_images_train.json",
+      "bytes": 1451202234,
+      "compressed_bytes": 96747263
+    }
+  ]
+}

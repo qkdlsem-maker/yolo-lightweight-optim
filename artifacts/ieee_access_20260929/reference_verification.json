@@ -130,5 +130,17 @@
     "text": "BDD100K maintainers, \"100k dataset test label file?,\" discussion 52, Mar. 2021-Mar. 2022. Accessed: Sep. 29, 2026.",
     "url": "https://github.com/bdd100k/bdd100k/discussions/52",
     "status": "Primary maintainer statements on withheld test annotations and evaluation server verified"
+  },
+  {
+    "id": 23,
+    "text": "SoleSensei, \"bdd100k,\" public mirror of the legacy BDD100K JSON annotations, Kaggle. Accessed: Sep. 29, 2026.",
+    "url": "https://www.kaggle.com/datasets/solesensei/solesensei_bdd100k",
+    "status": "Retrieved original-format train/validation JSON; full class/box comparison and SHA-256 hashes recorded. Public mirror, not official-host archive authentication."
+  },
+  {
+    "id": 24,
+    "text": "BDD100K, \"Data Download,\" official documentation distinguishing legacy 2018 labels and revised Detection 2020 labels. Accessed: Sep. 29, 2026.",
+    "url": "https://raw.githubusercontent.com/bdd100k/bdd100k/master/doc/source/download.rst",
+    "status": "Official project documentation read; legacy release retained for historical comparison and updated detection labels recommended."
   }
 ]

@@ -1,0 +1,1100 @@
+{
+  "train": {
+    "counts": {
+      "images": 69863,
+      "images_exact": 69478,
+      "images_positive_exact": 69863,
+      "local_boxes": 1287264,
+      "source_boxes": 1286871,
+      "matched_boxes": 1286871,
+      "local_only": 393,
+      "source_only": 0,
+      "local_nonpositive_boxes": 393
+    },
+    "filename_sets_equal": false,
+    "unmatched_local_images": [
+      {
+        "image": "54ea83be-ce461fd7",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5691a2c2-59c9f7ed",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "56bcdb00-0a1074d2",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "573809a9-e5a1b3b8",
+        "boxes": 18,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5797f14c-159e4924",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "57dd03e1-7b415b61",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5811624d-0c858bd8",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "58208859-5316743a",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5b1b0c34-216cd6a5",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5b4727ac-d3fd8666",
+        "boxes": 17,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5b54f9f0-848cd09b",
+        "boxes": 18,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5b6dfbed-ea08eb7b",
+        "boxes": 16,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5b7255d9-350ca0b7",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5b97b4c1-455baf62",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5c4991da-2bcce0d1",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5c99e5ec-7aed1c3f",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5cc5736c-1b3b8a9b",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5ccd45ac-62dae534",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5cd4c6d7-2051e443",
+        "boxes": 18,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5cf522b8-a0144375",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5d178102-9d5e50e2",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5d1905d8-875b2482",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5dc66059-52bfaff7",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5de4c788-84dbc745",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5de74ad7-9f445ae3",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5e412e85-d1452b76",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5e464562-65962983",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5ea6db6f-fa6b86fb",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5ead49a0-f0566b6a",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5ee6af4d-b34992f0",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5ee6af4d-e02b3213",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5ee9e8f1-c1cd62b8",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5f9e9266-78dac9cc",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "5fdc609c-d87d775f",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6032f7e2-a7062c48",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6051b591-f7ec53c8",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "60595c14-113d4b8c",
+        "boxes": 11,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "60855380-49af8931",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "608640e2-c900aca1",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "61239730-1811efc0",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "612affad-42702404",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "61676670-5ddf4aa4",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6188d9b2-08ac3765",
+        "boxes": 19,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "621a49b2-0b00f7bd",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6235309f-a5cc4d73",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "62bd3830-aa6cb431",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "63ab7273-cc691816",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "63ff2a76-e232da16",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "641d1337-af06cf4e",
+        "boxes": 9,
+        "nonpositive_boxes": 1
+      },
+      {
+        "image": "647e8e1c-0141c492",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "64a355f1-02850b31",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "64c28530-3876deb2",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6521230a-c379ab8a",
+        "boxes": 11,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "65551742-016ff56a",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "659a7a5e-92995bc3",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "65e0a5b6-08d3611c",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "66644eeb-b3f4ee0e",
+        "boxes": 14,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "66753960-186df654",
+        "boxes": 11,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "66838ab6-1d4062e5",
+        "boxes": 13,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "66cbb16a-010edd6c",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "66ed92d6-a7529a59",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "66fab43d-46c5b8f2",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6731a55a-3ecf9a1d",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6739851f-37c84296",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "679c58f7-e9a258c2",
+        "boxes": 15,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "67aafe4e-ba113a20",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "67c665d7-5d43cd3d",
+        "boxes": 16,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "67c665d7-662c6e08",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "681943bb-77050ee3",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "68aca905-2c504ffd",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "68c29514-3c867490",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "68ce94b4-855f26a3",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "69061757-1459064f",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "69519e0a-60b2fb72",
+        "boxes": 13,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "69687999-3bd919f4",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "69ebe4cd-d5567704",
+        "boxes": 11,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6a42c0ab-5a1df402",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6a76c075-d995ef0a",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6a90b276-de74a29c",
+        "boxes": 14,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6b1f5022-48037f59",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6bc8a49b-b03d2226",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6cf7a093-29129f20",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6d3eab65-1a1f9a3b",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6d95cfb2-60926d6d",
+        "boxes": 13,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6e0fa2a3-a8f2be95",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6e9e3de7-318e1e75",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6f0cc882-8b3e2238",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6f7184c4-e7ec2226",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6fcbd17b-9cd6c3a2",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6fdb819f-ce21ee5f",
+        "boxes": 11,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "6fe61342-4d182f3a",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7085ac8a-afc1e733",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "70cc96e1-1802a164",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "718c99cd-80508f57",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "71be111b-3d2c42bf",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "72024824-3cf37c08",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "734ecaa0-995f18ad",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7360cc7a-138da2b5",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "738820d1-958724b2",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "73918596-79c9e945",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "73e07d14-c2d2f031",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7481cb59-0c09de18",
+        "boxes": 13,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "749161f9-5281a0e0",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "74c17dc8-5da29363",
+        "boxes": 12,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "75417b66-b26413f4",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "75b44995-fef0153f",
+        "boxes": 13,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "75e66365-45cebb67",
+        "boxes": 10,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "75f56250-ee873a57",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "765f15fb-ef824308",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "76a40920-fc78b7cf",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "76b72431-735ebc8f",
+        "boxes": 15,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "772eca25-a718f498",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7751b61d-71561cda",
+        "boxes": 14,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7764bde0-03b1070a",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "77c27140-244a8a88",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "77d72c41-7e2d85d5",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7809356e-8e74fe0a",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7832d791-a1efbf0d",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "78c24fcc-bfe7d2da",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7944f396-18fb3eba",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "796e51dd-c9ed72e3",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "79a6c89a-342f4751",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "79bb5311-1819cfb5",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "79df0f3c-f11ba259",
+        "boxes": 13,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7a36201f-1b550e67",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7a53506f-9c59128b",
+        "boxes": 7,
+        "nonpositive_boxes": 1
+      },
+      {
+        "image": "7a85221a-9b83dce8",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7aca5bc0-23859d6f",
+        "boxes": 5,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7adaeab3-10ec73b5",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7afd081d-1b76748c",
+        "boxes": 9,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7b0114cd-55ad1f37",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7c6fa554-0c165e4f",
+        "boxes": 4,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7cddaf5e-2bdf3965",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7d2efdc4-6e8949dc",
+        "boxes": 7,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7da4529f-fda6359b",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7ddc420d-256fa72d",
+        "boxes": 6,
+        "nonpositive_boxes": 0
+      },
+      {
+        "image": "7df1ba2b-66efeea0",
+        "boxes": 8,
+        "nonpositive_boxes": 0
+      }
+    ],
+    "unmatched_local_boxes": 1141,
+    "unmatched_local_class_counts": {
+      "2": 707,
+      "3": 12,
+      "7": 107,
+      "8": 208,
+      "0": 56,
+      "4": 32,
+      "1": 4,
+      "5": 15
+    },
+    "source_class_counts": {
+      "7": 186117,
+      "8": 239686,
+      "2": 713211,
+      "0": 91349,
+      "3": 11672,
+      "4": 29971,
+      "1": 4517,
+      "5": 7210,
+      "6": 3002,
+      "9": 136
+    },
+    "extra_class_counts": {
+      "8": 67,
+      "2": 203,
+      "0": 30,
+      "7": 77,
+      "3": 4,
+      "4": 9,
+      "5": 2,
+      "1": 1
+    },
+    "extra_shapes": {
+      "nonpositive": 393
+    },
+    "source_json_sha256": "c1998792e385fd79213187576ca07d5249563d0ab83ae976688ad60668baca9e",
+    "examples": [
+      {
+        "image": "007aeb45-f9f5ac8c",
+        "local_only": [
+          [
+            8,
+            0.242759,
+            0.724218,
+            0.01582,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "00d15d58-9197cde5",
+        "local_only": [
+          [
+            2,
+            0.517299,
+            0.6,
+            0.012915,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "01853f47-6975b587",
+        "local_only": [
+          [
+            2,
+            0.400962,
+            0.563906,
+            0.010547,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "024b275b-33674b72",
+        "local_only": [
+          [
+            0,
+            0.171712,
+            0.658443,
+            0.0,
+            0.016651
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "025f49ef-0f6366f3",
+        "local_only": [
+          [
+            2,
+            0.559396,
+            0.53501,
+            0.010135,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "029ad1d1-8c9b02b1",
+        "local_only": [
+          [
+            2,
+            0.484479,
+            0.57362,
+            0.029244,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "02e98692-41d62ff5",
+        "local_only": [
+          [
+            2,
+            0.489354,
+            0.869962,
+            0.007798,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "0309d328-edcdbab5",
+        "local_only": [
+          [
+            0,
+            0.609263,
+            0.483281,
+            0.010547,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "03f8899f-569acc1a",
+        "local_only": [
+          [
+            7,
+            0.608123,
+            0.415118,
+            0.0,
+            0.012474
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "04095551-efe2622a",
+        "local_only": [
+          [
+            7,
+            0.378783,
+            0.168428,
+            0.011933,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "047671d6-83485ddb",
+        "local_only": [
+          [
+            7,
+            0.334998,
+            0.249652,
+            0.007651,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "0570f82d-5376271e",
+        "local_only": [
+          [
+            2,
+            0.717663,
+            0.688295,
+            0.0,
+            0.012236
+          ]
+        ],
+        "source_only": []
+      }
+    ],
+    "seconds": 23.015140056610107
+  },
+  "val": {
+    "counts": {
+      "images": 10000,
+      "images_exact": 9949,
+      "images_positive_exact": 10000,
+      "local_boxes": 185578,
+      "source_boxes": 185526,
+      "matched_boxes": 185526,
+      "local_only": 52,
+      "source_only": 0,
+      "local_nonpositive_boxes": 52
+    },
+    "filename_sets_equal": true,
+    "unmatched_local_images": [],
+    "unmatched_local_boxes": 0,
+    "unmatched_local_class_counts": {},
+    "source_class_counts": {
+      "8": 34908,
+      "7": 26885,
+      "2": 102506,
+      "1": 649,
+      "6": 452,
+      "0": 13262,
+      "3": 1597,
+      "4": 4245,
+      "5": 1007,
+      "9": 15
+    },
+    "extra_class_counts": {
+      "2": 34,
+      "8": 7,
+      "0": 3,
+      "4": 2,
+      "7": 6
+    },
+    "extra_shapes": {
+      "nonpositive": 52
+    },
+    "source_json_sha256": "c835be652f0c002897be51e74deedd16a1dcee0b7230f19c0456fba772f694af",
+    "examples": [
+      {
+        "image": "b2505382-2905b23c",
+        "local_only": [
+          [
+            2,
+            0.544691,
+            0.759661,
+            0.0,
+            0.012203
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b2715214-13e3dd85",
+        "local_only": [
+          [
+            2,
+            0.451716,
+            0.7114,
+            0.0,
+            0.00693
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b2d9b817-9a617024",
+        "local_only": [
+          [
+            2,
+            0.709802,
+            0.823933,
+            0.014396,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b30b460d-0e26bd8a",
+        "local_only": [
+          [
+            2,
+            0.331999,
+            0.625897,
+            0.007017,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b3683422-cce330a8",
+        "local_only": [
+          [
+            2,
+            0.553021,
+            0.767199,
+            0.0,
+            0.013178
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b4a23106-80491109",
+        "local_only": [
+          [
+            2,
+            0.469857,
+            0.889025,
+            0.007798,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b5115080-37a89b9c",
+        "local_only": [
+          [
+            2,
+            0.678595,
+            0.736083,
+            0.015077,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b5764fb7-c47fa3ec",
+        "local_only": [
+          [
+            2,
+            0.766504,
+            0.684367,
+            0.040293,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b5d8894a-d99dbb00",
+        "local_only": [
+          [
+            8,
+            0.09157,
+            0.55678,
+            0.006435,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b66ecd35-8de7da84",
+        "local_only": [
+          [
+            8,
+            0.480064,
+            0.783281,
+            0.010547,
+            0.0
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b6f77fda-46184a8c",
+        "local_only": [
+          [
+            2,
+            0.212049,
+            0.34568,
+            0.0,
+            0.01138
+          ]
+        ],
+        "source_only": []
+      },
+      {
+        "image": "b738d22a-6ac5e1d6",
+        "local_only": [
+          [
+            0,
+            0.323725,
+            0.613776,
+            0.0,
+            0.021429
+          ]
+        ],
+        "source_only": []
+      }
+    ],
+    "seconds": 2.938088893890381
+  },
+  "comparison_rule": "Class IDs and normalized cx,cy,w,h to six decimal places, ignoring row order, retaining duplicate multiplicities; image size 1280x720.",
+  "source": "SoleSensei Kaggle mirror of BDD100K 2018 JSON annotations, version predating the 2020 revision. This is a full comparison to retrieved JSON, not a signed authenticity certificate from the original host."
+}

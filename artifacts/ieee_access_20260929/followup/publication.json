@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/qkdlsem-maker/yolo-lightweight-optim",
+  "original_code_commit": "4f5be41e22ea8696800e94611688777a7cbb883a",
+  "experiment_code_commit": "efcd6484a4844b976ca63484bd1fd5b8d8d983f0",
+  "results_revision": "The Git commit containing this file; use git log -1 -- artifacts/ieee_access_20260929/followup/publication.json",
+  "completed_primary_training_runs": 9,
+  "completed_secondary_evaluations": 16,
+  "final_training_status": "complete; all final primary and secondary evaluations and numerical audits passed"
+}

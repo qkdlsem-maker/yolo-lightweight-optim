@@ -1,0 +1,10 @@
+run,attempted_minibatches,AMP_skips,applied_optimizer_steps
+control_seed0_e20,21880,5,21875
+control_seed1_e20,21880,5,21875
+control_seed2_e20,21880,4,21876
+cwd_seed0_e20,21880,4,21876
+cwd_seed1_e20,21880,5,21875
+cwd_seed2_e20,21880,4,21876
+mse_seed0_e20,21880,4,21876
+mse_seed1_e20,21880,6,21874
+mse_seed2_e20,21880,5,21875

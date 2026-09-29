@@ -1,0 +1,15 @@
+# Annotation and illumination sensitivity evaluation
+
+Specified on 2026-09-29 while the nine continuation runs are ongoing and before their final metrics. This supplements, and does not replace, the primary final-epoch comparison on the unchanged local validation conversion.
+
+Full comparison against the retrieved BDD100K 2018 JSON mirror establishes that all 185,526 positive-area validation boxes match after normalization to six decimals. The local validation set additionally contains 52 zero-area boxes across 51 images. A separate reconstructed validation view uses exactly the 2018 JSON boxes and the same 10,000 images. The existing training and validation files remain unchanged. The 137 local training images absent from the retrieved legacy JSON and their 1,141 boxes remain unverified; the continuation starts from a historical model and cannot retrospectively remove their influence.
+
+Evaluate the baseline nano/small/large teachers, three pruned models and the r=.45 recovery-KD model on this reconstructed view. Evaluate every final continuation checkpoint on the same view after all nine training runs have finished. Compare raw and reconstructed-label AP descriptively; do not choose whichever annotation set yields a higher score. No unknown-origin test labels are used.
+
+Recover `timeofday` attributes from the same legacy validation JSON, joined by complete image filename. Collect per-image TP flags at IoU .50:.95, prediction confidence and class, and target class using the installed Ultralytics matcher unchanged. Reaggregated overall AP must reproduce the validator result numerically. Report daylight, night and dawn/dusk strata, their image and class-instance counts, and descriptive pruning/KD effects. Compare illumination groups using the same nine common road-object classes, excluding the extremely sparse train class; mark a summary unavailable if any of those nine classes is absent. The global metric retains all ten classes. Do not interpret illumination differences causally or as real-world safety certification.
+
+Image size 640, FP32, batch 8, confidence .001, NMS IoU .7 and max detections 300. Evaluation can share a GPU with training; evaluation elapsed time is not used for latency claims. Model-only latency remains the separately documented benchmark. Retain all subgroup outcomes, including unfavorable results.
+
+## Target-denominator sensitivity check
+
+The label audit also motivates a fixed-prediction calculation: reuse prediction confidences, classes and true-positive flags, and add the 52 original zero-area target classes to the denominators. Zero-area boxes cannot match at positive IoU. This separates the annotation effect from numerical variation between batch-32 historical reassessment and batch-8 secondary runs. Verify the calculation with a direct original-label baseline evaluation at batch 8 and the same precision. This is an audit-driven secondary check, not a formally preregistered primary hypothesis. Apply the same calculation to every completed operating point and retain all outcomes.

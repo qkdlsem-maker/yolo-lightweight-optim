@@ -1,0 +1,278 @@
+{
+  "snapshot_utc": "2026-09-29T10:27:21Z",
+  "status": "passed",
+  "includes_active_runs": false,
+  "runs": {
+    "control_seed0_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 183
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 5,
+      "applied_optimizer_steps": 21875,
+      "EMA_updates": 21875,
+      "AMP_scale_at_snapshot": 4096.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        10,
+        12,
+        16,
+        18
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "control_seed1_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 183
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 5,
+      "applied_optimizer_steps": 21875,
+      "EMA_updates": 21875,
+      "AMP_scale_at_snapshot": 2048.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        15,
+        17,
+        18,
+        20
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "control_seed2_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 183
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 4,
+      "applied_optimizer_steps": 21876,
+      "EMA_updates": 21876,
+      "AMP_scale_at_snapshot": 4096.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        13,
+        15,
+        18
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "cwd_seed0_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 189
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 4,
+      "applied_optimizer_steps": 21876,
+      "EMA_updates": 21876,
+      "AMP_scale_at_snapshot": 4096.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        18
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "cwd_seed1_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 189
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 5,
+      "applied_optimizer_steps": 21875,
+      "EMA_updates": 21875,
+      "AMP_scale_at_snapshot": 2048.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        14,
+        17,
+        19
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "cwd_seed2_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 189
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 4,
+      "applied_optimizer_steps": 21876,
+      "EMA_updates": 21876,
+      "AMP_scale_at_snapshot": 4096.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        13,
+        15,
+        18
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "mse_seed0_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 189
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 4,
+      "applied_optimizer_steps": 21876,
+      "EMA_updates": 21876,
+      "AMP_scale_at_snapshot": 4096.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        13,
+        17,
+        18
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "mse_seed1_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 189
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 6,
+      "applied_optimizer_steps": 21874,
+      "EMA_updates": 21874,
+      "AMP_scale_at_snapshot": 2048.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        12,
+        14,
+        17,
+        19
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    },
+    "mse_seed2_e20": {
+      "complete": true,
+      "snapshot_epoch": 20,
+      "tensor_counts": {
+        "student": 355,
+        "adapters": 6,
+        "ema": 355,
+        "optimizer": 189
+      },
+      "nonfinite_tensor_counts": {
+        "student": 0,
+        "adapters": 0,
+        "ema": 0,
+        "optimizer": 0
+      },
+      "all_recorded_objective_means_finite": true,
+      "attempted_minibatches": 21880,
+      "skipped_optimizer_steps": 5,
+      "applied_optimizer_steps": 21875,
+      "EMA_updates": 21875,
+      "AMP_scale_at_snapshot": 4096.0,
+      "nonfinite_median_gradient_norm_epochs": [
+        11,
+        13,
+        15,
+        19
+      ],
+      "every_nonfinite_gradient_norm_epoch_has_recorded_AMP_skip": true,
+      "executed_script_hash_matches_config": true
+    }
+  },
+  "interpretation": "AMP overflows recorded by GradScaler can skip updates; saved student, adapter, EMA and optimizer tensors remain finite. Original np.median diagnostics can be NaN if a skipped-step gradient norm was nonfinite. Report actual applied steps, not an assertion of identical optimizer-update counts. This snapshot does not establish future checkpoint validity."
+}

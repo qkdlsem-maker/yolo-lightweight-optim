@@ -1,6 +1,96 @@
 {
   "method": "Same predictions and IoU true-positive flags; 52 zero-area targets cannot have positive IoU and only change target denominators. A full original-label baseline evaluation provides an independent check.",
   "models": {
+    "control_seed0_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4636016790249539,
+      "original_AP50_95_same_predictions": 0.25888692136013747,
+      "reconstructed_AP50": 0.4636894881986916,
+      "reconstructed_AP50_95": 0.2589364937623658,
+      "delta_AP50_pp": 0.008780917373768515,
+      "delta_AP50_95_pp": 0.004957240222835946
+    },
+    "control_seed1_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.46351281389518767,
+      "original_AP50_95_same_predictions": 0.2590622331178791,
+      "reconstructed_AP50": 0.4635947837734299,
+      "reconstructed_AP50_95": 0.2591103116587082,
+      "delta_AP50_pp": 0.008196987824221624,
+      "delta_AP50_95_pp": 0.004807854082905516
+    },
+    "control_seed2_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4644079547962189,
+      "original_AP50_95_same_predictions": 0.2593854421787956,
+      "reconstructed_AP50": 0.4644872859132829,
+      "reconstructed_AP50_95": 0.2594300749136554,
+      "delta_AP50_pp": 0.007933111706404095,
+      "delta_AP50_95_pp": 0.004463273485977304
+    },
+    "cwd_seed0_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4632150657713129,
+      "original_AP50_95_same_predictions": 0.2588407467887043,
+      "reconstructed_AP50": 0.46328968414668575,
+      "reconstructed_AP50_95": 0.2588872245035223,
+      "delta_AP50_pp": 0.007461837537287019,
+      "delta_AP50_95_pp": 0.004647771481802732
+    },
+    "cwd_seed1_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.46238123305385936,
+      "original_AP50_95_same_predictions": 0.2588325599223713,
+      "reconstructed_AP50": 0.46245854457451613,
+      "reconstructed_AP50_95": 0.2588800652004538,
+      "delta_AP50_pp": 0.007731152065676428,
+      "delta_AP50_95_pp": 0.004750527808250471
+    },
+    "cwd_seed2_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4643796644038112,
+      "original_AP50_95_same_predictions": 0.25909491725935924,
+      "reconstructed_AP50": 0.46445715240844637,
+      "reconstructed_AP50_95": 0.25914025239666644,
+      "delta_AP50_pp": 0.007748800463519556,
+      "delta_AP50_95_pp": 0.004533513730720085
+    },
+    "mse_seed0_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4634401670858324,
+      "original_AP50_95_same_predictions": 0.2585056902832645,
+      "reconstructed_AP50": 0.463521905323588,
+      "reconstructed_AP50_95": 0.2585521199776276,
+      "delta_AP50_pp": 0.008173823775559086,
+      "delta_AP50_95_pp": 0.004642969436313704
+    },
+    "mse_seed1_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4629818791801781,
+      "original_AP50_95_same_predictions": 0.25899195200565167,
+      "reconstructed_AP50": 0.46306857587991657,
+      "reconstructed_AP50_95": 0.2590406739002326,
+      "delta_AP50_pp": 0.00866966997384866,
+      "delta_AP50_95_pp": 0.004872189458093867
+    },
+    "mse_seed2_e20": {
+      "original_target_count": 185578,
+      "reconstructed_target_count": 185526,
+      "original_AP50_same_predictions": 0.4640681603094289,
+      "original_AP50_95_same_predictions": 0.25892246069545327,
+      "reconstructed_AP50": 0.4641526563728481,
+      "reconstructed_AP50_95": 0.2589686917053953,
+      "delta_AP50_pp": 0.00844960634192038,
+      "delta_AP50_95_pp": 0.004623100994205487
+    },
     "yolov8l_baseline": {
       "original_target_count": 185578,
       "reconstructed_target_count": 185526,

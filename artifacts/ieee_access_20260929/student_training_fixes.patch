@@ -1,0 +1,243 @@
+--- a/scripts/train_kd_feature.py
++++ b/scripts/train_kd_feature.py
+@@ -27,8 +27,10 @@
+ from ultralytics.nn.tasks import DetectionModel
+ from ultralytics.cfg import get_cfg
+ from ultralytics.utils import DEFAULT_CFG
+-from ultralytics.data.build import build_yolo_dataset, build_dataloader
++from ultralytics.data.build import build_yolo_dataset
+ from ultralytics.data.utils import check_det_dataset
++from ultralytics.utils.torch_utils import init_seeds
++from seeded_loader import build_seeded_loader
+ 
+ # P3, P4, P5 특징을 뽑을 레이어 인덱스 (yolov8n/l 공통 구조)
+ FEAT_LAYERS = [15, 18, 21]
+@@ -59,11 +61,25 @@
+ 
+     handles = [model.model[i].register_forward_hook(mk_hook(i)) for i in layers]
+     model_device = next(model.parameters()).device
+-    with torch.no_grad():
+-        model(torch.randn(1, 3, 640, 640, device=model_device))
+-    for h in handles:
+-        h.remove()
++    was_training = model.training
++    try:
++        model.eval()  # Channel inspection must not update BatchNorm statistics.
++        with torch.no_grad():
++            model(torch.zeros(1, 3, 640, 640, device=model_device))
++    finally:
++        for h in handles:
++            h.remove()
++        model.train(was_training)
+     return [feats[i].shape[1] for i in layers]
++
++
++def enable_student_training(student):
++    """YOLO inference checkpoints can retain requires_grad=False on all weights."""
++    for name, parameter in student.named_parameters():
++        # DFL's fixed integral projection is intentionally not learned.
++        parameter.requires_grad_("dfl.conv.weight" not in name)
++    if not any(p.requires_grad for p in student.parameters()):
++        raise RuntimeError("Student has no trainable parameters")
+ 
+ 
+ def register_feature_hooks(model, layers, store):
+@@ -86,6 +102,7 @@
+     parser.add_argument("--batch", type=int, default=64)
+     parser.add_argument("--imgsz", type=int, default=640)
+     parser.add_argument("--workers", type=int, default=8)
++    parser.add_argument("--seed", type=int, default=0)
+     parser.add_argument("--kd-weight", type=float, default=1.0,
+                          help="detection loss 대비 feature KD loss 가중치")
+     parser.add_argument("--lr", type=float, default=0.001)
+@@ -95,6 +112,7 @@
+     parser.add_argument("--patience", type=int, default=20,
+                          help="이 횟수만큼 mAP 개선 없으면 조기 종료")
+     args = parser.parse_args()
++    init_seeds(args.seed, deterministic=True)
+ 
+     device = torch.device(args.device)
+     save_dir = os.path.join(args.project, args.name)
+@@ -114,9 +132,13 @@
+     teacher.eval()
+     for p in teacher.parameters():
+         p.requires_grad_(False)
++    enable_student_training(student)
+     student.train()
+ 
+     hyp = get_cfg(DEFAULT_CFG)
++    hyp.imgsz = args.imgsz
++    hyp.seed = args.seed
++    hyp.deterministic = True
+     teacher.args = hyp
+     student.args = hyp
+ 
+@@ -134,7 +156,7 @@
+     print(">>> 데이터셋 로드 중...")
+     data_dict = check_det_dataset(args.data)
+     train_set = build_yolo_dataset(hyp, data_dict["train"], args.batch, data_dict, mode="train", rect=False)
+-    train_loader = build_dataloader(train_set, args.batch, args.workers, shuffle=True)
++    train_loader = build_seeded_loader(train_set, args.batch, args.workers, args.seed)
+ 
+     # ---------- 4. optimizer (student + adapter 파라미터 모두 학습) ----------
+     params = list(student.parameters()) + list(adapters.parameters())
+@@ -149,6 +171,7 @@
+ 
+     print(">>> KD 학습 시작...")
+     for epoch in range(1, args.epochs + 1):
++        student.train()
+         epoch_start = time.time()
+         running_det, running_kd, n_batches = 0.0, 0.0, 0
+ 
+@@ -177,6 +200,9 @@
+                 total_loss = det_loss + args.kd_weight * kd_loss
+ 
+             scaler.scale(total_loss).backward()
++            if epoch == 1 and n_batches == 0:
++                if not any(p.grad is not None for p in student.parameters()):
++                    raise RuntimeError("KD produced no student gradients; aborting invalid run")
+             scaler.step(optimizer)
+             scaler.update()
+ 
+@@ -203,7 +229,8 @@
+         #    (주의: YOLO.val()이 내부적으로 conv+BN을 fuse해서 구조를 영구 변경하므로,
+         #     인스턴스를 재사용하면 다음 load_state_dict에서 키 불일치가 남 -> 매번 새로 로드)
+         eval_yolo = YOLO(args.student_weights)
+-        eval_yolo.model.load_state_dict(student.state_dict(), assign=True)
++        # Separate evaluation storage from the live trainable model.
++        eval_yolo.model.load_state_dict({k: v.detach().cpu().clone() for k, v in student.state_dict().items()})
+         torch.save(student.state_dict(), os.path.join(weights_dir, "last_student_state_dict.pt"))
+         eval_yolo.save(os.path.join(weights_dir, "last.pt"))
+ 
+@@ -217,7 +244,10 @@
+                 best_map50 = map50
+                 no_improve_count = 0
+                 torch.save(student.state_dict(), os.path.join(weights_dir, "best_student_state_dict.pt"))
+-                eval_yolo.save(os.path.join(weights_dir, "best.pt"))
++                # val() fuses the evaluation model. Keep released checkpoints unfused.
++                best_yolo = YOLO(args.student_weights)
++                best_yolo.model.load_state_dict({k: v.detach().cpu().clone() for k, v in student.state_dict().items()})
++                best_yolo.save(os.path.join(weights_dir, "best.pt"))
+                 print(f"  -> 새로운 best 갱신 (mAP50={best_map50:.4f}), best.pt 저장")
+             else:
+                 no_improve_count += 1
+--- /dev/null
++++ b/scripts/seeded_loader.py
+@@ -0,0 +1,16 @@
++"""Explicit sampler and augmentation seeds for future independent training runs.
++
++This helper was not used to generate the September 22 fixed-data experiment.
++"""
++import torch
++from ultralytics.data.build import seed_worker
++
++def build_seeded_loader(dataset, batch, workers, seed):
++    generator = torch.Generator().manual_seed(seed)
++    return torch.utils.data.DataLoader(
++        dataset, batch_size=min(batch, len(dataset)), shuffle=True,
++        num_workers=workers, pin_memory=True,
++        collate_fn=getattr(dataset, 'collate_fn', None),
++        worker_init_fn=seed_worker, generator=generator,
++        persistent_workers=workers > 0,
++    )
+--- /dev/null
++++ b/scripts/test_kd_training_state.py
+@@ -0,0 +1,27 @@
++"""Regression checks for frozen checkpoints and state-mutating feature probes."""
++import copy
++import torch
++from ultralytics import YOLO
++from train_kd_feature import enable_student_training, get_channels, FEAT_LAYERS
++
++def main():
++    y=YOLO('../outputs/yolov8n_baseline/weights/best.pt')
++    model=y.model.cpu().train()
++    assert not any(p.requires_grad for p in model.parameters()), 'Fixture must retain frozen checkpoint flags'
++    before={k:v.clone() for k,v in model.named_buffers()}
++    assert get_channels(model,FEAT_LAYERS)==[64,128,256]
++    assert model.training
++    assert all(torch.equal(v,before[k]) for k,v in model.named_buffers()), 'Channel probe changed BatchNorm buffers'
++    enable_student_training(model)
++    assert model.model[-1].dfl.conv.weight.requires_grad is False
++    image=torch.rand(2,3,64,64)
++    optimizer=torch.optim.SGD([p for p in model.parameters() if p.requires_grad],lr=.01)
++    first=next(model.parameters());old=first.detach().clone()
++    output=model(image);loss=sum(t.square().mean() for t in output)
++    optimizer.zero_grad();loss.backward()
++    assert first.grad is not None and first.grad.abs().sum()>0
++    optimizer.step()
++    assert not torch.equal(first,old), 'Student weights did not change'
++    print('PASS: frozen checkpoint is trainable, fixed DFL preserved, BatchNorm probe unchanged, optimizer updates student')
++
++if __name__=='__main__': main()
+--- /dev/null
++++ b/scripts/test_seeded_loader.py
+@@ -0,0 +1,22 @@
++"""Check reproducibility and between-seed differences in samples and augmentations."""
++import random
++import numpy as np
++import torch
++from seeded_loader import build_seeded_loader
++
++class ProbeDataset(torch.utils.data.Dataset):
++    def __len__(self): return 24
++    def __getitem__(self, index):
++        return index, random.random(), float(np.random.rand()), float(torch.rand(()))
++
++def stream(seed):
++    loader = build_seeded_loader(ProbeDataset(), 4, 2, seed)
++    return [torch.cat([x.reshape(-1) for x in batch]) for _ in range(2) for batch in loader]
++
++if __name__ == '__main__':
++    a, b, c = stream(0), stream(0), stream(1)
++    assert all(torch.equal(x, y) for x, y in zip(a, b))
++    assert any(not torch.equal(x, y) for x, y in zip(a, c))
++    assert any(not torch.equal(x[:4], y[:4]) for x, y in zip(a, c))
++    assert any(not torch.equal(x[4:], y[4:]) for x, y in zip(a, c))
++    print('PASS: same seed reproduces two epochs; different seeds change order and augmentation draws')
+--- a/scripts/prepare_bdd100k.py
++++ b/scripts/prepare_bdd100k.py
+@@ -17,17 +17,19 @@
+ from pathlib import Path
+ from tqdm import tqdm
+ 
++# Match configs/bdd100k.yaml. The archived experiments used an externally
++# converted dataset; this converter is not evidence of its provenance.
+ CLASS_MAP = {
+     "pedestrian": 0,
+     "rider": 1,
+     "car": 2,
+-    "truck": 3,
+-    "bus": 4,
+-    "train": 5,
++    "truck": 4,
++    "bus": 3,
++    "train": 9,
+     "motorcycle": 6,
+-    "bicycle": 7,
+-    "traffic light": 8,
+-    "traffic sign": 9,
++    "bicycle": 5,
++    "traffic light": 7,
++    "traffic sign": 8,
+ }
+ 
+ IMG_W, IMG_H = 1280, 720  # BDD100K 원본 해상도 고정값
+--- /dev/null
++++ b/scripts/test_bdd_class_map.py
+@@ -0,0 +1,15 @@
++"""The official-category converter must agree with the training configuration."""
++from pathlib import Path
++import argparse
++import yaml
++from prepare_bdd100k import CLASS_MAP
++
++p=argparse.ArgumentParser();p.add_argument('--config',default=str(Path(__file__).resolve().parents[1]/'configs/bdd100k.yaml'));args=p.parse_args()
++config=yaml.safe_load(Path(args.config).read_text())
++names=config['names']
++aliases={'pedestrian':'person','motorcycle':'motor','bicycle':'bike'}
++assert len(CLASS_MAP)==len(names)==10
++for category,index in CLASS_MAP.items():
++    name=names[index] if isinstance(names,list) else names[index]
++    assert name==aliases.get(category,category),(category,index,name)
++print('PASS: official detection categories map to the configured ten class names')

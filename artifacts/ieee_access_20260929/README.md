@@ -16,7 +16,7 @@ The installed Ultralytics data-loader used the same generator seed for all runs.
 - `scripts/as_executed/`: scripts used for the completed reassessment. These preserve the fixed-data design actually run. They import helper functions from the project's original `scripts/` directory.
 - `scripts/archived_helpers/`: original helper snapshots for reproducing that execution; these are intentionally not silently repaired.
 - `scripts/revised/`: subsequent student-trainability, probe-state, checkpoint-saving, and explicit-data-seed corrections, plus regression tests. The explicit-data-seed revision was tested but was NOT used for the completed full training runs in this package.
-- `student_training_fixes.patch`: proposed patch relative to the original scripts. It has not been pushed to GitHub or substituted for the archived server source.
+- `student_training_fixes.patch`: changes relative to the original scripts. Corrected code and evidence have been published to the GitHub main branch; archived server scripts are retained separately.
 - `tests/verification.txt`: both regression tests passed in the experiment environment.
 - `reference_verification.json`: reference sources and scope of verification. This is not a comprehensive retraction-screening certificate.
 
@@ -42,7 +42,7 @@ python review_20260922/controlled_kd.py --device 1 --arm control --seeds 0 1 2 -
 python review_20260922/controlled_kd.py --device 0 --arm kd --seeds 0 1 2 --epochs 10
 ```
 
-For future independent-data experiments, apply the proposed patch in a separate checkout and run the tests from `scripts/` with the baseline checkpoint available at `../outputs/yolov8n_baseline/weights/best.pt`:
+For independent-data experiments, use the revised code in a separate checkout and run the tests from `scripts/` with the baseline checkpoint available at `../outputs/yolov8n_baseline/weights/best.pt`:
 
 ```sh
 python test_kd_training_state.py
@@ -54,3 +54,7 @@ The patched training script accepts `--seed`. Its checkpoint selection and defau
 ## Submission status
 
 The manuscript honestly reports the available bounded evidence, including unfavorable results. It does not establish a generally effective new compression method, independent training-seed robustness, an untouched test-set result, or embedded-device acceleration. Tae-Wan Kim's biography remains blank at the author's request. The author team must complete that biography and review all authorship, funding, AI disclosure, and scientific claims before submission. No acceptance guarantee or journal submission is represented.
+
+## September 29 follow-up
+
+The nine-run control/MSE/CWD comparison with independent data seeds is running; it has no completed final results in this package. Preflight and duplicate-audit records, protocol, and code are included under `followup/`. The original source is commit 4f5be41e22ea8696800e94611688777a7cbb883a; corrected code and audit records were published in commit efcd6484a4844b976ca63484bd1fd5b8d8d983f0. See DATA_PROVENANCE.md for distribution-source sample matching and unresolved annotation generation.

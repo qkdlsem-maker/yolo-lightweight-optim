@@ -109,14 +109,26 @@
   },
   {
     "id": 19,
-    "text": "H. Choi, \"yolo-lightweight-optim,\" code repository, commit 4f5be41e22ea8696800e94611688777a7cbb883a. Accessed: Sep. 22, 2026.",
-    "url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/tree/4f5be41e22ea8696800e94611688777a7cbb883a",
-    "status": "GitHub and server commit matched; author ownership is user-supplied"
+    "text": "H. Choi, \"yolo-lightweight-optim,\" code and reproducibility records, revision efcd6484a4844b976ca63484bd1fd5b8d8d983f0. Accessed: Sep. 29, 2026.",
+    "url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/tree/efcd6484a4844b976ca63484bd1fd5b8d8d983f0",
+    "status": "Published main branch verified by git ls-remote; historical implementation commit separately identified in manuscript"
   },
   {
     "id": 20,
     "text": "OpenAI, \"Codex,\" AI-assisted coding and writing system. Accessed: Sep. 22, 2026.",
     "url": "https://openai.com/codex/",
     "status": "Used in this revision; system disclosure"
+  },
+  {
+    "id": 21,
+    "text": "a7madmostafa, \"bdd100k Yolo-Format Dataset,\" Kaggle, ver. 4, Oct. 30, 2025. Accessed: Sep. 29, 2026.",
+    "url": "https://www.kaggle.com/datasets/a7madmostafa/bdd100k-yolo",
+    "status": "Publisher metadata and five sample file hashes checked; annotation-generation provenance not authenticated"
+  },
+  {
+    "id": 22,
+    "text": "BDD100K maintainers, \"100k dataset test label file?,\" discussion 52, Mar. 2021-Mar. 2022. Accessed: Sep. 29, 2026.",
+    "url": "https://github.com/bdd100k/bdd100k/discussions/52",
+    "status": "Primary maintainer statements on withheld test annotations and evaluation server verified"
   }
 ]

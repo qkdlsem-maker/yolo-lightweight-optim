@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "completed": [
+    "control_seed0_e20",
+    "control_seed1_e20",
+    "control_seed2_e20",
+    "mse_seed0_e20",
+    "mse_seed1_e20",
+    "mse_seed2_e20",
+    "cwd_seed0_e20",
+    "cwd_seed1_e20",
+    "cwd_seed2_e20"
+  ]
+}

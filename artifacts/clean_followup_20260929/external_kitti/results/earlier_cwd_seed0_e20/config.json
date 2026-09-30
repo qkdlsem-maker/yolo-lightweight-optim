@@ -1,0 +1,27 @@
+{
+  "model": {
+    "name": "earlier_cwd_seed0_e20",
+    "checkpoint": "review_20260929/confirmatory/cwd_seed0_e20/ema_epoch20.pt",
+    "prior_hash_record": "review_20260929/stratified/cwd_seed0_e20/metrics.json",
+    "group": "earlier_continuation",
+    "arm": "cwd",
+    "seed": 0,
+    "checkpoint_sha256": "46146e5323bdddeaa05b0837d4b0fe0c5496fe12716ac70899aa0144f931d239"
+  },
+  "settings": {
+    "imgsz": 640,
+    "rect": false,
+    "batch": 8,
+    "half": false,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "classes_before_nms": "all ten BDD classes",
+    "retained_after_nms": {
+      "0": "Pedestrian",
+      "2": "Car"
+    }
+  },
+  "device": 1,
+  "frozen_manifest_sha256": "986bfe4540798d9ea7ca4367755e699861db9ba859d47228055381adcd13889e"
+}

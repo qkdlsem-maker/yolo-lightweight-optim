@@ -1,6 +1,6 @@
 # Clean-source training and external evaluation
 
-Status: **in progress**, as described in [the evidence status](../../artifacts/clean_followup_20260929/STATUS.md). This directory adds a separate phase; it does not overwrite earlier results.
+Status: **completed and independently verified**, as described in [the evidence status](../../artifacts/clean_followup_20260929/STATUS.md). This directory adds a separate phase; it does not overwrite earlier results.
 
 Read [protocol.md](protocol.md) first. The selected data population, budgets, seed pairing, endpoints, external classes and all 25 artifact choices were fixed before full training and external model scoring. This is a documented protocol, not a claim of prospective registration with an independent registry. Protocol/source hashes are stored in executed configurations.
 
@@ -21,3 +21,9 @@ The scripts execute from the repository root with copies under `review_20260929_
 5. `queue_clean_postprocess.py` waits for input checks and all training audits, freezes the 25 actual checkpoints, evaluates every fixed model on KITTI, and performs source-reconstructed BDD class/illumination evaluation for all 11 new final models. No outcome-dependent arm/epoch selection is allowed.
 
 These queues do not write the paper. Scientific analysis, complete result disclosure, manuscript editing and page-by-page visual QA still follow. A completion marker for training or inference alone does not mean submission readiness.
+
+## Completed-result checks
+
+The public evidence includes both fresh bases, all nine continuation records, all25external results, all11new class/illumination records and independently derived summaries. Private SSH transport and progress logs are excluded. Raw nonfinite gradient diagnostic values are preserved in epoch JSON; downstream readers must distinguish these from the verified finite objective means and final tensors.
+
+Run `python experiments/clean_followup/verify_clean_training_records.py --root artifacts/clean_followup_20260929` and `python experiments/clean_followup/verify_clean_external_records.py --root artifacts/clean_followup_20260929` to recheck the numerical records. The optional training transfer-manifest check is private-local only. Full per-image reaggregation requires the versioned statistical artifact and Ultralytics8.2.103; the unchanged matcher and all group definitions are provided. Check release_assets_manifest.json and the separate release record before retrieving larger artifacts.

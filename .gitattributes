@@ -1,0 +1,3 @@
+# Preserve recorded numerical/source hashes across platforms.
+artifacts/clean_followup_20260929/** -text
+experiments/clean_followup/*.py text eol=lf

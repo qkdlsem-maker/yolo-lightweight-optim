@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "name": "clean_cwd_seed1_e20",
+  "group": "clean_continuation",
+  "checkpoint_sha256": "c9a1ee45eef17f632b9d5e7cac6d3e60a1934b65c0597e0019d7ba48fb76dade",
+  "images": 7481,
+  "metric": "KITTI native 2D AP_R40 (fraction), Car IoU>.7 and Pedestrian IoU>.5; easy/moderate/hard",
+  "class_AP_R40": {
+    "car": [
+      0.8851755000083668,
+      0.7759612737924722,
+      0.6373855689792747
+    ],
+    "pedestrian": [
+      0.715470705649411,
+      0.6280257950533172,
+      0.5541803125056217
+    ]
+  },
+  "primary_mean_Car_Pedestrian_moderate_AP_R40": 0.7019935344228947,
+  "predictions_sha256": "6d99f8bdd4ae9d260ed87b1ec3142ec0cf94f6005df8db78778ed83927dba5b2",
+  "config_sha256": "40fb4e2291434693e612a5e22f944ebd73670b7ebbc58f1b8f6b8a5a911e1a6b",
+  "seconds_this_invocation": 77.94235873222351,
+  "timing_is_not_a_latency_benchmark": true,
+  "external_public_training_partition_not_official_hidden_test": true,
+  "arm": "cwd",
+  "seed": 1
+}

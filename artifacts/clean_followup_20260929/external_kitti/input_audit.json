@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "kitti_images": 7481,
+  "kitti_label_rows": 51865,
+  "label_class_counts": {
+    "Pedestrian": 4487,
+    "Truck": 1094,
+    "Car": 28742,
+    "Cyclist": 1627,
+    "DontCare": 11295,
+    "Misc": 973,
+    "Van": 2914,
+    "Tram": 511,
+    "Person_sitting": 222
+  },
+  "extracted_archive_CRC_checks_passed": true,
+  "kitti_image_dimensions": {
+    "(1224, 370)": 770,
+    "(1242, 375)": 6057,
+    "(1238, 374)": 358,
+    "(1241, 376)": 296
+  },
+  "bdd_image_dimensions": {
+    "(1280, 720)": 100000
+  },
+  "bdd_encoded_hash_manifest_sha256": "02c9379be7242824183a1360c0cc8a1cefeec7f00fc16435391a59f39a10c344",
+  "bdd_hashes_from_prior_recorded_immutable_data_audit": true,
+  "bdd_current_file_sizes_match_prior_manifest": true,
+  "encoded_file_overlap": [],
+  "common_image_dimensions": [],
+  "exact_native_pixel_array_equality_ruled_out_by_disjoint_dimensions": true,
+  "scope": "Exact encoded-file hashes and native image dimensions. Does not establish perceptual/sequence independence, exclude crops/resizing, or audit COCO pretraining image overlap. KITTI public training partition is external only relative to this study."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "epochs": 100,
+  "checkpoint": "review_20260929_clean/base/nano/weights/last.pt",
+  "checkpoint_sha256": "63c03589fe1dcd7a5d5d2996fa64d51be250b3fdbfb09163b9d93e1882fe4273",
+  "source_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+  "data_manifest_sha256": "26282c2aa678e9fa73c886e6b7fba0e7d714ba61e1da55abbe501f56ef8e6b9d",
+  "finite_state": true,
+  "last_row": {
+    "                  epoch": "                    100",
+    "         train/box_loss": "                 1.2641",
+    "         train/cls_loss": "                0.70654",
+    "         train/dfl_loss": "                0.94944",
+    "   metrics/precision(B)": "                0.57698",
+    "      metrics/recall(B)": "                0.42289",
+    "       metrics/mAP50(B)": "                0.46378",
+    "    metrics/mAP50-95(B)": "                0.25921",
+    "           val/box_loss": "                 1.2477",
+    "           val/cls_loss": "                0.69925",
+    "           val/dfl_loss": "                0.93546",
+    "                 lr/pg0": "               0.000199",
+    "                 lr/pg1": "               0.000199",
+    "                 lr/pg2": "               0.000199"
+  },
+  "endpoint": "last epoch EMA; best.pt is not used as a continuation input"
+}

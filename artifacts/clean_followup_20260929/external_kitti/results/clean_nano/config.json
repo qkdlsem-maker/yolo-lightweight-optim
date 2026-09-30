@@ -1,0 +1,25 @@
+{
+  "model": {
+    "name": "clean_nano",
+    "checkpoint": "review_20260929_clean/base/nano/weights/last.pt",
+    "prior_hash_record": "review_20260929_clean/base_records/nano/COMPLETE.json",
+    "group": "clean_base",
+    "checkpoint_sha256": "63c03589fe1dcd7a5d5d2996fa64d51be250b3fdbfb09163b9d93e1882fe4273"
+  },
+  "settings": {
+    "imgsz": 640,
+    "rect": false,
+    "batch": 8,
+    "half": false,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "classes_before_nms": "all ten BDD classes",
+    "retained_after_nms": {
+      "0": "Pedestrian",
+      "2": "Car"
+    }
+  },
+  "device": 0,
+  "frozen_manifest_sha256": "986bfe4540798d9ea7ca4367755e699861db9ba859d47228055381adcd13889e"
+}

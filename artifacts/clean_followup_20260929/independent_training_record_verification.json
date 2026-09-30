@@ -1,0 +1,249 @@
+{
+  "status": "passed",
+  "transferred_files_verified": 0,
+  "within_seed_epoch_pairs": 180,
+  "between_seed_epoch_pairs": 540,
+  "independent_baseline_initializations": 1,
+  "primary_evaluation_batch": 32,
+  "runs": [
+    {
+      "arm": "control",
+      "seed": 0,
+      "AP50": 0.46438143776573104,
+      "AP50_95": 0.25891671670388433,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "2f6170e6fb34954cab3be149691223d3d46b96d64308b411d518538119816a8d",
+      "state_sha256": "076af7a7c40b6107b5c4cc9dce538d18946b78038d9df5c11db615a580824d72",
+      "delta_AP50_pp": 0.0,
+      "delta_AP50_95_pp": 0.0
+    },
+    {
+      "arm": "control",
+      "seed": 1,
+      "AP50": 0.4641638922002894,
+      "AP50_95": 0.25910745688486403,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "a436e5a17049105ba1ab214065e3dd6570a4d5f5fd559f0034be37163bafe186",
+      "state_sha256": "15b82d5eb0e2ba34c256aedde21377338795ca1f63d03ec426f8de72109725b2",
+      "delta_AP50_pp": 0.0,
+      "delta_AP50_95_pp": 0.0
+    },
+    {
+      "arm": "control",
+      "seed": 2,
+      "AP50": 0.4644880633347694,
+      "AP50_95": 0.259346735346848,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "023322e142827c540675ece05c1db0c6bc7826152bf9dc1004abd8efe197acfc",
+      "state_sha256": "eb056b4f3a2270e11699ff4d62248a016bc11e76a13433bee62fbca1924d05e0",
+      "delta_AP50_pp": 0.0,
+      "delta_AP50_95_pp": 0.0
+    },
+    {
+      "arm": "mse",
+      "seed": 0,
+      "AP50": 0.4640834244124868,
+      "AP50_95": 0.2585813527478697,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "08f085276c5ddfaaa86d5491ab968d6106718c3d0618edcfdfd95696926e651a",
+      "state_sha256": "8e54c60a76c522ef54ab92bb8e17a9328aad6ae7fb0f8097d6519d04d450bbb2",
+      "delta_AP50_pp": -0.029801335324425304,
+      "delta_AP50_95_pp": -0.033536395601463376
+    },
+    {
+      "arm": "mse",
+      "seed": 1,
+      "AP50": 0.4639513422638529,
+      "AP50_95": 0.25875575484510943,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "10129d04eb5695b51c112d1bb5fd03a0f661cef81cae0496f402ed594b51c64b",
+      "state_sha256": "aa4ff9bafec59f597ce1390a1b27593ffe2e43aad809b3a185b2ac2382ea512d",
+      "delta_AP50_pp": -0.021254993643654574,
+      "delta_AP50_95_pp": -0.03517020397545978
+    },
+    {
+      "arm": "mse",
+      "seed": 2,
+      "AP50": 0.46448567524412665,
+      "AP50_95": 0.2590759708003013,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 4,
+      "applied_updates": 21836,
+      "checkpoint_sha256": "94a1afe5b299059bd495abc3dbf741ff5133a5094fa5eb87da8475865c918be7",
+      "state_sha256": "623ed569595890f1c49a22a085581cadc6b665e501619d2f1b3a9893320ca0fd",
+      "delta_AP50_pp": -0.00023880906427353743,
+      "delta_AP50_95_pp": -0.02707645465466757
+    },
+    {
+      "arm": "cwd",
+      "seed": 0,
+      "AP50": 0.4630498252386518,
+      "AP50_95": 0.2581313007317489,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "fd45e94dc970f9f86f7c10b628afa6e256a757c39ab147d2cdba1f914f3b7eb6",
+      "state_sha256": "027c50baab111c26f6b4b277e053018e85f4a7dde10c7602bb18e91d30cbece1",
+      "delta_AP50_pp": -0.13316125270792512,
+      "delta_AP50_95_pp": -0.07854159721354392
+    },
+    {
+      "arm": "cwd",
+      "seed": 1,
+      "AP50": 0.4637515749673697,
+      "AP50_95": 0.2586999669578435,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 4,
+      "applied_updates": 21836,
+      "checkpoint_sha256": "c9a1ee45eef17f632b9d5e7cac6d3e60a1934b65c0597e0019d7ba48fb76dade",
+      "state_sha256": "78cfa5d0294ab01f2fc928d196e95588243d77d392d3339f52ae141b14291a96",
+      "delta_AP50_pp": -0.04123172329197344,
+      "delta_AP50_95_pp": -0.04074899270205545
+    },
+    {
+      "arm": "cwd",
+      "seed": 2,
+      "AP50": 0.46299178891576087,
+      "AP50_95": 0.2581873549873202,
+      "attempted_minibatches": 21840,
+      "skipped_updates": 5,
+      "applied_updates": 21835,
+      "checkpoint_sha256": "550cdfb94b932e31243c062b1eddda9c931dfe5c166780b54a016852c8112217",
+      "state_sha256": "80f15daad9081bb60c41c4daa12ca9e44310a2e58825584aa45c7964e63ac482",
+      "delta_AP50_pp": -0.14962744190085142,
+      "delta_AP50_95_pp": -0.1159380359527784
+    }
+  ],
+  "summary": {
+    "control": {
+      "AP50": {
+        "values": [
+          0.46438143776573104,
+          0.4641638922002894,
+          0.4644880633347694
+        ],
+        "mean": 0.4643444644335966,
+        "sample_sd": 0.00016521804252063143
+      },
+      "AP50_95": {
+        "values": [
+          0.25891671670388433,
+          0.25910745688486403,
+          0.259346735346848
+        ],
+        "mean": 0.25912363631186547,
+        "sample_sd": 0.00021546540027959799
+      },
+      "delta_AP50_pp": {
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "delta_AP50_95_pp": {
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "mse": {
+      "AP50": {
+        "values": [
+          0.4640834244124868,
+          0.4639513422638529,
+          0.46448567524412665
+        ],
+        "mean": 0.46417348064015546,
+        "sample_sd": 0.0002783173127178666
+      },
+      "AP50_95": {
+        "values": [
+          0.2585813527478697,
+          0.25875575484510943,
+          0.2590759708003013
+        ],
+        "mean": 0.2588043594644268,
+        "sample_sd": 0.00025086562381492644
+      },
+      "delta_AP50_pp": {
+        "values": [
+          -0.029801335324425304,
+          -0.021254993643654574,
+          -0.00023880906427353743
+        ],
+        "mean": -0.017098379344117804,
+        "sample_sd": 0.015213277804170798
+      },
+      "delta_AP50_95_pp": {
+        "values": [
+          -0.033536395601463376,
+          -0.03517020397545978,
+          -0.02707645465466757
+        ],
+        "mean": -0.03192768474386357,
+        "sample_sd": 0.004279971668653393
+      }
+    },
+    "cwd": {
+      "AP50": {
+        "values": [
+          0.4630498252386518,
+          0.4637515749673697,
+          0.46299178891576087
+        ],
+        "mean": 0.46326439637392747,
+        "sample_sd": 0.00042290576979386424
+      },
+      "AP50_95": {
+        "values": [
+          0.2581313007317489,
+          0.2586999669578435,
+          0.2581873549873202
+        ],
+        "mean": 0.2583395408923042,
+        "sample_sd": 0.0003133938918230694
+      },
+      "delta_AP50_pp": {
+        "values": [
+          -0.13316125270792512,
+          -0.04123172329197344,
+          -0.14962744190085142
+        ],
+        "mean": -0.10800680596691666,
+        "sample_sd": 0.05841205009515106
+      },
+      "delta_AP50_95_pp": {
+        "values": [
+          -0.07854159721354392,
+          -0.04074899270205545,
+          -0.1159380359527784
+        ],
+        "mean": -0.07840954195612593,
+        "sample_sd": 0.03759469557242126
+      }
+    }
+  },
+  "limitations": [
+    "First two actual minibatches per epoch are sampled hashes, not an all-batch equality proof.",
+    "Three data/augmentation seeds share one trained starting student and teacher.",
+    "AMP skips and raw nonfinite gradient diagnostics are preserved; final states are finite.",
+    "Descriptive conditional effects; no equivalence or universal objective ranking."
+  ]
+}

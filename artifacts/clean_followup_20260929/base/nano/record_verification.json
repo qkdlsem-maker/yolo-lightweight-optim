@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "epoch_rows": 100,
+  "epochs_sequential": true,
+  "all_csv_values_finite": true,
+  "final_row_matches_completion_record": true,
+  "source_sha_matches_official_nano_pretraining": true,
+  "checkpoint_sha256": "63c03589fe1dcd7a5d5d2996fa64d51be250b3fdbfb09163b9d93e1882fe4273",
+  "native_validation_metrics_are_diagnostic_not_final_matched_FP32_results": true
+}

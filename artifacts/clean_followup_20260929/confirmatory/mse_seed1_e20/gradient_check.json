@@ -1,0 +1,10 @@
+{
+  "student_grad_tensors": 183,
+  "student_nonzero_grad_tensors": 183,
+  "adapter_grad_tensors": 6,
+  "student_trainable_numel": 3012782,
+  "detection_loss": 185.0524139404297,
+  "feature_loss": 0.9293053150177002,
+  "weighted_KD_to_detection_loss": 0.09641950577497482,
+  "channel_probe_preserved_buffers": true
+}

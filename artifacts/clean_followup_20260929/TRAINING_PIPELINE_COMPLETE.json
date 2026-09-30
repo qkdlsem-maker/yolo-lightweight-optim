@@ -1,0 +1,6 @@
+{
+  "status": "complete",
+  "base_models": 2,
+  "continuation_models": 9,
+  "followup": "External KITTI, illumination evaluation and manuscript update still required"
+}

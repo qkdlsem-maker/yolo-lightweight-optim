@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "epochs": 100,
+  "checkpoint": "review_20260929_clean/base/large/weights/last.pt",
+  "checkpoint_sha256": "542ffff61f95ae5ebda53b1279cf9b238e754fe9b149b0c98fc686d55e9a7bd2",
+  "source_sha256": "64c9115303f6a25575f82200d1b22ec409fa6bd7d08d0313884fc20d919478cd",
+  "data_manifest_sha256": "26282c2aa678e9fa73c886e6b7fba0e7d714ba61e1da55abbe501f56ef8e6b9d",
+  "finite_state": true,
+  "last_row": {
+    "                  epoch": "                    100",
+    "         train/box_loss": "                 1.0896",
+    "         train/cls_loss": "                0.50859",
+    "         train/dfl_loss": "                0.92849",
+    "   metrics/precision(B)": "                0.62198",
+    "      metrics/recall(B)": "                0.54072",
+    "       metrics/mAP50(B)": "                0.57419",
+    "    metrics/mAP50-95(B)": "                0.33303",
+    "           val/box_loss": "                 1.1635",
+    "           val/cls_loss": "                0.58673",
+    "           val/dfl_loss": "                0.96413",
+    "                 lr/pg0": "               0.000199",
+    "                 lr/pg1": "               0.000199",
+    "                 lr/pg2": "               0.000199"
+  },
+  "endpoint": "last epoch EMA; best.pt is not used as a continuation input"
+}

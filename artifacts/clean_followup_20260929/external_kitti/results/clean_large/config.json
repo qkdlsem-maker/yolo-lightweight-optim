@@ -1,0 +1,25 @@
+{
+  "model": {
+    "name": "clean_large",
+    "checkpoint": "review_20260929_clean/base/large/weights/last.pt",
+    "prior_hash_record": "review_20260929_clean/base_records/large/COMPLETE.json",
+    "group": "clean_base",
+    "checkpoint_sha256": "542ffff61f95ae5ebda53b1279cf9b238e754fe9b149b0c98fc686d55e9a7bd2"
+  },
+  "settings": {
+    "imgsz": 640,
+    "rect": false,
+    "batch": 8,
+    "half": false,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "classes_before_nms": "all ten BDD classes",
+    "retained_after_nms": {
+      "0": "Pedestrian",
+      "2": "Car"
+    }
+  },
+  "device": 1,
+  "frozen_manifest_sha256": "986bfe4540798d9ea7ca4367755e699861db9ba859d47228055381adcd13889e"
+}

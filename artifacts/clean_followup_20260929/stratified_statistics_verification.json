@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "models": 11,
+  "attributes_sha256": "7f77203a3728e7ca156ff1df8a0c6fe10ea26dcb18a9886f58a3d6c4b2f2d89e",
+  "groups": [
+    "all",
+    "daytime",
+    "night",
+    "dawn/dusk",
+    "undefined"
+  ],
+  "images_by_group": [
+    10000,
+    5258,
+    3929,
+    778,
+    35
+  ],
+  "runs": [
+    {
+      "name": "clean_nano",
+      "metrics_sha256": "df6172f005f381f769ad81f61d9cfe75e7913c03dfc130654d2bab68d11bf154",
+      "statistics_sha256": "b8d331252daa719d1456bee641d7f5b969953bf1263c018f7e9238b26f09cda4",
+      "statistics_bytes": 9335120,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_large",
+      "metrics_sha256": "2597d7e1a5a0281458f02e3d82c0f9a52211c28224edc223cafa4612a9392841",
+      "statistics_sha256": "298309e8c4a9f2842f58f844658f62a3dc297de9c4eec2ca479601216e6747bc",
+      "statistics_bytes": 6210820,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_control_seed0_e20",
+      "metrics_sha256": "9a4a74af86b24462f0b1961cb8abf33622b09ff474c2fab70e3c758eefbbc8e9",
+      "statistics_sha256": "8dcf45465f9db9c0a518360c5aa46979e54028267aadaa878a08322276d65d10",
+      "statistics_bytes": 9850937,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_control_seed1_e20",
+      "metrics_sha256": "69a54b0776b8bc0271d3f4b76e3dedf9296b970d3d1f88554ea6f1c186917d73",
+      "statistics_sha256": "dec14f911f4be4345a7e727e1c678a91a190c07b8704c209a1480f3dbb01e5aa",
+      "statistics_bytes": 9849208,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_control_seed2_e20",
+      "metrics_sha256": "ca8dcd9c960d075f6f6a522325eed30469a42b620b77cd131e4bfa3b972b63d7",
+      "statistics_sha256": "303171d32c8d1be6e723715b5600fb842658ffc8894d8075726598c74a477923",
+      "statistics_bytes": 9842895,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_mse_seed0_e20",
+      "metrics_sha256": "1df6e7078bec7c5317d2adab27598d3e992626667d389c48a420d1f1c2d1714c",
+      "statistics_sha256": "983eae9b11fb294f16a6cd7b4ba789ee8953ee555c6ed0dcf4fb593aeae597e9",
+      "statistics_bytes": 9854064,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_mse_seed1_e20",
+      "metrics_sha256": "d542a10dcd27d4e2fad64e918cc9743507a5295c00cf1a578e5170cb9465b7ee",
+      "statistics_sha256": "9f016c7db6f9970767624472da9463bd7140b15d8d5c9441b7dae9ce2eee130b",
+      "statistics_bytes": 9850716,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_mse_seed2_e20",
+      "metrics_sha256": "dd6cef2be97730ba449d998f4fabf23d7b6485ed6eaead641ebe0a0ba533b474",
+      "statistics_sha256": "359a578d8286c23124876613f95c32b098462bdb66eec9c90da6bfccdd86884e",
+      "statistics_bytes": 9854018,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_cwd_seed0_e20",
+      "metrics_sha256": "e904d0447d934ff586ded80f1629386313c50eae2523f73e262eaae34cd98101",
+      "statistics_sha256": "b20d3a4b4f2624fa1a3c1239e1af71ea796c5bff05bd3f756b748672fc17835f",
+      "statistics_bytes": 9871200,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_cwd_seed1_e20",
+      "metrics_sha256": "960c4b5dd306b3109cc3ca62f994b914c4bc4c518195ee5f5477ef74a83588ea",
+      "statistics_sha256": "6113ea1f9c2afbbb315c3568081b914ef577b96d3278a91f0231b97c51869d5a",
+      "statistics_bytes": 9833396,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    },
+    {
+      "name": "clean_cwd_seed2_e20",
+      "metrics_sha256": "3b564b622ddf094f9e1ad6c6e4dfdf227148e1206ebc889a641086f70f4e54d2",
+      "statistics_sha256": "d06378a2a0fe53d5fe6b4af5d82269d8732440dce87d32a87ee2533a013212c2",
+      "statistics_bytes": 9849004,
+      "all_five_groups_and_per_class_AP_reproduced": true,
+      "max_absolute_AP_error": 0.0
+    }
+  ]
+}

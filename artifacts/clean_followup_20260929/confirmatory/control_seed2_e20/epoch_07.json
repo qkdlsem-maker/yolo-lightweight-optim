@@ -1,0 +1,14 @@
+{
+  "epoch": 7,
+  "lr": 7.96126671155092e-05,
+  "det_loss": 186.40581965883138,
+  "feature_loss": 0.0,
+  "seconds": 146.81310987472534,
+  "batches": 1092,
+  "optimizer_steps_skipped": 0,
+  "median_unclipped_grad_norm": 101.53240966796875,
+  "first_two_input_sha256": [
+    "67e8455b4afb5311652141f8c533b7faf6a2d24c8c4f32aec24c17c98c490fcf",
+    "84fbf8998e9e6ea7c8628215c5fadfd6d081e34799a00fe7dd0f4a3dcb6a1b7f"
+  ]
+}

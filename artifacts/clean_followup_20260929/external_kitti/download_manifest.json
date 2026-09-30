@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/devkit_object.zip",
+    "filename": "devkit_object.zip",
+    "bytes": 63794,
+    "sha256": "ce0b76b69c0c5f89690a0d65b7302bbbdb962a0c7e8aba6efc7050d1b04b4cf1",
+    "checksum_registry": "https://raw.githubusercontent.com/tensorflow/datasets/master/tensorflow_datasets/datasets/kitti/checksums.tsv",
+    "extracted_files": 18
+  },
+  {
+    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_label_2.zip",
+    "filename": "data_object_label_2.zip",
+    "bytes": 5601213,
+    "sha256": "4efc76220d867e1c31bb980bbf8cbc02599f02a9cb4350effa98dbb04aaed880",
+    "checksum_registry": "https://raw.githubusercontent.com/tensorflow/datasets/master/tensorflow_datasets/datasets/kitti/checksums.tsv",
+    "extracted_files": 7481
+  },
+  {
+    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_image_2.zip",
+    "filename": "data_object_image_2.zip",
+    "bytes": 12569945557,
+    "sha256": "351c5a2aa0cd9238b50174a3a62b846bc5855da256b82a196431d60ff8d43617",
+    "checksum_registry": "https://raw.githubusercontent.com/tensorflow/datasets/master/tensorflow_datasets/datasets/kitti/checksums.tsv",
+    "extracted_files": 7481
+  }
+]

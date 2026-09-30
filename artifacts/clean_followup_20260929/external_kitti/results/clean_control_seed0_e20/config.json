@@ -1,0 +1,26 @@
+{
+  "model": {
+    "name": "clean_control_seed0_e20",
+    "checkpoint": "review_20260929_clean/confirmatory/control_seed0_e20/ema_epoch20.pt",
+    "group": "clean_continuation",
+    "arm": "control",
+    "seed": 0,
+    "checkpoint_sha256": "2f6170e6fb34954cab3be149691223d3d46b96d64308b411d518538119816a8d"
+  },
+  "settings": {
+    "imgsz": 640,
+    "rect": false,
+    "batch": 8,
+    "half": false,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "classes_before_nms": "all ten BDD classes",
+    "retained_after_nms": {
+      "0": "Pedestrian",
+      "2": "Car"
+    }
+  },
+  "device": 0,
+  "frozen_manifest_sha256": "986bfe4540798d9ea7ca4367755e699861db9ba859d47228055381adcd13889e"
+}

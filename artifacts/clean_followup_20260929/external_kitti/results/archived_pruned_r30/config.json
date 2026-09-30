@@ -1,0 +1,25 @@
+{
+  "model": {
+    "name": "archived_pruned_r30",
+    "checkpoint": "outputs/yolov8n_pruned_finetuned/weights/best.pt",
+    "prior_hash_record": "review_20260929/stratified/yolov8n_pruned_finetuned/metrics.json",
+    "group": "archived",
+    "checkpoint_sha256": "9d740f4fb56339239047c59f48494b520b0d81d0fb564b5be6168deec03f4f48"
+  },
+  "settings": {
+    "imgsz": 640,
+    "rect": false,
+    "batch": 8,
+    "half": false,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "classes_before_nms": "all ten BDD classes",
+    "retained_after_nms": {
+      "0": "Pedestrian",
+      "2": "Car"
+    }
+  },
+  "device": 0,
+  "frozen_manifest_sha256": "986bfe4540798d9ea7ca4367755e699861db9ba859d47228055381adcd13889e"
+}

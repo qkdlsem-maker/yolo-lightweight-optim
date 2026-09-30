@@ -1,0 +1,24 @@
+{
+  "status": "prepared_not_published",
+  "assets": [
+    {
+      "name": "inference_checkpoints_25.zip",
+      "bytes": 206826850,
+      "sha256": "090e9000e6ab622e63fb697b27c2c48d93efbec232689f68336889428c03440a",
+      "model_files": 25
+    },
+    {
+      "name": "kitti_predictions_25.tar.gz",
+      "bytes": 555057768,
+      "sha256": "967edb11d647fa2d4639853ea01574e497d0034ee8cab9ae4367ebc02e936f35",
+      "model_files": 25,
+      "prediction_files": 187025
+    },
+    {
+      "name": "bdd_per_image_statistics_27.zip",
+      "bytes": 264101626,
+      "sha256": "328bedde33e9bd26ba1c4b4288f886fcb3a4b569242d5fdd2308d0edbf06fdf2",
+      "statistic_files": 27
+    }
+  ]
+}

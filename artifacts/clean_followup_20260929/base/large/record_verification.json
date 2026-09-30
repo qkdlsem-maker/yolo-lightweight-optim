@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "model": "large",
+  "epoch_rows": 100,
+  "epochs_sequential": true,
+  "all_csv_values_finite": true,
+  "final_row_matches_completion_record": true,
+  "source_sha_matches_official_pretraining": true,
+  "data_manifest_sha_matches_local_record": true,
+  "remote_checkpoint_sha_matches_completion_record": true,
+  "checkpoint_sha256": "542ffff61f95ae5ebda53b1279cf9b238e754fe9b149b0c98fc686d55e9a7bd2",
+  "native_validation_metrics_are_diagnostic_not_final_matched_FP32_results": true
+}

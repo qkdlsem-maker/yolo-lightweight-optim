@@ -1,0 +1,483 @@
+{
+  "status": "prepared_not_published",
+  "models": [
+    {
+      "name": "archived_nano",
+      "source_checkpoint_sha256": "24a99206fb524134d66db0a112c469199906981b18910b3d9603d8fddccf9304",
+      "release_checkpoint_sha256": "16f23e968b74489fd487f3150ba7bcfd5b0e48d1657684649fd2be47eb6b3c5c",
+      "release_bytes": 6239460,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "archived_pruned_r15",
+      "source_checkpoint_sha256": "27c385b230f891d50e11edf2cbf3f11bcde0f68d9c4969b518f008397d388ede",
+      "release_checkpoint_sha256": "36a04f689b59ba63ad322bf2796043499ee9506bf59fe8997f3dcdec0bfd2ff4",
+      "release_bytes": 4814724,
+      "tensor_count": 403,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "archived_pruned_r30",
+      "source_checkpoint_sha256": "9d740f4fb56339239047c59f48494b520b0d81d0fb564b5be6168deec03f4f48",
+      "release_checkpoint_sha256": "94af5f17b5b1ab79c73c591f43af987a6536f0c938074ab5c11e55dcf55c3aec",
+      "release_bytes": 3493644,
+      "tensor_count": 143,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "archived_pruned_r45",
+      "source_checkpoint_sha256": "09c7d8e3e58bd889cfeaf9efadf3a142e0f672fc615600f75118d7a2161a89c5",
+      "release_checkpoint_sha256": "9b377803eddeb068a81f291db31fce4169bc95fef77d105d15f789f7761d1fee",
+      "release_bytes": 2633732,
+      "tensor_count": 403,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "archived_recovery_kd",
+      "source_checkpoint_sha256": "61c0896721c907235a4844760b4adab52fac98efa807d717788f85ed70c99005",
+      "release_checkpoint_sha256": "3a69a70a31ca4f0e3f3f6cafe149cafdb9cac29a02666ef6468df4c0281a231c",
+      "release_bytes": 2633732,
+      "tensor_count": 403,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_control_seed0_e20",
+      "source_checkpoint_sha256": "28d731105cb3021f3a36162b60503f054e6051d87f1c92850aa2b388199ec224",
+      "release_checkpoint_sha256": "cab904eae6cb1fad7de59de32b03903f87f21b4227f39ec58355a1c4be136c59",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_control_seed1_e20",
+      "source_checkpoint_sha256": "bea68d1f971642f7a7657f6930257c49d8e80be4931c93a4d07a05164845769b",
+      "release_checkpoint_sha256": "f23dfd33777a5d9fa615cd7d2b5d535397404a025177c83007fbc6f584b7b770",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_control_seed2_e20",
+      "source_checkpoint_sha256": "bcc5abeb9b962dc9f857b4a3c4cd4a63481f95fc50851c0734ebe484f79b8aaf",
+      "release_checkpoint_sha256": "dd3e44c7402f9c215e9339445774dbe94c7b9fa90a670286be0e18bcf7750236",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_mse_seed0_e20",
+      "source_checkpoint_sha256": "f4bc2b0f635cd473ee579571184d9da69944a11febf3a410e67ab20d6da9326c",
+      "release_checkpoint_sha256": "748b5af449bb92d56cc09b1ee388c590619b4105597f7e61de791be0c8040630",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_mse_seed1_e20",
+      "source_checkpoint_sha256": "6722044ebb576b20483abe15538239128f2b558b23548979f24e3e75f512908b",
+      "release_checkpoint_sha256": "d4c21a4d476b686d7e34ec631b9f33975e93291220e37ffa316fd0a62d783098",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_mse_seed2_e20",
+      "source_checkpoint_sha256": "6f3143b904fbd53d7f21f460bcc0ced83e316e09e8780962f10eb90aaa438f27",
+      "release_checkpoint_sha256": "ae84fd94adc2e808f6eb9b92128c5f4840339e0d4f93fbfbc328232b0e27f2c3",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_cwd_seed0_e20",
+      "source_checkpoint_sha256": "46146e5323bdddeaa05b0837d4b0fe0c5496fe12716ac70899aa0144f931d239",
+      "release_checkpoint_sha256": "bfbaece565a72435310a138ea0ef3efe6e266b0680c8a326c7af64a4e08d54b8",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_cwd_seed1_e20",
+      "source_checkpoint_sha256": "487e0a4ecb814725a342cde93a0c046371af2508aa5cc6d3a2a7f7ef83f1acc4",
+      "release_checkpoint_sha256": "72225c7fe6645e135e7a68a21882c5a089167bad85b8e2aa371b9ebc2a895fc7",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "earlier_cwd_seed2_e20",
+      "source_checkpoint_sha256": "5f5901a0f393c0e4ee2d44993a6c8f6d664c521e227a9b749cb7a59a2de12f41",
+      "release_checkpoint_sha256": "73733f6b344097d9b0e5844d4af14837a0aaf55c8e597dc83aac37d6f88196ce",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_nano",
+      "source_checkpoint_sha256": "63c03589fe1dcd7a5d5d2996fa64d51be250b3fdbfb09163b9d93e1882fe4273",
+      "release_checkpoint_sha256": "4da90162861b31902e5a095092896ddf9b00fb2c68c5c124132c6b5043519b1b",
+      "release_bytes": 6239460,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_large",
+      "source_checkpoint_sha256": "542ffff61f95ae5ebda53b1279cf9b238e754fe9b149b0c98fc686d55e9a7bd2",
+      "release_checkpoint_sha256": "22accf19bab4ae78274f1d5b14416855a37483e3db89d7999105dfe010971f7f",
+      "release_bytes": 87661700,
+      "tensor_count": 595,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_control_seed0_e20",
+      "source_checkpoint_sha256": "2f6170e6fb34954cab3be149691223d3d46b96d64308b411d518538119816a8d",
+      "release_checkpoint_sha256": "7443d596c75e37deee8902f1a21f405c24bb6df345389745a26b328777e33d6e",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_control_seed1_e20",
+      "source_checkpoint_sha256": "a436e5a17049105ba1ab214065e3dd6570a4d5f5fd559f0034be37163bafe186",
+      "release_checkpoint_sha256": "abb78c520ea29d32b24e391a00828b7abc456a737a3d4a278b11c62d05c607f5",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_control_seed2_e20",
+      "source_checkpoint_sha256": "023322e142827c540675ece05c1db0c6bc7826152bf9dc1004abd8efe197acfc",
+      "release_checkpoint_sha256": "84b11a7589f2c68abceef9f293cc442311e9c490087d5238524bf3cf12cb6130",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_mse_seed0_e20",
+      "source_checkpoint_sha256": "08f085276c5ddfaaa86d5491ab968d6106718c3d0618edcfdfd95696926e651a",
+      "release_checkpoint_sha256": "0772b4099f3b42542d4ff6c5137352fbf16941bf98de57cafd70320164fc5758",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_mse_seed1_e20",
+      "source_checkpoint_sha256": "10129d04eb5695b51c112d1bb5fd03a0f661cef81cae0496f402ed594b51c64b",
+      "release_checkpoint_sha256": "4d63a9094e604a48f8c19b1e997a07b1282e255450f89b1481502e90c28dcde8",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_mse_seed2_e20",
+      "source_checkpoint_sha256": "94a1afe5b299059bd495abc3dbf741ff5133a5094fa5eb87da8475865c918be7",
+      "release_checkpoint_sha256": "c90964b39365164f638a645f8cc0aae2d6ca689375ac8fef98fcc6f921d12443",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_cwd_seed0_e20",
+      "source_checkpoint_sha256": "fd45e94dc970f9f86f7c10b628afa6e256a757c39ab147d2cdba1f914f3b7eb6",
+      "release_checkpoint_sha256": "837dbce60f707f1116a72ffc74399da98f1ac1c04eea6af355b5d5c23e82fe7d",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_cwd_seed1_e20",
+      "source_checkpoint_sha256": "c9a1ee45eef17f632b9d5e7cac6d3e60a1934b65c0597e0019d7ba48fb76dade",
+      "release_checkpoint_sha256": "4ade1f8be7c529a57f01f665f845627a8353c4cbd13fbfdafd3a0fe4902abb31",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    },
+    {
+      "name": "clean_cwd_seed2_e20",
+      "source_checkpoint_sha256": "550cdfb94b932e31243c062b1eddda9c931dfe5c166780b54a016852c8112217",
+      "release_checkpoint_sha256": "4963b0739bf4a67de3d55631a0fa78a7fd75f0fe1cd045db524e6c9beaab70c7",
+      "release_bytes": 6237412,
+      "tensor_count": 355,
+      "all_tensor_values_and_dtypes_identical": true,
+      "module_architecture_and_class_names_identical": true,
+      "cpu_fp32_probe_shape": [
+        1,
+        3,
+        128,
+        160
+      ],
+      "cpu_fp32_raw_output_tensors_bitwise_equal": 4,
+      "private_metadata_scan_passed": true,
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "version": "8.2.103"
+    }
+  ],
+  "prepared_utc": "2026-09-30T14:47:38Z",
+  "scope": "Inference checkpoints only; optimizer/training-history metadata omitted. Original frozen files unchanged.",
+  "probe_limit": "Tensor/module equality plus one deterministic CPU FP32 raw-forward probe per model; not a rerun of benchmark inference."
+}

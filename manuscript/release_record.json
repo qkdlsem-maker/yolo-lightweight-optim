@@ -1,0 +1,29 @@
+{
+  "results_commit": "c54d758d431ec3dc07927d2a94c63dc4b3031132",
+  "results_commit_verified": true,
+  "repository": "https://github.com/qkdlsem-maker/yolo-lightweight-optim",
+  "release_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/tag/ieee-access-reassessment-20260930",
+  "release_id": 400161755,
+  "release_tag": "ieee-access-reassessment-20260930",
+  "release_downloads_verified": true,
+  "assets": [
+    {
+      "name": "inference_checkpoints_25.zip",
+      "url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/ieee-access-reassessment-20260930/inference_checkpoints_25.zip",
+      "bytes": 206826850,
+      "sha256": "090e9000e6ab622e63fb697b27c2c48d93efbec232689f68336889428c03440a"
+    },
+    {
+      "name": "kitti_predictions_25.tar.gz",
+      "url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/ieee-access-reassessment-20260930/kitti_predictions_25.tar.gz",
+      "bytes": 555057768,
+      "sha256": "967edb11d647fa2d4639853ea01574e497d0034ee8cab9ae4367ebc02e936f35"
+    },
+    {
+      "name": "bdd_per_image_statistics_27.zip",
+      "url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/ieee-access-reassessment-20260930/bdd_per_image_statistics_27.zip",
+      "bytes": 264101626,
+      "sha256": "328bedde33e9bd26ba1c4b4288f886fcb3a4b569242d5fdd2308d0edbf06fdf2"
+    }
+  ]
+}

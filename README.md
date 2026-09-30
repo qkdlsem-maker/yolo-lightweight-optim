@@ -3,6 +3,10 @@
 IEEE Access 투고를 준비하는 YOLOv8 경량화 연구입니다. 게재 또는 심사 완료를 의미하지 않습니다.
 
 
+## 2026-10-01 최종 원고와 재현 자료
+
+[최종 논문과 보충자료](manuscript/README.md)를 공개했습니다. 원고 15쪽과 보충자료 5쪽의 모든 페이지를 렌더링·검수하고, 표를 원시 결과와 대조했습니다. [25개 모델·예측·이미지별 통계](https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/tag/ieee-access-reassessment-20260930)의 공개 다운로드와 SHA-256 검증도 완료했습니다. 두 저자 원고이며 실제 투고·게재 완료를 의미하지 않습니다.
+
 ## 2026-09-30 추가 실험과 외부 평가 완료
 
 미확인137장을 제외한69,863장으로 학생·교사100epoch 학습, 대조군/MSE/CWD×3시드의9회20epoch 비교,25개 모델의KITTI외부 평가와11개 모델의주야간 평가를 완료했습니다. [실제 결과와 검증 범위](artifacts/clean_followup_20260929/STATUS.md), [모든 외부 평가값](artifacts/clean_followup_20260929/external_all_models.csv), [사전 명시 조건](experiments/clean_followup/protocol.md)을 공개합니다.
@@ -19,7 +23,7 @@ IEEE Access 투고를 준비하는 YOLOv8 경량화 연구입니다. 게재 또�
 - [후속 실험 실행 코드](experiments/confirmatory_kd.py): 대조군 / MSE / CWD, 명시적인 sampler·worker 시드, 입력 해시 비교, 가중치 업데이트 검사, 고정 최종 EMA 평가 및 재시작 지원.
 - [데이터 출처 감사](artifacts/ieee_access_20260929/DATA_PROVENANCE.md): 2018년 원본 형식 JSON과 전수 대조하여 검증 185,526개 정상 상자 및 학습 69,863장 라벨의 일치를 확인했습니다. 면적 0 상자와 미확인 학습 137장을 구분했고, 재구성 검증셋에서 기존 7개와 새 최종 모델 9개, 총 16개 모델의 라벨 민감도와 주야간 분석을 완료했습니다. 원본 데이터는 유지했습니다. 출처 불명의 test 라벨은 사용하지 않습니다.
 
-검증 환경: Python 3.12.3, PyTorch 2.5.1+cu121, Ultralytics 8.2.103, Torch-Pruning 1.6.0, RTX 4090. 기존 결과의 원본 코드 기준은 커밋 `4f5be41e22ea8696800e94611688777a7cbb883a`입니다. 수정 코드가 과거의 결과를 생성했다고 소급해서 주장하지 않습니다. 데이터와 체크포인트 확보가 별도로 필요하며 결과 파일의 SHA-256으로 모델을 식별할 수 있습니다.
+검증 환경: Python 3.12.3, PyTorch 2.5.1+cu121, Ultralytics 8.2.103, Torch-Pruning 1.6.0, RTX 4090. 기존 결과의 원본 코드 기준은 커밋 `4f5be41e22ea8696800e94611688777a7cbb883a`입니다. 수정 코드가 과거의 결과를 생성했다고 소급해서 주장하지 않습니다. 데이터는 별도로 확보해야 하며, 이번 재현 릴리스의 25개 체크포인트는 공개 해시로 식별할 수 있습니다.
 
 ```bash
 # 의도적으로 재현할 때만 새 출력 경로를 지정하는 예
@@ -50,6 +54,10 @@ yolo_lightweight_optim/
 ├── requirements.txt
 └── setup_env.sh
 ```
+
+## 초기 프로젝트 사용 예시
+
+아래는 원래 프로젝트의 일반 사용 예시입니다. 이번 논문을 정확히 재현하려면 상단의 고정 프로토콜과 `experiments/clean_followup` 실행 코드를 사용하십시오. 새 단계는 GPU별 nano/large 별도 학습과 final-epoch EMA를 사용하므로 아래 일반 예시의 다중 GPU·best.pt 선택과 다릅니다.
 
 ## 실행 순서
 
@@ -95,7 +103,9 @@ python scripts/eval_baseline.py --weights outputs/yolov8n_baseline/weights/best.
 python scripts/eval_baseline.py --weights outputs/yolov8l_baseline/weights/best.pt
 ```
 
-## 다음 단계 (베이스라인 완료 후)
+## 초기 개발 당시 제안된 범위
+
+아래 INT8/Jetson 항목은 수행·검증된 논문 결과가 아닙니다.
 - Knowledge Distillation: yolov8l(teacher) -> yolov8n(student)
 - Pruning: torch-pruning 라이브러리로 채널 프루닝
 - Quantization: INT8 양자화 후 TensorRT 변환 (Jetson급 엣지 배포 가정 시 설득력 ↑)

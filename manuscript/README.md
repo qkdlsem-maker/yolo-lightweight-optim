@@ -10,6 +10,8 @@ Submission-prepared research manuscript by **Hyerim Choi and Tae-Kook Kim**, dat
 
 The immutable completed-results commit cited by the paper is `c54d758d431ec3dc07927d2a94c63dc4b3031132`. The final-document commit follows it; the results have not been altered to match the prose. Author-only cover letter and submission/account checklist are provided separately to the authors.
 
+Author correction on 1 October 2026: the funding acknowledgment is removed. Hyerim Choi's supplied ORCID `0009-0006-7311-4107` appears on the first manuscript page. The AI assistance disclosure and all experimental results remain unchanged.
+
 ## Findings and interpretation
 
 The fresh phase excludes 137 source-unverified images, trains nano and large bases for 100 epochs, and completes nine matched 20-epoch control/MSE/CWD continuations. The earlier nine-run study is retained separately. All 25 frozen KITTI evaluations and all 27 reconstructed-label evaluations across the two phases are reported.

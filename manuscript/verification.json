@@ -22,12 +22,12 @@
       "figures": 5,
       "files": {
         "docx": {
-          "bytes": 551644,
-          "sha256": "8e381d85161bbc582531a0af0c0659d2c33868d5a397805737e4f0137417edbf"
+          "bytes": 551506,
+          "sha256": "8c1c2703f027851220ce7c7460ee5249ab2cf39b6f31b67e8ebd386e9c3d9560"
         },
         "pdf": {
-          "bytes": 703126,
-          "sha256": "9fe63e7f75a9ab71d333d41e1727f7f3718f7873c777221299f5262e2f83a20d"
+          "bytes": 702963,
+          "sha256": "04842785aedf6cd88333d8831bdd89058acd62d2a73a01586af5bdd850f1db9c"
         }
       }
     },
@@ -37,16 +37,23 @@
       "figures": 0,
       "files": {
         "docx": {
-          "bytes": 48261,
-          "sha256": "0d2a065bf9d34fa3020d6be6fa50275d34d01385ba6e0f4a14d4bd05df29bb97"
+          "bytes": 41870,
+          "sha256": "fb26c50f559775d28d749bcf8b70719be3c4060311e1ba799c6a0be7d6c5e26c"
         },
         "pdf": {
           "bytes": 393429,
-          "sha256": "b64aa293d00963aef1df60de4e51d514bb6328d5f0cbd9625d805fd8842b9505"
+          "sha256": "2497d38aed480993e0d4264df59e35d042bc54c9bb6510d65588a25086adb7ab"
         }
       }
     }
   },
   "rendering": "Native Microsoft Word export, PyMuPDF rasterization at 1.8x; packaged LibreOffice unavailable as diagnosed earlier",
-  "visual_review": "All 15 manuscript and 5 supplementary pages opened individually after final rendering. Author-only cover letter/review/checklist were also reviewed."
+  "visual_review": "All 15 manuscript and 5 supplementary pages opened individually after final rendering. Author-only cover letter/review/checklist were also reviewed.",
+  "author_correction": {
+    "funding_acknowledgment_removed": true,
+    "Hyerim_Choi_ORCID": "0009-0006-7311-4107",
+    "ORCID_account_linkage_verified": false,
+    "AI_assistance_disclosure_retained": true,
+    "experimental_results_unchanged": true
+  }
 }

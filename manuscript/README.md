@@ -12,6 +12,8 @@ The immutable completed-results commit cited by the paper is `c54d758d431ec3dc07
 
 Author correction on 1 October 2026: the funding acknowledgment is removed. Hyerim Choi's supplied ORCID `0009-0006-7311-4107` appears on the first manuscript page. The AI assistance disclosure and all experimental results remain unchanged.
 
+Typography correction on 1 October 2026: references [1]-[27] were verified in first-citation order. English automatic hyphenation reduces stretched word spacing while preserving the justified two-column body. References and the two Code/Data paragraphs containing long URLs are left aligned. All 15 manuscript pages were rendered and visually checked; scientific wording and table values are unchanged.
+
 ## Findings and interpretation
 
 The fresh phase excludes 137 source-unverified images, trains nano and large bases for 100 epochs, and completes nine matched 20-epoch control/MSE/CWD continuations. The earlier nine-run study is retained separately. All 25 frozen KITTI evaluations and all 27 reconstructed-label evaluations across the two phases are reported.

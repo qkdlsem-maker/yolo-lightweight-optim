@@ -1,20 +1,5 @@
 {
   "status": "passed",
-  "checks": [
-    "27 references in first-citation order",
-    "Both primary tables all 18 endpoints and paired differences",
-    "External main table all 13 artifact/arm summaries",
-    "Both illumination tables all mean/SD cells",
-    "Supplement 150 external AP values against native metrics",
-    "Supplement all 18 primary endpoints and skips",
-    "Supplement all paired external/illumination values",
-    "Supplement all 27 reconstructed-label models and five AP columns",
-    "Published archive sizes and hashes",
-    "All ten Word/PDF files under 40 MB",
-    "No tracked edits, comments, hidden text or server credentials",
-    "25 final rendered pages individually reviewed; hashes fixed",
-    "Evidence ZIP CRC, all entry hashes and Python syntax"
-  ],
   "documents": {
     "IEEE_Access_Revised_Manuscript": {
       "pages": 15,
@@ -22,14 +7,16 @@
       "figures": 5,
       "files": {
         "docx": {
-          "bytes": 728352,
-          "sha256": "27f959093500c6906d3a171dbde7176b22cd86a62fcf236222fc4e95f84ef7bb"
+          "bytes": 726731,
+          "sha256": "209a47b379f9d692d5865d3f212e695b050ed62dcb52a158d01334e49988d712"
         },
         "pdf": {
-          "bytes": 721462,
-          "sha256": "41d735e2612070d5f8fb0aa31a4d3fd61f89c334358f6e3656d3c5cb87e89cd3"
+          "bytes": 715411,
+          "sha256": "677a7e72bc43827042a38c35829213d96866ab232b18fc26dd190accf9757372"
         }
-      }
+      },
+      "equation_layout_tables": 1,
+      "total_word_tables": 11
     },
     "IEEE_Access_Supplementary_Materials": {
       "pages": 5,
@@ -47,8 +34,10 @@
       }
     }
   },
-  "rendering": "Native Microsoft Word export, PyMuPDF rasterization at 1.8x; packaged LibreOffice unavailable as diagnosed earlier",
-  "visual_review": "All 15 manuscript and 5 supplementary pages opened individually after final rendering. Author-only cover letter/review/checklist were also reviewed.",
+  "rendering": {
+    "main_manuscript_2026_10_06": "Read-only native Microsoft Word PDF export; Poppler rasterization at 115 dpi; all 15 final page rasters individually inspected.",
+    "unchanged_support_documents_2026_10_01": "Native Microsoft Word export, PyMuPDF rasterization at 1.8x; packaged LibreOffice unavailable as diagnosed earlier"
+  },
   "author_correction": {
     "funding_acknowledgment_removed": true,
     "Hyerim_Choi_ORCID": "0009-0006-7311-4107",
@@ -122,6 +111,83 @@
     "scientific_wording_and_table_values_unchanged": true,
     "all15main_pages_visually_reviewed_after_final_Word_export": true,
     "funding_acknowledgment_absent": true,
-    "Hyerim_Choi_ORCID": "0009-0006-7311-4107"
+    "Hyerim_Choi_ORCID": "0009-0006-7311-4107",
+    "date": "2026-10-01"
+  },
+  "prior_bundle_checks_2026_10_01": [
+    "27 references in first-citation order",
+    "Both primary tables all 18 endpoints and paired differences",
+    "External main table all 13 artifact/arm summaries",
+    "Both illumination tables all mean/SD cells",
+    "Supplement 150 external AP values against native metrics",
+    "Supplement all 18 primary endpoints and skips",
+    "Supplement all paired external/illumination values",
+    "Supplement all 27 reconstructed-label models and five AP columns",
+    "Published archive sizes and hashes",
+    "All ten Word/PDF files under 40 MB",
+    "No tracked edits, comments, hidden text or server credentials",
+    "25 final rendered pages individually reviewed; hashes fixed",
+    "Evidence ZIP CRC, all entry hashes and Python syntax"
+  ],
+  "checks": [
+    "27 references in first-citation order; every entry cited",
+    "All ten result tables identical to the reviewed attachment; tables II-X rechecked against numerical records",
+    "Both continuation phases and external/illumination values preserved",
+    "All five figures and all ten result tables explicitly referenced in body prose",
+    "Abstract names BDD100K and independently explains abbreviations; 234 whitespace-delimited words",
+    "Separate first-use explanations in the main body",
+    "Reference 5 author spelling and reference 18 execution-version source corrected",
+    "Native equation, tables, media, template styles and settings preserved",
+    "Existing AI disclosure, reference and citation positions unchanged",
+    "No tracked edits, comments or hidden text",
+    "All 15 final manuscript pages rendered and individually visually reviewed"
+  ],
+  "prior_visual_review_2026_10_01": "All 15 manuscript and 5 supplementary pages opened individually after final rendering. Author-only cover letter/review/checklist were also reviewed.",
+  "visual_review": "All 15 revised manuscript pages individually inspected after final export; supplementary and author-only support documents unchanged from the prior review.",
+  "editorial_revision_2026_10_06": {
+    "abstract_word_count": 234,
+    "abstract_and_body_first_use_definitions_checked_separately": true,
+    "figure_callouts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "table_callouts": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "X"
+    ],
+    "corrected_references": [
+      5,
+      18
+    ],
+    "all_scientific_table_values_unchanged": true,
+    "AI_disclosure_and_citation_positions_unchanged": true,
+    "page_render_sha256": {
+      "page-01.png": "5d3c234b1a6b8bac3c519ec49c41121557547b6437097cacafabaf2abcf4909c",
+      "page-02.png": "52f983c3f4ea3c11cf095d3abdd40b6ddd82a8f958c5e6a29d720ea491b83d03",
+      "page-03.png": "7aa8575c9a7299fa686cc32f4d3493db2e1f37cb7b4d632543f90e2360bc0d87",
+      "page-04.png": "104f27466131c0335c31545cc43371faaf1ad36f0d72bbe7bcf67fef9dc47126",
+      "page-05.png": "9e41e9fcf04ebe9ff24668d0b1432116c59a1b87e43e02bf81227b7252ebbb5b",
+      "page-06.png": "edfb30a3c53aba81ae5c99e1f225148a9c637ef89d8962c2d317856845eac27f",
+      "page-07.png": "9f5aaf8d895dc9ca050c937df7d5c5f75d79d7912652b1317b3be5cd610db9ff",
+      "page-08.png": "cf74d3e109ae59ba54ce757f065cc42e39b5a90cace3b153abee8633f7649624",
+      "page-09.png": "472a7ac94781e5f986605dd83976b8e0e47ad4084f9216306c01d7dcd59e7152",
+      "page-10.png": "32d0f9050d095f20994b62d4652b85f220162d91e76b7ea530aff18d37f2a71c",
+      "page-11.png": "94126445d1568118302c482786bb64c607d82db93345ea2738a570a77d17cde6",
+      "page-12.png": "cc35a6cd0eb61264c4385bcd48d9cf4b408b978207140f03f7bd0f35091d00cd",
+      "page-13.png": "c5bd4878f43ae6ca5b9a7cac204b2a75fbed2e7d7f059b2a378125047d504b81",
+      "page-14.png": "5fda94843438ce2473a468f5386faefc3af488e4cf03a36aa8e2acf80ca47ce2",
+      "page-15.png": "7a16903a14a5dee6685da7c07f55c2ba716ef14affa311225e1bf1d9865a130c"
+    }
   }
 }

@@ -1,6 +1,6 @@
 # Reassessing Pruning and Feature Distillation for Lightweight YOLOv8
 
-Submission-prepared research manuscript by **Hyerim Choi and Tae-Kook Kim**, dated 1 October 2026. This repository does not claim journal submission, review or acceptance.
+Submission-prepared research manuscript by **Hyerim Choi and Tae-Kook Kim**, updated 6 October 2026. This repository does not claim journal submission, review or acceptance.
 
 - [Main manuscript PDF](IEEE_Access_Revised_Manuscript.pdf) and [editable Word source](IEEE_Access_Revised_Manuscript.docx): 15 pages, 10 tables, 5 figures and 27 references, using the IEEE Access template.
 - [Supplementary methods and complete results PDF](IEEE_Access_Supplementary_Materials.pdf) and [Word source](IEEE_Access_Supplementary_Materials.docx): 5 pages with every fixed external model and every continuation seed.
@@ -13,6 +13,8 @@ The immutable completed-results commit cited by the paper is `c54d758d431ec3dc07
 Author correction on 1 October 2026: the funding acknowledgment is removed. Hyerim Choi's supplied ORCID `0009-0006-7311-4107` appears on the first manuscript page. The AI assistance disclosure and all experimental results remain unchanged.
 
 Typography correction on 1 October 2026: references [1]-[27] were verified in first-citation order. English automatic hyphenation reduces stretched word spacing while preserving the justified two-column body. References and the two Code/Data paragraphs containing long URLs are left aligned. All 15 manuscript pages were rendered and visually checked; scientific wording and table values are unchanged.
+
+Editorial revision on 6 October 2026: the abstract now names BDD100K, and abbreviations and named components are explained independently at first use in the abstract and body. All figures and result tables have body callouts. Reference [5] preserves the compound family name Gonzalez Ortiz, and reference [18] links to the PyTorch 2.5.1 documentation source matching the execution environment. The abstract is 234 words. All 15 revised pages were rendered and visually checked, and references remain in first-citation order. Experimental values, tables, figures, the native equation, and existing AI assistance disclosure/citation locations are unchanged.
 
 ## Findings and interpretation
 

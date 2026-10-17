@@ -3,3 +3,6 @@ artifacts/clean_followup_20260929/** -text
 experiments/clean_followup/*.py text eol=lf
 # Final document bundle checksums describe the exact published bytes.
 manuscript/** -text
+
+# Preserve the prespecified independent-replication source hashes.
+experiments/independent_replication_20261017/** -text

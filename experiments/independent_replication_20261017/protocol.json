@@ -1,0 +1,121 @@
+{
+  "phase": "independent_base_and_strength_replication_20261017",
+  "status": "prespecified_before_new_training",
+  "question": "How reproducible are paired MSE and CWD continuation effects across independently fine-tuned student/teacher pairs and fixed distillation strengths, and how does their interpretation depend on evaluation definition?",
+  "rationale": "The previous study varied continuation data seeds conditional on one starting pair per phase. This study varies the starting-pair training seed and reports a fixed strength grid without choosing a favorable coefficient. It is a new empirical study, not a novel distillation algorithm or an assurance of publication.",
+  "root": "review_20261017_independent",
+  "previous_root": "review_20260929_clean",
+  "pair_seeds": [
+    101,
+    202,
+    303
+  ],
+  "data": {
+    "yaml": "review_20260929_clean/clean_bdd.yaml",
+    "yaml_sha256": "93678590e84df8873c0fce0e19e0d103fa83cb2ad7e3b3b6757244e333397b8c",
+    "manifest_sha256": "26282c2aa678e9fa73c886e6b7fba0e7d714ba61e1da55abbe501f56ef8e6b9d",
+    "train_images": 69863,
+    "validation_images": 10000,
+    "native_training_boxes": 1286870,
+    "excluded_unknown_label_images": 137,
+    "provenance": "Reconstructed legacy 2018-format mirror, not authenticated official-host Detection 2020 labels. Original labels and completed studies are immutable."
+  },
+  "base": {
+    "models": [
+      "nano",
+      "large"
+    ],
+    "epochs": 100,
+    "imgsz": 640,
+    "batch": {
+      "nano": 64,
+      "large": 16
+    },
+    "nbs": 64,
+    "optimizer": "SGD",
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "close_mosaic": 10,
+    "patience": 0,
+    "cos_lr": false,
+    "deterministic": true,
+    "amp": true,
+    "workers": 8,
+    "endpoint": "final epoch 100 EMA last.pt; never validation best.pt",
+    "nano_source_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+    "large_source_sha256": "64c9115303f6a25575f82200d1b22ec409fa6bd7d08d0313884fc20d919478cd",
+    "independence_scope": "Six new BDD fine-tuning runs from fixed official COCO checkpoints, not six independently pretrained COCO models. Independent base training seeds affect head initialization and data/augmentation. Three matched pairs are the unit of replication."
+  },
+  "continuation": {
+    "arms": [
+      "control",
+      "mse",
+      "cwd"
+    ],
+    "positive_weights": [
+      0.03,
+      0.3,
+      3.0
+    ],
+    "control_weight": 0.0,
+    "trajectories_per_pair": 7,
+    "total_trajectories": 21,
+    "epochs": 40,
+    "primary_epoch": 40,
+    "secondary_epoch": 20,
+    "diagnostic_epochs": [
+      10,
+      20,
+      40
+    ],
+    "batch": 64,
+    "workers": 4,
+    "lr": 0.0001,
+    "lr_schedule": "cosine over the prespecified 40-epoch trajectory, final multiplier 0.1",
+    "temperature": 4.0,
+    "data_seed_rule": "pair seed + 1000; identical per-epoch sampler and augmentation across all seven trajectories within a pair",
+    "teacher": "corresponding independently fine-tuned large model, frozen and in eval mode",
+    "trainability": "all student parameters except DFL projection; fresh 1x1 feature adapters; adapters discarded for inference",
+    "endpoint": "final EMA at fixed epochs, no best checkpoint or best coefficient selection",
+    "interpretation": "The epoch-20 endpoint is nested in a 40-epoch schedule, not a separately optimized 20-epoch schedule. Equal coefficient values do not imply equal objective or gradient strength. Report all six paired effects and their loss scales."
+  },
+  "evaluation": {
+    "primary": "BDD100K ten-class AP50:95 on reconstructed legacy validation labels",
+    "inference": {
+      "imgsz": 640,
+      "batch": 32,
+      "conf": 0.001,
+      "nms_iou": 0.7,
+      "max_det": 300,
+      "half": false,
+      "rect": false
+    },
+    "external": "Previously examined KITTI public labeled training partition, 7481 images, Car and Pedestrian; no external score used for coefficient, epoch or model selection. Do not call it a new untouched test or official hidden test.",
+    "harmonization": "Before new external scoring, implement and synthetically verify a common two-class AP evaluator with the same IoU grid and integration rule on BDD and KITTI. Preserve native KITTI scores separately. Document remaining annotation/ignore/sequence differences; harmonization cannot establish a causal domain-shift mechanism.",
+    "roster": "All six base endpoints and all 21 continuation trajectories at epochs 20 and 40; no selective external reporting."
+  },
+  "analysis": {
+    "unit": "paired difference within each of the three independently trained starting pairs",
+    "primary_contrasts": "Each of the two distillation objectives at each of three coefficients versus its pair-matched no-distillation control at epoch 40",
+    "report": "All pair-level scores and differences, mean and sample SD, effect size in percentage points, input hashes, actual AMP-applied/skipped updates, parameter changes, teacher detachment, finite states, runtime and failures",
+    "limits": "Three pairs do not characterize a population distribution precisely. No post hoc significance threshold, equivalence claim, favorable-run substitution, pooling with historical runs or winner selection. Reused BDD validation and previously examined KITTI remain disclosed.",
+    "pruning": "Historical pruning is contextual only; no new causal pruning comparison or speedup claim from unequal recovery budgets."
+  },
+  "execution": {
+    "gpus": [
+      0,
+      1
+    ],
+    "preflight": "Verify sources and every label hash, full native loader counts, two base seeds on both architectures, updated parameter states, different initial heads/input hashes, and paired control/MSE/CWD smoke inputs including high-strength cases before long jobs.",
+    "resume": "Technical failures only, identical recorded config and saved RNG/optimizer state; completion and lock files prevent repeats. Completed historical runs are never restarted.",
+    "stop": "Six 100-epoch base runs plus 21 40-epoch continuations, fixed evaluation roster, numerical audit and manuscript contribution review. Do not extend training to obtain favorable results.",
+    "followup": "After this fixed stage, additional experiments may be authorized autonomously under the user instruction of 2026-10-18, but only for a documented unresolved question with conditions, budget and stopping rule fixed before execution. Unfavorable outcomes remain reported; no rerunning until favorable, selective suppression, or tuning against KITTI."
+  },
+  "references": [
+    "https://openaccess.thecvf.com/content/ICCV2021/html/Shu_Channel-Wise_Knowledge_Distillation_for_Dense_Prediction_ICCV_2021_paper.html",
+    "https://openaccess.thecvf.com/content_ICCV_2019/html/Cho_On_the_Efficacy_of_Knowledge_Distillation_ICCV_2019_paper.html"
+  ]
+}

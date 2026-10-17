@@ -47,7 +47,8 @@
     "endpoint": "final epoch 100 EMA last.pt; never validation best.pt",
     "nano_source_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
     "large_source_sha256": "64c9115303f6a25575f82200d1b22ec409fa6bd7d08d0313884fc20d919478cd",
-    "independence_scope": "Six new BDD fine-tuning runs from fixed official COCO checkpoints, not six independently pretrained COCO models. Independent base training seeds affect head initialization and data/augmentation. Three matched pairs are the unit of replication."
+    "independence_scope": "Six new BDD fine-tuning runs from fixed official COCO checkpoints, not six independently pretrained COCO models. Independent base training seeds affect head initialization and data/augmentation. Three matched pairs are the unit of replication.",
+    "native_loader_correction": "Preflight found Ultralytics 8.2.103 hard-codes its training-loader generator independently of args.seed. Before full training, replace only the training loader with a standard finite PyTorch DataLoader; set generator to pair_seed + 100003 * zero-based epoch, recreate workers each epoch and retain native dataset/augmentations/optimizer/validation. Save full-precision model, EMA, optimizer, scaler, scheduler and RNG sidecars for technical resume."
   },
   "continuation": {
     "arms": [
@@ -112,7 +113,8 @@
     "preflight": "Verify sources and every label hash, full native loader counts, two base seeds on both architectures, updated parameter states, different initial heads/input hashes, and paired control/MSE/CWD smoke inputs including high-strength cases before long jobs.",
     "resume": "Technical failures only, identical recorded config and saved RNG/optimizer state; completion and lock files prevent repeats. Completed historical runs are never restarted.",
     "stop": "Six 100-epoch base runs plus 21 40-epoch continuations, fixed evaluation roster, numerical audit and manuscript contribution review. Do not extend training to obtain favorable results.",
-    "followup": "After this fixed stage, additional experiments may be authorized autonomously under the user instruction of 2026-10-18, but only for a documented unresolved question with conditions, budget and stopping rule fixed before execution. Unfavorable outcomes remain reported; no rerunning until favorable, selective suppression, or tuning against KITTI."
+    "followup": "After this fixed stage, additional experiments may be authorized autonomously under the user instruction of 2026-10-18, but only for a documented unresolved question with conditions, budget and stopping rule fixed before execution. Unfavorable outcomes remain reported; no rerunning until favorable, selective suppression, or tuning against KITTI.",
+    "preflight_failures_retained": "001 module-name collision, no optimization; 002 fixed native data-loader seed detected in four tiny smoke runs. Both repaired before full experiments and preserved in technical_failures."
   },
   "references": [
     "https://openaccess.thecvf.com/content/ICCV2021/html/Shu_Channel-Wise_Knowledge_Distillation_for_Dense_Prediction_ICCV_2021_paper.html",

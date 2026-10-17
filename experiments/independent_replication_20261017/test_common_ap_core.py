@@ -69,5 +69,5 @@ record = {'status': 'passed', 'scope': 'Synthetic core validation only; dataset 
           'cases': tests, 'runtime': runtime_record(), 'real_model_results_used': False,
           'files_sha256': {n: hashlib.sha256((ROOT / n).read_bytes()).hexdigest() for n in ['common_ap_core.py', 'test_common_ap_core.py']}}
 dest = ROOT / 'common_ap_core_validation.json'
-dest.write_text(json.dumps(record, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+dest.write_bytes((json.dumps(record, indent=2, allow_nan=False) + '\n').encode('utf-8'))
 print(json.dumps({'status': 'passed', 'cases': len(tests), 'record': str(dest)}))

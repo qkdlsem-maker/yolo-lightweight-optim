@@ -1,0 +1,41 @@
+{
+  "status": "training_started_not_completed",
+  "utc": "2026-10-17T15:14:56Z",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "base_runs_planned": 6,
+  "continuation_trajectories_planned": 21,
+  "active_first_pair": {
+    "nano_seed101": {
+      "device": 1,
+      "epochs": 100,
+      "source_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+      "config_sha256": "6f991fb25a4d7866924174b302d197d559182778b11dd20fa7ef8a10473b6638",
+      "initial_parameter_record_sha256": "ab79f9eaac3853f53df318eb016e11bf4063807d7700fbb1eb02414a316ef2aa"
+    },
+    "large_seed101": {
+      "device": 0,
+      "epochs": 100,
+      "source_sha256": "64c9115303f6a25575f82200d1b22ec409fa6bd7d08d0313884fc20d919478cd",
+      "config_sha256": "acacfe1ae9991f3170c48569ddf38467081157a7fa6da56a1875488a620dc94c",
+      "initial_parameter_record_sha256": "6ec7b9bac6cb34aa96c4a37f7dccef9dc928afbc42b2fb547fb2dc55a977d31e"
+    }
+  },
+  "hardware": "two NVIDIA GeForce RTX 4090 GPUs",
+  "training_observed": "First epoch in progress on both models, with finite displayed training losses; no final scientific outcomes yet.",
+  "technical_events": [
+    {
+      "id": 1,
+      "reason": "Initial coordinator module name shadowed standard-library queue; repaired before any data loading or training."
+    },
+    {
+      "id": 2,
+      "reason": "Native loader ignored requested run seed for sample order; detected by tiny independent-seed tests and repaired before full training."
+    },
+    {
+      "id": 3,
+      "reason": "Two initial full-data cache writers raced after smoke tests; large job failed before training. Valid nano continued uninterrupted; large restarted from the same prescribed COCO input after cache creation. Coordinator waits for both, then continues remaining fixed jobs."
+    }
+  ],
+  "reproduction_entrypoint": "Run run_experiment.py from the project root after placing these source files in review_20261017_independent. It primes full-data caches serially after smoke tests.",
+  "remaining": "Complete bounded training, independent input/numerical audits, common-metric and native external evaluations, contribution and manuscript revision."
+}

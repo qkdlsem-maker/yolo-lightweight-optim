@@ -1,0 +1,44 @@
+{
+  "status": "scheduling_handoff_verified_training_in_progress",
+  "utc": "2026-10-17T20:20:28Z",
+  "scientific_conditions_unchanged": true,
+  "frozen_protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "scheduler_sha256": "fcacdaa806e035e8b38649c1d73469082501e4c0002af8067c7fc5d7227260a9",
+  "completed_base_runs": 1,
+  "planned_base_runs": 6,
+  "completed_continuations": 0,
+  "planned_continuations": 21,
+  "completed_nano_seed101": {
+    "epochs": 100,
+    "checkpoint_sha256": "2b7724548ad472f0289b16373b36f7f21c5a0843cf1b0be7c84c9baf54990678",
+    "finite_state": true,
+    "changed_parameter_tensors": 183,
+    "fixed_dfl_preserved": true
+  },
+  "preserved_active_large_seed101": true,
+  "new_active_run": {
+    "model": "large",
+    "seed": 202,
+    "device": 1,
+    "epochs": 100,
+    "batch": 16,
+    "initial_parameter_tensors_distinct_from_seed101": 3,
+    "first_epoch_training_log_present_and_no_nonfinite_token": true
+  },
+  "next_base_jobs": [
+    [
+      "large",
+      303
+    ],
+    [
+      "nano",
+      202
+    ],
+    [
+      "nano",
+      303
+    ]
+  ],
+  "dispatch_rule": "Already scheduled large bases before nano bases, only on free GPUs; all six bases must complete before the unchanged 21-trajectory pipeline starts.",
+  "limits": "Full input hash and endpoint audits remain pending. Native base overflow/skipped AMP counts were not logged and cannot be inferred from EMA counts. No external scores or manuscript results updated."
+}

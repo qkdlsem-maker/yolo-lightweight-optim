@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "Synthetic label conversion and AP integration only; full source-label build remains pending",
+  "checks": [
+    "BDD pixel coordinates and rider exclusion",
+    "BDD duplicate multiplicity preserved",
+    "Source boxes are not silently clipped",
+    "KITTI exact category and two-variant mapping, no inclusive-pixel offset",
+    "Common metric does not apply native difficulty filters",
+    "Stable explicit image and annotation IDs",
+    "Both fixed ignore variants produce their known different AP values",
+    "Malformed-input rejection 1",
+    "Malformed-input rejection 2",
+    "Malformed-input rejection 3",
+    "Malformed-input rejection 4",
+    "Malformed-input rejection 5",
+    "Malformed-input rejection 6",
+    "Malformed-input rejection 7",
+    "Malformed-input rejection 8"
+  ],
+  "synthetic_variant_scores": {
+    "source_ignore_regions": 0.9999999999999998,
+    "no_ignore_sensitivity": 0.5
+  },
+  "real_model_results_used": false,
+  "files_sha256": {
+    "common_annotation_policy.json": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757",
+    "common_annotation_adapters.py": "78bf5d85f1d0790909ad140237f860f65efde5263ca8d62e39931b71387661fa",
+    "test_common_annotation_adapters.py": "27b374ea0e6e6340b2ea75424258ab70c8909a9d8e83b0cd96756e443a7435f0",
+    "common_ap_core.py": "10489f38e399fd6dc649cc4717c61e72458731a3d10de9757bc220ef1f720da4"
+  }
+}

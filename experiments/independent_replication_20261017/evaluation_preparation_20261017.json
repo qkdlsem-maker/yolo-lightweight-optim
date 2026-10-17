@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "utc": "2026-10-17T21:20:20Z",
+  "python": "3.12.3",
+  "platform": "Linux-6.17.0-40-generic-x86_64-with-glibc2.39",
+  "wheel": {
+    "filename": "pycocotools-2.0.11-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+    "sha256": "a82d1c9ed83f75da0b3f244f2a3cf559351a283307bd9b79a4ee2b93ab3231dd",
+    "bytes": 411685
+  },
+  "training_packages_before_and_after": {
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cu121",
+    "ultralytics": "8.2.103",
+    "pip": "26.1.2"
+  },
+  "training_environment_unchanged": true,
+  "isolation": "pycocotools target directory is used only via explicit per-process PYTHONPATH; existing training NumPy1.26.4 is reused read-only. CPU-only synthetic validation.",
+  "core_cases": 20,
+  "adapter_cases": 15,
+  "source_sha256": {
+    "common_ap_core.py": "10489f38e399fd6dc649cc4717c61e72458731a3d10de9757bc220ef1f720da4",
+    "test_common_ap_core.py": "09c2611856201d1be0cbfdea336459b3b4278f3195d2277d07d88765d84b9f14",
+    "common_annotation_adapters.py": "78bf5d85f1d0790909ad140237f860f65efde5263ca8d62e39931b71387661fa",
+    "test_common_annotation_adapters.py": "27b374ea0e6e6340b2ea75424258ab70c8909a9d8e83b0cd96756e443a7435f0",
+    "common_annotation_policy.json": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757"
+  },
+  "real_model_results_used": false,
+  "remaining": "Fixed inference/serialization validation, complete training/endpoint audit, all48-endpoint evaluation and analysis.",
+  "runtime": {
+    "pycocotools_version": "2.0.11",
+    "numpy_version": "1.26.4",
+    "cocoeval_python_sha256": "988485f79624cd42ceed9335d284df4cdcdf7b3d583e052fcbed2dd6bccf0267"
+  },
+  "test_evidence_sha256": {
+    "common_ap_core_validation_linux.json": "74f48c98deeaf3e6371dd159376d6e3609a41d15757e525436c78db1beba67df",
+    "common_annotation_validation_linux.json": "3ea0d36ea6fa9d7ab21dc4ed5b6a53702a5176aed242f56f115b4e8571b89c1a"
+  },
+  "cross_platform_check": {
+    "all_20_core_cases_match_to_absolute_tolerance": 1e-12,
+    "windows_numpy": "2.3.5",
+    "linux_numpy": "1.26.4",
+    "windows_cocoeval_sha256": "84b0e75c6e972ca8b6fa3219fb03c1993dc9a3509df28447ca112c3f91828d61",
+    "linux_cocoeval_sha256": "988485f79624cd42ceed9335d284df4cdcdf7b3d583e052fcbed2dd6bccf0267",
+    "python_implementation_identical_after_CRLF_to_LF_normalization": true,
+    "difference": "Windows wheel contains CRLF line endings; Linux wheel contains LF. Python source is otherwise byte-identical. Binary extensions remain platform-specific; validation covers only the listed synthetic cases."
+  },
+  "source_raw_environment_record_sha256": "21e1bf05c183025b47a0d358522cb5aa71ade853e438841d4fbec3393541d661"
+}

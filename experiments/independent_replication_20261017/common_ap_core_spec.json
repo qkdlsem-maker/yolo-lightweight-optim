@@ -3,11 +3,17 @@
   "purpose": "Use one matching and AP-integration implementation for the prespecified two-class diagnostic on BDD and KITTI; keep the primary ten-class BDD and native KITTI results separately.",
   "created_before_any_new_external_scoring": true,
   "implementation": "pycocotools==2.0.11 COCOeval, bbox mode; no modifications to its matching or accumulation code",
-  "normalized_categories": {"0": "person", "2": "car"},
+  "normalized_categories": {
+    "0": "person",
+    "2": "car"
+  },
   "iou_thresholds": "0.50 to 0.95 inclusive in steps of 0.05",
   "integration": "Arithmetic mean of the interpolated precision envelope at 101 recall points 0.00 to 1.00, then equal mean over ten IoU thresholds and two classes",
   "box_convention": "Continuous xywh pixel coordinates; area=width*height, no inclusive-pixel +1 convention",
-  "area_range": [0, 10000000000],
+  "area_range": [
+    0,
+    10000000000
+  ],
   "max_detections": 300,
   "input_policy": "Predictions are already filtered by the frozen all-class inference settings. The two-class core rejects more than 300 mapped predictions per image instead of silently truncating. It receives all image IDs, including images with zero predictions or no target-class ground truth.",
   "empty_cases": "No detections yields zero AP when target ground truth exists. An entirely missing ground-truth class raises an error instead of silently changing the macro-average denominator.",
@@ -18,7 +24,7 @@
     "Preserve the separate native KITTI evaluator and its native difficulty/neighbor-class/DontCare behavior; this common AP is not an official KITTI benchmark score."
   ],
   "interpretation_limits": "A shared AP core does not make the two datasets' annotation semantics, class definitions, ignore regions or sequence dependence identical. It cannot isolate a causal domain-shift effect, and the already-examined KITTI partition is not a fresh untouched holdout.",
-  "validation": "20 known-answer and rejection cases; no real model outcomes used. See common_ap_core_validation.json.",
+  "validation": "20 known-answer/rejection cases and 15 adapter checks pass on both Windows and Linux. All 20 core cases agree to 1e-12; the pycocotools Python source differs only in line endings. Linux uses the isolated pycocotools2.0.11 wheel and read-only training NumPy1.26.4; training packages were not modified. See evaluation_preparation_20261017.json and both *_validation_linux.json records. No real model outcomes used.",
   "sources": [
     "https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py",
     "https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d"

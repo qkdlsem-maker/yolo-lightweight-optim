@@ -1,0 +1,136 @@
+{
+  "status": "passed_for_available_records",
+  "utc": "2026-10-17T21:20:19.261626+00:00",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "audit_script_sha256": "da225c40c7bae02c03b8fb37a8cd1f8b3285d4f4ce542818451279dc45f2249d",
+  "comparisons": [
+    {
+      "runs": [
+        "large_seed101",
+        "large_seed202"
+      ],
+      "initial_record_sha256": [
+        "6ec7b9bac6cb34aa96c4a37f7dccef9dc928afbc42b2fb547fb2dc55a977d31e",
+        "e84999a4fa008c6ffa651b75e3a81ee4da6d6aaffcc32efd80d37c9154e5f352"
+      ],
+      "different_initial_parameter_names": [
+        "model.22.cv3.0.2.weight",
+        "model.22.cv3.1.2.weight",
+        "model.22.cv3.2.2.weight"
+      ],
+      "same_official_COCO_initial_source": true,
+      "common_recorded_epochs": 5,
+      "both_sampled_batches_differ_at_each_common_epoch": true,
+      "input_evidence": [
+        {
+          "epoch": 1,
+          "first_two_input_sha256": [
+            [
+              "0ad63f7884c50bc8109001a3b21b0efa71476cd755f679c2752d635d384c64e2",
+              "e3084bece7a7e0b49cd187cf9a51a3b438d73056239fd5c0c75fcd2928c33e4f"
+            ],
+            [
+              "8515609d408dc41e8ac0a632e233c06ba9302ce138964eb7910854eb24058f46",
+              "0f21b363238cf07dfadf5c78cbc4aae933d7bdad3ad0007c93900b96c840b2d7"
+            ]
+          ],
+          "epoch_record_sha256": [
+            "11513a1e4568995cf1ba1a9e5ad7109a0a380b9fc9a55abbdc7cfc0ff84e9d7e",
+            "d26c7595cc61c666499f1743886b0542835797e1372ef035165289778a3bd56f"
+          ]
+        },
+        {
+          "epoch": 2,
+          "first_two_input_sha256": [
+            [
+              "ccb146f8d9f07bc12f7a5efaef044010d2192b64f874967baac59b89673539b0",
+              "cadf1f3e41107a5d93f5bce8b032968667f7f17ce8bdc429258511e0261d13d8"
+            ],
+            [
+              "0858f3acf5d1c8f8a4992d04512aebdd3e2d523c39548b4970ffbdaffed36084",
+              "632c428309157ebeaa09e8488ef042b1a0ad99b25e689e321f6035eb8f7d54a4"
+            ]
+          ],
+          "epoch_record_sha256": [
+            "1b5389771c9c5026d297ac5cc36e61640c35539f089bd463cca4dcb5fb5a58b0",
+            "2c5622e193bee6af226dd0e103a7653a1ae4c514be491bd95e875706c46d7602"
+          ]
+        },
+        {
+          "epoch": 3,
+          "first_two_input_sha256": [
+            [
+              "abcdfebf0ad32bddb70d92f9a562fa7353b01bd9b45d4ea0cd29e36523179c23",
+              "f581dbf7177ec333de9cc661fcf395cec5f56c493cddc9b69e41fef027dbcd63"
+            ],
+            [
+              "2404c9a4dc45445c61c4b563e331b1ad4dc9cbf61cc23e46afa6eabe5c52c656",
+              "fe6c4ff7efbec440724e1302e2fd2982b69c66053cc199a043236f9c514d7566"
+            ]
+          ],
+          "epoch_record_sha256": [
+            "1be2090527e6d74bff8c331aa022b29d448316cb60961b3e9e2a994cf65937f1",
+            "ca7a18977c457bc515177d7972e8ef61921b7b662e9b6c4ae450d79093bf5e00"
+          ]
+        },
+        {
+          "epoch": 4,
+          "first_two_input_sha256": [
+            [
+              "c4c22b4e32de55fb8707519e0cdbb3d706be566030e3db03d94414edd39a498a",
+              "4ff3df6e4ed43462589c8711992f774ddda9c17dadc246bfe18274ce1ee9770b"
+            ],
+            [
+              "402a7a1d19c6590f8cf323306668b60481cf81c8640edc15f438363cd4e0a874",
+              "1c73df0e0aa2d2f53190a062f3f4ead43a816e5ca2fd5c1f124663da01b5043e"
+            ]
+          ],
+          "epoch_record_sha256": [
+            "4a6683b18c201c396841b789b4200408d49dbe49c69041ba438c481ff33e080b",
+            "3fd609f4392f6eeee64548dafeb84c16fb7aff503d49f50a6ea80c8e99e93278"
+          ]
+        },
+        {
+          "epoch": 5,
+          "first_two_input_sha256": [
+            [
+              "468fd0b3ab1fa7beccf234491a0dae925ae7a35b933a2be3011fdc5152f9d820",
+              "3cc508fc57de8d4a4ec5501902c5fc0dbc264d101c11f64f5cb5a05f2fef6444"
+            ],
+            [
+              "5b4f93511fd6740f623d6d962a920c5ec04e56cf0f38689a0ca711102ef8e0b9",
+              "834e4dbf0c30f40727e13dc2f890e94b7fb1b7e5edcbc1c6519355574790db28"
+            ]
+          ],
+          "epoch_record_sha256": [
+            "eea2ab61a49843b2ae79bba77b905d7407ca732cfabd9f79b9c24c5e25725854",
+            "231f6acad1de16e4ecfd286c384cd68dddf7ccac4152d0b031afd2c46e01f767"
+          ]
+        }
+      ]
+    }
+  ],
+  "pending_run_pairs": [
+    [
+      "nano_seed101",
+      "nano_seed202"
+    ],
+    [
+      "nano_seed101",
+      "nano_seed303"
+    ],
+    [
+      "nano_seed202",
+      "nano_seed303"
+    ],
+    [
+      "large_seed101",
+      "large_seed303"
+    ],
+    [
+      "large_seed202",
+      "large_seed303"
+    ]
+  ],
+  "scope": "Initial parameter hashes and first two actual minibatch hashes per common completed epoch only; remaining seeds/epochs pending. Fixed COCO pretraining is shared within each architecture."
+}

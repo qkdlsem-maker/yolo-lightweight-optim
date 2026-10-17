@@ -1,0 +1,74 @@
+{
+  "status": "resolved_before_fixed_roster_evaluation",
+  "utc": "2026-10-17T22:28:22.385257+00:00",
+  "trigger": "CPU-only synthetic image preflight; no BDD/KITTI images or accuracy scores were used",
+  "training_changed": false,
+  "old_completed_results_changed": false,
+  "events": [
+    {
+      "id": "001_zero_area_guard",
+      "finding": "5577 synthetic predictions included1562 zero-area boxes after image-boundary clipping,352 in target classes. A positive-area-only prediction guard rejected legitimate outputs.",
+      "repair": "Retain every zero-area prediction in raw JSON, common AP and native KITTI text. Common COCO bbox IoU is zero and all-area AP counts unmatched predictions as false positives; native KITTI retains its original distinct height/difficulty/ignore rules. Ground truth still requires positive area. No dropping or filtering to improve scores.",
+      "verification": "24 common-core cases now include three known-answer zero-area matching cases and rejection of zero-area ground truth;15 annotation-adapter checks pass. Both Windows and Linux verified."
+    },
+    {
+      "id": "002_list_source_batch",
+      "finding": "Passing33 list-source images with batch32 resulted in a single33-image forward input in pinned Ultralytics8.2.103.",
+      "repair": "Explicitly slice the frozen ordered image manifest into32-image calls plus the final partial call."
+    },
+    {
+      "id": "003_implicit_rectangle",
+      "finding": "The installed BasePredictor.pre_transform enables auto letterboxing for equal-shape images regardless of args.rect. Actual trace showed full mixed batch32x3x640x640 and partial batch1x3x224x640 despite rectFalse.",
+      "repair": "FixedSquarePredictor overrides only pre_transform using LetterBox(auto=False); native prediction/NMS and coordinate restoration remain in place. Implements the original prespecified640x640 protocol.",
+      "historical_limit": "Previous predict-based results without actual tensor-shape traces cannot be asserted to have used square inputs solely because rectFalse was passed. Do not silently reinterpret or replace historical measurements."
+    },
+    {
+      "id": "004_predictor_instance_api",
+      "finding": "First subclass integration passed a class; pinned Model.predict requires a predictor instance and raised TypeError before inference.",
+      "repair": "Create a configured predictor instance, retaining declared inference overrides and native model callbacks."
+    }
+  ],
+  "final_verification": {
+    "serialization_checks": 26,
+    "synthetic_images": 33,
+    "actual_forward_shapes": [
+      [
+        32,
+        3,
+        640,
+        640
+      ],
+      [
+        1,
+        3,
+        640,
+        640
+      ]
+    ],
+    "dtype": "float32",
+    "device": "cpu",
+    "total_predictions_retained": 5577,
+    "zero_area_predictions_retained": 1562,
+    "checkpoint_unchanged": true,
+    "cross_platform_core_cases": 24,
+    "cross_platform_core_tolerance": 1e-12
+  },
+  "archive": "Prior scripts and failure records preserved privately in evaluation_tools/technical_failures/001_zero_area_guard through004_predictor_instance_api and local prediction_technical_failures. Original public core available at commit7749e2c16b39a78c3f8671df1fb9314be38098e9.",
+  "current_source_sha256": {
+    "common_ap_core.py": "18b1978e94e4fd614feb06cad2d03700114b0ee304a20448c50e1e01bd7c3575",
+    "test_common_ap_core.py": "9febb69be67b9714212a1c811d46329aa2007e9d36afab26ef0218573a306851",
+    "common_annotation_adapters.py": "78bf5d85f1d0790909ad140237f860f65efde5263ca8d62e39931b71387661fa",
+    "test_common_annotation_adapters.py": "27b374ea0e6e6340b2ea75424258ab70c8909a9d8e83b0cd96756e443a7435f0",
+    "common_annotation_policy.json": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757",
+    "prediction_io.py": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b",
+    "test_prediction_io.py": "a2ea992fc0a5afb2cad70462f8de9f3021b28e9f807de605c2bda6cd63fa1d24",
+    "test_prediction_runtime.py": "5c30e87da8d6e5b559b39c2886cbed362ada0efff2d5d4c3bbafb7a89d47395c",
+    "fixed_geometry_predictor.py": "0a9da72c1f8288839cb94d76d296fd7c9317502efa44d12a0e4105dd83833e3f",
+    "prediction_io_policy.json": "da6dcb9b8c6b71088c0e3c0b96711eea6567ca3077900229627fbc70428403a8"
+  },
+  "sources": [
+    "https://raw.githubusercontent.com/cocodataset/cocoapi/master/common/maskApi.c",
+    "Installed pinned Ultralytics8.2.103: BasePredictor.pre_transform, DetectionPredictor.postprocess and Model.predict; observed CPU tensor traces"
+  ],
+  "remaining": "Durable per-image prediction archive/resume implementation, complete48endpoint/checkpoint manifest and final audits, native BDD actual-input geometry verification, all fixed evaluations and scientific analysis."
+}

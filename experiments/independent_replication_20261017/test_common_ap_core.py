@@ -46,6 +46,10 @@ overlap = GT + [dict(id=3, image_id=1, category_id=2, bbox=[0, 0, 100, 100], are
 check('ordinary_target_has_priority_over_crowd', DT, 1., overlap)
 two_cars = GT + [dict(id=3, image_id=3, category_id=2, bbox=[0, 0, 10, 10], area=100, iscrowd=0)]
 check('partial_recall_101_point_grid', DT, (1 + 51 / 101) / 2, two_cars)
+collapsed = [dict(image_id=3, category_id=2, bbox=[5, 5, 0, 10], score=.99)]
+check('zero_area_prediction_remains_false_positive', collapsed + DT, .75)
+check('zero_area_prediction_is_not_absorbed_by_crowd', collapsed + DT, .75, crowd)
+check('zero_area_predictions_cannot_match_ordinary_targets', [dict(DT[0], bbox=[0, 0, 0, 10]), DT[1]], .5)
 
 def reject(name, images=IMAGES, gt=GT, dt=DT):
     try:
@@ -60,7 +64,8 @@ reject('unknown_image', dt=[dict(DT[0], image_id=99)])
 reject('unknown_category', dt=[dict(DT[0], category_id=1)])
 reject('nonfinite_confidence', dt=[dict(DT[0], score=float('nan'))])
 reject('duplicate_annotation', gt=GT + [GT[0]])
-reject('zero_area_prediction', dt=[dict(DT[0], bbox=[0, 0, 0, 10])])
+reject('negative_width_prediction', dt=[dict(DT[0], bbox=[0, 0, -1, 10])])
+reject('zero_area_ground_truth', gt=[dict(GT[0], bbox=[0, 0, 0, 10], area=0), GT[1]])
 reject('ambiguous_ignore', gt=[dict(GT[0], ignore=1), GT[1]])
 reject('inference_cap_exceeded', dt=[copy.deepcopy(DT[0]) for _ in range(301)])
 reject('missing_image_not_silently_dropped', images=IMAGES[1:])

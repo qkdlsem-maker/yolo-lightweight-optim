@@ -27,6 +27,6 @@
     "common_annotation_policy.json": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757",
     "common_annotation_adapters.py": "78bf5d85f1d0790909ad140237f860f65efde5263ca8d62e39931b71387661fa",
     "test_common_annotation_adapters.py": "27b374ea0e6e6340b2ea75424258ab70c8909a9d8e83b0cd96756e443a7435f0",
-    "common_ap_core.py": "10489f38e399fd6dc649cc4717c61e72458731a3d10de9757bc220ef1f720da4"
+    "common_ap_core.py": "18b1978e94e4fd614feb06cad2d03700114b0ee304a20448c50e1e01bd7c3575"
   }
 }

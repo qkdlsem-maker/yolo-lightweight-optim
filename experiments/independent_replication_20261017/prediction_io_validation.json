@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checks": [
+    "All ten-class outputs retained without mutating inputs",
+    "All-class JSON round trip retains coordinates and confidences",
+    "Common mapping happens after NMS; xyxy-to-xywh uses no plus one",
+    "Native KITTI mapping preserves order, coordinates and confidence",
+    "Empty prediction image retained with explicit metadata",
+    "All-class cap of exactly 300 accepted before target mapping",
+    "Nine-digit native text and JSON round trip recover float32 test values exactly",
+    "Batch filename, shape and class mapping validated before serialization",
+    "Frozen inference options include all-class class-aware NMS and FP32 square input",
+    "Class filtering cannot hide an exceeded all-class cap",
+    "Fractional class indices rejected",
+    "Out-of-range class indices rejected",
+    "NaN confidence rejected",
+    "Infinite coordinate rejected",
+    "Confidence above one rejected",
+    "Zero-area clipped predictions retained in every serialized view",
+    "Reversed boxes rejected",
+    "Unclipped box rejected",
+    "Wrong result image rejected",
+    "Missing result image rejected",
+    "Wrong source dimensions rejected",
+    "Duplicate image IDs rejected",
+    "Path traversal filename rejected",
+    "Wrong class-name mapping rejected",
+    "Changed inference setting rejected",
+    "Unknown prediction schema rejected"
+  ],
+  "real_images_or_model_scores_used": false,
+  "files_sha256": {
+    "prediction_io.py": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b",
+    "test_prediction_io.py": "a2ea992fc0a5afb2cad70462f8de9f3021b28e9f807de605c2bda6cd63fa1d24"
+  }
+}

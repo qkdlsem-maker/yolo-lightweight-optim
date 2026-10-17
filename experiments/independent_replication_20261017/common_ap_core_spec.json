@@ -20,13 +20,14 @@
   "ignore_semantics": "The generic core accepts only explicit COCO iscrowd flags and rejects a separate ambiguous ignore field. Crowd matching follows standard COCO intersection-over-detection-area semantics. The separately frozen common_annotation_policy.json specifies source-ignore compatibility and no-ignore sensitivity variants for KITTI; neither is the native KITTI benchmark metric.",
   "dataset_mapping_status": "Converters pass 15 synthetic checks, and every serialized target/ignore row has been independently compared to the pinned source-label archives. See common_annotation_build.json and common_annotation_source_verification.json. No real model predictions or scores have been evaluated.",
   "not_yet_ready_for_real_external_evaluation": [
-    "Create and verify the 48-endpoint manifest after training completion and validate fixed inference serialization before real scoring.",
-    "Preserve the separate native KITTI evaluator and its native difficulty/neighbor-class/DontCare behavior; this common AP is not an official KITTI benchmark score."
+    "Durable per-image prediction archive/resume implementation, complete48endpoint/checkpoint manifest and final audits, native BDD actual-input geometry verification, all fixed evaluations and scientific analysis.",
+    "Native KITTI difficulty/neighbor-class/DontCare semantics remain separate; common AP is not official KITTI accuracy."
   ],
   "interpretation_limits": "A shared AP core does not make the two datasets' annotation semantics, class definitions, ignore regions or sequence dependence identical. It cannot isolate a causal domain-shift effect, and the already-examined KITTI partition is not a fresh untouched holdout.",
-  "validation": "20 known-answer/rejection cases and 15 adapter checks pass on both Windows and Linux. All 20 core cases agree to 1e-12; the pycocotools Python source differs only in line endings. Linux uses the isolated pycocotools2.0.11 wheel and read-only training NumPy1.26.4; training packages were not modified. See evaluation_preparation_20261017.json and both *_validation_linux.json records. No real model outcomes used.",
+  "validation": "24 common-core cases and15 annotation-adapter checks pass on Windows and Linux;26 serialization cases pass on both. A33-synthetic-image CPU test verifies actual float32 forward shapes32x3x640x640 and1x3x640x640, ID/order/shape integrity and retained zero-area predictions. See prediction_io_correction_20261017.json and prediction_runtime_validation.json. No real model accuracy was evaluated.",
   "sources": [
     "https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py",
     "https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d"
-  ]
+  ],
+  "zero_area_predictions": "Retain image-edge-collapsed predictions. COCO bbox IoU returns zero; they remain unmatched false positives in the all-area common metric. Ground truth still requires positive area. This replaces the initial overly strict prediction guard after synthetic validation, before fixed-roster scoring."
 }

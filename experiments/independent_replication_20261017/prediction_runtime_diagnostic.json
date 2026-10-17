@@ -1,0 +1,549 @@
+{
+  "synthetic_images": 33,
+  "total_predictions": 5577,
+  "invalid_count": 1562,
+  "invalid_examples": [
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        0.0,
+        720.0,
+        339.46405029296875,
+        720.0,
+        0.001306342426687479,
+        0.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        5.9644775390625,
+        720.0,
+        468.59661865234375,
+        720.0,
+        0.0013030010741204023,
+        6.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        17.0330810546875,
+        720.0,
+        592.022705078125,
+        720.0,
+        0.0013013335410505533,
+        1.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        696.0968017578125,
+        720.0,
+        1261.8853759765625,
+        720.0,
+        0.0012957125436514616,
+        1.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        21.36285400390625,
+        720.0,
+        736.067138671875,
+        720.0,
+        0.0012927595525979996,
+        6.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        752.1180419921875,
+        720.0,
+        1277.270263671875,
+        720.0,
+        0.0012892717495560646,
+        9.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        580.834716796875,
+        720.0,
+        1269.336181640625,
+        720.0,
+        0.0012888150522485375,
+        7.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        1.00482177734375,
+        720.0,
+        420.64520263671875,
+        720.0,
+        0.0012869358761236072,
+        1.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        79.171630859375,
+        720.0,
+        1116.3812255859375,
+        720.0,
+        0.0012837516842409968,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        756.1099853515625,
+        720.0,
+        1274.9156494140625,
+        720.0,
+        0.0012836819514632225,
+        8.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        0.0,
+        720.0,
+        374.83026123046875,
+        720.0,
+        0.0012814000947400928,
+        6.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        838.28564453125,
+        720.0,
+        1280.0,
+        720.0,
+        0.0012807680759578943,
+        0.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        295.29736328125,
+        720.0,
+        1230.12109375,
+        720.0,
+        0.0012806783197447658,
+        8.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        457.2173767089844,
+        720.0,
+        1244.3726806640625,
+        720.0,
+        0.001279619405977428,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        886.934326171875,
+        720.0,
+        1280.0,
+        720.0,
+        0.0012782564153894782,
+        7.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        986.5244140625,
+        720.0,
+        1280.0,
+        720.0,
+        0.001277512637898326,
+        9.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        21.8243408203125,
+        720.0,
+        756.6019287109375,
+        720.0,
+        0.0012763907434418797,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        14.31005859375,
+        720.0,
+        596.5689697265625,
+        720.0,
+        0.0012742109829559922,
+        3.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        892.601318359375,
+        720.0,
+        1280.0,
+        720.0,
+        0.0012730852467939258,
+        1.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        0.0,
+        0.0,
+        257.8607482910156,
+        0.0,
+        0.0012714741751551628,
+        0.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        894.548095703125,
+        720.0,
+        1278.918701171875,
+        720.0,
+        0.0012711950112134218,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 1,
+        "file_name": "synthetic_000.png",
+        "width": 1280,
+        "height": 720
+      },
+      "row": [
+        0.0,
+        720.0,
+        307.5164794921875,
+        720.0,
+        0.0012685165274888277,
+        2.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        0.0,
+        0.0,
+        314.4951477050781,
+        0.0,
+        0.0013197207590565085,
+        0.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        128.47573852539062,
+        375.0,
+        756.4904174804688,
+        375.0,
+        0.0013117658672854304,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        0.0,
+        375.0,
+        305.9433288574219,
+        375.0,
+        0.0013086723629385233,
+        0.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        61.18944549560547,
+        375.0,
+        597.6909790039062,
+        375.0,
+        0.0013074115850031376,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        198.35369873046875,
+        375.0,
+        956.7353515625,
+        375.0,
+        0.0013063692022114992,
+        4.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        44.60991668701172,
+        375.0,
+        597.0496215820312,
+        375.0,
+        0.0013049552217125893,
+        0.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        130.95777893066406,
+        375.0,
+        949.58154296875,
+        375.0,
+        0.0013031673151999712,
+        6.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    },
+    {
+      "image": {
+        "id": 2,
+        "file_name": "synthetic_001.png",
+        "width": 1242,
+        "height": 375
+      },
+      "row": [
+        62.00311279296875,
+        375.0,
+        666.2496948242188,
+        375.0,
+        0.0013012863928452134,
+        6.0
+      ],
+      "zero_area": true,
+      "out_of_bounds": false
+    }
+  ],
+  "all_invalid_are_zero_area": true,
+  "invalid_target_class_count": 352
+}

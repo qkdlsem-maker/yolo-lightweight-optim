@@ -1,0 +1,41 @@
+{
+  "status": "synthetic_preparation_passed_real_evaluation_pending",
+  "utc": "2026-10-17T22:28:22.389257+00:00",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "source_sha256": {
+    "common_ap_core.py": "18b1978e94e4fd614feb06cad2d03700114b0ee304a20448c50e1e01bd7c3575",
+    "test_common_ap_core.py": "9febb69be67b9714212a1c811d46329aa2007e9d36afab26ef0218573a306851",
+    "common_annotation_adapters.py": "78bf5d85f1d0790909ad140237f860f65efde5263ca8d62e39931b71387661fa",
+    "test_common_annotation_adapters.py": "27b374ea0e6e6340b2ea75424258ab70c8909a9d8e83b0cd96756e443a7435f0",
+    "common_annotation_policy.json": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757",
+    "prediction_io.py": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b",
+    "test_prediction_io.py": "a2ea992fc0a5afb2cad70462f8de9f3021b28e9f807de605c2bda6cd63fa1d24",
+    "test_prediction_runtime.py": "5c30e87da8d6e5b559b39c2886cbed362ada0efff2d5d4c3bbafb7a89d47395c",
+    "fixed_geometry_predictor.py": "0a9da72c1f8288839cb94d76d296fd7c9317502efa44d12a0e4105dd83833e3f",
+    "prediction_io_policy.json": "da6dcb9b8c6b71088c0e3c0b96711eea6567ca3077900229627fbc70428403a8"
+  },
+  "evidence_sha256": {
+    "common_ap_core_validation.json": "f0835ed8c14bf97c8a9ac3e4c636443b0d44c138af49ff7dbe7a5fbff09173f1",
+    "common_ap_core_validation_linux.json": "c9c4c1f1b84125696159a8e6eb1ed6cbade1ec8e156779c49867c2db64b94842",
+    "common_annotation_validation.json": "81facc25d701ea7432904f2c8d991fc9a96c0642d1a9da3dd83d4651a3c3b0aa",
+    "common_annotation_validation_linux.json": "81facc25d701ea7432904f2c8d991fc9a96c0642d1a9da3dd83d4651a3c3b0aa",
+    "prediction_io_validation.json": "9b1a9892da3e55db2a3357b8ef3c2f0646381f8be55c70b3e866d9c933fcdf5e",
+    "prediction_io_validation_linux.json": "9b1a9892da3e55db2a3357b8ef3c2f0646381f8be55c70b3e866d9c933fcdf5e",
+    "prediction_runtime_validation.json": "331f9fb1d0d6b76fed588e277e3dd7ba7ce4b45f646c3cdd616e87878f66f85d",
+    "prediction_io_correction_20261017.json": "32bdd3f475d900744d86d3d353aef75b64402ef17935e67d8e0a58667606935a"
+  },
+  "counts": {
+    "common_core": 24,
+    "annotation_adapters": 15,
+    "prediction_serialization": 26,
+    "synthetic_runtime_images": 33
+  },
+  "isolated_linux_pycocotools_wheel": {
+    "filename": "pycocotools-2.0.11-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+    "sha256": "a82d1c9ed83f75da0b3f244f2a3cf559351a283307bd9b79a4ee2b93ab3231dd",
+    "bytes": 411685
+  },
+  "training_environment_unmodified": true,
+  "real_fixed_roster_evaluations_complete": false,
+  "remaining": "Durable per-image prediction archive/resume implementation, complete48endpoint/checkpoint manifest and final audits, native BDD actual-input geometry verification, all fixed evaluations and scientific analysis."
+}

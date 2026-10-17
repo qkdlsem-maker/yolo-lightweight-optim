@@ -32,12 +32,14 @@ def runtime_record():
             'cocoeval_python_sha256': hashlib.sha256(Path(implementation.__file__).read_bytes()).hexdigest()}
 
 
-def _bbox(row):
+def _bbox(row, allow_zero=False):
     box = row['bbox']
     if len(box) != 4 or not all(math.isfinite(float(x)) for x in box):
         raise ValueError('A bbox must contain four finite xywh values')
-    if box[2] <= 0 or box[3] <= 0:
-        raise ValueError('Zero/negative box areas must be explicitly handled by the data adapter')
+    if box[2] < 0 or box[3] < 0:
+        raise ValueError('Negative box dimensions are invalid')
+    if not allow_zero and (box[2] == 0 or box[3] == 0):
+        raise ValueError('Ground-truth boxes must have positive area')
     return float(box[2] * box[3])
 
 
@@ -83,7 +85,9 @@ def evaluate(images, ground_truth, predictions, include_matches=False):
     for row in predictions:
         if row['image_id'] not in id_set or row['category_id'] not in CLASSES:
             raise ValueError('Unknown prediction image or category')
-        _bbox(row)
+        # Clipping at image edges can collapse detector boxes to zero area.
+        # Preserve them: COCO bbox IoU is zero, so they cannot become matches.
+        _bbox(row, allow_zero=True)
         if not math.isfinite(float(row['score'])) or not 0 <= row['score'] <= 1:
             raise ValueError('Prediction confidence must be finite and within [0,1]')
         counts[row['image_id']] += 1

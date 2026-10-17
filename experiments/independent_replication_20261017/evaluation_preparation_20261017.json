@@ -45,5 +45,6 @@
     "python_implementation_identical_after_CRLF_to_LF_normalization": true,
     "difference": "Windows wheel contains CRLF line endings; Linux wheel contains LF. Python source is otherwise byte-identical. Binary extensions remain platform-specific; validation covers only the listed synthetic cases."
   },
-  "source_raw_environment_record_sha256": "21e1bf05c183025b47a0d358522cb5aa71ade853e438841d4fbec3393541d661"
+  "source_raw_environment_record_sha256": "21e1bf05c183025b47a0d358522cb5aa71ade853e438841d4fbec3393541d661",
+  "version_scope": "Historical first Linux deployment verification. Prediction guards and source/test hashes were subsequently superseded by prediction_io_correction_20261017.json and evaluation_preparation_current.json before real scoring."
 }

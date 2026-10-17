@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "scope": "Synthetic core validation only; dataset converters and frozen real-data inference remain pending",
+  "cases": [
+    {
+      "name": "perfect_detection",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "no_detections",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "missing_person_predictions",
+      "expected": 0.5,
+      "actual": 0.4999999999999999
+    },
+    {
+      "name": "empty_image_high_score_false_positive",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "duplicate_after_matched_target",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "false_positive_before_target",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "exact_IoU_half_boundary",
+      "expected": 0.55,
+      "actual": 0.5499999999999999
+    },
+    {
+      "name": "classes_are_not_pooled",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "crowd_uses_detection_area_and_accepts_multiple",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "ordinary_target_has_priority_over_crowd",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "partial_recall_101_point_grid",
+      "expected": 0.7524752475247525,
+      "actual": 0.7524752475247524
+    },
+    {
+      "name": "missing_class_is_not_zero_AP",
+      "rejected": "Both classes must have non-ignored ground truth; missing is not zero AP"
+    },
+    {
+      "name": "unknown_image",
+      "rejected": "Unknown prediction image or category"
+    },
+    {
+      "name": "unknown_category",
+      "rejected": "Unknown prediction image or category"
+    },
+    {
+      "name": "nonfinite_confidence",
+      "rejected": "Prediction confidence must be finite and within [0,1]"
+    },
+    {
+      "name": "duplicate_annotation",
+      "rejected": "Duplicate annotation IDs"
+    },
+    {
+      "name": "zero_area_prediction",
+      "rejected": "Zero/negative box areas must be explicitly handled by the data adapter"
+    },
+    {
+      "name": "ambiguous_ignore",
+      "rejected": "Ambiguous ignore field: provide an explicit adapter policy"
+    },
+    {
+      "name": "inference_cap_exceeded",
+      "rejected": "Predictions exceed the frozen all-class inference cap; do not silently truncate"
+    },
+    {
+      "name": "missing_image_not_silently_dropped",
+      "rejected": "Unknown ground-truth image or category"
+    }
+  ],
+  "runtime": {
+    "pycocotools_version": "2.0.11",
+    "numpy_version": "2.3.5",
+    "cocoeval_python_sha256": "84b0e75c6e972ca8b6fa3219fb03c1993dc9a3509df28447ca112c3f91828d61"
+  },
+  "real_model_results_used": false,
+  "files_sha256": {
+    "common_ap_core.py": "10489f38e399fd6dc649cc4717c61e72458731a3d10de9757bc220ef1f720da4",
+    "test_common_ap_core.py": "02accfbb017fd90a4acbe99299a1b36d1c979554086ebf0671e71ae441af0f61"
+  }
+}

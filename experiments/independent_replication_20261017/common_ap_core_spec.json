@@ -1,0 +1,27 @@
+{
+  "status": "core_validated_on_synthetic_cases_only",
+  "purpose": "Use one matching and AP-integration implementation for the prespecified two-class diagnostic on BDD and KITTI; keep the primary ten-class BDD and native KITTI results separately.",
+  "created_before_any_new_external_scoring": true,
+  "implementation": "pycocotools==2.0.11 COCOeval, bbox mode; no modifications to its matching or accumulation code",
+  "normalized_categories": {"0": "person", "2": "car"},
+  "iou_thresholds": "0.50 to 0.95 inclusive in steps of 0.05",
+  "integration": "Arithmetic mean of the interpolated precision envelope at 101 recall points 0.00 to 1.00, then equal mean over ten IoU thresholds and two classes",
+  "box_convention": "Continuous xywh pixel coordinates; area=width*height, no inclusive-pixel +1 convention",
+  "area_range": [0, 10000000000],
+  "max_detections": 300,
+  "input_policy": "Predictions are already filtered by the frozen all-class inference settings. The two-class core rejects more than 300 mapped predictions per image instead of silently truncating. It receives all image IDs, including images with zero predictions or no target-class ground truth.",
+  "empty_cases": "No detections yields zero AP when target ground truth exists. An entirely missing ground-truth class raises an error instead of silently changing the macro-average denominator.",
+  "ignore_semantics": "The generic core accepts only explicit COCO iscrowd flags and rejects a separate ambiguous ignore field. Crowd matching follows standard COCO intersection-over-detection-area semantics. This does not decide how KITTI DontCare, Van, Person_sitting or BDD annotations are converted.",
+  "not_yet_ready_for_real_external_evaluation": [
+    "Freeze and document dataset-specific category, box-clipping, invalid-area and ignore-region conversion rules before new external predictions or scores are examined.",
+    "Validate both converters on synthetic and source-label examples, with category/count/source hashes and all images preserved.",
+    "Create and verify the 48-endpoint manifest after training completion and validate fixed inference serialization before real scoring.",
+    "Preserve the separate native KITTI evaluator and its native difficulty/neighbor-class/DontCare behavior; this common AP is not an official KITTI benchmark score."
+  ],
+  "interpretation_limits": "A shared AP core does not make the two datasets' annotation semantics, class definitions, ignore regions or sequence dependence identical. It cannot isolate a causal domain-shift effect, and the already-examined KITTI partition is not a fresh untouched holdout.",
+  "validation": "20 known-answer and rejection cases; no real model outcomes used. See common_ap_core_validation.json.",
+  "sources": [
+    "https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py",
+    "https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d"
+  ]
+}

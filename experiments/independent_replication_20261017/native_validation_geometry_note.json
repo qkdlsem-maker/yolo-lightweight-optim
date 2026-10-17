@@ -1,0 +1,21 @@
+{
+  "status": "synthetic_native_geometry_verified",
+  "utc": "2026-10-17T23:21:08.752542+00:00",
+  "question": "Does native standalone YOLO.val with the frozen evaluation flags actually deliver square640 FP32 tensors for homogeneous1280x720 images, including a partial batch?",
+  "budget_and_data": "One bounded33-image software fixture set with artificial labels; same preflight smoke checkpoint. No actual BDD/KITTI dataset or new trained endpoint used.",
+  "result": "The unchanged native validation path supplies32x3x640x640 and1x3x640x640 float32 CPU inputs; data loader is rectFalse and halfFalse. No geometry override was needed for YOLO.val.",
+  "failed_harness_attempt": {
+    "archive": "evaluation_tools/technical_failures/005_native_validation_probe",
+    "reason": "The initial hook also counted a1x3x32x32 initialization/model-summary probe before on_val_start as a validation batch.",
+    "repair": "Classify traces by the on_val_start boundary. Retain and report initialization probes separately. Do not modify the native validator or its data/metric settings.",
+    "original_script_sha256": "a5add6ba7f0664789ad6f98beb97e1d129c3c51a0c054d512aa3815a9a82124c"
+  },
+  "interpretation": "Native standalone validation and the predict API use distinct preprocessing paths. The prior FixedSquarePredictor correction remains necessary for predict-based common/KITTI inference. Training-context validation may use different precision and geometry, and cannot replace the final standalone evaluation.",
+  "limits": "CPU synthetic geometry does not validate every real-data image, GPU numerical equivalence or detector performance. Check actual inputs during each future frozen endpoint evaluation. Synthetic accuracy and latency are not research results.",
+  "training_or_historical_results_changed": false,
+  "real_fixed_roster_scoring_started": false,
+  "files_sha256": {
+    "test_native_validation_geometry.py": "93466d8dc3526417361d9b48e33a384f1a052603c05630e3ca6d1a28cb05607b",
+    "native_validation_geometry.json": "efe44eabb2a9906879934bbdedb0a43e623b4f380d4ed4e40054da0d9fee4df1"
+  }
+}

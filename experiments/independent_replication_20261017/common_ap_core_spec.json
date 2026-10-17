@@ -11,10 +11,9 @@
   "max_detections": 300,
   "input_policy": "Predictions are already filtered by the frozen all-class inference settings. The two-class core rejects more than 300 mapped predictions per image instead of silently truncating. It receives all image IDs, including images with zero predictions or no target-class ground truth.",
   "empty_cases": "No detections yields zero AP when target ground truth exists. An entirely missing ground-truth class raises an error instead of silently changing the macro-average denominator.",
-  "ignore_semantics": "The generic core accepts only explicit COCO iscrowd flags and rejects a separate ambiguous ignore field. Crowd matching follows standard COCO intersection-over-detection-area semantics. This does not decide how KITTI DontCare, Van, Person_sitting or BDD annotations are converted.",
+  "ignore_semantics": "The generic core accepts only explicit COCO iscrowd flags and rejects a separate ambiguous ignore field. Crowd matching follows standard COCO intersection-over-detection-area semantics. The separately frozen common_annotation_policy.json specifies source-ignore compatibility and no-ignore sensitivity variants for KITTI; neither is the native KITTI benchmark metric.",
+  "dataset_mapping_status": "Converters pass 15 synthetic checks, and every serialized target/ignore row has been independently compared to the pinned source-label archives. See common_annotation_build.json and common_annotation_source_verification.json. No real model predictions or scores have been evaluated.",
   "not_yet_ready_for_real_external_evaluation": [
-    "Freeze and document dataset-specific category, box-clipping, invalid-area and ignore-region conversion rules before new external predictions or scores are examined.",
-    "Validate both converters on synthetic and source-label examples, with category/count/source hashes and all images preserved.",
     "Create and verify the 48-endpoint manifest after training completion and validate fixed inference serialization before real scoring.",
     "Preserve the separate native KITTI evaluator and its native difficulty/neighbor-class/DontCare behavior; this common AP is not an official KITTI benchmark score."
   ],

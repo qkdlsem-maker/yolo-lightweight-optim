@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "utc": "2026-10-17T19:20:50Z",
+  "verification": "Independent implementation compares every serialized target/ignore row to pinned source archives, image IDs and counts; no adapter import",
+  "verifier_sha256": "87d436bae144221219af080bcedd724494328ddfbcb38eb7271d4f0b65aa5995",
+  "build_manifest_sha256": "58d224cc8038da89837e36e85564bade9ddb1007720e41cc0afd4a5afdab89db",
+  "bdd_source_rows_checked": 185526,
+  "bdd_target_rows_checked": 115768,
+  "kitti_source_rows_checked": 51865,
+  "kitti_target_rows_checked": 33229,
+  "kitti_compatibility_ignore_rows_checked": 25726,
+  "real_model_predictions_or_scores_accessed": false,
+  "limits": "Source archives remain legacy-mirror BDD and previously examined KITTI public training data; no new provenance or holdout-independence claim."
+}

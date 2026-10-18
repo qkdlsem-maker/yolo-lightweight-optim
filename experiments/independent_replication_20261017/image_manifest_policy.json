@@ -1,0 +1,27 @@
+{
+  "status": "fixed_actual_evaluation_image_content_manifests_complete",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "preparation_summary_sha256": "12fafa1b2dacca7be179b1d5f76a25a7182317c467a91785fde85711b3153c37",
+  "inputs": "All10000 fixed reconstructed-label BDD validation images and all7481 previously examined KITTI public labeled training-partition images. Ordered IDs, filenames and dimensions exactly match the previously verified common annotation views; both KITTI variants share one image manifest.",
+  "private_artifacts": {
+    "bdd_images.json": {
+      "bytes": 1498896,
+      "images": 10000,
+      "sha256": "aa4f1ffab0ef9e51bffca9075c2a6871e742eec791da97b69339693cf3a10564"
+    },
+    "kitti_images.json": {
+      "bytes": 1038754,
+      "images": 7481,
+      "sha256": "2193d967aed04e8238e59ed1ccc783d940b8188e4592e58dd3656b882e9feaa0"
+    }
+  },
+  "private_server_directory": "review_20261017_independent/image_manifests",
+  "public_contents": "Only builder code, aggregate counts/content hashes and this policy. The per-image filename/SHA256 lists, source images and labels are not included in this publication.",
+  "checks": "Read every encoded image byte for SHA256, verify source-file set and unique IDs/filenames, check JPEG/PNG headers and dimensions, verify stable size/mtime during each read, and bind pinned annotation-view hashes. Exact duplicate image content is reported rather than removed.",
+  "duplicate_interpretation": "BDD contains9998 distinct encoded image hashes among10000 files: two groups of two identical-byte images. This matches the earlier immutable audit; it is not a newly discovered cross-split leak. KITTI has7481 distinct encoded hashes. No encoded hash is shared between these two evaluation partitions. The prespecified10000/7481 image populations remain unchanged.",
+  "historical_audit_sha256": "ea8e338981e79408d1c586b7d3396164df8ac5e1a566591758336bed20f8b8a4",
+  "historical_scope": "The earlier all100k BDD encoded-byte audit recorded no train/validation exact-file overlap. This manifest build rehashes the current evaluation images, not all current training images; do not describe the older train comparison as a new full-training-content audit.",
+  "limitations": "Content hashes identify these exact files, not official-download authenticity, near-duplicate scenes, sequence independence or COCO pretraining non-overlap. BDD validation has been reused and KITTI was previously examined. No duplicate removal, model selection, coefficient/epoch selection or performance computation occurred.",
+  "execution": "Read-only input scan with Linux nice19 and idle I/O priority, no GPU access, training restart or environment change. New outputs are isolated, locked and guarded against replacing different existing bytes. Both transferred private manifests were independently hash/count-checked locally.",
+  "remaining": "GPU inference preflight when a GPU is available without interfering with training; fixed48endpoint hashes after all training/audits; final native BDD and common/native KITTI evaluation orchestration, all scores, analysis and manuscript work."
+}

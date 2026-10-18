@@ -1,0 +1,46 @@
+{
+  "status": "CPU_native_BDD_validation_integration_verified_real_scores_pending",
+  "utc": "2026-10-18T05:29:38.677793+00:00",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "purpose": "Evaluate each frozen endpoint with the original ten-class Ultralytics8.2.103 standalone detection validator. The subclass only verifies inputs and records native statistics; production preprocessing, NMS, coordinate conversion, matching and AP remain unchanged.",
+  "request_schema": "native_bdd_validation_request_v1: endpoint_id, checkpoint/protocol/image_manifest/dataset_manifest/data_yaml (each path+SHA256), image_dir, label_dir, source_sha256 for all four fixed local dependencies.",
+  "production_inputs": {
+    "images": 10000,
+    "raw_validation_boxes": 185526,
+    "image_manifest_sha256": "aa4f1ffab0ef9e51bffca9075c2a6871e742eec791da97b69339693cf3a10564",
+    "clean_data_manifest_sha256": "26282c2aa678e9fa73c886e6b7fba0e7d714ba61e1da55abbe501f56ef8e6b9d",
+    "clean_data_yaml_sha256": "93678590e84df8873c0fce0e19e0d103fa83cb2ad7e3b3b6757244e333397b8c",
+    "ordered_validation_label_bytes_sha256": "c0feb4100e4278ca9f0546a783ae57679372e0905be3b595c9292f475bb7d28a"
+  },
+  "input_integrity": "Bind the data YAML/manifest hashes to the fixed protocol; verify every original image hash/dimension and every ordered label byte. Build a private label snapshot and image-link view per endpoint so native label caches cannot write to original/training directories. Check all native loaded float32 class/bbox rows against the unique pinned raw rows, preserving and reporting native duplicate handling. Check every actual image ID/order/original dimension and forward tensor batch/shape/float32/device; setup probes are recorded separately. Recheck original inputs, snapshots, checkpoint and sources before completion.",
+  "fixed_inference": {
+    "imgsz": 640,
+    "batch": 32,
+    "conf": 0.001,
+    "NMS_IoU": 0.7,
+    "max_det": 300,
+    "half": false,
+    "rect": false,
+    "augment": false,
+    "single_cls": false,
+    "classes": null,
+    "agnostic_nms": false,
+    "workers_requested": 4,
+    "CPU_workers_forced_by_native_validator": 0
+  },
+  "preserved_evidence": "All native per-batch TP matrices for10IoUs, confidence, predicted/target classes, target-image class entries, prediction/target image-ID arrays and per-image counts are retained in compressed NumPy files. Keep full actual input trace, classwise AP-by-IoU and native aggregate metrics. No image is discarded when both target and prediction sets are empty. Run speed is recorded only as a diagnostic, not a controlled latency benchmark.",
+  "immutability": "Exclusive output lock, a fresh partial directory and atomic final commit after successful checks. Original labels/checkpoints remain unchanged. Completed matching output is verified without loading a model or repeating inference. Changed sources/inputs/statistics fail. Incomplete technical attempts remain separate for inspection; they are not completed experiment outcomes. Private generated YAML/cache paths record the staging location used during evaluation and are not a portable dataset release.",
+  "synthetic_actual_inference_proof": "33generated1280x720images and the existing preflight smoke checkpoint on CPU, with33raw label rows but32unique native rows and one empty-label image. Actual batches32and1 are640square float32. Original postprocessing remains active. The all-zero synthetic accuracy is not a research result; it checks the no-TP branch, input/label bindings, statistic persistence and cached no-model reuse. Original labels/cache/checkpoint remain unchanged; source/label/image/output mutations are rejected.",
+  "synthetic_positive_statistics_proof": "A distinct software fixture replaces ONLY postprocessing inside the test with fabricated boxes: the empty frame has no predictions; the remaining32frames each have one high-score false positive and one lower-score exact-match true positive. Native coordinate conversion/matching/AP and the new recorder remain active. All10IoUs have32TP/32FP,64prediction and32target image IDs align exactly, and native ten-class AP50:95 is the known answer0.4975. Native101-point trapezoidal interpolation differs from the common COCO integration. Saved statistics reproduce native metrics exactly. These values are software tests, never detector performance.",
+  "source_and_evidence_sha256": {
+    "run_native_bdd_validation.py": "34bb45f765fd0a8d1964358d5e46f7c4af10f4f00c43005c5114b9e25b82060b",
+    "test_native_bdd_validation.py": "5dde53019856b38aefe80624ed1f979b2b5f4725d364828f4a47cbb8e70990fd",
+    "test_native_bdd_positive_statistics.py": "33be6f1429c37ba9a51d85c34573d9f1f351ff8856be341ee828b47b8593b6a2",
+    "native_bdd_validation_integration.json": "4c5106c70fdb3f65476104c99c42b7534edef6d75bccb58181e8f5e2edbbda23",
+    "native_bdd_positive_statistics_validation.json": "20d62d0815215b4c58e7c6d0130db41b1f020633966bcbb6f26b2191cf6fd513"
+  },
+  "training_or_original_data_changed": false,
+  "real_model_BDD_KITTI_scores_computed": false,
+  "data_handling": "Completed private evaluation folders include copied labels, image symlinks, native cache and per-image statistics. Do not automatically publish these folders. This publication contains only original runner/test code, aggregate synthetic proof and this policy.",
+  "limits": "CPU verification is not GPU numeric-equivalence evidence. GPU inference preflight remains pending until a GPU is free. All six base trainings and21continuations, their final audits and the frozen48endpoint roster must finish before real evaluation. Native training-context validation may force FP16/use different geometry; training CSV scores must not replace this standalone primary metric. BDD validation is reused, legacy2018mirror provenance is not authenticated, and137uncertain-label images are excluded. Scientific analysis, journal fit and manuscript revision remain pending."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "CPU_synthetic_inference_resume_passed_real_roster_evaluation_pending",
+  "utc": "2026-10-18T01:22:35.210226+00:00",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "archive_policy_sha256": "ecef5d51c2d2f4ec3843fc57f5bdc4bcdb9c6ec739541d12f7c0aa5f23ab5e39",
+  "frozen_request_schema": "frozen_prediction_request_v1: endpoint_id, dataset_id, checkpoint{path,sha256}, protocol{path,sha256}, image_manifest{path,sha256}, image_dir, source_sha256 for the four inference/archive modules. The image manifest is an ordered JSON list of id/file_name/width/height/sha256.",
+  "before_inference": "Verify actual checkpoint, protocol, image-manifest and local source content against fixed hashes. Bind exact package versions, critical installed Ultralytics source hashes, device/runtime flags, ordered image metadata and content hashes. Verify every image byte hash and header dimensions before model loading.",
+  "inference": "Use the already verified FixedSquarePredictor and explicit32-image slicing, including the final remainder. Class-aware ten-class NMS and original protocol settings are unchanged. Obtain model-input shape/dtype/device from a forward hook. Classify on_predict_batch_start/on_predict_batch_end inputs separately from setup/warmup probes. Require exactly one float32[B,3,640,640] actual forward per committed batch.",
+  "integrity": "Verify active-batch image bytes both before and after inference. Recheck all image hashes and checkpoint/protocol/manifest/local-source hashes before completion. Execution journals preserve started/finished/failed status and actual traces separately from immutable prediction storage. Changed input bytes fail even when an archive was previously complete.",
+  "resume": "Verify existing archive, skip committed batches and append only pending whole batches. A complete archive is verified without loading the model or running inference. A positive max-new-batches is a graceful technical batch limit and does not finalize incomplete predictions. The CLI exposes no accuracy-based stopping or selection.",
+  "synthetic_evidence": "33 generated unlabeled images and existing preflight smoke checkpoint on CPU. Deliberately interrupt after the first32-image durable commit, resume only image33, then verify completed-archive access performs no model load or forward. Compare all37 archive artifact files against an uninterrupted run: every byte matches. All5577 predictions retained. Changed generated-image bytes are rejected. Checkpoint unchanged.",
+  "runtime_detail": "The pinned Ultralytics CPU select_device helper sets torch threads to8 after the initial2-thread request; the recorded runtime correctly captures the actual8 threads. This is synthetic integration validation, not a latency benchmark. Deterministic algorithms use the pinned library warn-only setting, which is recorded rather than described as a universal determinism guarantee.",
+  "expected_test_interruption": "The test-only callback intentionally raises SyntheticInterruption after durable batch0; this is a planned fault-injection fixture, not an unreported experimental failure. Temporary synthetic fixtures contain execution journals; no real data or model results are modified.",
+  "source_and_evidence_sha256": {
+    "run_prediction_archive.py": "e2d990fb313478edfb527031f9e5d0278467254387e76b278361cd05386c8d41",
+    "test_prediction_archive_runtime.py": "627d464d1ea9c9bcbded559006ecb04bfa170319c4ed28a2cc19ecb1ccf9d954",
+    "prediction_archive_runtime_validation.json": "35cac63cf8d2373533d1e804daa25b579bccdcfc58523194b1866005e531d052"
+  },
+  "training_or_original_data_modified": false,
+  "real_dataset_accuracy_computed": false,
+  "limits": "CPU synthetic proof does not establish GPU bitwise reproducibility, actual GPU warmup trace behavior, full real-dataset correctness or scientific model performance. Validate GPU behavior once a GPU is available without interfering with active training. Freeze and audit all48 endpoint hashes after all training; then run every fixed native/common metric, preserve both KITTI variants and all outcomes. Native BDD final evaluation and roster orchestration/scoring still need integration."
+}

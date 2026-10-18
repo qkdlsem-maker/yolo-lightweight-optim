@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "Fabricated image metadata, labels and predictions only; no model or real dataset accessed",
+  "known_answer_AP50_95": {
+    "kitti_source_ignore": 1.0,
+    "kitti_no_ignore_sensitivity": 0.5,
+    "bdd_common": 0.5
+  },
+  "same_prediction_projection_for_both_KITTI_variants": true,
+  "empty_image_and_zero_area_prediction_retained": true,
+  "all_class_predictions": 6,
+  "mapped_predictions": 5,
+  "completed_scores_reused_without_recomputation_or_changes": true,
+  "invalid_requests_and_mutations_rejected": [
+    "missing_fixed_variant",
+    "changed_source",
+    "changed_annotation_even_with_complete_scores",
+    "changed_score_artifact"
+  ],
+  "source_sha256": {
+    "common_ap_core.py": "18b1978e94e4fd614feb06cad2d03700114b0ee304a20448c50e1e01bd7c3575",
+    "prediction_archive.py": "13fca0ca79defb6c0aaae9ac3ee6e22c347bc4a9509bea9f92a976f174a02062",
+    "prediction_io.py": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b",
+    "score_common_archive.py": "7c15826a4fb6e07c9a415fd75c2705eb03a51985ae7f9c77b87858c32d959147",
+    "common_annotation_policy.json": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757",
+    "test_common_archive_scoring.py": "d176bf0bb682038f5ad643cb3a401633fc883e7d2b980a94700e3db389c05aa7"
+  },
+  "runtime": {
+    "cocoeval_python_sha256": "988485f79624cd42ceed9335d284df4cdcdf7b3d583e052fcbed2dd6bccf0267",
+    "numpy_version": "1.26.4",
+    "pycocotools_version": "2.0.11"
+  },
+  "real_model_or_dataset_scores_observed": false,
+  "native_BDD_or_native_KITTI_metrics_covered": false
+}

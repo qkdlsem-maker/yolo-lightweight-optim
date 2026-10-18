@@ -1,0 +1,29 @@
+{
+  "status": "synthetic_common_archive_scoring_integration_passed_real_evaluation_pending",
+  "utc": "2026-10-18T03:23:29.029272+00:00",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "annotation_policy_sha256": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757",
+  "purpose": "Apply the already frozen two-class common AP core to the complete immutable prediction archive. This is distinct from ten-class native BDD AP and native KITTI difficulty/AP_R40.",
+  "request_schema": "common_archive_scoring_request_v1: dataset(bdd or kitti), archive_path, archive_manifest_sha256, archive_complete_sha256, all five local source/policy hashes, annotation_views mapping each required variant to path/SHA256.",
+  "fixed_variants": {
+    "bdd": [
+      "bdd_common"
+    ],
+    "kitti": [
+      "kitti_source_ignore",
+      "kitti_no_ignore_sensitivity"
+    ]
+  },
+  "integrity": "Verify completed archive hashes and every archived prediction, all annotation hashes, exact image metadata/order, fixed category mapping and annotation-policy binding. Verify that the KITTI ordinary targets are identical after removing annotation IDs. One common prediction projection is used for both KITTI views; save its SHA256 in both results.",
+  "metric": "Unchanged common_ap_core.py with isolated pinned pycocotools2.0.11, two classes(person0,car2), IoU.50:.05:.95,101recall levels, all areas/maxDet300. Preserve classwise AP-by-IoU,101precision curves and max-recall curves. Raw all-class predictions remain in the archive; mapping occurs only after original ten-class NMS.",
+  "completion": "Exclusive output lock and all-variant directory commit. Write no completed score set until every required variant succeeds and input/source integrity is rechecked. Interrupted partial directories are retained. Existing completed matching results are hash-verified and reused without invoking the evaluator; different/corrupt input or output bytes are rejected.",
+  "synthetic_validation": "Fabricated labels/predictions only, with an empty second image, a low-score zero-area prediction and a non-target-class prediction. Known answers: common source-ignore AP1.0, strict/no-ignore AP0.5, BDD-common AP0.5. These are software fixtures, not detector results. Both KITTI variants share the exact projection; all6original detections/5mapped detections retained. Missing variant, changed source, changed annotations and changed output are rejected. A failing evaluator mock proves completed scores are reused without recomputation.",
+  "source_and_evidence_sha256": {
+    "score_common_archive.py": "7c15826a4fb6e07c9a415fd75c2705eb03a51985ae7f9c77b87858c32d959147",
+    "test_common_archive_scoring.py": "d176bf0bb682038f5ad643cb3a401633fc883e7d2b980a94700e3db389c05aa7",
+    "common_archive_scoring_validation.json": "58220f6417bc6d45fba48600451830133dff288f080b6075a4561e61629a7188"
+  },
+  "training_environment_changed": false,
+  "real_dataset_model_scores_observed": false,
+  "limits": "This validates common-score integration only. GPU inference preflight, native BDD final-evaluation runner, native KITTI archive export/scoring integration, final48endpoint model roster and full real-data evaluation/analysis are still pending. The common metric does not erase annotation/ignore differences or establish a causal explanation of cross-dataset effects."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "label_zip_sha256": "4efc76220d867e1c31bb980bbf8cbc02599f02a9cb4350effa98dbb04aaed880",
+  "image_manifest_sha256": "2193d967aed04e8238e59ed1ccc783d940b8188e4592e58dd3656b882e9feaa0",
+  "images": 7481,
+  "label_files": 7481,
+  "label_bytes": 4239487,
+  "ordered_member_hashes_sha256": "dd0608c1626e8a92fefe9f8836e26f447e7429e6d60943eaef8991dd0b53bf67",
+  "scope": "Read-only ZIP member/population compatibility; no original data extraction, inference or scoring",
+  "source_sha256": {
+    "score_native_kitti_archive.py": "dd0796efef702d7e07875c0ba3d17fb7d637d20353dd82661eb705139327d31f"
+  }
+}

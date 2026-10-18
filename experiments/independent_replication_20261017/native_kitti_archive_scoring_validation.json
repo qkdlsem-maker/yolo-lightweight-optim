@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "Fabricated image metadata, labels and predictions only; no model or real dataset evaluated",
+  "native_core_sha256": {
+    "executable": "4524fb43a3b39662140f1f41a749d3cf42e395e18cd23420260fa796d89b64c9",
+    "original_source": "b16410ba8914a732405ec937a16d1cd039b6e3bf7d9e8edb6dd3ec79c15892b4",
+    "adapted_source": "20c521ef2b30b37f34b52cdbfee3c6e7daa0d3650a603c2b209a5dd39f91c45e",
+    "build_manifest": "427e55b18221e0c67788c0b81240d1b31f20d0e77eb6b3f3c6eba7339ee28a33",
+    "prior_synthetic_proof": "444b92667b3656ccba487678ffbf088d03978fb3354fcd1a01ea88eff7ec3527"
+  },
+  "existing_eight_case_proof_reused_without_reexecution": true,
+  "images": 400,
+  "known_answer_AP_R40_all_classes_and_difficulties": 0.5,
+  "all_class_predictions": 1400,
+  "mapped_predictions": 1200,
+  "empty_prediction_files": 200,
+  "zero_area_mapped_predictions_preserved": 400,
+  "GT_ZIP_member_bytes_preserved": true,
+  "injected_process_failure_preserved_as_partial_without_complete": true,
+  "completed_outputs_reused_without_execution_or_mutation": true,
+  "invalid_requests_and_mutations_rejected": [
+    "changed_source",
+    "changed_labels_even_with_completed_scores",
+    "changed_exported_prediction_text",
+    "wrong_precision_shape",
+    "nonfinite_precision"
+  ],
+  "source_sha256": {
+    "prediction_archive.py": "13fca0ca79defb6c0aaae9ac3ee6e22c347bc4a9509bea9f92a976f174a02062",
+    "prediction_io.py": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b",
+    "score_native_kitti_archive.py": "dd0796efef702d7e07875c0ba3d17fb7d637d20353dd82661eb705139327d31f",
+    "test_native_kitti_archive_scoring.py": "f72612075ac49ef182933492ed0ae3f988c55e4955514ffb26890aa032be46ea"
+  },
+  "real_model_or_dataset_scores_observed": false
+}

@@ -1,0 +1,36 @@
+{
+  "status": "native_KITTI_archive_integration_synthetically_verified_real_scores_pending",
+  "utc": "2026-10-18T04:27:10.688641+00:00",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "purpose": "Apply the previously verified original KITTI 2D matching core to completed immutable prediction archives. This native difficulty/AP_R40 endpoint is separate from both common COCO AP variants, which remain mandatory.",
+  "core_sha256": {
+    "executable": "4524fb43a3b39662140f1f41a749d3cf42e395e18cd23420260fa796d89b64c9",
+    "original_source": "b16410ba8914a732405ec937a16d1cd039b6e3bf7d9e8edb6dd3ec79c15892b4",
+    "adapted_source": "20c521ef2b30b37f34b52cdbfee3c6e7daa0d3650a603c2b209a5dd39f91c45e",
+    "build_manifest": "427e55b18221e0c67788c0b81240d1b31f20d0e77eb6b3f3c6eba7339ee28a33",
+    "prior_synthetic_proof": "444b92667b3656ccba487678ffbf088d03978fb3354fcd1a01ea88eff7ec3527"
+  },
+  "core_provenance": "Reuse the checksum-pinned original developer-kit source, local 2D path/count harness, executable, build manifest and eight-case synthetic proof from the prior completed phase. No rebuild, changes to matching/ignore/IoU/difficulty rules, or repeat of the eight original tests. The new integration is separately tested with fabricated records.",
+  "request_schema": "native_kitti_archive_scoring_request_v1: archive_path, archive_manifest_sha256, archive_complete_sha256, source_sha256 for the three fixed modules, native_core_paths for executable/original_source/adapted_source/build_manifest/prior_synthetic_proof, and label_zip with path/SHA256.",
+  "production_population": {
+    "images": 7481,
+    "file_names": "000000.png through 007480.png, ordered; archive IDs1 through7481",
+    "label_zip_sha256": "4efc76220d867e1c31bb980bbf8cbc02599f02a9cb4350effa98dbb04aaed880",
+    "image_manifest_sha256": "2193d967aed04e8238e59ed1ccc783d940b8188e4592e58dd3656b882e9feaa0"
+  },
+  "integrity": "Require a complete archive and verify every record, source and native-core hash. Require ZIP member names to exactly cover the complete image population; duplicate/extra/missing members fail. Copy each label member byte-for-byte into a fresh private stage. The original ZIP and existing extracted data are read-only. Verify hashes before/after scoring, verify local label and prediction snapshots, and save all file hashes. Actual final requests must use the production hashes above and the final frozen48endpoint roster.",
+  "export": "One text file for every frame, including empty predictions. Map person0 to Pedestrian and car2 to Car only after the original all-ten-class NMS. Retain zero-area predictions and use the unchanged nine-significant-digit float32-safe serializer. Save counts, input bindings, native text files, complete precision curves and all per-class/difficulty results.",
+  "metric": "Original 2D class/difficulty matching: Car IoU>0.7 and Pedestrian IoU>0.5, with the original height/truncation/occlusion/neighbor/DontCare behavior. Parse exactly3by41 finite precision values per class. AP_R40 is the mean of slots1 through40 excluding slot0, reported as a fraction. Primary native summary is the arithmetic mean of Car and Pedestrian moderate AP_R40; all easy/moderate/hard values remain reported.",
+  "completion": "Exclusive output lock, subprocess argument list with no shell, fresh partial directory and atomic final directory commit. Preserve partial artifacts on failure. Never mark complete after a failed native process. Existing matching complete outputs are hash-verified and reused without invoking the binary; changed inputs or outputs fail.",
+  "synthetic_integration": "400 fabricated frames: half have missing predictions; the others have true positives, high-score DontCare overlaps, non-target-class outputs and collapsed outputs. Both classes/all difficulties give known-answer AP_R40=0.5. All1400raw outputs remain archived;1200mapped outputs,200empty files and400collapsed mapped outputs are exported. This is a software fixture, not scientific detector performance. A planned process-failure mock verifies incomplete-state retention; a no-execution mock verifies complete-state reuse. Source/label/export mutations and malformed/nonfinite curves are rejected.",
+  "source_and_evidence_sha256": {
+    "score_native_kitti_archive.py": "dd0796efef702d7e07875c0ba3d17fb7d637d20353dd82661eb705139327d31f",
+    "test_native_kitti_archive_scoring.py": "f72612075ac49ef182933492ed0ae3f988c55e4955514ffb26890aa032be46ea",
+    "native_kitti_archive_scoring_validation.json": "9d74912ebc7cf153fa12b70b8a441ba4774f92079f1b4eedddda0c417601c26c",
+    "native_kitti_label_binding.json": "ec3f32bfb325030d749fa1e6558411358179744b92fa947965e40af183e1cc5b"
+  },
+  "data_handling": "Private score folders include copies of original labels and native prediction files. Do not automatically publish these folders or ZIPs. The public allowlist here contains only original wrapper/test code, aggregate evidence and this policy.",
+  "real_model_or_dataset_scores_observed": false,
+  "training_or_original_data_modified": false,
+  "limits": "This is a local evaluation on the previously examined publicly labeled KITTI training partition, not the official hidden-test benchmark or an untouched new test set. GPU inference preflight, native BDD final-run integration, final training/input/checkpoint audits, the48endpoint roster and all actual evaluations/scientific analysis remain pending. Synthetic proof does not establish generalization or explain dataset effects."
+}

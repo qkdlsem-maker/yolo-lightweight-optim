@@ -1,0 +1,22 @@
+{
+  "status": "synthetic_archive_validation_passed_inference_integration_pending",
+  "utc": "2026-10-18T00:23:34.467136+00:00",
+  "purpose": "Preserve all fixed-roster predictions across interrupted evaluation without mixing models, inputs, configurations or code versions.",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "parent_inference_preparation_sha256": "04811fde7343667dbfb77b7b0aa557fe364fa3168b19c344723e68f86b45bbf5",
+  "storage": "One lossless all-class JSON per image, including empty and zero-area outputs. Fixed32-image batches plus remainder. Each batch has an ordered input-content and record SHA256 commit manifest; directory rename publishes only a fully written batch. Completion binds all commit hashes in order.",
+  "binding": "Archive manifest fixes endpoint/dataset IDs, checkpoint and protocol hashes, source hashes, runtime, original inference settings and ordered image metadata/content SHA256. Changed bindings, missing/extra/reordered records or any changed prediction bytes fail verification.",
+  "resume": "Exclusive kernel file lock. Verify every committed batch before append/resume and at completion. Skip committed batches; never overwrite them. Preserve interrupted staging directories as evidence and do not count them. Only an uncommitted whole batch may be repeated after technical interruption. Readers may score only a complete verified archive.",
+  "actual_tensor_guard": "Each committed batch requires one recorded actual model input with shape[B,3,640,640] and dtype torch.float32. The future runner must separate warmup/setup probes from actual inference and obtain these traces from hooks, not from declared settings.",
+  "durability_scope": "Files are flushed and fsynced before atomic directory rename; containing directories are fsynced on Linux. Windows directory fsync is unavailable here, so no equivalent power-loss guarantee is claimed. Corrupt initialization/completion metadata fail closed and require inspected recovery. Tests simulate orphan staging and tampering; they do not certify every hardware/power-loss failure mode.",
+  "validation": "All16 named synthetic cases pass on Windows and Linux with identical evidence. Covers interruption staging preservation, append/resume round trip, empty/zero-area/other-class outputs, changed checkpoint/protocol/source/runtime/input/geometry/precision, concurrent locking, missing/extra/tampered records, ordering and completion guards.",
+  "source_and_evidence_sha256": {
+    "prediction_archive.py": "13fca0ca79defb6c0aaae9ac3ee6e22c347bc4a9509bea9f92a976f174a02062",
+    "test_prediction_archive.py": "5cfada9c824f5528c9f3d8ed3dd9a75940926b02609caab0dd1a24c642beadbf",
+    "prediction_archive_validation.json": "68604bfe7395f5cf2bd6877be96ab962978f9d5c0e9bed419b0881433f02d356",
+    "prediction_archive_validation_linux.json": "68604bfe7395f5cf2bd6877be96ab962978f9d5c0e9bed419b0881433f02d356"
+  },
+  "training_or_original_data_modified": false,
+  "real_model_predictions_or_scores_generated": false,
+  "remaining": "Integration runner must hash actual checkpoint/source/image bytes, provide genuine forward traces, verify runtime and unchanged input/checkpoint state, and skip all committed batches. Synthetic inference interruption/resume integration, final48endpoint manifest, all real fixed-roster evaluations and manuscript/scientific work remain pending."
+}

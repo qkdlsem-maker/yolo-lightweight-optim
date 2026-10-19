@@ -1,0 +1,31 @@
+{
+  "status": "GPU_synthetic_preflight_passed_real_endpoint_evaluation_pending",
+  "utc": "2026-10-19T01:38:03.283747+00:00",
+  "supersedes_only_pending_GPU_preflight_status_in": [
+    "prediction_archive_runtime_policy.json",
+    "native_bdd_validation_policy.json"
+  ],
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "scope": "Four bounded GPU-only software tests using the existing nano and large seed101 smoke checkpoints and generated images. No real BDD/KITTI image or label is evaluated and no scientific model-performance value is produced.",
+  "test_configuration": "Physical GPU1, RTX4090, CUDA_VISIBLE_DEVICES=1 and logical cuda:0. PyTorch2.5.1+cu121, Ultralytics8.2.103. Native GPU validation uses4workers. All actual batches are32or1, RGB640x640 and float32.",
+  "guards": "Before every new test, the training coordinator remained active only on GPU0 with no pending base jobs, nano303 completed, large303 epoch81 and GPU1 had no compute process. The existing coordinator was not restarted or modified.",
+  "prediction_evidence": "For each architecture, a planned exception follows the first durable32-image batch. Recovery processes only image33 and preserves committed bytes. The resumed and uninterrupted37artifact files are byte-identical within the tested GPU/runtime configuration. Completed archives skip model loading/inference. Changed generated-image bytes are rejected. Nano5577 and large9900 synthetic predictions are retained without dropping collapsed boxes. These counts are software-fixture properties, not detection performance.",
+  "native_validation_evidence": "For each architecture, all33generated1280x720images remain in fixed order, including an empty-label frame and an exact duplicate-label fixture.33raw rows become32native unique rows. Saved per-batch statistics reproduce native metrics. Changed source/image/label/statistic artifacts are rejected; complete matching output loads no model. Source checkpoint and fixture originals stay unchanged until explicit test-only mutation checks.",
+  "warmup": "Prediction setup has one1x3x640x640 CUDA float32 warmup per model instantiation. Native validation records a separate1x3x32x32 model-summary probe and1x3x640x640 warmup. Neither is counted as a real data batch.",
+  "technical_failure": "The first outer wrapper stopped after nano prediction had already passed because nvidia-smi prefixes the GPU UUID with GPU- while PyTorch omits that prefix. The initial failure record is preserved. Recovery strips only that format prefix for equality; it reused the existing passed nano prediction proof without running inference again, then ran the three remaining tests once. Production inference/validation sources, test conditions and installed packages were not changed.",
+  "known_limitations": "This verifies GPU software behavior on generated fixtures and the two smoke checkpoints. It does not establish universal bitwise determinism, CPU/GPU numerical equality, real-dataset accuracy, controlled inference latency or correctness of all future trained endpoints. The fixed48endpoint roster, training audits, all native/common evaluations and manuscript analysis remain pending.",
+  "training_or_production_sources_modified": false,
+  "real_dataset_scores_computed": false,
+  "data_handling": "Generated fixture folders remain private for audit, including intentional corruption tests. Publish only the two test scripts, plan, four aggregate proofs, initial/recovery execution records and this policy; no real dataset images or labels.",
+  "source_and_evidence_sha256": {
+    "test_prediction_archive_gpu.py": "08c09ea9273a1259b81896e648c9f8be2aff98b2a44577b3d66b836bcaa64524",
+    "test_native_bdd_gpu.py": "1980c209b50c710970c672b30a1862a0778922d6992b588b2b032640001ebd18",
+    "gpu_evaluation_preflight_plan.json": "800035eda4a62633dbd7ae69b9ebca375839a6461bc490a486146b7d294d16cd",
+    "gpu_nano_prediction_validation.json": "40354537200ec936f948289b67d91e1b011ac0497cba81c25a8f2e2a2d1547af",
+    "gpu_large_prediction_validation.json": "71a3a30238a05d1a891098d74ddfa7e55c22627746c057d6caaad3352f35d40b",
+    "gpu_nano_native_bdd_validation.json": "73f11c7467823aa7586c900ba6935fe6fe4c767123f6c22dd3db339fc4306e7d",
+    "gpu_large_native_bdd_validation.json": "f5b356fb04c0f37096942527128d5b42eda17200686d278d9610934dcb303688",
+    "gpu_preflight_execution.json": "744d2130de44ee4c4079e6bda831266c68de56c7cf5f99fb6b642d24b06cee3d",
+    "gpu_preflight_execution_recovery.json": "5ab93948c21536a386b033188b0157200642764f3a70e2a876571d06b2772344"
+  }
+}

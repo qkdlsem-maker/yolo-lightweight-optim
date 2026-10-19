@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "utc": "2026-10-19T01:36:49.852057+00:00",
+  "jobs": [
+    {
+      "model": "nano",
+      "kind": "prediction",
+      "status": "passed_existing_without_rerun",
+      "proof_sha256": "40354537200ec936f948289b67d91e1b011ac0497cba81c25a8f2e2a2d1547af"
+    },
+    {
+      "model": "nano",
+      "kind": "native_bdd",
+      "guard": {
+        "gpu_inventory": "0, GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 10840\n1, GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc, 118\n",
+        "compute_processes": "GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 2252685\n",
+        "physical_gpu1_uuid": "GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc",
+        "large303_epoch": 81
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log_sha256": "79df3d787535eaa8b7904255e4d15769228a1756e31269dc3e5a1ee55492a9e5",
+      "proof_sha256": "73f11c7467823aa7586c900ba6935fe6fe4c767123f6c22dd3db339fc4306e7d"
+    },
+    {
+      "model": "large",
+      "kind": "prediction",
+      "guard": {
+        "gpu_inventory": "0, GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 10840\n1, GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc, 118\n",
+        "compute_processes": "GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 2252685\n",
+        "physical_gpu1_uuid": "GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc",
+        "large303_epoch": 81
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log_sha256": "71a3a30238a05d1a891098d74ddfa7e55c22627746c057d6caaad3352f35d40b",
+      "proof_sha256": "71a3a30238a05d1a891098d74ddfa7e55c22627746c057d6caaad3352f35d40b"
+    },
+    {
+      "model": "large",
+      "kind": "native_bdd",
+      "guard": {
+        "gpu_inventory": "0, GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 10840\n1, GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc, 118\n",
+        "compute_processes": "GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 2252685\n",
+        "physical_gpu1_uuid": "GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc",
+        "large303_epoch": 81
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log_sha256": "ad05a9bc9f41bd19d3a9a83dda3c4b73f1de52aac3ffe74cdb4e202447e10904",
+      "proof_sha256": "f5b356fb04c0f37096942527128d5b42eda17200686d278d9610934dcb303688"
+    }
+  ],
+  "plan_sha256": "800035eda4a62633dbd7ae69b9ebca375839a6461bc490a486146b7d294d16cd",
+  "finished_utc": "2026-10-19T01:37:07.494664+00:00"
+}

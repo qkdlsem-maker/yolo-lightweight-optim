@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "utc": "2026-10-19T01:36:14.051683+00:00",
+  "jobs": [
+    {
+      "model": "nano",
+      "kind": "prediction",
+      "guard": {
+        "gpu_inventory": "0, GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 10840\n1, GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc, 118\n",
+        "compute_processes": "GPU-41d83c61-12b9-c217-8efb-88f629f90acf, 2252685\n",
+        "physical_gpu1_uuid": "GPU-f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc",
+        "large303_epoch": 81
+      },
+      "status": "running",
+      "exit_code": 0,
+      "log_sha256": "40354537200ec936f948289b67d91e1b011ac0497cba81c25a8f2e2a2d1547af"
+    }
+  ],
+  "plan_sha256": "800035eda4a62633dbd7ae69b9ebca375839a6461bc490a486146b7d294d16cd",
+  "error_type": "AssertionError",
+  "error": "",
+  "finished_utc": "2026-10-19T01:36:19.531691+00:00"
+}

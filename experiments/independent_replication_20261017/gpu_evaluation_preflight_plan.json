@@ -1,0 +1,29 @@
+{
+  "status": "prespecified_before_GPU_execution",
+  "utc": "2026-10-19T01:35:32.100947+00:00",
+  "purpose": "Verify actual GPU precision/shape/warmup, archive resume and unchanged native validation on synthetic data, once GPU1 is idle after nano303 completion.",
+  "tests": [
+    {
+      "script": "test_prediction_archive_gpu.py",
+      "checkpoints": [
+        "nano_seed101_smoke/weights/last.pt",
+        "large_seed101_smoke/weights/last.pt"
+      ]
+    },
+    {
+      "script": "test_native_bdd_gpu.py",
+      "checkpoints": [
+        "nano_seed101_smoke/weights/last.pt",
+        "large_seed101_smoke/weights/last.pt"
+      ]
+    }
+  ],
+  "budget": "Four sequential subprocesses, at most600seconds each, GPU1 only. Prediction tests process33synthetic images in interrupted+resumed and uninterrupted executions; native tests process33generated images once per architecture. No real BDD/KITTI inputs or metrics.",
+  "guard": "Before each subprocess require current coordinator active only on GPU0 with no pending base jobs, large303 epoch<90, nano303 complete, and no compute process on GPU1. If any guard fails, stop without launching; defer until safely available.",
+  "stopping_rule": "Stop on first technical failure and preserve logs/fixtures. Never repeat successful tests; record numerical nonidentity as such and inspect technical cause before any revised test.",
+  "unchanged": "No training source/configuration, evaluation production source, installed dependency, checkpoint or original dataset changed.",
+  "source_sha256": {
+    "test_prediction_archive_gpu.py": "08c09ea9273a1259b81896e648c9f8be2aff98b2a44577b3d66b836bcaa64524",
+    "test_native_bdd_gpu.py": "1980c209b50c710970c672b30a1862a0778922d6992b588b2b032640001ebd18"
+  }
+}

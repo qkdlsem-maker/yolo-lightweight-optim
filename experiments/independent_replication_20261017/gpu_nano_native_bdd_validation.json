@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "scope": "GPU standalone native validation of generated33image fixtures only; not CPU/GPU numerical equivalence",
+  "real_BDD_KITTI_data_used": false,
+  "synthetic_accuracy_or_latency_reported_as_research": false,
+  "images": 33,
+  "raw_label_rows": 33,
+  "native_unique_label_rows": 32,
+  "empty_image_retained": true,
+  "native_duplicate_label_handling_verified": true,
+  "native_loaded_labels_match_pinned_float32_rows": true,
+  "actual_forward_inputs": [
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "shape": [
+        32,
+        3,
+        640,
+        640
+      ]
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ]
+    }
+  ],
+  "setup_probes": [
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "shape": [
+        1,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ]
+    }
+  ],
+  "preserved_native_statistics_reproduce_native_results_exactly": true,
+  "completed_output_reused_without_loading_model_or_inference": true,
+  "original_labels_and_checkpoint_unchanged": true,
+  "original_label_cache_not_created": true,
+  "invalid_requests_and_mutations_rejected": [
+    "changed_source",
+    "changed_original_labels_even_with_complete_output",
+    "changed_original_image_even_with_complete_output",
+    "changed_native_statistics_artifact"
+  ],
+  "preflight_checkpoint_sha256": "2bf0858038a4315bbbd0435a42a0553fd46491a6ebe950d714fe2e1da624d54a",
+  "native_validation_source_sha256": {
+    "default_cfg_yaml": "5d69719c92d5ccc9fa8c126c0a9c589709994418188163ffd2a1784117e0dc70",
+    "ultralytics.cfg": "74b6ea3647d75a78308a26efaf11fac0c7bfa191b8388b31848892be4ac26c49",
+    "ultralytics.data.base": "ce2ff59e725bdbd801a98de3aef6cc0b087a44fa5786bd3c0d0d81436fdd853a",
+    "ultralytics.data.build": "01f326cf4b072189b0af2ffdd2d10915193f933d12dd2a2549c557a981e24f4f",
+    "ultralytics.data.dataset": "212d3bba593bad73d9f925bfae3605f664be4f13d7398f5b6e8e63a9f7303ea3",
+    "ultralytics.data.utils": "1954ed665144f10f5194d275f44aff09dc5e9e37836ef41ead4d6328eb3be92e",
+    "ultralytics.engine.validator": "e3cdc077cec8ae4ec806524d2eed9240026c6fb62b8802d35fd18882b8829918",
+    "ultralytics.models.yolo.detect.val": "35ad72f7818b7c5ef6fbd263eae36d3e4fc20a92e934f9a831582e9113d59ae9",
+    "ultralytics.utils.metrics": "5202c6b9d5a9e7bb970cc94c509cb882ccfa71f56372aeed6261deb68dd3aaf3"
+  },
+  "runtime": {
+    "CUDA_VISIBLE_DEVICES": "1",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": true,
+    "evaluation_seed": 0,
+    "gpu": {
+      "compute_capability": [
+        8,
+        9
+      ],
+      "name": "NVIDIA GeForce RTX 4090",
+      "total_memory": 25251676160,
+      "uuid": "f3dd6535-4b0a-a608-2aaa-cb487f6b3bfc"
+    },
+    "native_source_sha256": {
+      "ultralytics.data.augment": "45b16105042b13d4dacc3d8c9913cfeb41ca2f7ca19111b47b454c59baca7b72",
+      "ultralytics.engine.predictor": "3203161d425d45c54269598ecaf772d868e4fc4c911eff9aaf44921b141ef05e",
+      "ultralytics.models.yolo.detect.predict": "fe463afbfc2c3c2b7d64e7fe8b0bac71e8a400ce5357f2a78d876fda4a04e390",
+      "ultralytics.nn.autobackend": "f791550effe5e5f6b1e5ff209a16002084b67bff2ee8763135de126b187b135d",
+      "ultralytics.nn.tasks": "e444854e6d4262deee482c96916eebb0b01d30b3c748195af791968f8dfd4ab0",
+      "ultralytics.utils.ops": "76c5cd772ad8c7fa7a8a8eb37b38a0f69f387714bb53ed74bdc787355bb620bd"
+    },
+    "packages": {
+      "Pillow": "12.2.0",
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "torch": "2.5.1+cu121",
+      "torchvision": "0.20.1+cu121",
+      "ultralytics": "8.2.103"
+    },
+    "platform": "Linux-6.17.0-40-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "requested_device": "1",
+    "selected_device": "cuda:0",
+    "torch_cuda_build": "12.1",
+    "torch_num_threads": 2
+  },
+  "source_sha256": {
+    "prediction_archive.py": "13fca0ca79defb6c0aaae9ac3ee6e22c347bc4a9509bea9f92a976f174a02062",
+    "prediction_io.py": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b",
+    "run_prediction_archive.py": "e2d990fb313478edfb527031f9e5d0278467254387e76b278361cd05386c8d41",
+    "run_native_bdd_validation.py": "34bb45f765fd0a8d1964358d5e46f7c4af10f4f00c43005c5114b9e25b82060b",
+    "test_native_bdd_gpu.py": "1980c209b50c710970c672b30a1862a0778922d6992b588b2b032640001ebd18"
+  }
+}

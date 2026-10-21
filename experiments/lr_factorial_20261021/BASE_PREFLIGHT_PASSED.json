@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "utc": "2026-10-21T07:05:48Z",
+  "protocol_sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d",
+  "deployed_sources_sha256": "c7425bcae4b5d10ebf9917f7620c958d9bd0ee08733e73aac2642a4f375a7ec9",
+  "recovery_sources_sha256": "fc8cdeb052237406c8ac7aa45bf8d9e41640ac082a625909a0edc05b34581b57",
+  "base_checks": {
+    "nano": {
+      "seed_initialization_differs": true,
+      "actual_inputs_differ": true,
+      "finite_raw_and_EMA": true,
+      "runs": [
+        {
+          "counts": {
+            "attempted": 32,
+            "applied": 26,
+            "skipped": 6
+          },
+          "changed_raw_parameter_tensors": 183
+        },
+        {
+          "counts": {
+            "attempted": 32,
+            "applied": 25,
+            "skipped": 7
+          },
+          "changed_raw_parameter_tensors": 183
+        }
+      ]
+    },
+    "large": {
+      "seed_initialization_differs": true,
+      "actual_inputs_differ": true,
+      "finite_raw_and_EMA": true,
+      "runs": [
+        {
+          "counts": {
+            "attempted": 96,
+            "applied": 90,
+            "skipped": 6
+          },
+          "changed_raw_parameter_tensors": 303
+        },
+        {
+          "counts": {
+            "attempted": 96,
+            "applied": 90,
+            "skipped": 6
+          },
+          "changed_raw_parameter_tensors": 303
+        }
+      ]
+    }
+  },
+  "step_accounting_validation_sha256": "7593dd9f124f0953979c03435b66c7d18507fece5f8c7da9e78c38d1439aab9e",
+  "historical24endpoints_unchanged": true,
+  "data_verification_sha256": "143d906543b791f751e6529450fb6e10b809307e49ebe35cca47b9c640b7d14d",
+  "continuation_ready": false
+}

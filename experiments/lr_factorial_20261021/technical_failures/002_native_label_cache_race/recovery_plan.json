@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-21T07:17:59Z",
+  "cause": "Two native dataset constructors rebuilt the shared full-training label cache after subset smoke checks; their temporary .cache.npy rename raced. Seed505 exited during dataset setup, before on_train_start, input batches or optimizer updates.",
+  "action": "Preserve the entire failed attempt. Warm the complete train/val caches serially, then run seed505 with unchanged source/seed/conditions on idle GPU1. Seed404 continues under its original coordinator. No training state exists for505 to resume.",
+  "ownership": "Recovery worker initially owns only GPU1 and unstarted/failed505 plus unstarted remaining bases. GPU0 is eligible only after the old coordinator exits and seed404 completes. Old coordinator stop flag was set by failed505, so it will dispatch no more jobs.",
+  "training_source_sha256": "6a38f94ae68d7b20ff2597a6b9ec71f6ab0131ca876d536435db02c538dd4565",
+  "protocol_sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d",
+  "attempt_sha256": "def69339ff891c6defbbe0d8d6bb64e7e7ebb70bfce8323096a88c4245af30e9",
+  "budget": "All failed and recovery subprocess wall time remains charged. No completed training repeated."
+}

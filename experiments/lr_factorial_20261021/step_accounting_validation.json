@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "actual_counts": {
+    "attempted": 3,
+    "applied": 2,
+    "skipped": 1
+  },
+  "native_EMA_updates_preserved": 3,
+  "model_EMA_optimizer_scaler_exact_parity": true,
+  "injected_nonfinite_step_skipped": true,
+  "source_sha256": "92fa702b8e3f99ee131459d5d2de01f139dd338189afa620ec5331e488f08511",
+  "accounting_sha256": "37d3dc52e628f5d4d8806967d1ef646fbb2e6b129dbb5af67b9bfa322daa3b41"
+}

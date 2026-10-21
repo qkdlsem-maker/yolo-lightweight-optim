@@ -1,0 +1,18 @@
+{
+  "reason": "128-image native smoke had only2 nano optimizer attempts, both skipped by initial native AMP scaling. The real step hook exposed this; checkpoint quantization differences cannot establish raw updates.",
+  "fixture_train_images": 2048,
+  "fixture_val_images": 32,
+  "epochs": 1,
+  "architectures": [
+    "nano",
+    "large"
+  ],
+  "seeds": [
+    404,
+    505
+  ],
+  "stop": "One fixed fixture per architecture/seed. If no applied updates or finite raw changes, stop for investigation; do not extend again based on performance.",
+  "scientific_conditions_changed": false,
+  "old_smoke_outputs_retained": true,
+  "utc": "2026-10-21T07:04:46Z"
+}

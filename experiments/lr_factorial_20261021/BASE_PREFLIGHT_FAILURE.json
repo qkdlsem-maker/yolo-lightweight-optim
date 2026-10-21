@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-21T07:02:45Z",
+  "error": "AssertionError({'attempted': 2, 'applied': 0, 'skipped': 2})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/review_20261021_lr_factorial/run_base_preflight.py\", line 31, in <module>\n    assert c['attempted']==c['applied']+c['skipped'] and c['applied']>0,c\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'attempted': 2, 'applied': 0, 'skipped': 2}\n"
+}

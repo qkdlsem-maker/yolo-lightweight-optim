@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-21T07:17:44.370021+00:00",
+  "cause": "Paramiko exclusive mode xb created an empty file but did not enable writing. Changed private transport to wbx, preserving the empty artifact. The accidentally invoked empty script performed no work; no training state or source was modified.",
+  "status": "transport helper corrected; source deployment to be byte-verified"
+}

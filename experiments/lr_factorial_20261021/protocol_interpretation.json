@@ -1,0 +1,29 @@
+{
+  "schema": "protocol_interpretation_v1",
+  "protocol_sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d",
+  "timing": "Recorded during the first epoch of the first new bases, before any new completed base, continuation or evaluation result. The original protocol file remains unchanged.",
+  "reason": "The protocol copied historical training/evaluation objects to preserve shared settings. Their historical roster, strength-grid and count fields must not override the explicit factorial design in the enclosing object.",
+  "canonical_design": {
+    "new_pair_seeds": [404, 505, 606],
+    "all_pair_seeds": [101, 202, 303, 404, 505, 606],
+    "arms": ["control", "mse", "cwd"],
+    "kd_weights": {"control": 0.0, "mse": 0.3, "cwd": 0.3},
+    "learning_rates": [0.0001, 0.001],
+    "new_bases": 6,
+    "new_continuations": 27,
+    "reused_continuations": 9,
+    "continuation_epochs": 40,
+    "primary_epoch": 40,
+    "secondary_epoch": 20,
+    "factorial_endpoints": 84,
+    "new_endpoints": 60,
+    "reused_endpoints": 24,
+    "gradient_paths": 36,
+    "gradient_batches_per_path": 2,
+    "gradient_batch_probes": 72,
+    "metric_decomposition_endpoints": 48,
+    "metric_decomposition_cells": 384
+  },
+  "precedence": "factorial.arms/kd_weight/control_weight/learning_rates/new_jobs/endpoint_count_combined and all_pair_seeds specify the new factorial. The nested factorial.training positive_weights, total_trajectories, trajectories_per_pair, lr, seven-trajectory wording and evaluation.roster describe the previous 21-path study only. Keep other shared optimizer/data/inference settings unchanged. execution.stop's 36 fixed gradient probes means 36 paths, each with the explicitly specified two batches, 72 total.",
+  "claim_limit": "This is an explicit clarification of duplicated historical text, not an outcome-dependent design change. Both files must be reported together. No additional strength search, endpoint selection or budget increase is authorized by this clarification."
+}

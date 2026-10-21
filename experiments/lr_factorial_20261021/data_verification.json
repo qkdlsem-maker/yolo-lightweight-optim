@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "train_images": 69863,
+  "native_training_boxes": 1286870,
+  "source_manifest_sha256": "26282c2aa678e9fa73c886e6b7fba0e7d714ba61e1da55abbe501f56ef8e6b9d",
+  "all_train_and_validation_label_hashes_match": true,
+  "all_image_links_resolve": true,
+  "smoke_yaml_sha256": "a98ed98b8b08c4a5ca7bb5a70cb58c4e1e740f8bce80df50bcedaaa197dc482c",
+  "utc": "2026-10-21T07:01:54Z"
+}

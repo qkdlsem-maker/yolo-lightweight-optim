@@ -13,3 +13,13 @@ This extension was fixed on 2026-10-21 after the original three-pair study was c
 Native AMP update counters are observational. The initial 128-image nano smoke fixture had only two optimizer attempts and no applied updates because both were skipped. That failed preflight and all four original smoke outputs are retained. One separately recorded 2,048-image fixture per architecture/seed checks actual raw-parameter updates; native training/scaler/EMA rules are unchanged. No full training starts before the base preflight and public protocol-byte verification pass. Continuations require their own separate preflight; the base queue cannot launch them.
 
 The legacy data provenance, reused evaluation populations, one detector family, previous IEEE Access final desk rejection and pending author/AI-disclosure review remain explicit. New results may support or weaken the proposed explanation. No paper acceptance, new compression algorithm or inference speedup is promised.
+
+## Execution evidence (2026-10-21)
+
+The base preflight passed after the separately recorded fixed-length AMP fixture. Exact native optimizer/scaler/EMA parity was checked, including an injected skipped optimizer step. All four extended native fixtures applied real updates, changed raw model parameters and retained finite final states. The failed short fixture remains recorded.
+
+Full base training has started. The initial simultaneous launch encountered a native shared-label-cache temporary-file rename race in seed505 before any input batch or optimizer update. The failed config/args/log were archived, full train/validation caches were warmed serially and the identical source/seed/settings were relaunched. Seed404 continues unchanged; the recovery worker owns only the five other bases and uses GPU0 only after the original worker exits. A separate guard enforces the original disk, GPU-hour and wall-clock caps. No scientific result is yet claimed; continuation execution still requires its own passed preflight and completed-base audit.
+
+[protocol_interpretation.json](protocol_interpretation.json) makes the explicit new factorial take precedence over copied historical roster/count fields in the original protocol. It preserves the protocol bytes and design, documents the duplicated-text ambiguity, and was recorded before any new completed base or continuation result. Read both files together.
+
+The `technical_failures` records preserve the short AMP fixture, cache race and an empty-file transport error. No failure is excluded to improve a reported result. Raw training states and larger operational logs remain on the research server; the JSON evidence release is not a claim that complete model/prediction binaries are publicly deposited.

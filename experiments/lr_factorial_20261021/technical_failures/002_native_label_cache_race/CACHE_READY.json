@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-21T07:18:00Z",
+  "status": "passed",
+  "counts": {
+    "train": {
+      "images": 69863,
+      "boxes": 1286870
+    },
+    "val": {
+      "images": 10000,
+      "boxes": 185526
+    }
+  },
+  "original_labels_unchanged": "Native derived cache only; labels separately hash-verified in data_verification.json."
+}

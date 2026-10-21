@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "utc": "2026-10-21T00:26:02.619187+00:00",
+  "source_sha256": "03b3e158ae9b45bbe03f8413ce436d5e496877bfb8eb46f6a5f6a62b5665f67f",
+  "analysis_sha256": "6ba83713bdf8ea9b050beda6a5055dcc214e4d613927d3904e39831abd4ff5b9",
+  "numeric_table_cells_compared": 651,
+  "document_pages": {
+    "Author_Review_and_Journal_Fit_20261021.pdf": 3,
+    "Manuscript_Independent_Distillation_20261021.pdf": 9,
+    "Supplement_All_Endpoints_20261021.pdf": 10
+  },
+  "visual_review": "All 22 final document pages opened and visually inspected individually after native Microsoft Word export and Poppler rasterization at 110 DPI. Title border and blank author-review page corrected; figures retain all pair points.",
+  "renderer": "Packaged render_docx.py attempted; installed LibreOffice unavailable. Diagnosed and used native Microsoft Word COM export, then bundled Poppler.",
+  "user_edited_original_sha256": "fbd39f78c969ef394e6b8eebff8b82fb12c5cc47dfc69514c56123604ebeed81",
+  "user_edited_original_unchanged": true,
+  "author_approval": "pending",
+  "AI_disclosure_author_verification": "pending",
+  "journal_submission": "not performed",
+  "files": {
+    "Author_Review_and_Journal_Fit_20261021.docx": {
+      "sha256": "ac75be3eed6ce448541d7dd19a428594b5e53564dd28206d5c3c551fb100ab40",
+      "bytes": 36468
+    },
+    "Author_Review_and_Journal_Fit_20261021.pdf": {
+      "sha256": "4897dc68b4feec4b0e4e1857c3cc8b4f4c93e67253743c86ece5ef03f0fe4cb5",
+      "bytes": 262064
+    },
+    "Manuscript_Independent_Distillation_20261021.docx": {
+      "sha256": "56d036314ae2f677d1ab46e77011c9afedbe18d9f6414abe5a1b847bf14d3056",
+      "bytes": 194161
+    },
+    "Manuscript_Independent_Distillation_20261021.pdf": {
+      "sha256": "a6858f593e9a2dbeede0b27a9e9d62bc49ce99c74b1dcec4e9b84d56dfa8c81c",
+      "bytes": 419763
+    },
+    "Supplement_All_Endpoints_20261021.docx": {
+      "sha256": "4e6d4aa3e7f117be18f352113fa2c4f6d33d40d288c695ec64a180c87d1f539e",
+      "bytes": 48027
+    },
+    "Supplement_All_Endpoints_20261021.pdf": {
+      "sha256": "5296f91e8b3ff30d273e9b6abaf151903f4c2665efa30161b2480a26d7ae032a",
+      "bytes": 364245
+    },
+    "figures/Figure1_primary_pairs.pdf": {
+      "sha256": "4f3fd8b3a62dcccac28eace9a3d31242eba8060e9d52e83b6be8a03ba43f4837",
+      "bytes": 18323
+    },
+    "figures/Figure1_primary_pairs.png": {
+      "sha256": "06adb06e14fd6986eed95d1c3e01d7f0a4d16e810c11f02ff1c8541e82486058",
+      "bytes": 67973
+    },
+    "figures/Figure2_metric_definitions.pdf": {
+      "sha256": "f2d93766f7056b0cb9dae7eaa9853643e8d45719fd39dfd85a5b7b79eaa9d50f",
+      "bytes": 18795
+    },
+    "figures/Figure2_metric_definitions.png": {
+      "sha256": "52e7dd4f4f193a6a1b6400cfc3a4a5beba15d6938f0b2b31addf46f251c1757e",
+      "bytes": 77647
+    }
+  }
+}

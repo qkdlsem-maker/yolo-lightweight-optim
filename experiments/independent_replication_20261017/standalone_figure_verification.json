@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "utc": "2026-10-21T00:32:28.458962+00:00",
+  "scope": "Both standalone scientific figure PDF pages rasterized with Poppler at 120 DPI and opened for visual inspection. All points, axes and text are visible. This supplements the prior 22-page document review.",
+  "files": {
+    "Figure1_primary_pairs.pdf": {
+      "sha256": "4f3fd8b3a62dcccac28eace9a3d31242eba8060e9d52e83b6be8a03ba43f4837",
+      "bytes": 18323
+    },
+    "Figure2_metric_definitions.pdf": {
+      "sha256": "f2d93766f7056b0cb9dae7eaa9853643e8d45719fd39dfd85a5b7b79eaa9d50f",
+      "bytes": 18795
+    }
+  }
+}

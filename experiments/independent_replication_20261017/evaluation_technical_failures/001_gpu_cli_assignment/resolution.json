@@ -1,0 +1,19 @@
+{
+  "status": "resolved",
+  "root_cause": "CLI --device0 overrode CUDA_VISIBLE_DEVICES1 in pinned Ultralytics selection. Initial two nativeBDD passes both ran on GPU0.",
+  "action": "Stop coordinator dispatch, let both existing nativeBDD passes finish, terminate only stopped coordinator after children exited; resume via separately preserved v2 orchestrator.",
+  "preservation": "Both completed nativeBDD artifacts kept byte-identical and independently reused with new_inference=false; all27 completed training runs unchanged. No inference repeated for the GPU dispatch issue.",
+  "remaining_execution": "Physical lane index passed to --device; actual GPU UUID verified; sole existing large101 nativeBDD cache retains explicit device0 exception bound by its original hashes.",
+  "study_deviation": "Initial two nativeBDD passes shared GPU0 rather than planned split0/1. Same model, data, full FP32 geometry and scoring sources; actual device evidence retained. No latency/throughput comparison or cross-GPU numerical-equivalence claim.",
+  "readonly_verification_issue": "First recovery-proof reader assumed clean JSON stdout, failed on log prefix; original helper/log preserved at phase root. v2 parser accepts exactly one terminal result object, then checks native cache and live batch/runtime evidence.",
+  "evidence_sha256": {
+    "run_final_evaluation.py": "ed1a09c9a8345f7bc1a63603181864b5ab82e1f986ac823cd338e6029af43fbd",
+    "final_evaluation_launch_20261020_2105.txt": "eaca5679a642c206ce951202adf9487c0295191147bb7b848fcebf65398446ff",
+    "final_gpu_assignment_review.txt": "d3188d6f488351f23d8fd3462535728b32700c52d23934acd2fd5fde66e7c68b",
+    "final_gpu_assignment_recovery.txt": "09e226509405eee7867e18e4c9f2b56be265f0d1ea5ee6f632ef547647ccd770",
+    "final_evaluation_recovery.json": "ed70a9b694f941bf34dbbceb41e02a97ce35286662a9145643f4f15bc17e496d",
+    "final_gpu_recovery_validation.json": "9328dbc486aa663cff73f3d96edf8092511135ef5834e0d528f7b2d08ccc8f9f",
+    "final_scheduler_v2_validation.json": "b20d2ac3cb05cd5dda2342d44e274d512a61aa696823118ec2d85d1d8412ce56"
+  },
+  "fixed_runner_sha256": "830035a421981083f74f82206e5684f10badc1a881969b3ee9311c7c66718a5f"
+}

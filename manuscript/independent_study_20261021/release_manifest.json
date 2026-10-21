@@ -1,0 +1,794 @@
+{
+  "files": [
+    {
+      "path": "experiments/independent_replication_20261017/aggregate_final_evaluation.py",
+      "sha256": "fae56484d04840d9be57230d6de5b110eee3b1da4784c8de6a769fdf9ca2490e",
+      "bytes": 8621
+    },
+    {
+      "path": "experiments/independent_replication_20261017/aggregate_final_evaluation_v2.py",
+      "sha256": "d8a2f6fced95a89fe9bbc01dd8d8b8b14f8bed6364cbccf1bf5a7fa45d32c6f2",
+      "bytes": 8826
+    },
+    {
+      "path": "experiments/independent_replication_20261017/audit_completed_continuation.py",
+      "sha256": "2d63c1458f1185d754e3902695c4c257a4c78194bf68ed93cbe0a62bf9033432",
+      "bytes": 8402
+    },
+    {
+      "path": "experiments/independent_replication_20261017/audit_final_evaluation.py",
+      "sha256": "abf66b83332814f890d58f18c4962e886e8e26625295820fbb136aa9fb3141e6",
+      "bytes": 17766
+    },
+    {
+      "path": "experiments/independent_replication_20261017/audit_technical_failures/004_aggregation_artifact_key/aggregate_final_evaluation.py",
+      "sha256": "fae56484d04840d9be57230d6de5b110eee3b1da4784c8de6a769fdf9ca2490e",
+      "bytes": 8621
+    },
+    {
+      "path": "experiments/independent_replication_20261017/audit_technical_failures/004_aggregation_artifact_key/resolution.json",
+      "sha256": "8a9c89c4b6d2e66bc8bf1c6c552dd1fcb8e5102550a316843990bdb24156d2b6",
+      "bytes": 598
+    },
+    {
+      "path": "experiments/independent_replication_20261017/build_research_package.py",
+      "sha256": "6951e95e542ca8600cc67275cf8050d2d51ae78033ac9158dd9bf64d2532c2f7",
+      "bytes": 59418
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_base_states_20261019.json",
+      "sha256": "0229b92f72cc5bdc5b299ab212a395b6cf4362e0dc313ea06e93905c064e4e03",
+      "bytes": 8025
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_control_w0.json",
+      "sha256": "a84dd82e0d9f169abc7ea273049b9252cadbf3b66c610f4ee2d489957e75ceb8",
+      "bytes": 12218
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_cwd_w0.03.json",
+      "sha256": "b20856360e060137388ef686528269fa68faf51e8750628be649fcdbc387d408",
+      "bytes": 11965
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_cwd_w0.3.json",
+      "sha256": "90a2794afae63c2172854f6440519bfabded0753907c66df9c8cbd29ba239c9c",
+      "bytes": 11913
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_cwd_w3.json",
+      "sha256": "56ea6460680b77e1f3b14e84f2998551b22150b8b0f623af543f8c098d242acc",
+      "bytes": 11812
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_mse_w0.03.json",
+      "sha256": "44a4b3a055b277d082e6d133b2827b25e65ae74ed92335269668801ae576e198",
+      "bytes": 11965
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_mse_w0.3.json",
+      "sha256": "4d5d86a6fa034ba1b8fe9347dddb7c2a99f82f9523fe043c22a24bb7c80922e6",
+      "bytes": 11914
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair101_mse_w3.json",
+      "sha256": "37abb12c1744760f867b45a239e0ddab407e7fdb845f61e09c35884ff6810d5a",
+      "bytes": 11812
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_control_w0.json",
+      "sha256": "3105028e9829718caeabe66ab7af9b4e6bfe715fa28c6fc5f0ebef6c1684647a",
+      "bytes": 12219
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_cwd_w0.03.json",
+      "sha256": "057691cfc53f4892a1e97e08a5c26bcc6d078258549ec61a5e48890bd9dbb290",
+      "bytes": 11965
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_cwd_w0.3.json",
+      "sha256": "322623229cfa6bdc3d2ec8be1e29846e63330b6e7481010043b539dd11a11161",
+      "bytes": 11913
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_cwd_w3.json",
+      "sha256": "4962de8542602d72a9d278c3b602f69078c288faa95c64091cbc0ab63a42710c",
+      "bytes": 11812
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_mse_w0.03.json",
+      "sha256": "08c0e61762b813788245ecb20627022fb2519d95caa768acfc0505752b0a067e",
+      "bytes": 11966
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_mse_w0.3.json",
+      "sha256": "1a836936235a9574cec11c777775a6ea81573695f58ef92094a7a19b0d2eac21",
+      "bytes": 11914
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair202_mse_w3.json",
+      "sha256": "e87343be53c0a0e6972171f16f94b33b8e47c76a93bdc319ff2f25f7f9f9be20",
+      "bytes": 11811
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_control_w0.json",
+      "sha256": "9795b38b331fdd700425b80290aae6b20e13453adf2ee2412c17de18c4d83914",
+      "bytes": 12220
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_cwd_w0.03.json",
+      "sha256": "1a62095235563d3891d898738ff9179e36a3d49438cd537d0a3a2e28cc4fc74f",
+      "bytes": 11966
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_cwd_w0.3.json",
+      "sha256": "ff259022f266f0476a0020fbca9c7dea887767b726b8f0fe05f7748279cb29c2",
+      "bytes": 12028
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_cwd_w3.json",
+      "sha256": "43dfeec2445e257ddd78f00f4fcb927f579ffdf50b838604add494dcce6c81e8",
+      "bytes": 11927
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_mse_w0.03.json",
+      "sha256": "e23a42c6c10f95dc15011fd606a581deefdc2aefd53a04b650c4e2c6eec23e81",
+      "bytes": 11966
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_mse_w0.3.json",
+      "sha256": "5d3a6eb935a23e9fae2d46e9efdf7ae2f44ef93380dc90fc9a67d0a6dda1089c",
+      "bytes": 11914
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_continuation_audits/pair303_mse_w3.json",
+      "sha256": "01e1ad55e44cbe154b4199dc1634b6f1900b04f7980c40b7b125e72b47455e40",
+      "bytes": 11812
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_training_audit_summary.json",
+      "sha256": "0d8f255ecade91cf908a648dddca88fbb7cd9b4500bf297565fb0a85787e4e8f",
+      "bytes": 13384
+    },
+    {
+      "path": "experiments/independent_replication_20261017/completed_training_diagnostics_summary.json",
+      "sha256": "434ea664f70d9369045cd358172e27ca206da1f3b01bd5b22ca7baf20a11843b",
+      "bytes": 505133
+    },
+    {
+      "path": "experiments/independent_replication_20261017/continue_final_evaluation_audits.py",
+      "sha256": "d5effa8696117476218ee52ca51eb3726afa3c1e2fc7d81abc317599731aa50f",
+      "bytes": 3214
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/base_large_seed101_e100.json",
+      "sha256": "6b83e040d8e0810e8f6cebe06fcb0cc6ca4143337363486942e6ca45bf89691b",
+      "bytes": 1684
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/base_large_seed202_e100.json",
+      "sha256": "01b6b353e0a087f08dab4fd1201796760a79b797f870fbfc243b7f0f1c3dd991",
+      "bytes": 1684
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/base_large_seed303_e100.json",
+      "sha256": "2016469c477fa801ae7c2ade8a57b33d6e3999bd65082cb3b806071a1c69b81d",
+      "bytes": 1684
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/base_nano_seed101_e100.json",
+      "sha256": "00811d8b321c4155883bb64217d63fcd27d210fc4b279b3b77e27f75eee1fb86",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/base_nano_seed202_e100.json",
+      "sha256": "3f451fa9167a16b593a27a3c442685e10d7a7add020c9ef73067e63ddcfaafcd",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/base_nano_seed303_e100.json",
+      "sha256": "a4b3af05d78051476069e7a2f5cb5d1c7bccddfaa076a951e85b3a19b7d048ca",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_control_w0_e20.json",
+      "sha256": "3619a7fe276145dbd9bbebfc318ff22a45ee536e2c47b435bfa7d9f6b0696ff7",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_control_w0_e40.json",
+      "sha256": "a18d1f3153ece5dbaae6debf8a7089e3a6e1277832d2ff1a1f96b3b1550d1de4",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_cwd_w0.03_e20.json",
+      "sha256": "bc33c306ca3f5e75a91d28764edf5da5350b625ac293a191d84a8664e32c2995",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_cwd_w0.03_e40.json",
+      "sha256": "fc9e7e963388350d5d2f9af3725a14c11e9c81e28165346f5b03373cf87e74c4",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_cwd_w0.3_e20.json",
+      "sha256": "0018b306a2d533e0fa2fc0c335e2763b92a65a4b85264eb34c820f624613dee8",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_cwd_w0.3_e40.json",
+      "sha256": "5b0d5fdb5627157dffe1ae5406a6559dd87fdfedfe10cfe9b56b87009dd82cbb",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_cwd_w3_e20.json",
+      "sha256": "bd47978e63164035c882083f211905c812321972c198eddfae283f03feadcf96",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_cwd_w3_e40.json",
+      "sha256": "1045d5fcfd8999db0d5635c6fed8b5f16a24a5e8cf7d97d9a0c5a5bc000d4123",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_mse_w0.03_e20.json",
+      "sha256": "69f524b49f15c53296a3ff0809f49a3db729d57391de0c3ef2191594ada1229e",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_mse_w0.03_e40.json",
+      "sha256": "58ce7b7c4865d4ca3846cf04305fa501d1f61c0878db8443d41c4bbff4337459",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_mse_w0.3_e20.json",
+      "sha256": "90599ec27672ff51bc6e1304521acbd745f22cc9284adf21b0efaea07ebab124",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_mse_w0.3_e40.json",
+      "sha256": "0ead0321226af90bb2bbc3c3e397ca43ceb8217aef26436fe12dcf7864d43c5d",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_mse_w3_e20.json",
+      "sha256": "552ca3b2a087ad35a02c8effe0f18aa75be6b47c3facc2c1af1c591c94ac97a9",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair101_mse_w3_e40.json",
+      "sha256": "402ca6c4c33b74e3075c23c78667a4e3347e7a1bb00d3134e8d6ce14973914b5",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_control_w0_e20.json",
+      "sha256": "afa6e74a5332c8de1435d4b022d9b018535aeeaafa68385c7d09d9a9d0393ca9",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_control_w0_e40.json",
+      "sha256": "852046ea32d13ab6914d351bc2d40e46706291d5d167bb4aeab7ee2a63864397",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_cwd_w0.03_e20.json",
+      "sha256": "85914093f1f052eb73242f409e5ac6c5f8b29e5ed33703d2178cbb55719653b7",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_cwd_w0.03_e40.json",
+      "sha256": "7d93e4f86c60932cf2cefd150735fea71efad77e90fc783544cb4410d37341db",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_cwd_w0.3_e20.json",
+      "sha256": "d6eb5bc3f02c40b9e195391b29c0087c418df5ae75453a1900ff96e10dcad797",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_cwd_w0.3_e40.json",
+      "sha256": "19dfa327dd418a7cc8cb09aec4f22799a026951fcc359be414571c7caaca3757",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_cwd_w3_e20.json",
+      "sha256": "59ea5ea46420cc835e130279aac048f8f828c0ce48a7a4ab0efa8456c61f6436",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_cwd_w3_e40.json",
+      "sha256": "51ffee6732b7d8f7ae882f28b8e9ac6c4cfb665218105269fe8d7c9da1f213df",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_mse_w0.03_e20.json",
+      "sha256": "20d6d67808e849ecaad85f49979b19c0ae49498e37f00da589eee0055c3996b5",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_mse_w0.03_e40.json",
+      "sha256": "6aafa692c9648319eea65485469e2bada2ff4f7060d2dc7b4f45409704ebe368",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_mse_w0.3_e20.json",
+      "sha256": "b4a1d52b88ce53edf5451a6b88c384f262062a009255844eae81235c6153f5f5",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_mse_w0.3_e40.json",
+      "sha256": "4dad457abf0cf5a94d413893a2ff7167613aac0a46cc5731f3e06d1b6de27e1b",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_mse_w3_e20.json",
+      "sha256": "a080ce689a7136dd55a0f70f9c1533f698d1ad11748ef30d06ef09cb30b5350a",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair202_mse_w3_e40.json",
+      "sha256": "a95d0d158e810c669d7e6c69b0211231c22bb799dcebc3ba696051ca05c41a81",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_control_w0_e20.json",
+      "sha256": "f3f864e1b524eb29ff7af386640e16859697fc983dccd39803dc6d0e374ff16b",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_control_w0_e40.json",
+      "sha256": "24a7cb93fdd52cf54598fce2dad155779379d97ff0a77aa2b3fedd03be18e295",
+      "bytes": 1683
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_cwd_w0.03_e20.json",
+      "sha256": "cbad6407576ca9a81c4912581be46a01474ae3831f6f91a05fb2c02ae42db161",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_cwd_w0.03_e40.json",
+      "sha256": "40064507e76b999ea316c4563793cdc31ebc723b6f817d7cd839916567a5ea1f",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_cwd_w0.3_e20.json",
+      "sha256": "10e08c3aa153be58756c4aec5e4d0671bb2013cf98be7791b4b088005a80a2fa",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_cwd_w0.3_e40.json",
+      "sha256": "b2ad90ae9573b6fd4370994ee4046ab77d74d78f3d996c13b32225508c1a153c",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_cwd_w3_e20.json",
+      "sha256": "3767d1fd09a10fb462a340899e5ce45d965e40cf168d769e88f59486942ca984",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_cwd_w3_e40.json",
+      "sha256": "60e7e76f08fb686da51693546351e51f46544153cfe0eeecc117d420273122cd",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_mse_w0.03_e20.json",
+      "sha256": "edbc858b0edbcc9a9d0d91bafc1a016cb01a68f7f81a57d8dcead4965f63a337",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_mse_w0.03_e40.json",
+      "sha256": "2fb2cf0ed46f7f03a7c66ad45dac2d7e3dc0a84010e46acf695087341eaa7013",
+      "bytes": 1682
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_mse_w0.3_e20.json",
+      "sha256": "d5e6eb75ed36c1b41ef1970a52b7d2507550721ab7d2c7395913c11dd80b0375",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_mse_w0.3_e40.json",
+      "sha256": "c32ff141fa3c7e1966a9916fbaa7163c7bb2c935b272fdd496f936a56891203d",
+      "bytes": 1681
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_mse_w3_e20.json",
+      "sha256": "ce194211fa728a38e849cb2ef0678be70ceac8e163df7a8cf1bffc0b4f07143d",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_endpoint_markers/pair303_mse_w3_e40.json",
+      "sha256": "3d5de36a3d58e1952178453430bebb73ab3acd322633ea4044ab6ee462f9ea67",
+      "bytes": 1679
+    },
+    {
+      "path": "experiments/independent_replication_20261017/evaluation_technical_failures/001_gpu_cli_assignment/resolution.json",
+      "sha256": "ef50ca302c684e1a01dd0ac25d720e4bfbba7426fcf4093e8bad5f683342ef67",
+      "bytes": 2205
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_all_pair_analysis.json",
+      "sha256": "6ba83713bdf8ea9b050beda6a5055dcc214e4d613927d3904e39831abd4ff5b9",
+      "bytes": 334982
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_analysis_independent_verification.json",
+      "sha256": "f9fee523ac5d48781501cdca7d0a66a2d4628291b86eb3e28933c3dcb1eb8dc2",
+      "bytes": 2474
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_document_verification.json",
+      "sha256": "2e07047de379c80a7b5de8f68e9da54cbc71de1a50a2fa6995614721ad1cc57e",
+      "bytes": 2852
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_endpoint_roster.json",
+      "sha256": "4a5afdd71ff4ac306e77110019a222ff8b42b184a38d8aa08f3464a59a5e0a53",
+      "bytes": 28692
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation/EVALUATION_COMPLETE.json",
+      "sha256": "342ade71474a15489bcc85809b07f58a58104673cd5c20b122a6bc01418bcfd4",
+      "bytes": 4487
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/AUDITS_COMPLETE.json",
+      "sha256": "13359b2a0abd4781a55fde0724b443fd7cd61f35720f9a385cf56d6d7a310c69",
+      "bytes": 4850
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/base_large_seed101_e100.json",
+      "sha256": "185b47dcbb3534b0c0fa5cf61f8b04bf56807f44c722839b0ed5741f3067c6a2",
+      "bytes": 4041
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/base_large_seed202_e100.json",
+      "sha256": "1a480c4c0b8b4ddadf7c3eea8cb4ec5871edb89636697d72ece8ab3e008e66c8",
+      "bytes": 4045
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/base_large_seed303_e100.json",
+      "sha256": "3767ba7220bc627289c2634afd7117c1553239c24bdccaa5af14429c6ef1b4f1",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/base_nano_seed101_e100.json",
+      "sha256": "82916f47d54aa2520a518dcb63497dd60d4ed121625c5888e19f7fbac3cf7253",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/base_nano_seed202_e100.json",
+      "sha256": "85d2f8c40b91942017fa3545ec4ce48027ec27d8798eb5f1a746815b6365bb7b",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/base_nano_seed303_e100.json",
+      "sha256": "40c8ecb07f0abf0a974da6d39ae55319a20bad34e9168684fe0501504b26cb23",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/first_endpoint_validation.json",
+      "sha256": "231902c37f8b427075953b5efccd88ed93d263d86bde8d8e1f84dbf7f094f298",
+      "bytes": 364
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_control_w0_e20.json",
+      "sha256": "f7d10b0692b77f9e8e517247159f322f50505156a66978aa1b3ca9e7293d56c5",
+      "bytes": 4044
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_control_w0_e40.json",
+      "sha256": "9301b536cbc1c1157b2a3c5a3db4146b34d0fd26a273c7b111a96b7799e46739",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_cwd_w0.03_e20.json",
+      "sha256": "b69d205f48cb09c311e3dde73227a01a0990961cd8f8e9fa06a9ab9d1d1c6fe8",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_cwd_w0.03_e40.json",
+      "sha256": "2fbb93afe99d35b8e4ed2161c1605c239a840775628af2f04cc9f280193911cc",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_cwd_w0.3_e20.json",
+      "sha256": "ac59843be593a74ed0cb42964046b1c0f9bb12fcda82fd553dba6cc48a7e49fb",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_cwd_w0.3_e40.json",
+      "sha256": "4e624949c2b8b9ddf600aa7697540dc812e1125954f7e1dfb21ee619550c1165",
+      "bytes": 4043
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_cwd_w3_e20.json",
+      "sha256": "347a1c21d7202ea4750372e5bf141195d0c7fa9bdc436e9ea786c2118af4898b",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_cwd_w3_e40.json",
+      "sha256": "0b6167070d7f98e53d29872561dd7058e126f9b47f9576cd0129f88ff52fc416",
+      "bytes": 4041
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_mse_w0.03_e20.json",
+      "sha256": "32d05808914a3f61c4e1b9c10ff25c93420c37254823fb8bbce3951fd918608c",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_mse_w0.03_e40.json",
+      "sha256": "50968745352c8a41c4b3980e1e58fad87a25a6f853c5db0424e27c7e5c187491",
+      "bytes": 4043
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_mse_w0.3_e20.json",
+      "sha256": "df5abafa392fd85af22341b47d2d7a0b393459d8927db540e5bfa2e1ac780dcc",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_mse_w0.3_e40.json",
+      "sha256": "0c35aad2e8ba2f9b4e6cb275e6a0aa777b80edb8604ecf8ddb32344e504ff9ee",
+      "bytes": 4043
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_mse_w3_e20.json",
+      "sha256": "a56778c774479d3ad4b749ccfd3de81b0875af7851eca6d59dc5342b8bf8e804",
+      "bytes": 4045
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair101_mse_w3_e40.json",
+      "sha256": "fb80fbc76ed116604229291288850631efa0c69f18f714fec24af412cf60757e",
+      "bytes": 4037
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_control_w0_e20.json",
+      "sha256": "99ad59afbd33016cd64a4f0b0dcbb76bf06c4fc903041769eacb3602122447cc",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_control_w0_e40.json",
+      "sha256": "5e16ab4c77de8f19df97d62192519dbb00a10a820b532ab3547e62133f86654f",
+      "bytes": 4051
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_cwd_w0.03_e20.json",
+      "sha256": "941f24f26268c9e979b08eeae9f162569c1790089231f26678de60a570e209ab",
+      "bytes": 4049
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_cwd_w0.03_e40.json",
+      "sha256": "2e97f56784c3637c253c21c43c8bc6867ccd6c3991618d480a665e37252f6dcb",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_cwd_w0.3_e20.json",
+      "sha256": "9cebaac2d166fad3a805d42379432c2c5dfc92c631eefc23714cc7950ab2bc1b",
+      "bytes": 4044
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_cwd_w0.3_e40.json",
+      "sha256": "21b8e55f2ffc066bddedbbd2074b2e803c3839bc784fb2edefff8790499cc06a",
+      "bytes": 4049
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_cwd_w3_e20.json",
+      "sha256": "a1883b99ca9f0cf142df99b1dc530ace43f76aba51e25c5315f43d576c55ae91",
+      "bytes": 4044
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_cwd_w3_e40.json",
+      "sha256": "e3526cc0bd21fbe82dbcf50666142339c937fd2e4c5175d79f1c5f6ed06a04b7",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_mse_w0.03_e20.json",
+      "sha256": "5e813f1005dd0ce92c6624438250acb7503c04efc286ca4e1f607884233c78a5",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_mse_w0.03_e40.json",
+      "sha256": "d2e6f4ee492320da402944bb960425ef910107d9b971114580bca4f1806bf61d",
+      "bytes": 4051
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_mse_w0.3_e20.json",
+      "sha256": "26b198c3ba0734e34d497056e34e6fc23ab4dd9c536bca7d08f42146ab55ba99",
+      "bytes": 4038
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_mse_w0.3_e40.json",
+      "sha256": "5de623a52bf27665ce4a89195d5297052706825082df77815557c9703bb04f24",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_mse_w3_e20.json",
+      "sha256": "ca2311027cafbf1465813b6ac5a319d8d20240410f56c0ce7570e353b3fcc39e",
+      "bytes": 4038
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair202_mse_w3_e40.json",
+      "sha256": "95284ea4fa8514bc4a7b2e8c166d2affe6ccb28df2d8ca7c0c940d60c54c94ed",
+      "bytes": 4040
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_control_w0_e20.json",
+      "sha256": "541dbe335787ca9c0c422e7c2639faecec249571bb2290c528b50ea0ac5e9433",
+      "bytes": 4045
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_control_w0_e40.json",
+      "sha256": "496281bbdf57a6803287867ae056ad87a4b99bff8bfec32091bdd822ca89a241",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_cwd_w0.03_e20.json",
+      "sha256": "450d095f8b2ecc27673eb4ce7eec998d4117dc86aebc570fd9d2326fdec5f95b",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_cwd_w0.03_e40.json",
+      "sha256": "dc22ed2490174de7b65f6a169be73bec01f260f3d2d4460b95e229558c9b1dac",
+      "bytes": 4045
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_cwd_w0.3_e20.json",
+      "sha256": "b207c998b1e4e240c76e8090d055afc376a12704cca841728490e381011874ff",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_cwd_w0.3_e40.json",
+      "sha256": "c1f16d279c480e6b9dbe13534ec534d183103de7df13497ac5f4822e160fc7ba",
+      "bytes": 4045
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_cwd_w3_e20.json",
+      "sha256": "31db0ceafb1fda9e0585d20da8a9583dbb2b1f0b7ef964e61ac84c0123b285e9",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_cwd_w3_e40.json",
+      "sha256": "ca646dee1f217521ab646dff1d7c63f88da2eed38cd134efea11058695469478",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_mse_w0.03_e20.json",
+      "sha256": "0bc3ff6d5b568e377ed7ac34406c461210b74954e6f38eb5c39890796ac6b99d",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_mse_w0.03_e40.json",
+      "sha256": "2678112f7900068fd4d57c78fbd5a3fa1803051a2ac66a21209ce1100f1bdf3a",
+      "bytes": 4047
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_mse_w0.3_e20.json",
+      "sha256": "abe0003b4acd973b8bb7a8a221c13ef376afd0c8fe8d5ec5281f04269911a4d1",
+      "bytes": 4044
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_mse_w0.3_e40.json",
+      "sha256": "e703782c8f6113db67555e1a2633bd84b8407f4b4bbf94aed3c0cda43a881cb8",
+      "bytes": 4048
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_mse_w3_e20.json",
+      "sha256": "f61bc211775657de29e8c24701082a70512b85947c2fc8d5776d8a2f17471b88",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/pair303_mse_w3_e40.json",
+      "sha256": "b34418aa8e6d83953e633eb73ed84682ba0306fb563cb82ebd53e60d916714af",
+      "bytes": 4046
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/watch_child_launch.json",
+      "sha256": "de9fab23b35055b8c3331c435721d81f0ae718ba40dbf10f276736cfb1922fc0",
+      "bytes": 580
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_audits/watch_guard_launch.json",
+      "sha256": "ae44b87936a832ccda7f0bea72f561b63e47d723675d86c9878322ebde48d10b",
+      "bytes": 331
+    },
+    {
+      "path": "experiments/independent_replication_20261017/final_evaluation_plan.json",
+      "sha256": "9eb59cda78a1512a732b068cf172dd74009eb70232ddcbcceba32f6f82d5fc2d",
+      "bytes": 227002
+    },
+    {
+      "path": "experiments/independent_replication_20261017/followup_scope_decision_20261021.json",
+      "sha256": "0b88f5b83df44d9bf633eddfb30d3018add6a354901a4cc9ba42fc4f497dfdb1",
+      "bytes": 1111
+    },
+    {
+      "path": "experiments/independent_replication_20261017/run_final_evaluation.py",
+      "sha256": "ed1a09c9a8345f7bc1a63603181864b5ab82e1f986ac823cd338e6029af43fbd",
+      "bytes": 12873
+    },
+    {
+      "path": "experiments/independent_replication_20261017/run_final_evaluation_v2.py",
+      "sha256": "830035a421981083f74f82206e5684f10badc1a881969b3ee9311c7c66718a5f",
+      "bytes": 14621
+    },
+    {
+      "path": "experiments/independent_replication_20261017/summarize_training_diagnostics.py",
+      "sha256": "ae9c259371daaac9e09ebbceae67a595608b5f8c58167068d424090a530cab47",
+      "bytes": 7691
+    },
+    {
+      "path": "experiments/independent_replication_20261017/verify_final_analysis.py",
+      "sha256": "ac7fa0bf78b9714b8ca2b272fecd4aabe97472b2b1eaa4614ec8b9ee98d0735f",
+      "bytes": 4791
+    },
+    {
+      "path": "manuscript/independent_study_20261021/Manuscript_Independent_Distillation_20261021.docx",
+      "sha256": "56d036314ae2f677d1ab46e77011c9afedbe18d9f6414abe5a1b847bf14d3056",
+      "bytes": 194161
+    },
+    {
+      "path": "manuscript/independent_study_20261021/Manuscript_Independent_Distillation_20261021.pdf",
+      "sha256": "a6858f593e9a2dbeede0b27a9e9d62bc49ce99c74b1dcec4e9b84d56dfa8c81c",
+      "bytes": 419763
+    },
+    {
+      "path": "manuscript/independent_study_20261021/Supplement_All_Endpoints_20261021.docx",
+      "sha256": "4e6d4aa3e7f117be18f352113fa2c4f6d33d40d288c695ec64a180c87d1f539e",
+      "bytes": 48027
+    },
+    {
+      "path": "manuscript/independent_study_20261021/Supplement_All_Endpoints_20261021.pdf",
+      "sha256": "5296f91e8b3ff30d273e9b6abaf151903f4c2665efa30161b2480a26d7ae032a",
+      "bytes": 364245
+    },
+    {
+      "path": "manuscript/independent_study_20261021/figures/Figure1_primary_pairs.pdf",
+      "sha256": "4f3fd8b3a62dcccac28eace9a3d31242eba8060e9d52e83b6be8a03ba43f4837",
+      "bytes": 18323
+    },
+    {
+      "path": "manuscript/independent_study_20261021/figures/Figure1_primary_pairs.png",
+      "sha256": "06adb06e14fd6986eed95d1c3e01d7f0a4d16e810c11f02ff1c8541e82486058",
+      "bytes": 67973
+    },
+    {
+      "path": "manuscript/independent_study_20261021/figures/Figure2_metric_definitions.pdf",
+      "sha256": "f2d93766f7056b0cb9dae7eaa9853643e8d45719fd39dfd85a5b7b79eaa9d50f",
+      "bytes": 18795
+    },
+    {
+      "path": "manuscript/independent_study_20261021/figures/Figure2_metric_definitions.png",
+      "sha256": "52e7dd4f4f193a6a1b6400cfc3a4a5beba15d6938f0b2b31addf46f251c1757e",
+      "bytes": 77647
+    },
+    {
+      "path": "experiments/independent_replication_20261017/contribution_and_journal_review.json",
+      "sha256": "eb52001f9e13c992d9295e7482c01b6f28904d14d88d37f378e63b72a1b80baa",
+      "bytes": 2337
+    },
+    {
+      "path": "experiments/independent_replication_20261017/STUDY_COMPLETION_20261021.json",
+      "sha256": "410306744259e6dd4758dfd15a3b734bf1e7c2d83fc3c545bcb38c5191ba4cce",
+      "bytes": 873
+    },
+    {
+      "path": "manuscript/independent_study_20261021/README.md",
+      "sha256": "9b32671476f7a269e7d7a1b90820b3cd3e0c6e34daca3ae685c4e0590ddf6723",
+      "bytes": 2652
+    },
+    {
+      "path": "README.md",
+      "sha256": "4020b2cdaf360e37ee24861fe2f9ab82e537469fe02ee02ce9823701df765b78",
+      "bytes": 9567
+    },
+    {
+      "path": "experiments/independent_replication_20261017/recheck_published_analysis.py",
+      "sha256": "4e6f53016a765e8f3fcf359ff2d10ae1d24332a4609da9a063a0656e1ba92bad",
+      "bytes": 4714
+    },
+    {
+      "path": "experiments/independent_replication_20261017/standalone_figure_verification.json",
+      "sha256": "2c2978746c80c0656e3cbbaedefab317b9e406d35caa8d6c0e0c905d706d85d4",
+      "bytes": 604
+    }
+  ]
+}

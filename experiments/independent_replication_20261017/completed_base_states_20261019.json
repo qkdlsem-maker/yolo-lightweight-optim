@@ -1,0 +1,174 @@
+{
+  "status": "passed",
+  "utc": "2026-10-19T05:42:06Z",
+  "protocol_sha256": "c2de04c650b0a3553aef88712a8cc4b8521fe8dbdd4f8fee589766248da1c8ba",
+  "base_stage": {
+    "status": "complete",
+    "jobs": 6
+  },
+  "launch": {
+    "pid": 2324018,
+    "mode": "normal_coordinator_after_all_six_bases",
+    "utc": "2026-10-19T05:06:02Z"
+  },
+  "runs": [
+    {
+      "model": "nano",
+      "seed": 101,
+      "epoch": 100,
+      "checkpoint_sha256": "2b7724548ad472f0289b16373b36f7f21c5a0843cf1b0be7c84c9baf54990678",
+      "checkpoint_bytes": 6233571,
+      "complete_record_sha256": "72cbf62a5a4b3c1ab339a4dd507d245d41998577ee23516ccd5e55310af33edd",
+      "resume_state_sha256": "bf79188a37af82c16256d6f175af56a53e1240518bbd426f51626f9dd39ab9bf",
+      "initial_parameters_sha256": "ab79f9eaac3853f53df318eb016e11bf4063807d7700fbb1eb02414a316ef2aa",
+      "initial_parameter_digest": "8aa0aa8ffe3315552e82599c5d58541f1d896d4d55aa4f969313b410fd5983ea",
+      "raw_final_parameter_digest": "0b43e2cde60f1a3bc5590c959693e5b365eadd6a3af3752d56a28b8aa25a750c",
+      "ema_parameter_digest": "cc3496c0c54938e5e4c51b746db420c54ec7a5b40d2a32a466d512d23fe27964",
+      "raw_float32_changed_parameter_tensors": 183,
+      "fixed_dfl_preserved": true,
+      "finite_raw_ema_checkpoint_and_optimizer_tensors": true,
+      "checkpoint_matches_final_ema_at_saved_precision": true
+    },
+    {
+      "model": "nano",
+      "seed": 202,
+      "epoch": 100,
+      "checkpoint_sha256": "8adff4f2d4b04a609db19deeb380217e27755bb14daa3fe9791aa23eace7bdd5",
+      "checkpoint_bytes": 6233571,
+      "complete_record_sha256": "7a84521f536fb760434ab50fa7ad09d853585f975c6a81190d16a53b0826e4a2",
+      "resume_state_sha256": "7d2a4b6e9a2f470a8e447a8f5d127bb8c75749b914cd3411ff6a3a6f63c039a8",
+      "initial_parameters_sha256": "ffc9eb92c59427a14607befa75082736a6429a8e69973cc1d30057fbadf14364",
+      "initial_parameter_digest": "24a18475074e85b998c0e4988e7eab8f9f04a7ecdd250ad04bb5ede46c06153f",
+      "raw_final_parameter_digest": "e3eb970da0a26580d2b2029de3cc9e4fa53cef1f3d55acd2de5854cd6e2b8bba",
+      "ema_parameter_digest": "62c65c5279111efa66afbc86005fc5d89563da0a3648bcc1764eb2123e2b8026",
+      "raw_float32_changed_parameter_tensors": 183,
+      "fixed_dfl_preserved": true,
+      "finite_raw_ema_checkpoint_and_optimizer_tensors": true,
+      "checkpoint_matches_final_ema_at_saved_precision": true
+    },
+    {
+      "model": "nano",
+      "seed": 303,
+      "epoch": 100,
+      "checkpoint_sha256": "b55af624ccc5f0738ac2bbcee8208693789d662a62115bf53e0ae1e97812efbc",
+      "checkpoint_bytes": 6233571,
+      "complete_record_sha256": "13a18907d356ca0f6ad23295da07ad2d2ae64e1a47c07b0ba4005d63cd06c1e5",
+      "resume_state_sha256": "049fac2d6f86072a475e6242e3e77c747f2d9b881d5dc9a3de0c68fb6dbde15e",
+      "initial_parameters_sha256": "644a5f96594566c838ff08b16963243c33bb32b8d4fdda4e6768f58f21b2e2a1",
+      "initial_parameter_digest": "4736c73595af6f355187563c2431f026863cab7e281879e75fb80a6e13a0cdec",
+      "raw_final_parameter_digest": "84bad850027b7333bc7cdc653d26988ceeaf8115f7dc2a05d04d4ba5fdd81cea",
+      "ema_parameter_digest": "81bfcf89969e7bd3124f1787ee52df22e6ed615605dc93ba39bb096d69629933",
+      "raw_float32_changed_parameter_tensors": 183,
+      "fixed_dfl_preserved": true,
+      "finite_raw_ema_checkpoint_and_optimizer_tensors": true,
+      "checkpoint_matches_final_ema_at_saved_precision": true
+    },
+    {
+      "model": "large",
+      "seed": 101,
+      "epoch": 100,
+      "checkpoint_sha256": "1eaa3f303b1a27ff037e667591485b090bbb71af2c4951be4c50cb1d1c62fd89",
+      "checkpoint_bytes": 87641459,
+      "complete_record_sha256": "59d0e375a5412b536b0c3a1453eb490150568436364d9925038ee45d183580df",
+      "resume_state_sha256": "5d28768c68322c189c290c51270090aecc52813c61cc1890dd7f5ee34079fa0f",
+      "initial_parameters_sha256": "6ec7b9bac6cb34aa96c4a37f7dccef9dc928afbc42b2fb547fb2dc55a977d31e",
+      "initial_parameter_digest": "ea3952422ea16c4cd70593abee1c3d5def34f04f273e493047b8d5378aad1a5d",
+      "raw_final_parameter_digest": "e67db7c98baa388f6384a047fcf7018bcb5d6d3496fc0966faa060cf961ccde8",
+      "ema_parameter_digest": "66fc24491bcc80798942d8417cc5b69013b33b9ba8952e938ad31648f60699c6",
+      "raw_float32_changed_parameter_tensors": 303,
+      "fixed_dfl_preserved": true,
+      "finite_raw_ema_checkpoint_and_optimizer_tensors": true,
+      "checkpoint_matches_final_ema_at_saved_precision": true
+    },
+    {
+      "model": "large",
+      "seed": 202,
+      "epoch": 100,
+      "checkpoint_sha256": "1c02917430b7c5df0971996565846387cb65b065d1e2c5799ab4fc482af8bd83",
+      "checkpoint_bytes": 87641459,
+      "complete_record_sha256": "8650a795db8abc4878bae65272035a5ea50d5a3e89b35d80c28b90c40908b39b",
+      "resume_state_sha256": "5a51d3d5b4900e033cb10d950f50b9f349af8bb0c879aa6fa194c1164a585e64",
+      "initial_parameters_sha256": "e84999a4fa008c6ffa651b75e3a81ee4da6d6aaffcc32efd80d37c9154e5f352",
+      "initial_parameter_digest": "6e4f363c248e5868e66c47009890aeb6d21b55660a1eee1b342de7b2267ce42e",
+      "raw_final_parameter_digest": "e3e32cf6e40f749e60ccebe55bcbaf80966ce6a049fed4acca304d8f73dfdeb0",
+      "ema_parameter_digest": "e86750d0a919064bd2675516609b341a8f540114d3f3c5b1f9c709366ceba335",
+      "raw_float32_changed_parameter_tensors": 303,
+      "fixed_dfl_preserved": true,
+      "finite_raw_ema_checkpoint_and_optimizer_tensors": true,
+      "checkpoint_matches_final_ema_at_saved_precision": true
+    },
+    {
+      "model": "large",
+      "seed": 303,
+      "epoch": 100,
+      "checkpoint_sha256": "20393fd82e18cf42b040dab6df49de2f6b276973bf096068f329e669c88c464a",
+      "checkpoint_bytes": 87641459,
+      "complete_record_sha256": "2f40cfbfd19e9615dc600b11209e9dfb3bdcdebf36bc572e80eeca03dd71e5fb",
+      "resume_state_sha256": "0c0b368ab59ddbd4332e1cd1f40a9a2383c2cc82be8c3e58f0850b6f4b079ef6",
+      "initial_parameters_sha256": "b3916fa3735d418b533b943c44ccc7bd9393124358ead4c973917a5fea292330",
+      "initial_parameter_digest": "4a18283e090f898bdf6452be065465dbcca9450b4ef11a84d880b7c6c9241a1e",
+      "raw_final_parameter_digest": "731cfb412fd5fdfbd224aff24d9b77d3a22147d2e774c27887615f7e01ce5b64",
+      "ema_parameter_digest": "6e90b269a8735e7096b47206da0a8f183fe18191de089ffb1c9430fcd79ee3a7",
+      "raw_float32_changed_parameter_tensors": 303,
+      "fixed_dfl_preserved": true,
+      "finite_raw_ema_checkpoint_and_optimizer_tensors": true,
+      "checkpoint_matches_final_ema_at_saved_precision": true
+    }
+  ],
+  "pairwise_checks": [
+    {
+      "model": "nano",
+      "seeds": [
+        101,
+        202
+      ],
+      "distinct_initial_raw_final_and_ema_parameter_values": true
+    },
+    {
+      "model": "nano",
+      "seeds": [
+        101,
+        303
+      ],
+      "distinct_initial_raw_final_and_ema_parameter_values": true
+    },
+    {
+      "model": "nano",
+      "seeds": [
+        202,
+        303
+      ],
+      "distinct_initial_raw_final_and_ema_parameter_values": true
+    },
+    {
+      "model": "large",
+      "seeds": [
+        101,
+        202
+      ],
+      "distinct_initial_raw_final_and_ema_parameter_values": true
+    },
+    {
+      "model": "large",
+      "seeds": [
+        101,
+        303
+      ],
+      "distinct_initial_raw_final_and_ema_parameter_values": true
+    },
+    {
+      "model": "large",
+      "seeds": [
+        202,
+        303
+      ],
+      "distinct_initial_raw_final_and_ema_parameter_values": true
+    }
+  ],
+  "scope": "Independent read-only CPU reload of all six final raw FP32 sidecars and released EMA checkpoints. Parameter digests use parameter names and canonical float32 values; separation is not inferred from checkpoint file bytes. No training or validation inference was run.",
+  "limitations": [
+    "Only three independently BDD-fine-tuned pairs from fixed COCO checkpoints.",
+    "Base per-step AMP-applied/skipped counters were not recorded; final EMA update counts do not reconstruct them.",
+    "This audit does not compute research performance or inspect every training input."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-21",
+  "contribution": "Bounded paired empirical sensitivity study across independently fine-tuned starting pairs, fixed strengths and evaluation definitions; no new KD algorithm.",
+  "primary_literature": [
+    {
+      "title": "Fine-grained feature imitation",
+      "url": "https://arxiv.org/abs/1906.03609"
+    },
+    {
+      "title": "Focal and global distillation",
+      "url": "https://arxiv.org/abs/2111.11837"
+    },
+    {
+      "title": "Channel-wise distillation",
+      "url": "https://arxiv.org/abs/2011.13256"
+    },
+    {
+      "title": "Efficacy of distillation",
+      "url": "https://arxiv.org/abs/1910.01348"
+    },
+    {
+      "title": "Role of the projector",
+      "url": "https://arxiv.org/abs/2303.11098v5"
+    },
+    {
+      "title": "CSCWD preprint",
+      "url": "https://arxiv.org/abs/2609.30395v1"
+    }
+  ],
+  "journal_assessment": {
+    "PLOS One": "Potential soundness-focused empirical-study fit, not assurance of acceptance. Current Clarivate SCIE roster not directly verified in this review.",
+    "Applied Sciences": "Alternative applied-research scope; publisher indexing listing names SCIE. Reconfirm current indexing before submission."
+  },
+  "policy_sources": [
+    "https://journals.plos.org/plosone/s/criteria-for-publication",
+    "https://journals.plos.org/plosone/s/submission-guidelines",
+    "https://journals.plos.org/plosone/s/ethical-publishing-practice",
+    "https://www.mdpi.com/journal/applsci/about",
+    "https://www.mdpi.com/journal/applsci/indexing"
+  ],
+  "status": "author_review_draft_not_submitted",
+  "author_AI_disclosure_review": "pending",
+  "previous_IEEE_Access_decision": "final desk rejection; no same-manuscript resubmission or publication promise",
+  "remaining_limits": [
+    "Three training pairs, one architecture family, fixed pretrained sources.",
+    "Legacy mirror not authenticated Detection 2020; reused validation and previously examined KITTI.",
+    "Base actual AMP counters and intermediate raw EMA unavailable; per-batch gradient history incomplete.",
+    "Full model/prediction binaries retained on server, not deposited in this public text-and-JSON package.",
+    "Final author contributions, conflicts, data access and full AI disclosure require author verification."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "scope": "Read-only aggregation utility, not training, inference or metric computation",
+  "failure": "Output folder kitti_native differs from audit proof field native_kitti; KeyError before any aggregate output was written.",
+  "correction": "New separate v2 source maps folder and proof key explicitly; original source/log preserved. All 48 successful numerical audit proofs and evaluation outputs remain unchanged.",
+  "old_sha256": "fae56484d04840d9be57230d6de5b110eee3b1da4784c8de6a769fdf9ca2490e",
+  "new_sha256": "d8a2f6fced95a89fe9bbc01dd8d8b8b14f8bed6364cbccf1bf5a7fa45d32c6f2"
+}

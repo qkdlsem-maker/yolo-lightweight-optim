@@ -1,0 +1,104 @@
+{
+  "audit_source_sha256": "abf66b83332814f890d58f18c4962e886e8e26625295820fbb136aa9fb3141e6",
+  "bdd_common": {
+    "all_class_predictions": 1042463,
+    "images": 10000,
+    "mapped_predictions": 604642,
+    "native_export_counts": {
+      "empty": 0,
+      "mapped": 0,
+      "zero_area": 0
+    },
+    "projection_sha256": "28d18d342bc8683a9f6463a5d0917147788b9b22cf0d5b54c9dd32ec2da4847f",
+    "scores": {
+      "bdd_common": {
+        "all_numeric_fields_replayed_exactly": true,
+        "class_AP50_95": {
+          "car": 0.496976471287912,
+          "person": 0.35744450482892487
+        },
+        "mean_AP50_95": 0.42721048805841844,
+        "score_sha256": "0ebe3125566d1b74044ca8d7f87c36e21df54232758b7c9b1634cb37705d4bef"
+      }
+    }
+  },
+  "endpoint_complete_sha256": "6b83e040d8e0810e8f6cebe06fcb0cc6ca4143337363486942e6ca45bf89691b",
+  "endpoint_id": "base_large_seed101_e100",
+  "kitti_common": {
+    "all_class_predictions": 691410,
+    "images": 7481,
+    "mapped_predictions": 368394,
+    "native_export_counts": {
+      "empty": 0,
+      "mapped": 368394,
+      "zero_area": 1
+    },
+    "projection_sha256": "369d9ce678d65949f5c2e0360455bc85319448f76198d570dc158247a7aa0b92",
+    "scores": {
+      "kitti_no_ignore_sensitivity": {
+        "all_numeric_fields_replayed_exactly": true,
+        "class_AP50_95": {
+          "car": 0.4916249793850462,
+          "person": 0.2941203902497958
+        },
+        "mean_AP50_95": 0.392872684817421,
+        "score_sha256": "2957356faf48abe8c7f1019d38cf2a2c1f665452b257251feab9cc773e600eea"
+      },
+      "kitti_source_ignore": {
+        "all_numeric_fields_replayed_exactly": true,
+        "class_AP50_95": {
+          "car": 0.5359155742471636,
+          "person": 0.30695799851306194
+        },
+        "mean_AP50_95": 0.4214367863801128,
+        "score_sha256": "1612d302041882c57a975e50e4995e1485ccab429931f727b0349e2f1762fe76"
+      }
+    }
+  },
+  "limitations": [
+    "This validates saved computations, not a new untouched evaluation population or independent metric implementation.",
+    "Does not reconstruct native BDD IoU matches from image pixels; saved per-detection TP statistics are replayed.",
+    "Native KITTI matching core is provenance-bound; only saved precision integration is recomputed."
+  ],
+  "native_bdd": {
+    "actual_batches_FP32_640_square_and_image_ledger_verified": true,
+    "images": 10000,
+    "native_boxes": 185526,
+    "prediction_rows": 1375442,
+    "raw_label_rows": 185526,
+    "results": {
+      "fitness": 0.3566779305673977,
+      "metrics/mAP50(B)": 0.5756495915766788,
+      "metrics/mAP50-95(B)": 0.3323477460108109,
+      "metrics/precision(B)": 0.6440132086760006,
+      "metrics/recall(B)": 0.529107901697453
+    },
+    "saved_statistics_exactly_reproduce_all_results_and_class_AP": true,
+    "score_sha256": "4e8f908e17caf39e5eea5e41988fb63e1d621bffe9ae9fa2e148a3bce61db829"
+  },
+  "native_kitti": {
+    "AP_R40_reconstructed_exactly_from_saved_curves": true,
+    "class_AP_R40": {
+      "car": {
+        "easy": 0.8917962974684361,
+        "hard": 0.6603270671831895,
+        "moderate": 0.7997051125261151
+      },
+      "pedestrian": {
+        "easy": 0.8177671441549859,
+        "hard": 0.6512533150938371,
+        "moderate": 0.7345959111777
+      }
+    },
+    "exported_text_exactly_matches_prediction_archive": true,
+    "ground_truth_exactly_matches_fixed_zip": true,
+    "images": 7481,
+    "limitation": "Native C++ matching was not rerun; audit checks pinned core provenance, exact text exports, labels and retained precision integration.",
+    "mean_moderate_AP_R40": 0.7671505118519075,
+    "score_sha256": "5e62b3cb54e80baaf25fd02b8eca202d02bcda3defaa4452a16f414bc15b5e05"
+  },
+  "plan_sha256": "9eb59cda78a1512a732b068cf172dd74009eb70232ddcbcceba32f6f82d5fc2d",
+  "scope": "Independent read-only artifact and numerical replay using the same pinned metric implementations. No model loading, training, inference, C++ reevaluation or output overwrite.",
+  "status": "passed",
+  "utc": "2026-10-20T22:16:44Z"
+}

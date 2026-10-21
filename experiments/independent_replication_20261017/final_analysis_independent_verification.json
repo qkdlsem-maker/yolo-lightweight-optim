@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "utc": "2026-10-21T00:12:40.861274+00:00",
+  "verification_source_sha256": "ac7fa0bf78b9714b8ca2b272fecd4aabe97472b2b1eaa4614ec8b9ee98d0735f",
+  "analysis_sha256": "6ba83713bdf8ea9b050beda6a5055dcc214e4d613927d3904e39831abd4ff5b9",
+  "endpoint_count": 48,
+  "metric_values": 960,
+  "group_summaries": 16,
+  "contrasts": 12,
+  "numeric_comparisons": 4480,
+  "absolute_tolerance": 1e-12,
+  "method": "Direct local proof extraction; elementary sums and sample variance. No aggregation-code import, training or inference.",
+  "primary_pair_effects_pp": [
+    {
+      "arm": "mse",
+      "weight": 0.03,
+      "mean_pp": -0.0002530222719584104,
+      "n_pairs": 3,
+      "pair_values_pp": {
+        "101": 0.019930176883803385,
+        "202": -0.025167936302766813,
+        "303": 0.004478692603088197
+      },
+      "sample_SD_pp": 0.022918372487836635
+    },
+    {
+      "arm": "mse",
+      "weight": 0.3,
+      "mean_pp": -0.02917592004375395,
+      "n_pairs": 3,
+      "pair_values_pp": {
+        "101": -0.03491877588717163,
+        "202": -0.03848446498234681,
+        "303": -0.014124519261743407
+      },
+      "sample_SD_pp": 0.013156254550836018
+    },
+    {
+      "arm": "mse",
+      "weight": 3.0,
+      "mean_pp": -0.25967582347639817,
+      "n_pairs": 3,
+      "pair_values_pp": {
+        "101": -0.23281710103294495,
+        "202": -0.3794620059725917,
+        "303": -0.16674836342365773
+      },
+      "sample_SD_pp": 0.10887064186492039
+    },
+    {
+      "arm": "cwd",
+      "weight": 0.03,
+      "mean_pp": 0.00962970598033519,
+      "n_pairs": 3,
+      "pair_values_pp": {
+        "101": 0.007914441130718597,
+        "202": 0.002177810022935267,
+        "303": 0.018796866787351707
+      },
+      "sample_SD_pp": 0.00844125950690841
+    },
+    {
+      "arm": "cwd",
+      "weight": 0.3,
+      "mean_pp": -0.0497156981915825,
+      "n_pairs": 3,
+      "pair_values_pp": {
+        "101": -0.03407051237591663,
+        "202": -0.12834769473191732,
+        "303": 0.013271112533086438
+      },
+      "sample_SD_pp": 0.07209403943597283
+    },
+    {
+      "arm": "cwd",
+      "weight": 3.0,
+      "mean_pp": -0.22515091279876054,
+      "n_pairs": 3,
+      "pair_values_pp": {
+        "101": -0.16870701980189473,
+        "202": -0.40085330307219613,
+        "303": -0.10589241552219075
+      },
+      "sample_SD_pp": 0.15537025483841158
+    }
+  ]
+}

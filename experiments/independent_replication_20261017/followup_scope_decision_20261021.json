@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-21",
+  "stage": "after_fixed_all48_numeric_audit",
+  "decision": "no_additional_training_for_this_bounded_question",
+  "basis": [
+    "All prespecified strengths, pairs and endpoints are complete and verified.",
+    "The question concerns the fixed post100epoch continuation regime; outcome magnitude is not a criterion for extending the experiment.",
+    "Additional architectures, early-stage schedules and authenticated new labels would test separate generalization questions, not repair the completed comparison."
+  ],
+  "reporting": [
+    "All primary and secondary results retained.",
+    "No winner chosen and no KITTI tuning.",
+    "No causal teacher-quality or domain-shift explanation.",
+    "Three-pair descriptive empirical contribution; not a novel KD algorithm."
+  ],
+  "remaining_author_actions": [
+    "Verify and adopt the final scientific interpretation and full AI disclosure.",
+    "Confirm author contributions, conflicts, and data-access/archival arrangements before submission.",
+    "Select a journal; no submission or payment performed."
+  ]
+}

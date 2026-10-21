@@ -1,0 +1,16 @@
+{
+  "pid": 2440662,
+  "utc": "2026-10-20T22:15:26Z",
+  "command": [
+    "/home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/venv/bin/python",
+    "review_20261017_independent/evaluation_tools/audit_final_evaluation.py",
+    "--plan",
+    "review_20261017_independent/final_evaluation_plan.json",
+    "--plan-sha256",
+    "9eb59cda78a1512a732b068cf172dd74009eb70232ddcbcceba32f6f82d5fc2d",
+    "--output",
+    "review_20261017_independent/final_evaluation_audits",
+    "--watch"
+  ],
+  "source_sha256": "abf66b83332814f890d58f18c4962e886e8e26625295820fbb136aa9fb3141e6"
+}

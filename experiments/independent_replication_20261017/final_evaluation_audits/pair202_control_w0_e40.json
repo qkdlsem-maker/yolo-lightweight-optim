@@ -1,0 +1,104 @@
+{
+  "audit_source_sha256": "abf66b83332814f890d58f18c4962e886e8e26625295820fbb136aa9fb3141e6",
+  "bdd_common": {
+    "all_class_predictions": 1763451,
+    "images": 10000,
+    "mapped_predictions": 947418,
+    "native_export_counts": {
+      "empty": 0,
+      "mapped": 0,
+      "zero_area": 0
+    },
+    "projection_sha256": "a480e75c20c55435bbb99d14a24cdfdb68dac8111fa43aa7b27698bd18238fa3",
+    "scores": {
+      "bdd_common": {
+        "all_numeric_fields_replayed_exactly": true,
+        "class_AP50_95": {
+          "car": 0.44924555237244773,
+          "person": 0.2561407623433648
+        },
+        "mean_AP50_95": 0.3526931573579063,
+        "score_sha256": "b5e4bcb47b28551fd7c3d4c4e589a66ca88b2a6930fcc2d3697d153e68c8c433"
+      }
+    }
+  },
+  "endpoint_complete_sha256": "852046ea32d13ab6914d351bc2d40e46706291d5d167bb4aeab7ee2a63864397",
+  "endpoint_id": "pair202_control_w0_e40",
+  "kitti_common": {
+    "all_class_predictions": 1324995,
+    "images": 7481,
+    "mapped_predictions": 725504,
+    "native_export_counts": {
+      "empty": 0,
+      "mapped": 725504,
+      "zero_area": 0
+    },
+    "projection_sha256": "6a37a6dbec26daee54c65ac489255b0b1ba0b3381c8e96d3892ee05ac6b50e9a",
+    "scores": {
+      "kitti_no_ignore_sensitivity": {
+        "all_numeric_fields_replayed_exactly": true,
+        "class_AP50_95": {
+          "car": 0.4796183103303109,
+          "person": 0.2522201936252227
+        },
+        "mean_AP50_95": 0.36591925197776676,
+        "score_sha256": "62423f567005f7230fff29a7095f0503f681bf7038d562e3dd8f5068102aa260"
+      },
+      "kitti_source_ignore": {
+        "all_numeric_fields_replayed_exactly": true,
+        "class_AP50_95": {
+          "car": 0.5118759960489714,
+          "person": 0.25899386914444594
+        },
+        "mean_AP50_95": 0.38543493259670863,
+        "score_sha256": "1b282da8af3e87c5e2d9cf62290e0023292f607e7928b0f784f767ecb98841b4"
+      }
+    }
+  },
+  "limitations": [
+    "This validates saved computations, not a new untouched evaluation population or independent metric implementation.",
+    "Does not reconstruct native BDD IoU matches from image pixels; saved per-detection TP statistics are replayed.",
+    "Native KITTI matching core is provenance-bound; only saved precision integration is recomputed."
+  ],
+  "native_bdd": {
+    "actual_batches_FP32_640_square_and_image_ledger_verified": true,
+    "images": 10000,
+    "native_boxes": 185526,
+    "prediction_rows": 2238418,
+    "raw_label_rows": 185526,
+    "results": {
+      "fitness": 0.28181343528133634,
+      "metrics/mAP50(B)": 0.46717256417707204,
+      "metrics/mAP50-95(B)": 0.2612179765151435,
+      "metrics/precision(B)": 0.5749143882854868,
+      "metrics/recall(B)": 0.44335370117916695
+    },
+    "saved_statistics_exactly_reproduce_all_results_and_class_AP": true,
+    "score_sha256": "c8f9b14116e1b21c3d46565093bed2151e6de5f1338eaafbdbed5360f83d3be6"
+  },
+  "native_kitti": {
+    "AP_R40_reconstructed_exactly_from_saved_curves": true,
+    "class_AP_R40": {
+      "car": {
+        "easy": 0.8841442197844447,
+        "hard": 0.6401597337803957,
+        "moderate": 0.7775427176418904
+      },
+      "pedestrian": {
+        "easy": 0.7306952210511608,
+        "hard": 0.5623545202182145,
+        "moderate": 0.6378415829038049
+      }
+    },
+    "exported_text_exactly_matches_prediction_archive": true,
+    "ground_truth_exactly_matches_fixed_zip": true,
+    "images": 7481,
+    "limitation": "Native C++ matching was not rerun; audit checks pinned core provenance, exact text exports, labels and retained precision integration.",
+    "mean_moderate_AP_R40": 0.7076921502728477,
+    "score_sha256": "5143b11a158ce197f8b1a8c623c826176857baba2472c74835afa3d1fbe0a0fe"
+  },
+  "plan_sha256": "9eb59cda78a1512a732b068cf172dd74009eb70232ddcbcceba32f6f82d5fc2d",
+  "scope": "Independent read-only artifact and numerical replay using the same pinned metric implementations. No model loading, training, inference, C++ reevaluation or output overwrite.",
+  "status": "passed",
+  "utc": "2026-10-20T22:55:06Z"
+}

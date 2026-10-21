@@ -1,0 +1,22 @@
+{
+  "status": "fixed_experiments_analysis_and_author_review_documents_complete",
+  "base_runs": 6,
+  "continuation_runs": 21,
+  "fixed_evaluation_endpoints": 48,
+  "numeric_audits": 48,
+  "independent_pairs": 3,
+  "primary_epoch": 40,
+  "secondary_epoch": 20,
+  "analysis_sha256": "6ba83713bdf8ea9b050beda6a5055dcc214e4d613927d3904e39831abd4ff5b9",
+  "document_pages": {
+    "manuscript": 9,
+    "supplement": 10,
+    "author_review_local": 3
+  },
+  "all_document_pages_visually_inspected": true,
+  "author_approval": "pending",
+  "AI_disclosure_author_verification": "pending",
+  "submitted": false,
+  "older_pending_policy_notes": "Historical preflight statuses retained unchanged; this completion record supersedes their pending-work status only.",
+  "raw_binary_public_archive": "not deposited; access arrangement remains an author-review item"
+}

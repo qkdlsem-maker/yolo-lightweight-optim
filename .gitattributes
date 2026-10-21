@@ -6,3 +6,6 @@ manuscript/** -text
 
 # Preserve the prespecified independent-replication source hashes.
 experiments/independent_replication_20261017/** -text
+
+# Preserve the prospective LR-factorial protocol and source hashes.
+experiments/lr_factorial_20261021/** -text

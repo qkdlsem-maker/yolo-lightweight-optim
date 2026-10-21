@@ -1,0 +1,365 @@
+{
+  "original_roster_sha256": "4a5afdd71ff4ac306e77110019a222ff8b42b184a38d8aa08f3464a59a5e0a53",
+  "endpoints": [
+    {
+      "architecture": "nano",
+      "arm": null,
+      "audit_file": "completed_base_states_20261019.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/base/nano_seed101/weights/last.pt",
+        "sha256": "2b7724548ad472f0289b16373b36f7f21c5a0843cf1b0be7c84c9baf54990678"
+      },
+      "endpoint_id": "base_nano_seed101_e100",
+      "epoch": 100,
+      "pair_seed": 101,
+      "role": "base_reference",
+      "stage": "base",
+      "weight": null
+    },
+    {
+      "architecture": "large",
+      "arm": null,
+      "audit_file": "completed_base_states_20261019.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/base/large_seed101/weights/last.pt",
+        "sha256": "1eaa3f303b1a27ff037e667591485b090bbb71af2c4951be4c50cb1d1c62fd89"
+      },
+      "endpoint_id": "base_large_seed101_e100",
+      "epoch": 100,
+      "pair_seed": 101,
+      "role": "base_reference",
+      "stage": "base",
+      "weight": null
+    },
+    {
+      "architecture": "nano",
+      "arm": "control",
+      "audit_file": "completed_continuation_audits/pair101_control_w0.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair101_control_w0/control_seed1101_e40/ema_epoch20.pt",
+        "sha256": "edfeb319c7c732e0f16679a3cf99d04257970eea2f1dae0523ff0dd7928cfc53"
+      },
+      "endpoint_id": "pair101_control_w0_e20",
+      "epoch": 20,
+      "pair_seed": 101,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.0
+    },
+    {
+      "architecture": "nano",
+      "arm": "control",
+      "audit_file": "completed_continuation_audits/pair101_control_w0.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair101_control_w0/control_seed1101_e40/ema_epoch40.pt",
+        "sha256": "d549f86bb0cf76fb48e59153b092c105a36ef0ae71151c95d4f80e70ae62eae4"
+      },
+      "endpoint_id": "pair101_control_w0_e40",
+      "epoch": 40,
+      "pair_seed": 101,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.0
+    },
+    {
+      "architecture": "nano",
+      "arm": "mse",
+      "audit_file": "completed_continuation_audits/pair101_mse_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair101_mse_w0.3/mse_seed1101_e40/ema_epoch20.pt",
+        "sha256": "2cdac7e9e349ce5cfb17fbea83928ea41cc85a3cdd7bfd34f445b757b4810e0d"
+      },
+      "endpoint_id": "pair101_mse_w0.3_e20",
+      "epoch": 20,
+      "pair_seed": 101,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "mse",
+      "audit_file": "completed_continuation_audits/pair101_mse_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair101_mse_w0.3/mse_seed1101_e40/ema_epoch40.pt",
+        "sha256": "18391ba576d55d2b340b3afa616d3d60c9f31f32d8af404821c749e5094bdb07"
+      },
+      "endpoint_id": "pair101_mse_w0.3_e40",
+      "epoch": 40,
+      "pair_seed": 101,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "cwd",
+      "audit_file": "completed_continuation_audits/pair101_cwd_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair101_cwd_w0.3/cwd_seed1101_e40/ema_epoch20.pt",
+        "sha256": "843bdd6c04b8f0159b4e372ff24e849fa65233c989a0e6f72af25e16da0c8d7a"
+      },
+      "endpoint_id": "pair101_cwd_w0.3_e20",
+      "epoch": 20,
+      "pair_seed": 101,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "cwd",
+      "audit_file": "completed_continuation_audits/pair101_cwd_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair101_cwd_w0.3/cwd_seed1101_e40/ema_epoch40.pt",
+        "sha256": "bc6c1878b27475700de40774bddc57a45451e5802bb4c43464f7d5c9dec471e0"
+      },
+      "endpoint_id": "pair101_cwd_w0.3_e40",
+      "epoch": 40,
+      "pair_seed": 101,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": null,
+      "audit_file": "completed_base_states_20261019.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/base/nano_seed202/weights/last.pt",
+        "sha256": "8adff4f2d4b04a609db19deeb380217e27755bb14daa3fe9791aa23eace7bdd5"
+      },
+      "endpoint_id": "base_nano_seed202_e100",
+      "epoch": 100,
+      "pair_seed": 202,
+      "role": "base_reference",
+      "stage": "base",
+      "weight": null
+    },
+    {
+      "architecture": "large",
+      "arm": null,
+      "audit_file": "completed_base_states_20261019.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/base/large_seed202/weights/last.pt",
+        "sha256": "1c02917430b7c5df0971996565846387cb65b065d1e2c5799ab4fc482af8bd83"
+      },
+      "endpoint_id": "base_large_seed202_e100",
+      "epoch": 100,
+      "pair_seed": 202,
+      "role": "base_reference",
+      "stage": "base",
+      "weight": null
+    },
+    {
+      "architecture": "nano",
+      "arm": "control",
+      "audit_file": "completed_continuation_audits/pair202_control_w0.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair202_control_w0/control_seed1202_e40/ema_epoch20.pt",
+        "sha256": "43383705508351202eca6e22ffff488f96cc26da72e21860e84716cc02e363bc"
+      },
+      "endpoint_id": "pair202_control_w0_e20",
+      "epoch": 20,
+      "pair_seed": 202,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.0
+    },
+    {
+      "architecture": "nano",
+      "arm": "control",
+      "audit_file": "completed_continuation_audits/pair202_control_w0.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair202_control_w0/control_seed1202_e40/ema_epoch40.pt",
+        "sha256": "217eba7b9b8fa04c04029a35dca450068cfddade626f3a499c174f7c187ec051"
+      },
+      "endpoint_id": "pair202_control_w0_e40",
+      "epoch": 40,
+      "pair_seed": 202,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.0
+    },
+    {
+      "architecture": "nano",
+      "arm": "mse",
+      "audit_file": "completed_continuation_audits/pair202_mse_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair202_mse_w0.3/mse_seed1202_e40/ema_epoch20.pt",
+        "sha256": "4d50119b943bdea23732f561408a4f51959f0f4a13545d900a8071f35399cd1e"
+      },
+      "endpoint_id": "pair202_mse_w0.3_e20",
+      "epoch": 20,
+      "pair_seed": 202,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "mse",
+      "audit_file": "completed_continuation_audits/pair202_mse_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair202_mse_w0.3/mse_seed1202_e40/ema_epoch40.pt",
+        "sha256": "66a0f922c068376090c2feccbdac0f75b08ecc187b74e1418c5ebebb01ef4aaa"
+      },
+      "endpoint_id": "pair202_mse_w0.3_e40",
+      "epoch": 40,
+      "pair_seed": 202,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "cwd",
+      "audit_file": "completed_continuation_audits/pair202_cwd_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair202_cwd_w0.3/cwd_seed1202_e40/ema_epoch20.pt",
+        "sha256": "59010ca41956a92ffb26f6ca7962beab56217c0fd8a4d145d721cfc114e41134"
+      },
+      "endpoint_id": "pair202_cwd_w0.3_e20",
+      "epoch": 20,
+      "pair_seed": 202,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "cwd",
+      "audit_file": "completed_continuation_audits/pair202_cwd_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair202_cwd_w0.3/cwd_seed1202_e40/ema_epoch40.pt",
+        "sha256": "b1b02bf18efe0e92ff60c5a4c52b721eb206377abcad66c14cbd0f19f1e67cdb"
+      },
+      "endpoint_id": "pair202_cwd_w0.3_e40",
+      "epoch": 40,
+      "pair_seed": 202,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": null,
+      "audit_file": "completed_base_states_20261019.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/base/nano_seed303/weights/last.pt",
+        "sha256": "b55af624ccc5f0738ac2bbcee8208693789d662a62115bf53e0ae1e97812efbc"
+      },
+      "endpoint_id": "base_nano_seed303_e100",
+      "epoch": 100,
+      "pair_seed": 303,
+      "role": "base_reference",
+      "stage": "base",
+      "weight": null
+    },
+    {
+      "architecture": "large",
+      "arm": null,
+      "audit_file": "completed_base_states_20261019.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/base/large_seed303/weights/last.pt",
+        "sha256": "20393fd82e18cf42b040dab6df49de2f6b276973bf096068f329e669c88c464a"
+      },
+      "endpoint_id": "base_large_seed303_e100",
+      "epoch": 100,
+      "pair_seed": 303,
+      "role": "base_reference",
+      "stage": "base",
+      "weight": null
+    },
+    {
+      "architecture": "nano",
+      "arm": "control",
+      "audit_file": "completed_continuation_audits/pair303_control_w0.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair303_control_w0/control_seed1303_e40/ema_epoch20.pt",
+        "sha256": "5f31d1be5bba7a4ef09e6478c1049eeccf77a3b7c4043a4b8ff34fc03a5988a4"
+      },
+      "endpoint_id": "pair303_control_w0_e20",
+      "epoch": 20,
+      "pair_seed": 303,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.0
+    },
+    {
+      "architecture": "nano",
+      "arm": "control",
+      "audit_file": "completed_continuation_audits/pair303_control_w0.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair303_control_w0/control_seed1303_e40/ema_epoch40.pt",
+        "sha256": "871e7e64312f586e84815115cf4110c596e73b375dd56c1276f2c26aa44b8d44"
+      },
+      "endpoint_id": "pair303_control_w0_e40",
+      "epoch": 40,
+      "pair_seed": 303,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.0
+    },
+    {
+      "architecture": "nano",
+      "arm": "mse",
+      "audit_file": "completed_continuation_audits/pair303_mse_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair303_mse_w0.3/mse_seed1303_e40/ema_epoch20.pt",
+        "sha256": "d1a45c4e8f06eed16ea912d53993d195f8d81efe5caec609ddc944880f07b88a"
+      },
+      "endpoint_id": "pair303_mse_w0.3_e20",
+      "epoch": 20,
+      "pair_seed": 303,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "mse",
+      "audit_file": "completed_continuation_audits/pair303_mse_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair303_mse_w0.3/mse_seed1303_e40/ema_epoch40.pt",
+        "sha256": "8f649030f599cf5f930d239de509590d530a4b63dd4cc3ddd27df5bdd7a4059b"
+      },
+      "endpoint_id": "pair303_mse_w0.3_e40",
+      "epoch": 40,
+      "pair_seed": 303,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "cwd",
+      "audit_file": "completed_continuation_audits/pair303_cwd_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair303_cwd_w0.3/cwd_seed1303_e40/ema_epoch20.pt",
+        "sha256": "6f078aa77cc5722dfe90b78719829064e40628cbdbdde3b99f32dee25a1f1753"
+      },
+      "endpoint_id": "pair303_cwd_w0.3_e20",
+      "epoch": 20,
+      "pair_seed": 303,
+      "role": "secondary",
+      "stage": "continuation",
+      "weight": 0.3
+    },
+    {
+      "architecture": "nano",
+      "arm": "cwd",
+      "audit_file": "completed_continuation_audits/pair303_cwd_w0.3.json",
+      "checkpoint": {
+        "path": "review_20261017_independent/continuations/pair303_cwd_w0.3/cwd_seed1303_e40/ema_epoch40.pt",
+        "sha256": "4a90ff5387c8ce9e37a2e96e71ea4cfafb11194168d24527d82e5407192ca63c"
+      },
+      "endpoint_id": "pair303_cwd_w0.3_e40",
+      "epoch": 40,
+      "pair_seed": 303,
+      "role": "primary",
+      "stage": "continuation",
+      "weight": 0.3
+    }
+  ]
+}

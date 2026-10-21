@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "name": "protocol.json",
+      "bytes": 14004,
+      "sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d"
+    },
+    {
+      "name": "historical_reuse_manifest.json",
+      "bytes": 12645,
+      "sha256": "2eb69016b83b3347ba5e79823d81d35cde13230818cd028445e5da213ac157fd"
+    },
+    {
+      "name": "base_train.py",
+      "bytes": 9088,
+      "sha256": "6a38f94ae68d7b20ff2597a6b9ec71f6ab0131ca876d536435db02c538dd4565"
+    },
+    {
+      "name": "step_accounting.py",
+      "bytes": 1024,
+      "sha256": "37d3dc52e628f5d4d8806967d1ef646fbb2e6b129dbb5af67b9bfa322daa3b41"
+    },
+    {
+      "name": "test_step_accounting.py",
+      "bytes": 2179,
+      "sha256": "92fa702b8e3f99ee131459d5d2de01f139dd338189afa620ec5331e488f08511"
+    },
+    {
+      "name": "setup_data.py",
+      "bytes": 2610,
+      "sha256": "4c8ae465c8c884e6b9eb57f666eac756704506ed80ddcf2a5213d7c56964e8fa"
+    },
+    {
+      "name": "job_runtime.py",
+      "bytes": 3504,
+      "sha256": "7f71b408abfd4e8734539092686c5e55f9d3387017303015d61818a3c63756f5"
+    },
+    {
+      "name": "run_base_preflight.py",
+      "bytes": 3029,
+      "sha256": "a15db1079f766d035c3b635bc369efdf37591734edaff7aadbdb322ea4f66c3e"
+    },
+    {
+      "name": "run_bases.py",
+      "bytes": 1936,
+      "sha256": "2249d441db35aa3a85f5b21f7aad72545b18a638ea4a8ac2e784b1876e52152f"
+    }
+  ]
+}

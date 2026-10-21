@@ -1,5 +1,10 @@
 # 자율주행 경량 객체 탐지 최적화 실험
 
+## 2026-10-21 추가 보강 단계
+
+사용자 요청에 따라 [학습률 상호작용과 새 시작 쌍의 추가 실험](experiments/lr_factorial_20261021/README.md)을 사전 명시했습니다. 새 기초 학습 6회와 후속 학습 27회, 기존 완료 경로 재사용, 고정 기울기 진단·평가 지표 분해가 범위입니다. 계산 상한은 총 220 GPU시간입니다. 현재 사전 점검 단계이며 새 성능 결과는 아직 없습니다. 아래 독립 시작 쌍 연구는 완료된 이전 단계로 보존합니다.
+
+
 ## 2026-10-21 독립 시작 쌍 연구 완료
 
 기초 학습 **6회**, 후속 학습 **21회**, 고정 **48개 모델 시점의 평가와 수치 감사**를 완료했습니다. 이전 9회 결과와 합치지 않은 새 단계입니다. [새 원고와 보충자료](manuscript/independent_study_20261021/README.md), [모든 결과](experiments/independent_replication_20261017/final_all_pair_analysis.json), [완료 범위](experiments/independent_replication_20261017/STUDY_COMPLETION_20261021.json)를 공개합니다.

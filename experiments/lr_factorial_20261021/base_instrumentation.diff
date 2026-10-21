@@ -1,0 +1,50 @@
+--- historical/base_train.py
++++ new/base_train.py
+@@ -6,8 +6,9 @@
+ from ultralytics import YOLO
+ from ultralytics.models.yolo.detect import DetectionTrainer
+ from ultralytics.data.build import seed_worker
++from step_accounting import OptimizerStepAccounting
+ 
+-R=Path('review_20261017_independent')
++R=Path('review_20261021_lr_factorial')
+ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+ def tensor_sha(t):return hashlib.sha256(t.detach().float().cpu().contiguous().numpy().tobytes()).hexdigest()
+ def dump(p,v):
+@@ -18,7 +19,7 @@
+     def set_epoch(self,epoch):self.generator.manual_seed(self.run_seed+100003*epoch)
+     def reset(self):pass  # Native close-mosaic reset; workers are recreated on iteration.
+ 
+-class SeededDetectionTrainer(DetectionTrainer):
++class SeededDetectionTrainer(OptimizerStepAccounting,DetectionTrainer):
+     def get_dataloader(self,dataset_path,batch_size=16,rank=-1,mode='train'):
+         if mode!='train':return super().get_dataloader(dataset_path,batch_size,rank,mode)
+         assert rank==-1,'This protocol uses one process per GPU, not DDP'
+@@ -62,6 +63,7 @@
+             trainer.scaler.load_state_dict(state['scaler']);trainer.scheduler.load_state_dict(state['scheduler'])
+             random.setstate(state['python_rng']);np.random.set_state(state['numpy_rng'])
+             torch.set_rng_state(state['torch_rng'].cpu());torch.cuda.set_rng_state(state['cuda_rng'].cpu(),trainer.device)
++        trainer.install_step_accounting(state['actual_step_counts'] if a.resume else None)
+         initial={k:{'shape':list(v.shape),'sha256':tensor_sha(v)} for k,v in trainer.model.named_parameters()}
+         if not (record/'initial_parameters.json').exists():dump(record/'initial_parameters.json',initial)
+         dump(record/'effective_config.json',vars(trainer.args))
+@@ -82,9 +84,10 @@
+         if epoch in traces:
+             assert len(traces[epoch])==2,(name,epoch,traces[epoch])
+             dump(record/f'epoch_{epoch:03d}.json',{'epoch':epoch,'loss_items':loss.tolist(),'first_two_input_sha256':traces[epoch],
++              'actual_step_counts':dict(trainer.actual_step_counts),'native_EMA_updates':trainer.ema.updates,
+               'updated_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())})
+             state={'epoch':epoch,'model':trainer.model.state_dict(),'ema':trainer.ema.ema.state_dict(),
+-              'ema_updates':trainer.ema.updates,'optimizer':trainer.optimizer.state_dict(),'scaler':trainer.scaler.state_dict(),
++              'ema_updates':trainer.ema.updates,'actual_step_counts':dict(trainer.actual_step_counts),'optimizer':trainer.optimizer.state_dict(),'scaler':trainer.scaler.state_dict(),
+               'scheduler':trainer.scheduler.state_dict(),'python_rng':random.getstate(),'numpy_rng':np.random.get_state(),
+               'torch_rng':torch.get_rng_state(),'cuda_rng':torch.cuda.get_rng_state(trainer.device)}
+             tmp=record/'resume_state.pt.tmp';torch.save(state,tmp);tmp.replace(record/'resume_state.pt')
+@@ -114,6 +117,6 @@
+     dump(record/'COMPLETE.json',{'status':'complete','seed':a.seed,'model':a.model,'epochs':config['epochs'],
+       'checkpoint':str(checkpoint),'checkpoint_sha256':sha(checkpoint),'source_sha256':sha(source),
+       'initial_parameters_sha256':sha(record/'initial_parameters.json'),'finite_state':True,'changed_parameter_tensors':len(changed),
+-      'fixed_dfl_preserved':True,'last_row':rows[-1],'endpoint':'final epoch EMA, never best validation epoch'})
++      'fixed_dfl_preserved':True,'actual_step_counts':dict(holder['trainer'].actual_step_counts),'native_EMA_updates':holder['trainer'].ema.updates,'last_row':rows[-1],'endpoint':'final epoch EMA, never best validation epoch'})
+     print('BASE_COMPLETE',name,flush=True)
+ if __name__=='__main__':main()

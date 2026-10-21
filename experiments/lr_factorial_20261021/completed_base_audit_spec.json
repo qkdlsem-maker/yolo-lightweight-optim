@@ -1,0 +1,18 @@
+{
+  "schema": "completed_base_audit_spec_v1",
+  "protocol_sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d",
+  "scope": "Six new 100-epoch BDD bases: nano and large for seeds404/505/606. CPU reload only, without training, validation inference or checkpoint repair.",
+  "entry_gate": "Require COMPLETE.json before reading any per-run state; require exact frozen protocol, source manifests and base preflight bindings. Never assert that the old original coordinator must still be alive or that its expected historical cache-failure marker must be absent.",
+  "checks": [
+    "Exact source/data/config bindings and effective shared training settings; 100 ordered results rows and epoch records.",
+    "Integer cumulative attempted=applied+skipped counts, monotonicity and positive actual applications per epoch; final COMPLETE, final epoch and raw sidecar counts agree.",
+    "Native base EMA update count equals attempted steps, including AMP-skipped attempts; it is not substituted for actual applications.",
+    "Finite raw model, EMA, checkpoint, optimizer, scaler and scheduler; saved RNG components present. This presence check is not a claim of exact base interruption replay.",
+    "Raw and EMA parameters are FP32; released checkpoint equals raw final EMA at the checkpoint's saved precision; raw parameters changed and fixed DFL remains unchanged.",
+    "All six proofs required for aggregate gate; initial, raw-final and EMA parameter digests differ between each same-architecture pair, and both sampled input hashes differ across every one of the100 epochs.",
+    "Every input bound by SHA256 is checked again after reading; cached passed proofs are reused only if audit source, protocol and all bound evidence still match. Existing proof files are never overwritten."
+  ],
+  "validation": "25 fabricated CPU known-answer/rejection cases passed. These cover valid skip-aware counts and saved-precision binding, corrupt counts/config/bytes/epochs/inputs, nonfinite state, unchanged or wrong-precision raw parameters, EMA mismatch, DFL drift, missing RNG, input mutation and incomplete/duplicate aggregate rosters.",
+  "status_limit": "Only audit software readiness has been verified. No completed new research base has yet been audited; the actual six-base gate remains pending. This audit does not prove every training input or gradient was finite and does not reconstruct missing historical base counters.",
+  "downstream_gate": "Both the completed-six-base audit and the separate continuation observational-parity/interruption-replay preflight must pass before any new continuation training starts."
+}

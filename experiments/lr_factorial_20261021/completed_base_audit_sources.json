@@ -1,0 +1,32 @@
+{
+  "schema": "completed_base_audit_sources_v1",
+  "utc": "2026-10-21T09:31:23.863311+00:00",
+  "status": "synthetic_validation_passed_actual_completed_base_audits_pending",
+  "files": [
+    {
+      "name": "audit_completed_base.py",
+      "bytes": 14517,
+      "sha256": "2bdef65c7de87ec12e6533d211ce324381f15c9f398e998ae021c66a815542fc"
+    },
+    {
+      "name": "test_completed_base_audit.py",
+      "bytes": 11116,
+      "sha256": "8f85ccdcdc55d0498f404ae348ee967d1f12456de387497ec6ad1cb33e078af6"
+    },
+    {
+      "name": "test_completed_base_audit.sh",
+      "bytes": 795,
+      "sha256": "5c6ad1f134cd4f974adf3fe978915313fc96e67c301a1e1bb8030e1d525d7c62"
+    },
+    {
+      "name": "completed_base_audit_validation.json",
+      "bytes": 1125,
+      "sha256": "d77f264fd7e709e195666f3c673abc8ccdfd544a7c6a45dff93ea9b2ed3e0686"
+    },
+    {
+      "name": "completed_base_audit_spec.json",
+      "bytes": 2639,
+      "sha256": "7387bf16020b5d382b5a87144a773e45c0ef14640b4bbc8643d4fbb733896705"
+    }
+  ]
+}

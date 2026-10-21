@@ -1,0 +1,13 @@
+{
+  "status": "resolved",
+  "stage": "private transport receipt creation, before CPU audit tests",
+  "failure": "The caller supplied a workspace-relative receipt name to a helper that resolves receipt names relative to the phase directory. FileNotFoundError occurred only when writing the local receipt, after three new audit files had already been uploaded and read back.",
+  "incorrect_receipt_argument": "work/revision_20261021/completed_base_audit_test_deployment.json",
+  "correct_receipt_argument": "completed_base_audit_test_deployment.json",
+  "recovery": "Repeated immutable put with the corrected receipt argument. All three existing server files matched local bytes exactly and were reused; no differing remote file was overwritten. The helper reported passed for three files and the corrected receipt was saved.",
+  "files": ["audit_completed_base.py", "test_completed_base_audit.py", "test_completed_base_audit.sh"],
+  "training_affected": false,
+  "research_data_affected": false,
+  "test_execution_repeated": false,
+  "scientific_conditions_changed": false
+}

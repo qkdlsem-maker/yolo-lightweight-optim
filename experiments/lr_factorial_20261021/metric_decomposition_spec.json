@@ -1,0 +1,34 @@
+{
+  "schema": "controlled_metric_decomposition_spec_v1",
+  "frozen_utc": "2026-10-21T08:31:20.698038+00:00",
+  "protocol_sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d",
+  "interpretation_sha256": "ffea92e15e8f0d7973e6ccc96083227124c3eb42de25d746f4611b76471f02b8",
+  "scope": "All48 final factorial endpoints:12base references and36epoch40students. Reuse their cached KITTI predictions;384fixed metric cells. No research archive rescored yet.",
+  "factors": {
+    "overlap": [
+      "IoU0.50:0.05:0.95 both classes",
+      "Car0.70/person0.50 under COCO >= threshold matching"
+    ],
+    "recall_grid": [
+      "np.linspace(0,1,101)",
+      "np.arange(1,41)/40"
+    ],
+    "ignore": [
+      "original source-ignore COCOcrowd view",
+      "original no-ignore view"
+    ]
+  },
+  "fixed": "Same all-image population, class mapping, predictions and ordering, COCO matching/interpolation envelope, maxDet300, all areas, no difficulty filtering. This is NOT native KITTI R40.",
+  "verification": "66core cases,14exact original-scorer parity cases,all8archive known-answer cells,9invalid/mutated inputs rejected. Each real endpoint must reproduce BOTH saved 101point common metrics exactly, including full precision/recall matrices, before40point rescoring. No completion committed on reference mismatch.",
+  "preservation": "Completed scores verified/reused without recomputation. Atomic complete8cell output; failed partial staging directories preserved. Original model/prediction/label data remain immutable.",
+  "source_origin": {
+    "common_ap_core.py": "18b1978e94e4fd614feb06cad2d03700114b0ee304a20448c50e1e01bd7c3575"
+  },
+  "execution_pending": "Fixed48endpoint roster with final checkpoint/archive/common-reference bindings and CPU budget-aware dispatch must be frozen before real scoring. No new training or inference by this scorer.",
+  "CPU_budget_accounting": {
+    "total_cap_hours": 24,
+    "synthetic_validation_reserved_hours": 0.5,
+    "remaining_cap_hours": 23.5,
+    "basis": "Conservative upper bound: three single-thread synthetic wrapper invocations each had a600second timeout, including one import failure. Exact process CPU time was not recorded;0.5hours is a reserve, not a measured cost. Future real-scoring coordinator must account CPU time and enforce remaining cap."
+  }
+}

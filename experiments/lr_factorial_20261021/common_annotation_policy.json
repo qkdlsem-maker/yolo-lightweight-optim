@@ -1,0 +1,31 @@
+{
+  "status": "fixed_before_new_external_predictions_or_scores",
+  "role": "Auxiliary evaluation-definition diagnostics on all 48 prespecified model endpoints. The ten-class BDD primary endpoint and native KITTI metrics remain separate and unchanged.",
+  "question": "How sensitive are fixed paired distillation differences to using a common class set, common AP calculation, and explicit handling of KITTI's unlabeled or neighboring-class regions?",
+  "budget_and_stopping_rule": "Convert the existing 10000 BDD validation labels and 7481 KITTI labeled training-partition labels once. After all training and endpoint checks pass, evaluate every frozen endpoint under BDD common AP and BOTH specified KITTI common-AP variants, in addition to native metrics. No model/epoch/strength/variant is chosen by the resulting scores. No additional training is authorized by this diagnostic.",
+  "coordinates": "Continuous source pixel xywh, width=x2-x1 and height=y2-y1; no inclusive-pixel +1. Preserve source ground-truth coordinates, including portions outside image boundaries. Do not clip or resize annotations. Reject nonfinite or nonpositive boxes instead of silently dropping them. Predictions retain the already frozen inference settings and its image-boundary clipping.",
+  "BDD": {
+    "input": "Immutable reconstructed legacy-2018-format YOLO validation labels, 10000 images and 185526 total ten-class rows, archive SHA256 df48ed99c5928e1a3d9c48e0b1c6e02f534e2d5c9bfdf3c7e323c617867db319",
+    "mapping": "Retain person=0 and car=2; exclude the other eight classes from the common metric. Person excludes rider. Convert normalized center/size using the verified native image dimensions; retain the source's six-decimal coordinate precision.",
+    "ignore": "These reconstructed detector labels contain no explicit ignore regions. Every retained box has iscrowd=0. This does not establish that all possible objects were exhaustively annotated.",
+    "duplicates": "Preserve source multiplicity; do not silently deduplicate during this conversion. Any differences from a native loader's duplicate-removal policy must be quantified separately."
+  },
+  "KITTI": {
+    "input": "Previously audited 7481 public labeled training-partition files, archive SHA256 4efc76220d867e1c31bb980bbf8cbc02599f02a9cb4350effa98dbb04aaed880, never an untouched new or official hidden test",
+    "positive_mapping": {"Car": 2, "Pedestrian": 0},
+    "difficulty": "Include all positive Car/Pedestrian boxes without height, occlusion or truncation filters for the common diagnostic. Retain original easy/moderate/hard filtering only in the separate native KITTI evaluator.",
+    "variant_A_source_ignore_regions": "Encode Van as a car-only ignored region and Person_sitting as a person-only ignored region. Encode each DontCare box once for each target category. Use explicit iscrowd=1 to invoke standard COCO intersection-over-detection-area ignore matching at each of the same ten overlap thresholds. Ordinary positive matches have priority and an ignored region can absorb multiple predictions. This is a disclosed compatibility mapping, NOT native KITTI matching or a claim that these boxes describe actual crowds.",
+    "variant_B_no_ignore_sensitivity": "Keep the identical ordinary positive targets, omit the compatibility ignore boxes, and count unmatched target-class detections as false positives. This deliberately strict annotation-policy sensitivity analysis is not an official or preferred KITTI accuracy estimate. Always report it alongside variant A, including unfavorable results.",
+    "other_categories": "Truck, Cyclist, Tram and Misc are neither target positives nor compatibility ignore regions. Reject an unexpected source category for inspection.",
+    "native_results": "Retain the previously verified original KITTI 2D matching evaluator and AP_R40; do not replace it with either auxiliary variant."
+  },
+  "prohibited_interpretations": [
+    "A shared AP formula or ignore compatibility mapping makes BDD and KITTI annotation semantics equivalent.",
+    "Metric-dependent differences establish a causal domain-shift or teacher-quality mechanism.",
+    "One diagnostic variant may be omitted or promoted because its observed differences are more favorable."
+  ],
+  "sources": [
+    "https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py",
+    "https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d"
+  ]
+}

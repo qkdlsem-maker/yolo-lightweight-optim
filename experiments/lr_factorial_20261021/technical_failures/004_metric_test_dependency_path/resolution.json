@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-21T08:25:09.433669+00:00",
+  "cause": "Synthetic test wrapper omitted the existing pinned evaluation_deps from PYTHONPATH. Import failed before any tests or data access.",
+  "resolution": "Use the unchanged scorer/test sources with the same evaluation_deps directory already used by the original study; no package install or version change.",
+  "scientific_conditions_changed": false
+}

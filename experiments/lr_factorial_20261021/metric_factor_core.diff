@@ -1,0 +1,99 @@
+--- original/common_ap_core.py
++++ extension/metric_factor_core.py
+@@ -1,6 +1,7 @@
+-"""Shared two-class AP core; dataset-specific annotation adapters are separate.
++"""Controlled metric-factor core; derived from the immutable common AP scorer.
+ 
+-Uses the pinned COCO evaluator, not the Ultralytics trapezoidal AP or KITTI R40.
++Uses pinned COCO matching/envelopes for BOTH overlap policies and recall grids.
++The 40-point variant is NOT native KITTI R40; no difficulty filtering is applied.
+ This module alone does not establish annotation comparability between datasets.
+ """
+ import contextlib
+@@ -43,7 +44,7 @@
+     return float(box[2] * box[3])
+ 
+ 
+-def evaluate(images, ground_truth, predictions, include_matches=False):
++def evaluate_grid(images, ground_truth, predictions, recall_points=101, include_matches=False):
+     """Evaluate normalized COCO-format rows without silently filtering anything.
+ 
+     images: id, width, height; ground_truth: id, image_id, category_id, bbox,
+@@ -52,6 +53,9 @@
+     empty images, must be supplied. Crowds use standard COCO ignore behavior;
+     interpreting dataset ignore annotations is NOT delegated to this function.
+     """
++    if type(recall_points) is not int or recall_points not in (101, 40):
++        raise ValueError("Only the frozen 101- and 40-point recall grids are allowed")
++    recall_grid = RECALL.copy() if recall_points == 101 else np.arange(1, 41, dtype=float) / 40.
+     runtime = runtime_record()
+     images, ground_truth, predictions = copy.deepcopy((images, ground_truth, predictions))
+     ids = [x['id'] for x in images]
+@@ -108,27 +112,58 @@
+         p = evaluator.params
+         p.imgIds = sorted(ids)
+         p.catIds = sorted(CLASSES)
+-        p.iouThrs, p.recThrs = IOU.copy(), RECALL.copy()
++        p.iouThrs, p.recThrs = IOU.copy(), recall_grid.copy()
+         p.maxDets = [MAX_DET]
+         p.areaRng, p.areaRngLbl = [[0., 1e10]], ['all']
+         evaluator.evaluate()
+         evaluator.accumulate()
+     precision = evaluator.eval['precision'][:, :, :, 0, 0]
+     recall = evaluator.eval['recall'][:, :, 0, 0]
+-    if precision.shape != (10, 101, 2) or not np.isfinite(precision).all() or np.any(precision < 0):
++    if precision.shape != (10, recall_points, 2) or not np.isfinite(precision).all() or np.any(precision < 0):
+         raise ValueError('Missing or invalid precision cells')
+-    result = {'metric': 'Common two-class COCO-style AP101 at IoU .50:.05:.95, maxDet=300, all areas',
++    classes = sorted(CLASSES)
++    # COCO evaluates every IoU independently within each class. Selecting the
++    # class-specific rows afterward therefore changes only the overlap policy.
++    indices = {0: 0, 2: 4}
++    selected = np.stack([precision[indices[c], :, i] for i, c in enumerate(classes)], axis=1)
++    cells = {
++        'iou_grid': {'mean_AP': float(precision.mean()),
++                     'class_AP': {CLASSES[c]: float(precision[:, :, i].mean()) for i, c in enumerate(classes)},
++                     'class_IoU_thresholds': {CLASSES[c]: IOU.tolist() for c in classes}},
++        'class_specific_iou': {'mean_AP': float(selected.mean()),
++                     'class_AP': {CLASSES[c]: float(selected[:, i].mean()) for i, c in enumerate(classes)},
++                     'class_IoU_thresholds': {CLASSES[c]: [float(IOU[indices[c]])] for c in classes}}}
++    result = {'metric': 'Controlled COCO-rule AP factors, maxDet=300, all areas, no difficulty filter; NOT native KITTI',
+               'runtime': runtime, 'images': len(ids), 'predictions': len(predictions),
+               'positive_ground_truth': {CLASSES[c]: positives[c] for c in CLASSES},
+               'crowd_ignore_ground_truth': {CLASSES[c]: ignored[c] for c in CLASSES},
+-              'class_order': [CLASSES[c] for c in sorted(CLASSES)],
+-              'iou_thresholds': IOU.tolist(), 'recall_thresholds': RECALL.tolist(),
+-              'mean_AP50_95': float(precision.mean()),
+-              'class_AP50_95': {CLASSES[c]: float(precision[:, :, i].mean()) for i, c in enumerate(sorted(CLASSES))},
+-              'class_AP_by_IoU': {CLASSES[c]: precision[:, :, i].mean(1).tolist() for i, c in enumerate(sorted(CLASSES))},
+-              'precision_101': precision.tolist(), 'max_recall_by_IoU': recall.tolist(),
++              'class_order': [CLASSES[c] for c in classes],
++              'iou_thresholds': IOU.tolist(), 'recall_thresholds': recall_grid.tolist(),
++              'recall_points': recall_points, 'overlap_cells': cells,
++              'class_AP_by_IoU': {CLASSES[c]: precision[:, :, i].mean(1).tolist() for i, c in enumerate(classes)},
++              'precision_grid': precision.tolist(), 'max_recall_by_IoU': recall.tolist(),
+               'annotation_policy_must_be_reported_separately': True}
+     if include_matches:
+         result['image_matches'] = [{k: (v.tolist() if isinstance(v, np.ndarray) else v)
+                                     for k, v in entry.items()} for entry in evaluator.evalImgs if entry is not None]
+     return result
++
++
++def evaluate_factorial(images, source_ignore, no_ignore, predictions, include_matches=False):
++    """All eight prespecified cells; exactly the same ordinary targets/predictions."""
++    ordinary = [{k: v for k, v in row.items() if k != 'id'} for row in source_ignore if row.get('iscrowd') == 0]
++    strict = [{k: v for k, v in row.items() if k != 'id'} for row in no_ignore]
++    if ordinary != strict or any(row.get('iscrowd') != 0 for row in no_ignore):
++        raise ValueError('Ignore variants must have identical ordered ordinary targets')
++    grids, cells = {}, []
++    for name, gt in [('source_ignore', source_ignore), ('no_ignore', no_ignore)]:
++        for n in [101, 40]:
++            key = f'{name}_r{n}'
++            score = evaluate_grid(images, gt, predictions, n, include_matches)
++            grids[key] = score
++            for overlap, values in score['overlap_cells'].items():
++                cells.append({'ignore_policy': name, 'recall_points': n,
++                              'overlap_policy': overlap, 'grid_reference': key, **values})
++    return {'schema': 'controlled_metric_factorial_v1', 'cells': cells, 'grids': grids,
++            'native_KITTI_equivalence_claimed': False,
++            'controls': 'COCO matching, interpolation envelope, all-image population, same category mapping, no difficulty filtering and maxDet300'}

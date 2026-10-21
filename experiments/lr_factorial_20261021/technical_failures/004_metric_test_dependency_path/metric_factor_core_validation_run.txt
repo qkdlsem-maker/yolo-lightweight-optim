@@ -1,0 +1,8 @@
+
+STDERR
+Traceback (most recent call last):
+  File "/home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/review_20261021_lr_factorial/test_metric_factor_core.py", line 4, in <module>
+    from metric_factor_core import evaluate_grid,evaluate_factorial,runtime_record
+  File "/home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/review_20261021_lr_factorial/metric_factor_core.py", line 17, in <module>
+    from pycocotools.coco import COCO
+ModuleNotFoundError: No module named 'pycocotools'

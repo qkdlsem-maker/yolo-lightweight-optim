@@ -1,0 +1,331 @@
+{
+  "status": "passed",
+  "scope": "Synthetic metric core only; no research checkpoint, real prediction archive or dataset score loaded. Archive integration and exact real cached common-cell reproduction remain required.",
+  "cases": [
+    {
+      "name": "perfect_detection",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "no_detections",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "missing_person_predictions",
+      "expected": 0.5,
+      "actual": 0.4999999999999999
+    },
+    {
+      "name": "empty_image_high_score_false_positive",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "duplicate_after_matched_target",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "false_positive_before_target",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "exact_IoU_half_boundary",
+      "expected": 0.55,
+      "actual": 0.5499999999999999
+    },
+    {
+      "name": "classes_are_not_pooled",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "crowd_uses_detection_area_and_accepts_multiple",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "ordinary_target_has_priority_over_crowd",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "partial_recall_101_point_grid",
+      "expected": 0.7524752475247525,
+      "actual": 0.7524752475247524
+    },
+    {
+      "name": "zero_area_prediction_remains_false_positive",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "zero_area_prediction_is_not_absorbed_by_crowd",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "zero_area_predictions_cannot_match_ordinary_targets",
+      "expected": 0.5,
+      "actual": 0.4999999999999999
+    },
+    {
+      "name": "missing_class_is_not_zero_AP",
+      "rejected": "Both classes must have non-ignored ground truth; missing is not zero AP"
+    },
+    {
+      "name": "unknown_image",
+      "rejected": "Unknown prediction image or category"
+    },
+    {
+      "name": "unknown_category",
+      "rejected": "Unknown prediction image or category"
+    },
+    {
+      "name": "nonfinite_confidence",
+      "rejected": "Prediction confidence must be finite and within [0,1]"
+    },
+    {
+      "name": "duplicate_annotation",
+      "rejected": "Duplicate annotation IDs"
+    },
+    {
+      "name": "negative_width_prediction",
+      "rejected": "Negative box dimensions are invalid"
+    },
+    {
+      "name": "zero_area_ground_truth",
+      "rejected": "Ground-truth boxes must have positive area"
+    },
+    {
+      "name": "ambiguous_ignore",
+      "rejected": "Ambiguous ignore field: provide an explicit adapter policy"
+    },
+    {
+      "name": "inference_cap_exceeded",
+      "rejected": "Predictions exceed the frozen all-class inference cap; do not silently truncate"
+    },
+    {
+      "name": "missing_image_not_silently_dropped",
+      "rejected": "Unknown ground-truth image or category"
+    },
+    {
+      "name": "perfect_101_iou_grid",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "empty_101_iou_grid",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "partial_recall_101_iou_grid",
+      "expected": 0.7524752475247525,
+      "actual": 0.7524752475247524
+    },
+    {
+      "name": "empty_image_FP_101_iou_grid",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "perfect_101_class_specific_iou",
+      "expected": 1.0,
+      "actual": 0.9999999999999999
+    },
+    {
+      "name": "empty_101_class_specific_iou",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "partial_recall_101_class_specific_iou",
+      "expected": 0.7524752475247525,
+      "actual": 0.7524752475247524
+    },
+    {
+      "name": "empty_image_FP_101_class_specific_iou",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "exact_class_specific_boundaries_101",
+      "expected": 1.0,
+      "actual": 0.9999999999999999
+    },
+    {
+      "name": "full_grid_same_boundary_boxes_101",
+      "expected": 0.3,
+      "actual": 0.29999999999999993
+    },
+    {
+      "name": "below_car_threshold_101",
+      "expected": 0.5,
+      "actual": 0.49999999999999994
+    },
+    {
+      "name": "below_person_threshold_101",
+      "expected": 0.5,
+      "actual": 0.49999999999999994
+    },
+    {
+      "name": "perfect_40_iou_grid",
+      "expected": 1.0,
+      "actual": 0.9999999999999999
+    },
+    {
+      "name": "empty_40_iou_grid",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "partial_recall_40_iou_grid",
+      "expected": 0.75,
+      "actual": 0.7499999999999999
+    },
+    {
+      "name": "empty_image_FP_40_iou_grid",
+      "expected": 0.75,
+      "actual": 0.75
+    },
+    {
+      "name": "perfect_40_class_specific_iou",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "empty_40_class_specific_iou",
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "name": "partial_recall_40_class_specific_iou",
+      "expected": 0.75,
+      "actual": 0.7499999999999998
+    },
+    {
+      "name": "empty_image_FP_40_class_specific_iou",
+      "expected": 0.75,
+      "actual": 0.7499999999999999
+    },
+    {
+      "name": "exact_class_specific_boundaries_40",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "name": "full_grid_same_boundary_boxes_40",
+      "expected": 0.3,
+      "actual": 0.29999999999999993
+    },
+    {
+      "name": "below_car_threshold_40",
+      "expected": 0.5,
+      "actual": 0.4999999999999999
+    },
+    {
+      "name": "below_person_threshold_40",
+      "expected": 0.5,
+      "actual": 0.4999999999999999
+    },
+    {
+      "name": "factorial_source_ignore_r101_iou_grid",
+      "actual": 0.9999999999999998,
+      "expected": 1.0
+    },
+    {
+      "name": "factorial_source_ignore_r101_class_specific_iou",
+      "actual": 0.9999999999999999,
+      "expected": 1.0
+    },
+    {
+      "name": "factorial_source_ignore_r40_iou_grid",
+      "actual": 0.9999999999999999,
+      "expected": 1.0
+    },
+    {
+      "name": "factorial_source_ignore_r40_class_specific_iou",
+      "actual": 0.9999999999999998,
+      "expected": 1.0
+    },
+    {
+      "name": "factorial_no_ignore_r101_iou_grid",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666
+    },
+    {
+      "name": "factorial_no_ignore_r101_class_specific_iou",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666
+    },
+    {
+      "name": "factorial_no_ignore_r40_iou_grid",
+      "actual": 0.6666666666666665,
+      "expected": 0.6666666666666666
+    },
+    {
+      "name": "factorial_no_ignore_r40_class_specific_iou",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666
+    },
+    {
+      "name": "reject_unregistered_recall_grid_True",
+      "rejected": "Only the frozen 101- and 40-point recall grids are allowed"
+    },
+    {
+      "name": "reject_unregistered_recall_grid_100",
+      "rejected": "Only the frozen 101- and 40-point recall grids are allowed"
+    },
+    {
+      "name": "reject_unregistered_recall_grid_41",
+      "rejected": "Only the frozen 101- and 40-point recall grids are allowed"
+    },
+    {
+      "name": "reject_unregistered_recall_grid_40.0",
+      "rejected": "Only the frozen 101- and 40-point recall grids are allowed"
+    },
+    {
+      "name": "reject_unregistered_recall_grid_40",
+      "rejected": "Only the frozen 101- and 40-point recall grids are allowed"
+    },
+    {
+      "name": "reject_unregistered_recall_grid_None",
+      "rejected": "Only the frozen 101- and 40-point recall grids are allowed"
+    },
+    {
+      "name": "ignore_factor_cannot_change_targets",
+      "rejected": "Ignore variants must have identical ordered ordinary targets"
+    },
+    {
+      "name": "no_ignore_view_cannot_contain_crowd",
+      "rejected": "Ignore variants must have identical ordered ordinary targets"
+    },
+    {
+      "name": "ordinary_priority_101",
+      "expected": 1.0,
+      "actual": 0.9999999999999999
+    },
+    {
+      "name": "ordinary_priority_40",
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    }
+  ],
+  "exact_reference_parity_cases": 14,
+  "runtime": {
+    "pycocotools_version": "2.0.11",
+    "numpy_version": "1.26.4",
+    "cocoeval_python_sha256": "988485f79624cd42ceed9335d284df4cdcdf7b3d583e052fcbed2dd6bccf0267"
+  },
+  "source_sha256": {
+    "/home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/review_20261021_lr_factorial/test_metric_factor_core.py": "9a73050cecee383826d288f070bb0f9f350e2470cd62a6bc3d930fea4e1074ad",
+    "/home/futurenetworklab/choihyerim1129/yolo_lightweight_optim/review_20261021_lr_factorial/metric_factor_core.py": "ad3aab47d8028f9e2773806241e97ea98fb620ecbdc7e1f6fd24b6b8eb2053ab",
+    "review_20261017_independent/evaluation_tools/common_ap_core.py": "18b1978e94e4fd614feb06cad2d03700114b0ee304a20448c50e1e01bd7c3575"
+  },
+  "real_model_results_used": false,
+  "native_KITTI_equivalence_claimed": false
+}

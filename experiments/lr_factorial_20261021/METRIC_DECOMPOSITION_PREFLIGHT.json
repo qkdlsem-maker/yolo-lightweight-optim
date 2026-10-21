@@ -1,0 +1,11 @@
+{
+  "status": "synthetic_preflight_passed",
+  "utc": "2026-10-21T08:31:20.698038+00:00",
+  "protocol_sha256": "8dac98e36fee058726b9475487896c49f53f246e960cdfc0ba7e6acb895cdc9d",
+  "source_manifest_sha256": "5c2b1bd6759cc8c5d5f102895a79c9a85e735ba52cf77f3525e291e5be5b7a59",
+  "core_validation_sha256": "99269c1d93d3639cb2b3a37e643e49d091aac358626ba4790ad22fddb8ffdd05",
+  "archive_validation_sha256": "f9ac72e604fe247383a1c87fb0a615664c753ac7aeaa663e3a78037ebde07feb",
+  "research_scores_computed": 0,
+  "whole_phase_complete": false,
+  "remaining": "Immutable48endpoint request roster, CPU-budget-aware dispatcher, exact saved common metric replay at every research endpoint; all other training/evaluation/gradient/manuscript work pending."
+}

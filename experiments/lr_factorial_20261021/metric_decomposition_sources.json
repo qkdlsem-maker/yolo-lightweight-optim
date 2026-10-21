@@ -1,0 +1,71 @@
+{
+  "schema": "metric_decomposition_sources_v1",
+  "frozen_utc": "2026-10-21T08:31:20.698038+00:00",
+  "files": [
+    {
+      "name": "metric_factor_core.py",
+      "bytes": 9367,
+      "sha256": "ad3aab47d8028f9e2773806241e97ea98fb620ecbdc7e1f6fd24b6b8eb2053ab"
+    },
+    {
+      "name": "score_metric_factor_archive.py",
+      "bytes": 9084,
+      "sha256": "d360de3ac08b8560506ccc860dfcd83cc33b2da995537777ca594262078588eb"
+    },
+    {
+      "name": "prediction_archive.py",
+      "bytes": 12279,
+      "sha256": "13fca0ca79defb6c0aaae9ac3ee6e22c347bc4a9509bea9f92a976f174a02062"
+    },
+    {
+      "name": "prediction_io.py",
+      "bytes": 7260,
+      "sha256": "4cab2082544d365454a1968dab24f9e3b753db4045eef89c564578be76a3084b"
+    },
+    {
+      "name": "common_annotation_policy.json",
+      "bytes": 4456,
+      "sha256": "9f481cd73643c200847619d6646d8a9e83a35db6fae0d9af6869e304e4e95757"
+    },
+    {
+      "name": "test_metric_factor_core.py",
+      "bytes": 9176,
+      "sha256": "9a73050cecee383826d288f070bb0f9f350e2470cd62a6bc3d930fea4e1074ad"
+    },
+    {
+      "name": "test_metric_factor_archive.py",
+      "bytes": 8389,
+      "sha256": "7b57050160eff2f6718383d191df09a0cbceb51f0db12e281b9463b7e348a8c7"
+    },
+    {
+      "name": "metric_factor_core.diff",
+      "bytes": 6392,
+      "sha256": "8ab2d4a067dc553686d238f633549723aff5a5ec182c59b2c007605640325bc1"
+    },
+    {
+      "name": "metric_decomposition_spec.json",
+      "bytes": 2361,
+      "sha256": "1a0f64e0a22e42bc7d61594b91a2639ef0f7152535f415148560b529907e231d"
+    },
+    {
+      "name": "test_metric_factor_core_v2.sh",
+      "bytes": 451,
+      "sha256": "49f623b7429f113f6b6418093068a87b08f8d93b8f9f78728a8d73e956ccf8bf"
+    },
+    {
+      "name": "test_metric_factor_archive.sh",
+      "bytes": 513,
+      "sha256": "665e322b19d19f48c5459d9ea01582f7b7a29a830445da08b814fe5b0e980a6b"
+    },
+    {
+      "name": "metric_factor_core_validation.json",
+      "bytes": 9140,
+      "sha256": "99269c1d93d3639cb2b3a37e643e49d091aac358626ba4790ad22fddb8ffdd05"
+    },
+    {
+      "name": "metric_factor_archive_validation.json",
+      "bytes": 2213,
+      "sha256": "f9ac72e604fe247383a1c87fb0a615664c753ac7aeaa663e3a78037ebde07feb"
+    }
+  ]
+}

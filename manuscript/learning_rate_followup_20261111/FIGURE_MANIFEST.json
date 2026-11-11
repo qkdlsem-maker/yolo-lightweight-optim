@@ -1,0 +1,45 @@
+{
+  "status": "figures_built_from_verified_results",
+  "INDEX_sha256": "c50308c238bd2fb774af6c9e3dd15cd5941ffb393dc00a45f10706ce61ac75d7",
+  "figures": [
+    {
+      "name": "Figure1_primary_interactions",
+      "caption": "Epoch 40 native ten-class BDD AP50:95 interactions. Each circle is (KD minus control at 0.001) minus (KD minus control at 0.0001) within one base-training pair. Open circles are the three historical starting pairs and filled circles are the three new pairs. Diamonds show the mean and descriptive 95% t interval with df 5. Six matched pairs are the replication units; intervals do not provide multiplicity-adjusted significance or equivalence decisions. Plotting code was prepared with OpenAI Codex assistance; coordinates come from the verified numerical records.",
+      "png_sha256": "5e27d415110f2905ef82802a4f51ae72e5029bde0b671247a97ccba3c4679bf3",
+      "pdf_sha256": "8ef2cadeabe5c5fbade90fe5ecaee4ba317117f2d683b5ef3899aada30198294"
+    },
+    {
+      "name": "Figure2_simple_effects",
+      "caption": "Epoch 40 native BDD paired KD-minus-control differences at both fixed learning rates. Each line connects the same starting pair; the slope corresponds to the interaction shown in Figure 1. The coefficient is 0.3 in both distillation arms. These are paired observations, not 12 independent replications per method. Plotting code was prepared with OpenAI Codex assistance; coordinates come from the verified numerical records.",
+      "png_sha256": "310a80f9224a0cfbb1416784e533dc4b453f709f8b85dc3999ba8e208ef5f60c",
+      "pdf_sha256": "73c5d0cea7810090d27aa7e550be9a25806fb01cb2e4f19242bb91a2dc6f62ea"
+    },
+    {
+      "name": "Figure3_evaluation_definitions",
+      "caption": "Pair-level epoch 40 learning-rate interactions under four fixed evaluation definitions. Black ticks are six-pair means; small vertical offsets separate plotted pairs and have no numerical meaning. The full 18-metric results also retain the no-ignore sensitivity and native KITTI class and difficulty outputs. Different class populations and matching rules limit direct comparison and do not identify a causal domain-shift mechanism. Plotting code was prepared with OpenAI Codex assistance; coordinates come from the verified numerical records.",
+      "png_sha256": "9f54cadd716d9c7bd012d076743d8385a4a1a0821aef650046c9d3e50a222632",
+      "pdf_sha256": "6fee4f0c36b0e94ab6b4ecea181cbb417ebad7b60c97aff1ceb9d2e6e55ee8b4"
+    },
+    {
+      "name": "Figure4_fixed_gradient_diagnostics",
+      "caption": "Fixed-model FP32 diagnostics on two prespecified 32-image training batches per path. All-student parameter groups are shown on a shared logarithmic horizontal scale. Colors identify pair seeds as in Figure 2; circles and triangles identify rates 0.0001 and 0.001; open and filled symbols identify batches 0 and 1. Plotted coordinates: 48 of 48 KD batch probes. Unplotted KD coordinates: 0, retained with reasons in JSON. All 24 control probes remain in the report; their zero feature gradients make cosine undefined. Raw final models, rather than EMA inference checkpoints, are measured. These probes do not reconstruct historical stochastic AMP updates or establish a causal mechanism. Plotting code was prepared with OpenAI Codex assistance; coordinates come from the verified numerical records.",
+      "png_sha256": "4b3185b10a2f2d2434271d436e7cad571d63822fcd8d146d3a8f869e60ddb818",
+      "pdf_sha256": "d34baf35bf1864b1ee351e8292a23cd0d52de522a15a75f6a2b1289e4195a4ba"
+    },
+    {
+      "name": "FigureS1_all_metric_factor_effects",
+      "caption": "All 48 fixed final archives and all seven controlled metric contrasts for equally weighted person/car AP. O: class-specific overlap thresholds minus the IoU grid; R: 40-point minus 101-point recall integration; I: no-ignore minus source-ignore. Main effects average over the remaining factors; interactions are differences of differences. Each archive supplies eight scores from unchanged predictions. These are within-archive sensitivity measures, not 48 independent model replications, and do not reproduce native KITTI scoring. Full class-specific contrasts and 384 cells accompany the report. Plotting code was prepared with OpenAI Codex assistance; coordinates come from the verified numerical records.",
+      "png_sha256": "d5b3911c4937c2da91a5825a890164db5630eddfb43811348a541f107ab53f64",
+      "pdf_sha256": "84fb20e63d591ed480f0d0aa5c89f713ade8d6a259374dd4e993baa4521ed56d"
+    }
+  ],
+  "builder_sources": {
+    "build_result_figures.py": "d706c1b3807ee0ec4e1f9ed125e458195fbdc97c29c97fdc3adbf5ae1b59284e",
+    "prose_typography.py": "d1d197824b8df8adaa120e4dc5ba5d4c13f58165514948f27389523bd2044a9c",
+    "verify_downloaded_results.py": "02a5ecd0c67cb0594d58abb5d529b9a2025943e20e889a7c0fad6d2c90fe20d4"
+  },
+  "gradient_coordinates_plotted": 48,
+  "unplotted_KD_coordinates_by_reason": {},
+  "matplotlib_version": "3.11.2",
+  "numpy_version": "2.5.4"
+}

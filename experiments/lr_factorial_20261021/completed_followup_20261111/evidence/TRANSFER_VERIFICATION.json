@@ -1,0 +1,10 @@
+{
+  "status": "selected_text_transfer_and_flat_extraction_verified",
+  "created_UTC": "2026-11-11T15:11:19.423239+00:00",
+  "archive_sha256": "ef4e2fddc10fc81214c8ff21045a4d1017c40f235567aaa926e02bbe46461baa",
+  "INDEX_sha256": "c50308c238bd2fb774af6c9e3dd15cd5941ffb393dc00a45f10706ce61ac75d7",
+  "source_manifest_sha256": "9ed35b5175b0bfdcc1c506f727f0164309e667fe04b73b5ab07d7ebb4442012f",
+  "remote_file_records": 3440,
+  "unique_payloads": 3411,
+  "scientific_verification_pending": true
+}

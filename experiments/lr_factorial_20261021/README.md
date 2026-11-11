@@ -1,4 +1,17 @@
-# Learning-rate interaction and new starting-pair replication
+# Learning rate interaction and new starting pair replication
+
+The fixed follow-up is complete. The [final results and independent verification](completed_followup_20261111/README.md) cover six new base trainings, 27 new continuations, 84 evaluation endpoints including 24 retained historical endpoints, 72 fixed-model gradient probes and 384 controlled metric cells. The [revised manuscript and supplement](../../manuscript/learning_rate_followup_20261111/README.md) report the actual outcomes and limitations.
+
+| Method | Six-pair mean | Sample SD | Descriptive 95% t interval | Historical three mean | New three mean |
+| --- | --- | --- | --- | --- | --- |
+| MSE | −0.0249 | 0.0263 | −0.0525 to +0.0026 | −0.0106 | −0.0392 |
+| CWD | −0.0017 | 0.0674 | −0.0724 to +0.0691 | +0.0177 | −0.0210 |
+
+All entries are native BDD epoch-40 interaction percentage points: `(KD − control at 0.001) − (KD − control at 0.0001)`. The original three-pair results were known before this follow-up. Six matched pairs are the replication units; no general ranking or equivalence conclusion is asserted. The disclosed kernel transition remains an unisolated difference between historical and current execution.
+
+## Historical protocol and readiness record from October 21
+
+The dated record below is preserved to show what was fixed and known at that stage. Its references to work pending or results not yet available describe that earlier state; the completed release above is the current status. The original protocol and interpretation bytes remain unchanged.
 
 This extension was fixed on 2026-10-21 after the original three-pair study was completed and inspected. It is not retroactive preregistration. Its purpose is to test whether the continuation optimizer learning rate modifies the paired MSE/CWD effect, with three additional independently fine-tuned starting pairs. No new result is claimed yet.
 

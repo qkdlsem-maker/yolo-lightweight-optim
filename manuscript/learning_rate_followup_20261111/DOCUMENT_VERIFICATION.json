@@ -1,0 +1,55 @@
+{
+  "status": "all_public_document_pages_visually_reviewed",
+  "documents": {
+    "Manuscript_Learning_Rate_Followup.docx": {
+      "docx_sha256": "9f5318fe16b070902cbb852392b1ad304c3c18254f99ef374658d1e475a36ce3",
+      "pdf_sha256": "1a6e1f2c5ee37590e34c86f6679c6d0e41a37836717324bd1b46a6c26ddda013",
+      "page_count": 11,
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "Supplement_All_Fixed_Followup_Results.docx": {
+      "docx_sha256": "d5f63a9a26e2a64c23120b5c2b67ce780df8d9ef6b13e97152560bacb992a84a",
+      "pdf_sha256": "0821d9161f1cdda1c847e6a282b47094171a4dc4bd04ea3bb39cc9f6a7ae8e05",
+      "page_count": 21,
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    }
+  },
+  "source_final_page_QA_sha256": "1b61f3e40767d4340f81f47a8ac58231bce61eae663d3c3328a4e4e4f10502ee",
+  "INDEX_sha256": "c50308c238bd2fb774af6c9e3dd15cd5941ffb393dc00a45f10706ce61ac75d7",
+  "author_approval_claimed": false,
+  "journal_submission_performed": false
+}

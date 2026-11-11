@@ -1,0 +1,27 @@
+{
+  "status": "local_export_and_verifier_schema_corrections_reviewed",
+  "created_UTC": "2026-11-11T15:18:08.251049+00:00",
+  "INDEX_sha256": "c50308c238bd2fb774af6c9e3dd15cd5941ffb393dc00a45f10706ce61ac75d7",
+  "scientific_measurements_changed": false,
+  "completed_scientific_stages_reexecuted": false,
+  "original_analysis_records_unchanged": true,
+  "export_correction": "Initial packaging treated new-base epochs (an integer count) as continuation epoch records (a list). It stopped before archive creation. The corrected collector exports all6 base audits and all36 continuation audits plus1440 epoch source records separately.",
+  "verifier_correction": "The initial local checker incorrectly required every unavailable epoch median to be historical. Frozen native admission already permits explicit null new-run medians when measured nonfinite-gradient batch counts are positive. The corrected checker preserves the raw and summary nulls, checks finite/nonfinite batch partitions, clipped-count bounds, cumulative optimizer counts and aggregate nonfinite counts, and records source-bound explanations separately.",
+  "native_policy": {
+    "path": "review_20261021_lr_factorial/continuation_evidence_checks.py",
+    "sha256": "d2c88fff38b4611abe54c5d1b2d310663c3434b2913850c1936fc5dad464d4cf",
+    "rule": "Native admission permits an explicit null median only with a positive measured nonfinite-gradient batch count. Source values and the legacy-only reason field are preserved unchanged."
+  },
+  "historical_undefined_epoch_medians": 120,
+  "new_explicit_null_epoch_medians": 342,
+  "synthetic_regressions": [
+    "native explicit null with positive recorded counter accepted",
+    "new nonfinite JSON literal rejected",
+    "null with zero nonfinite batches rejected",
+    "inconsistent batch partition rejected",
+    "changed source summary and duplicate keys rejected"
+  ],
+  "verification_sha256": "b22933e7072d73ca3e2f8c0de387bbdf1c0460d092a1ba29b66736c5a96decde",
+  "verifier_source_sha256": "02a5ecd0c67cb0594d58abb5d529b9a2025943e20e889a7c0fad6d2c90fe20d4",
+  "verifier_test_sha256": "ae58f7e06f433344e52390a8ba620e4b70c1137e2927675d9091975757d2994c"
+}

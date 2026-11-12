@@ -1,0 +1,36 @@
+S1 Dataset. Complete numerical results for the fixed learning-rate follow-up.
+Authors: Hyerim Choi and Tae-Kook Kim. Prepared 2026-11-12.
+
+followup_results/ALL_84_ENDPOINTS.json: 84 evaluation endpoints, each with roster,
+18 AP scores, source/audit references. Base references are included, not new trials.
+followup_results/contrasts/: 324 contrasts across 18 metrics; six pair values,
+historical/new strata, SD, range and the designated descriptive t intervals.
+followup_results/GRADIENT_72_SUMMARY.json: 36 final states x two fixed batches.
+followup_results/METRIC_384_CELLS_AND_EFFECTS.json: 48 fixed prediction archives,
+eight scoring cells and seven factorial contrasts per archive, including classes.
+followup_results/TRAINING_36_PATHS_AND6_NEW_BASES.json: trajectories and counters.
+followup_results/HISTORICAL_STRENGTH_GRID_REFERENCE.json: provenance of prior grid.
+original_strength_grid/: unchanged numerical outputs of the original study.
+INDEPENDENT_LOCAL_VERIFICATION.json: already completed local arithmetic audit.
+
+Units: stored AP scores are fractions in [0,1]; _pp denotes percentage points.
+To report AP as a percentage multiply by 100. Do not multiply _pp again.
+Null is unavailable/undefined, not zero. Historical missing values were retained.
+Pair seeds: 101,202,303 historical; 404,505,606 new. Initial rates: 0.0001,0.001.
+Arms: control, mse, cwd. Fixed feature coefficient: 0 for control, 0.3 for KD.
+Forty epochs is primary; twenty epochs is a nested secondary checkpoint.
+84 follow-up endpoints and 48 prior-grid endpoints overlap at 24 endpoints.
+Six matched base-training pairs are the units; endpoints, batches, classes and
+scoring cells are not independent replications. Shared COCO sources and data,
+previously examined evaluation populations and execution-period confounding apply.
+
+Source code/audit release:
+https://github.com/qkdlsem-maker/yolo-lightweight-optim
+Commit: 407f4b3d3a52e72bda5022a61b5df6dbd38473e5
+Path: experiments/lr_factorial_20261021/completed_followup_20261111
+
+Coverage: these are numerical results, not the full model/prediction binaries.
+The frozen roster may have null future checkpoint hashes. Actual hashes, where
+recorded, are in source-bound completion records; null does not certify a binary.
+Original third-party images/labels are not included. Do not infer that this ZIP
+alone completes all journal data-sharing obligations or grants dataset rights.

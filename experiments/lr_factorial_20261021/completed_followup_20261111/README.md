@@ -1,5 +1,9 @@
 # Completed learning rate follow up
 
+## Publication reproduction supplement
+
+The [12 November supplement](../publication_reproduction_20261112/README.txt) adds the numerical supporting dataset, a table/figure data map, and portable plotting code with A/B panel labels. All numerical source checks passed and all five generated PNGs exactly match the reviewed plots. Scientific results are unchanged. The supplement supports scalar and figure reproduction; it does not resolve the missing model/prediction binary access or third-party rights described below. No journal submission or all-author approval is asserted.
+
 All six new base trainings and 27 new forty-epoch continuations are complete. The fixed follow-up retains 84 evaluation endpoints (60 new and 24 reused), 72 fixed-model gradient batch probes, and 384 metric-definition cells. Source-bound scores and every prespecified contrast passed the [independent local checks](evidence/INDEPENDENT_LOCAL_VERIFICATION.json).
 
 The primary question is whether changing the initial continuation rate from 0.0001 to 0.001 changes the paired distillation effect at epoch 40. MSE and CWD both use coefficient 0.3. An interaction is `(KD − control at 0.001) − (KD − control at 0.0001)`, measured in AP percentage points on native ten-class BDD AP50:95. A positive interaction does not by itself mean that KD improved on control.

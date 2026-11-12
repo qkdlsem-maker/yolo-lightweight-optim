@@ -1,0 +1,57 @@
+[
+  {
+    "path": "build_result_figures.py",
+    "bytes": 11706,
+    "sha256": "600982308acd80d879c180fabacb9be5cfb3a5c49a8264ade159f10dc0de3883"
+  },
+  {
+    "path": "CLAIM_DATA_MAP.json",
+    "bytes": 1998,
+    "sha256": "c44a0e0f7df21f108f538c028a0c9530240e4aa3a4ad379da37979bab4cbfcfe"
+  },
+  {
+    "path": "DATA_DICTIONARY.txt",
+    "bytes": 2451,
+    "sha256": "9ee727d0e79763d72e718ee61cbaf7ce6e7ac536ad2c6da1a3556ef77dea9c93"
+  },
+  {
+    "path": "PLOT_REQUIREMENTS.txt",
+    "bytes": 34,
+    "sha256": "11580fbdd48cc51af202a622a3bd8eda389c8574fe638ef0f85beec08f2dde81"
+  },
+  {
+    "path": "prose_typography.py",
+    "bytes": 552,
+    "sha256": "d1d197824b8df8adaa120e4dc5ba5d4c13f58165514948f27389523bd2044a9c"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 3330,
+    "sha256": "15485f23e366bada65d3730cbde077cd56283dd033d52ba93bcdad513114c058"
+  },
+  {
+    "path": "REVIEWED_FIGURE_MANIFEST.json",
+    "bytes": 4991,
+    "sha256": "c64d0137c0f91e2c45fc1ae313ab01d29063fc5eda2ef655f03daa1d5fe0096c"
+  },
+  {
+    "path": "S1_Dataset.zip",
+    "bytes": 684394,
+    "sha256": "1f7d0fc1e97af9536e0b6a90a82b8043f99d1a7cab8ad2e1b84044db7fb043fa"
+  },
+  {
+    "path": "VERIFICATION_SUMMARY.json",
+    "bytes": 1329,
+    "sha256": "54ff42f68285bb7236405ccbca73cdd147390850639e773f5464ad32cb197185"
+  },
+  {
+    "path": "verify_downloaded_results.py",
+    "bytes": 40578,
+    "sha256": "02a5ecd0c67cb0594d58abb5d529b9a2025943e20e889a7c0fad6d2c90fe20d4"
+  },
+  {
+    "path": "verify_release.py",
+    "bytes": 2940,
+    "sha256": "750ccfd2d476707852f27ea530f6abb04d8f5754676594d9a8860c83990f2e22"
+  }
+]

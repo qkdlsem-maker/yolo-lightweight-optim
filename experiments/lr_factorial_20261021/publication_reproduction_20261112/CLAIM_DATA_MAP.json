@@ -1,0 +1,46 @@
+{
+  "dataset": "S1_Dataset.zip",
+  "mapping": [
+    {
+      "output": "Table 1 and Fig 1",
+      "file_in_dataset": "followup_results/contrasts/bdd_ten_class_AP50_95.json",
+      "selection": "kind=interaction; epoch=40; arm=mse/cwd; six pairs and all_six_pairs"
+    },
+    {
+      "output": "Table 2",
+      "file_in_dataset": "followup_results/contrasts/bdd_ten_class_AP50_95.json",
+      "selection": "Same primary interactions; historical and new three-pair summaries"
+    },
+    {
+      "output": "Table 3 and Fig 2",
+      "file_in_dataset": "followup_results/contrasts/bdd_ten_class_AP50_95.json",
+      "selection": "epoch=40; simple KD minus control effects at each rate, plus endpoint AP means"
+    },
+    {
+      "output": "Fig 3",
+      "file_in_dataset": "followup_results/contrasts/",
+      "selection": "epoch=40; interactions for bdd_ten_class_AP50_95, bdd_common_AP50_95, kitti_common_source_ignore_AP50_95, kitti_native_mean_moderate_R40"
+    },
+    {
+      "output": "Table 4 and Fig 4",
+      "file_in_dataset": "followup_results/GRADIENT_72_SUMMARY.json",
+      "selection": "All-student parameter groups; raw final FP32 states; both fixed batches; controls retained with undefined cosine"
+    },
+    {
+      "output": "Table 5",
+      "file_in_dataset": "followup_results/METRIC_384_CELLS_AND_EFFECTS.json",
+      "selection": "Within-archive main effects; equal-class mean AP; 48 archives with eight definitions each"
+    },
+    {
+      "output": "S1 Appendix",
+      "file_in_dataset": "followup_results/",
+      "selection": "All 84 endpoints, eighteen contrast sets, training records, 72 gradients and 384 metric cells"
+    },
+    {
+      "output": "S2 Appendix",
+      "file_in_dataset": "original_strength_grid/",
+      "selection": "Preserved 48-endpoint study; 24 overlap follow-up; not 132 independent observations"
+    }
+  ],
+  "note": "Selectors document the analysis; no scores or scientific decisions are changed."
+}

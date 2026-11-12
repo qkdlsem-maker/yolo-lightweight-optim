@@ -1,0 +1,39 @@
+{
+  "checked_date": "2026-11-12",
+  "numerical_status": "supplement_and_bound_arithmetic_checks_passed",
+  "dataset_sha256": "1f7d0fc1e97af9536e0b6a90a82b8043f99d1a7cab8ad2e1b84044db7fb043fa",
+  "supplement_members_checked": 35,
+  "followup_analysis_files_identical_to_evidence": 26,
+  "evidence_files_hash_checked": 3440,
+  "figure_reproduction": {
+    "status": "all_five_png_figures_identical_to_reviewed_source",
+    "figures": [
+      {
+        "figure": "Figure1_primary_interactions",
+        "png_exactly_identical": true
+      },
+      {
+        "figure": "Figure2_simple_effects",
+        "png_exactly_identical": true
+      },
+      {
+        "figure": "Figure3_evaluation_definitions",
+        "png_exactly_identical": true
+      },
+      {
+        "figure": "Figure4_fixed_gradient_diagnostics",
+        "png_exactly_identical": true
+      },
+      {
+        "figure": "FigureS1_all_metric_factor_effects",
+        "png_exactly_identical": true
+      }
+    ],
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "python": "3.12.14",
+    "source_path_line_removed_only": true,
+    "pdf_hash_comparison": "not required; timestamp metadata varies"
+  },
+  "limit": "Numerical and figure verification; does not certify inference reproduction, data access or reuse permissions."
+}

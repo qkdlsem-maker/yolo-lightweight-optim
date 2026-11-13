@@ -1,0 +1,514 @@
+{
+  "status": "all_84_downloaded_checkpoint_bytes_match_bound_evaluation_records",
+  "date": "2026-11-13",
+  "bytes": 1013402244,
+  "rows": [
+    {
+      "endpoint_id": "base_nano_seed101_e100",
+      "path": "review_20261017_independent/base/nano_seed101/weights/last.pt",
+      "sha256": "2b7724548ad472f0289b16373b36f7f21c5a0843cf1b0be7c84c9baf54990678",
+      "bytes": 6233571
+    },
+    {
+      "endpoint_id": "base_large_seed101_e100",
+      "path": "review_20261017_independent/base/large_seed101/weights/last.pt",
+      "sha256": "1eaa3f303b1a27ff037e667591485b090bbb71af2c4951be4c50cb1d1c62fd89",
+      "bytes": 87641459
+    },
+    {
+      "endpoint_id": "pair101_control_w0_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair101_control_w0/control_seed1101_e40/ema_epoch20.pt",
+      "sha256": "edfeb319c7c732e0f16679a3cf99d04257970eea2f1dae0523ff0dd7928cfc53",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_control_w0_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair101_control_w0/control_seed1101_e40/ema_epoch40.pt",
+      "sha256": "d549f86bb0cf76fb48e59153b092c105a36ef0ae71151c95d4f80e70ae62eae4",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_mse_w0.3_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair101_mse_w0.3/mse_seed1101_e40/ema_epoch20.pt",
+      "sha256": "2cdac7e9e349ce5cfb17fbea83928ea41cc85a3cdd7bfd34f445b757b4810e0d",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_mse_w0.3_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair101_mse_w0.3/mse_seed1101_e40/ema_epoch40.pt",
+      "sha256": "18391ba576d55d2b340b3afa616d3d60c9f31f32d8af404821c749e5094bdb07",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_cwd_w0.3_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair101_cwd_w0.3/cwd_seed1101_e40/ema_epoch20.pt",
+      "sha256": "843bdd6c04b8f0159b4e372ff24e849fa65233c989a0e6f72af25e16da0c8d7a",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_cwd_w0.3_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair101_cwd_w0.3/cwd_seed1101_e40/ema_epoch40.pt",
+      "sha256": "bc6c1878b27475700de40774bddc57a45451e5802bb4c43464f7d5c9dec471e0",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_control_w0_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair101_control_w0_lr0.001/control_seed1101_e40/ema_epoch20.pt",
+      "sha256": "8761fa34d6c6e4eae8933218ac1d1b0dce59f5e07f434b463c56692a9df10c01",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_control_w0_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair101_control_w0_lr0.001/control_seed1101_e40/ema_epoch40.pt",
+      "sha256": "db57835ef712b400e62503a387062021e292641419239027d0f3a46e701c49ef",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_mse_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair101_mse_w0.3_lr0.001/mse_seed1101_e40/ema_epoch20.pt",
+      "sha256": "183b1d5f1e48d28722c22a5a3ef3e597194bc86ceef6ac8dc675e551a00f9b03",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_mse_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair101_mse_w0.3_lr0.001/mse_seed1101_e40/ema_epoch40.pt",
+      "sha256": "91091fe0a52cc8c3974f151d5af5e0442a9959ed3bafc2c95454ed31a6e1c874",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_cwd_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair101_cwd_w0.3_lr0.001/cwd_seed1101_e40/ema_epoch20.pt",
+      "sha256": "a400bed86b80ab8c2435ff2d69ff66a1732226fc328490a683089bc99dfed3da",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair101_cwd_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair101_cwd_w0.3_lr0.001/cwd_seed1101_e40/ema_epoch40.pt",
+      "sha256": "0e122bac8cd120c1f740b6c598a8023c484fe3b863de50f52a03e8006774fcee",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "base_nano_seed202_e100",
+      "path": "review_20261017_independent/base/nano_seed202/weights/last.pt",
+      "sha256": "8adff4f2d4b04a609db19deeb380217e27755bb14daa3fe9791aa23eace7bdd5",
+      "bytes": 6233571
+    },
+    {
+      "endpoint_id": "base_large_seed202_e100",
+      "path": "review_20261017_independent/base/large_seed202/weights/last.pt",
+      "sha256": "1c02917430b7c5df0971996565846387cb65b065d1e2c5799ab4fc482af8bd83",
+      "bytes": 87641459
+    },
+    {
+      "endpoint_id": "pair202_control_w0_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair202_control_w0/control_seed1202_e40/ema_epoch20.pt",
+      "sha256": "43383705508351202eca6e22ffff488f96cc26da72e21860e84716cc02e363bc",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_control_w0_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair202_control_w0/control_seed1202_e40/ema_epoch40.pt",
+      "sha256": "217eba7b9b8fa04c04029a35dca450068cfddade626f3a499c174f7c187ec051",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_mse_w0.3_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair202_mse_w0.3/mse_seed1202_e40/ema_epoch20.pt",
+      "sha256": "4d50119b943bdea23732f561408a4f51959f0f4a13545d900a8071f35399cd1e",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_mse_w0.3_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair202_mse_w0.3/mse_seed1202_e40/ema_epoch40.pt",
+      "sha256": "66a0f922c068376090c2feccbdac0f75b08ecc187b74e1418c5ebebb01ef4aaa",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_cwd_w0.3_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair202_cwd_w0.3/cwd_seed1202_e40/ema_epoch20.pt",
+      "sha256": "59010ca41956a92ffb26f6ca7962beab56217c0fd8a4d145d721cfc114e41134",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_cwd_w0.3_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair202_cwd_w0.3/cwd_seed1202_e40/ema_epoch40.pt",
+      "sha256": "b1b02bf18efe0e92ff60c5a4c52b721eb206377abcad66c14cbd0f19f1e67cdb",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_control_w0_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair202_control_w0_lr0.001/control_seed1202_e40/ema_epoch20.pt",
+      "sha256": "47354e21332cb01b9d08f681c9302f627aa16f5c50c767a56e7a5dd3a4a9ed78",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_control_w0_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair202_control_w0_lr0.001/control_seed1202_e40/ema_epoch40.pt",
+      "sha256": "e5a894a930b1241b65e4c5070612ea95a2a3619101bbccd28b98c299054bd67e",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_mse_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair202_mse_w0.3_lr0.001/mse_seed1202_e40/ema_epoch20.pt",
+      "sha256": "fae4f4c39dc29e886c464b66832a19d4d75e3a0459a70c3e0395d995737f7063",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_mse_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair202_mse_w0.3_lr0.001/mse_seed1202_e40/ema_epoch40.pt",
+      "sha256": "ea9fb73d901ee8662c63f138a9777853e4e928346b078a8f604dd7e07ac4b795",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_cwd_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair202_cwd_w0.3_lr0.001/cwd_seed1202_e40/ema_epoch20.pt",
+      "sha256": "893e0339bf0ea6ac86667fa042b165235cbbbc138aeaf3a650b9930db749bd41",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair202_cwd_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair202_cwd_w0.3_lr0.001/cwd_seed1202_e40/ema_epoch40.pt",
+      "sha256": "e94c9ff8deaa4cce99ddb44563a2bc380d8030c70238631edd9e300701d8025d",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "base_nano_seed303_e100",
+      "path": "review_20261017_independent/base/nano_seed303/weights/last.pt",
+      "sha256": "b55af624ccc5f0738ac2bbcee8208693789d662a62115bf53e0ae1e97812efbc",
+      "bytes": 6233571
+    },
+    {
+      "endpoint_id": "base_large_seed303_e100",
+      "path": "review_20261017_independent/base/large_seed303/weights/last.pt",
+      "sha256": "20393fd82e18cf42b040dab6df49de2f6b276973bf096068f329e669c88c464a",
+      "bytes": 87641459
+    },
+    {
+      "endpoint_id": "pair303_control_w0_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair303_control_w0/control_seed1303_e40/ema_epoch20.pt",
+      "sha256": "5f31d1be5bba7a4ef09e6478c1049eeccf77a3b7c4043a4b8ff34fc03a5988a4",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_control_w0_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair303_control_w0/control_seed1303_e40/ema_epoch40.pt",
+      "sha256": "871e7e64312f586e84815115cf4110c596e73b375dd56c1276f2c26aa44b8d44",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_mse_w0.3_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair303_mse_w0.3/mse_seed1303_e40/ema_epoch20.pt",
+      "sha256": "d1a45c4e8f06eed16ea912d53993d195f8d81efe5caec609ddc944880f07b88a",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_mse_w0.3_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair303_mse_w0.3/mse_seed1303_e40/ema_epoch40.pt",
+      "sha256": "8f649030f599cf5f930d239de509590d530a4b63dd4cc3ddd27df5bdd7a4059b",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_cwd_w0.3_lr0.0001_e20",
+      "path": "review_20261017_independent/continuations/pair303_cwd_w0.3/cwd_seed1303_e40/ema_epoch20.pt",
+      "sha256": "6f078aa77cc5722dfe90b78719829064e40628cbdbdde3b99f32dee25a1f1753",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_cwd_w0.3_lr0.0001_e40",
+      "path": "review_20261017_independent/continuations/pair303_cwd_w0.3/cwd_seed1303_e40/ema_epoch40.pt",
+      "sha256": "4a90ff5387c8ce9e37a2e96e71ea4cfafb11194168d24527d82e5407192ca63c",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_control_w0_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair303_control_w0_lr0.001/control_seed1303_e40/ema_epoch20.pt",
+      "sha256": "0b4d2b5f8a290c550f634d92de1a0694a3ae5bf65050c128cbbf76fcb3a33804",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_control_w0_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair303_control_w0_lr0.001/control_seed1303_e40/ema_epoch40.pt",
+      "sha256": "c54880e0afc669a10d78dd46c9ebe6d6fda6aae5898249b6fde1433caf2701eb",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_mse_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair303_mse_w0.3_lr0.001/mse_seed1303_e40/ema_epoch20.pt",
+      "sha256": "6986e05faddd7323d0ea252eb10cd5e4e1c4f637df93611f9975c1a08d755e4f",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_mse_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair303_mse_w0.3_lr0.001/mse_seed1303_e40/ema_epoch40.pt",
+      "sha256": "2731d93f097497230a23251f477b3ddc381eac803194245a68954578c3a6bae3",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_cwd_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair303_cwd_w0.3_lr0.001/cwd_seed1303_e40/ema_epoch20.pt",
+      "sha256": "a74cb901a1a8bd605cabec40d7aa3584476f62ad8480ca4c9bfebf1da33db2d9",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair303_cwd_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair303_cwd_w0.3_lr0.001/cwd_seed1303_e40/ema_epoch40.pt",
+      "sha256": "32d96b50f1024832187f363130b2220734bcfc839d8915bc51ef6cb3c83b2494",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "base_nano_seed404_e100",
+      "path": "review_20261021_lr_factorial/base/nano_seed404/weights/last.pt",
+      "sha256": "ae8eeabbf397ce4644fdc3576eb9eb9db6538971ad9389b015f88842c21e93f6",
+      "bytes": 6233571
+    },
+    {
+      "endpoint_id": "base_large_seed404_e100",
+      "path": "review_20261021_lr_factorial/base/large_seed404/weights/last.pt",
+      "sha256": "0ab28650f1d5b5fe1e9fe5383eb6603333402a15099672ecb1624218635440fe",
+      "bytes": 87641459
+    },
+    {
+      "endpoint_id": "pair404_control_w0_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair404_control_w0_lr0.0001/control_seed1404_e40/ema_epoch20.pt",
+      "sha256": "673de2cd997dc1facafb150bb318576a63cebc571fd3639f2e37680f8bc2d324",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_control_w0_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair404_control_w0_lr0.0001/control_seed1404_e40/ema_epoch40.pt",
+      "sha256": "0aef44afb8245f951ca30b16b60a610910a1512ff6e355f81e1a65fc48e386de",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_mse_w0.3_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair404_mse_w0.3_lr0.0001/mse_seed1404_e40/ema_epoch20.pt",
+      "sha256": "12d88f2059910de381acc1827c4ae980fa3d75cc7df2623e80594f971dc2860c",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_mse_w0.3_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair404_mse_w0.3_lr0.0001/mse_seed1404_e40/ema_epoch40.pt",
+      "sha256": "5de1fed5d2dfec381cf238a30bb68dedcb6df52bdaf3a0ff34b6ac0d23fdaed1",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_cwd_w0.3_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair404_cwd_w0.3_lr0.0001/cwd_seed1404_e40/ema_epoch20.pt",
+      "sha256": "57bc8099916f9d6bf80dcb5f96166d450dc0980676aefb9c23de3435b55b76d5",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_cwd_w0.3_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair404_cwd_w0.3_lr0.0001/cwd_seed1404_e40/ema_epoch40.pt",
+      "sha256": "a087ff3d289649cd1fa7058956d2af17f9b8b5ac2c93ba9c4cad2dbdd8caa6cf",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_control_w0_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair404_control_w0_lr0.001/control_seed1404_e40/ema_epoch20.pt",
+      "sha256": "5604541d404db8ad734fb0b93a97d0563dfb0f7bc502bd57174c349857f7aa1c",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_control_w0_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair404_control_w0_lr0.001/control_seed1404_e40/ema_epoch40.pt",
+      "sha256": "808ce20ff5dd9a71ebb7d83b3e2e8e39357cb34329d522bcf45a346c3b92d825",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_mse_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair404_mse_w0.3_lr0.001/mse_seed1404_e40/ema_epoch20.pt",
+      "sha256": "1dae2b6fb0b499b792d26c7bae9fac6315a5b8947e29c81a15e58de1f61193b6",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_mse_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair404_mse_w0.3_lr0.001/mse_seed1404_e40/ema_epoch40.pt",
+      "sha256": "821776be17899b4042d6a98b3ebf57264dbed2939572ad691ac3c2b92a92acb6",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_cwd_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair404_cwd_w0.3_lr0.001/cwd_seed1404_e40/ema_epoch20.pt",
+      "sha256": "574e7f832afec9f733b6b1f66f30dba83ffc06d9328a55b3082d37b1b15c0f31",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair404_cwd_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair404_cwd_w0.3_lr0.001/cwd_seed1404_e40/ema_epoch40.pt",
+      "sha256": "66e210dd88d0ba709bf659edb6fe327bce78506e4bc672295ec0c227efe9f35e",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "base_nano_seed505_e100",
+      "path": "review_20261021_lr_factorial/base/nano_seed505/weights/last.pt",
+      "sha256": "6592d503d97cfb7ed26a2926927bc4464e5214633c6727baced21d3374dd96a2",
+      "bytes": 6233571
+    },
+    {
+      "endpoint_id": "base_large_seed505_e100",
+      "path": "review_20261021_lr_factorial/base/large_seed505/weights/last.pt",
+      "sha256": "e7879eee6e10e6c54e9dd174aff3802fb76954f2475fb5b9e284494e7f5d7ca4",
+      "bytes": 87641459
+    },
+    {
+      "endpoint_id": "pair505_control_w0_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair505_control_w0_lr0.0001/control_seed1505_e40/ema_epoch20.pt",
+      "sha256": "f808957a3a290e30a55180a1d0ea8a494d6e5a83c4b65e50e939a4325b08b030",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_control_w0_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair505_control_w0_lr0.0001/control_seed1505_e40/ema_epoch40.pt",
+      "sha256": "26971fd7f5ac474b06ff919f4ad4d6f9b4efad69caa042751070bc7b9b8ca688",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_mse_w0.3_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair505_mse_w0.3_lr0.0001/mse_seed1505_e40/ema_epoch20.pt",
+      "sha256": "fe333d617069f1c5325a72fba8532599e890f4a51574aaeb4e7d22ccbdd8db95",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_mse_w0.3_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair505_mse_w0.3_lr0.0001/mse_seed1505_e40/ema_epoch40.pt",
+      "sha256": "b080493475313e8a3605613ea04d241ee127b78faf379c5b5a631f2b7343b29a",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_cwd_w0.3_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair505_cwd_w0.3_lr0.0001/cwd_seed1505_e40/ema_epoch20.pt",
+      "sha256": "a84e2ea725a30297c0d8410c1d90022565a9e945c7e66d0ce371ca7d2f22eb66",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_cwd_w0.3_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair505_cwd_w0.3_lr0.0001/cwd_seed1505_e40/ema_epoch40.pt",
+      "sha256": "17f044739c2e73a19a7a6b6a526b5820b11e46f08642264fe59a8d8800bff301",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_control_w0_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair505_control_w0_lr0.001/control_seed1505_e40/ema_epoch20.pt",
+      "sha256": "06e4ff83f5b9a8bb015f98686212dd0a3594e096426f5a99a6fa8004d538dfda",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_control_w0_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair505_control_w0_lr0.001/control_seed1505_e40/ema_epoch40.pt",
+      "sha256": "893034369acd3e79895b1556f8039ba7ca9efe65fd8198db6cb28fddff3b9300",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_mse_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair505_mse_w0.3_lr0.001/mse_seed1505_e40/ema_epoch20.pt",
+      "sha256": "9c86cb4695b5e79f66309ae58698db18df23241552e08c91f2c832e4f0b67277",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_mse_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair505_mse_w0.3_lr0.001/mse_seed1505_e40/ema_epoch40.pt",
+      "sha256": "3186a303f6a080cb8855eca3146f0a84daca7842c89d3e436d51251e12ed3565",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_cwd_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair505_cwd_w0.3_lr0.001/cwd_seed1505_e40/ema_epoch20.pt",
+      "sha256": "811bee1cc87462f4c0b9fa77338885708d7c0c302575205b264e3c266991f462",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair505_cwd_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair505_cwd_w0.3_lr0.001/cwd_seed1505_e40/ema_epoch40.pt",
+      "sha256": "9acf2efd75ccdc0b0408c93603c6993296d4b1dbf3a83837865c3e14c7d07815",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "base_nano_seed606_e100",
+      "path": "review_20261021_lr_factorial/base/nano_seed606/weights/last.pt",
+      "sha256": "d698c3084fc2d18658e83fbfb809960556475e361bdfb04a786aa09eb11eabeb",
+      "bytes": 6233571
+    },
+    {
+      "endpoint_id": "base_large_seed606_e100",
+      "path": "review_20261021_lr_factorial/base/large_seed606/weights/last.pt",
+      "sha256": "6ff05c65675ce7e64e4784c4cc032b652d64359208ca1cb832ee2150e27eea0d",
+      "bytes": 87641459
+    },
+    {
+      "endpoint_id": "pair606_control_w0_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair606_control_w0_lr0.0001/control_seed1606_e40/ema_epoch20.pt",
+      "sha256": "142206843e90d307558242e85fa51b1d303558e5beb5589de1bfbcc945e48ae7",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_control_w0_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair606_control_w0_lr0.0001/control_seed1606_e40/ema_epoch40.pt",
+      "sha256": "4ecb5a25992e99235045990da38228a4a83eaa23830126443dc80bddb199f778",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_mse_w0.3_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair606_mse_w0.3_lr0.0001/mse_seed1606_e40/ema_epoch20.pt",
+      "sha256": "9389eca2652fc25e8d358697cc008770108ac263032a757f9804428caef92a0d",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_mse_w0.3_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair606_mse_w0.3_lr0.0001/mse_seed1606_e40/ema_epoch40.pt",
+      "sha256": "20bb40a92f3f485b9df3693f72c81a5661a71195078beb059241fbb897f82d7b",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_cwd_w0.3_lr0.0001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair606_cwd_w0.3_lr0.0001/cwd_seed1606_e40/ema_epoch20.pt",
+      "sha256": "58f0d00e72003c27e1af1992587b48b4d891bacfa1e61d715f7a909420e76baf",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_cwd_w0.3_lr0.0001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair606_cwd_w0.3_lr0.0001/cwd_seed1606_e40/ema_epoch40.pt",
+      "sha256": "1d44cd583d7d705787971229bba495b0ee1fda42dda3a5c29d0288762960191d",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_control_w0_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations_restart028/pair606_control_w0_lr0.001/control_seed1606_e40/ema_epoch20.pt",
+      "sha256": "ec15560df0a33b76902a9b0c41012c1cade8ddcd7059e9aeecd205f0069d4faa",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_control_w0_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations_restart028/pair606_control_w0_lr0.001/control_seed1606_e40/ema_epoch40.pt",
+      "sha256": "208e3f22f2971a72985b6f820b568ad369f3c3e1228eaf51e5b4f4ddae366b6e",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_mse_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations_restart028/pair606_mse_w0.3_lr0.001/mse_seed1606_e40/ema_epoch20.pt",
+      "sha256": "42f0b609b3c126b372ccf1be3a1914084df43b6a64a0d87b3712ed9e68c73bac",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_mse_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations_restart028/pair606_mse_w0.3_lr0.001/mse_seed1606_e40/ema_epoch40.pt",
+      "sha256": "8ef8ad25cba9109313dfcda95e9a261bc6dedfddd98054d3b29c7157245b135e",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_cwd_w0.3_lr0.001_e20",
+      "path": "review_20261021_lr_factorial/continuations/pair606_cwd_w0.3_lr0.001/cwd_seed1606_e40/ema_epoch20.pt",
+      "sha256": "eabc7472bb2eee41167d990d328a9abc14b5b5ee896895b4402ae8e5c0968149",
+      "bytes": 6252112
+    },
+    {
+      "endpoint_id": "pair606_cwd_w0.3_lr0.001_e40",
+      "path": "review_20261021_lr_factorial/continuations/pair606_cwd_w0.3_lr0.001/cwd_seed1606_e40/ema_epoch40.pt",
+      "sha256": "ae02db00f29db0066b5bd4788d90b1181be959f7b1a1bcea79d8e059d9005125",
+      "bytes": 6252112
+    }
+  ],
+  "models_loaded": 0,
+  "remote_files_modified": false,
+  "public_binary_deposit_completed": false
+}

@@ -1,0 +1,43 @@
+{
+  "observed_date": "2026-11-13",
+  "mirrors": [
+    {
+      "title": "bdd100k",
+      "ref": "solesensei/solesensei_bdd100k",
+      "currentVersionNumber": 2,
+      "lastUpdated": "2019-05-21T21:10:21.507Z",
+      "totalBytes": 9884138351,
+      "licenseName": "Other (specified in description)"
+    },
+    {
+      "title": "bdd100k Yolo-Format Dataset",
+      "ref": "a7madmostafa/bdd100k-yolo",
+      "currentVersionNumber": 4,
+      "lastUpdated": "2025-10-30T08:23:43.077Z",
+      "totalBytes": 5861668546,
+      "licenseName": "CC BY-SA 4.0"
+    }
+  ],
+  "bdd_data_terms": {
+    "url": "https://github.com/bdd100k/bdd100k/blob/master/doc/source/license.rst",
+    "git_blob_sha": "d478f6469aac16bf51630b1a5c2fb3ffda95a06d"
+  },
+  "bdd_release_documentation": {
+    "url": "https://github.com/bdd100k/bdd100k/blob/master/doc/source/download.rst",
+    "git_blob_sha": "ae399a3ade3de172f9cd28681529c636c5016ed1"
+  },
+  "kitti": {
+    "url": "https://www.cvlibs.net/datasets/kitti/",
+    "download_page": "https://www.cvlibs.net/datasets/kitti/eval_object.php",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "downloads_routed_to_provider_login": true,
+    "full_source_archive_redownload_performed": false
+  },
+  "ultralytics": {
+    "version": "8.2.103",
+    "url": "https://github.com/ultralytics/ultralytics/blob/v8.2.103/LICENSE",
+    "git_blob_sha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+    "license": "AGPL-3.0"
+  },
+  "project_license_granted_by_this_update": false
+}

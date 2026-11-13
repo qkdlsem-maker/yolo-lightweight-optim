@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-13",
+  "scope": "One recorded validation image per mirror; not full image-distribution authentication",
+  "authentication": "none",
+  "raw_images_retained_or_redistributed": false,
+  "checks": [
+    {
+      "dataset": "solesensei/solesensei_bdd100k",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/solesensei/solesensei_bdd100k/bdd100k%2Fbdd100k%2Fimages%2F100k%2Fval%2Fb1c66a42-6f7d68ca.jpg",
+      "expected_image_sha256": "76bf84536edbaf192a8a699efc62ba2b06056bac12c426ecfcc2e003d91fbd32",
+      "image": "b1c66a42-6f7d68ca.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "actual_image_sha256": "76bf84536edbaf192a8a699efc62ba2b06056bac12c426ecfcc2e003d91fbd32",
+      "bytes": 53219,
+      "matches_study_image": true
+    },
+    {
+      "dataset": "a7madmostafa/bdd100k-yolo",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/a7madmostafa/bdd100k-yolo/val%2Fimages%2Fb1c66a42-6f7d68ca.jpg",
+      "expected_image_sha256": "76bf84536edbaf192a8a699efc62ba2b06056bac12c426ecfcc2e003d91fbd32",
+      "image": "b1c66a42-6f7d68ca.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "actual_image_sha256": "76bf84536edbaf192a8a699efc62ba2b06056bac12c426ecfcc2e003d91fbd32",
+      "bytes": 53219,
+      "matches_study_image": true
+    }
+  ]
+}

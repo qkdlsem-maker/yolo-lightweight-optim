@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-13",
+  "files": [
+    {
+      "split": "val",
+      "source_url": "https://www.kaggle.com/api/v1/datasets/download/solesensei/solesensei_bdd100k/bdd100k_labels_release%2Fbdd100k%2Flabels%2Fbdd100k_labels_images_val.json",
+      "authentication": "none",
+      "expected_json_sha256": "c835be652f0c002897be51e74deedd16a1dcee0b7230f19c0456fba772f694af",
+      "official_2020_identity_claimed": false,
+      "http_status": 200,
+      "content_type": "application/zip",
+      "download_sha256": "2797c597476bff8bf8efaea1d2cfa092d3825e86c3cb71d548ddf18a4e2600f2",
+      "download_bytes": 13899917,
+      "json_member": "bdd100k_labels_images_val.json",
+      "actual_json_sha256": "c835be652f0c002897be51e74deedd16a1dcee0b7230f19c0456fba772f694af",
+      "json_bytes": 208257864,
+      "matches_research_source": true,
+      "status": "verified"
+    },
+    {
+      "split": "train",
+      "source_url": "https://www.kaggle.com/api/v1/datasets/download/solesensei/solesensei_bdd100k/bdd100k_labels_release%2Fbdd100k%2Flabels%2Fbdd100k_labels_images_train.json",
+      "authentication": "none",
+      "expected_json_sha256": "c1998792e385fd79213187576ca07d5249563d0ab83ae976688ad60668baca9e",
+      "official_2020_identity_claimed": false,
+      "http_status": 200,
+      "content_type": "application/zip",
+      "download_sha256": "19bbed5312cae5cfc260dfcfa72eb6de0534142a6df9578e753a5e6dbfbbb136",
+      "download_bytes": 96747465,
+      "json_member": "bdd100k_labels_images_train.json",
+      "actual_json_sha256": "c1998792e385fd79213187576ca07d5249563d0ab83ae976688ad60668baca9e",
+      "json_bytes": 1451202234,
+      "matches_research_source": true,
+      "status": "verified"
+    }
+  ],
+  "all_source_json_bytes_match": true,
+  "raw_annotations_publicly_redistributed_by_this_task": false
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "data_access_supplement_file_manifest_v1",
+  "date": "2026-11-13",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 43,
+      "sha256": "d474b5ef1493970447d7fdee1214f783fa67b07c43aea9b38c36caae5479c799"
+    },
+    {
+      "path": "CHECKPOINT_COPY_VERIFICATION.json",
+      "bytes": 24745,
+      "sha256": "ad0c78be9fa0fe74bdecaea053b6545347ae58e6cfd984841197d7cb8c8fd7ce"
+    },
+    {
+      "path": "ENDPOINT_ARTIFACT_BINDINGS.json",
+      "bytes": 251396,
+      "sha256": "342295744d074748c3d5486e4a17cffc5c160b76a0f0e50b78390fc26fc14040"
+    },
+    {
+      "path": "IMAGE_ACCESS_SAMPLE.json",
+      "bytes": 1366,
+      "sha256": "80ce56dc6df46c13dd4b4217b0f1516990727cd73e010c5c97a32a58439e745b"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 6515,
+      "sha256": "d19ebf212e3b344355e89614c2311f90e283c5d70a797028c74e012e0561005f"
+    },
+    {
+      "path": "SOURCE_ACCESS_VERIFICATION.json",
+      "bytes": 1853,
+      "sha256": "dbf16d25307ccc0eaa2ee605b541db8b811962db30883cb3059b5a9e14de18fd"
+    },
+    {
+      "path": "third_party/BDD100K_DATA_LICENSE.rst",
+      "bytes": 1893,
+      "sha256": "4457784962848847eaa9ecf18aafddc001e8e93e1368e22aae3251abd3bd5a3b"
+    },
+    {
+      "path": "third_party/Ultralytics_AGPL-3.0.txt",
+      "bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 3377,
+      "sha256": "2e58c61f3800e5dabd4774a1866486b52a3ae18ade7b8c432d6b1d7d87c48b13"
+    },
+    {
+      "path": "THIRD_PARTY_SOURCE_METADATA.json",
+      "bytes": 1558,
+      "sha256": "30ba70be314184de0eb6c85eca2ba12c57185f561ba3e4ab09e20a8093cdc73b"
+    },
+    {
+      "path": "verify_source_access.py",
+      "bytes": 3516,
+      "sha256": "1368a935485b4cedf6875d2b1ebc6b5716df2e3668343461933f6604aea4988e"
+    }
+  ]
+}

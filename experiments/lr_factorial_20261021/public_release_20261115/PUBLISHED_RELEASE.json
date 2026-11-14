@@ -1,0 +1,57 @@
+{
+  "id": 444122034,
+  "tag_name": "plos-one-underlying-outputs-20261115",
+  "html_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/tag/plos-one-underlying-outputs-20261115",
+  "published_at": "2026-11-14T19:13:29Z",
+  "target_commitish": "90a7c424e21fa6473e6f84a16814311102ff0aa4",
+  "draft": false,
+  "assets": [
+    {
+      "id": 748500671,
+      "name": "Documentation_and_verification_20261115.zip",
+      "size": 1053578,
+      "digest": "sha256:6609322318064258a93d409fb232ca03db793db4e11c09bf24e08fa346fb3815",
+      "browser_download_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/plos-one-underlying-outputs-20261115/Documentation_and_verification_20261115.zip"
+    },
+    {
+      "id": 743328646,
+      "name": "Final_raw_states_36.zip",
+      "size": 1268729057,
+      "digest": "sha256:1b2ca3e2e8811fefd78f8c945fe56d1be1038bf691bb5dfba7bfeee1909081e1",
+      "browser_download_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/plos-one-underlying-outputs-20261115/Final_raw_states_36.zip"
+    },
+    {
+      "id": 743341498,
+      "name": "Fixed_gradient_inputs_2.zip",
+      "size": 21446541,
+      "digest": "sha256:f4138d6246af864e459d56f46b9dc5c3535ba0cebf14b51222e394e95105b38a",
+      "browser_download_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/plos-one-underlying-outputs-20261115/Fixed_gradient_inputs_2.zip"
+    },
+    {
+      "id": 743315644,
+      "name": "Inference_checkpoints_108.zip",
+      "size": 1070267913,
+      "digest": "sha256:34c9c1fe2a6064fb87c9e96c19da33be45c022852ad3ba8a0af2e734a50694ca",
+      "browser_download_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/plos-one-underlying-outputs-20261115/Inference_checkpoints_108.zip"
+    },
+    {
+      "id": 743341759,
+      "name": "Native_BDD_statistics_108.zip",
+      "size": 1185715001,
+      "digest": "sha256:73d390477da0699be07c58d65159dd3818d7b8316fea1408661ea5dfe432b521",
+      "browser_download_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/plos-one-underlying-outputs-20261115/Native_BDD_statistics_108.zip"
+    },
+    {
+      "id": 743352960,
+      "name": "Preparation_records_20261113.zip",
+      "size": 1053970,
+      "digest": "sha256:d44b468ac8c37e373feb0caffc585e533875fc72617af23ebd0e468fb69ef1b5",
+      "browser_download_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/download/plos-one-underlying-outputs-20261115/Preparation_records_20261113.zip"
+    }
+  ],
+  "status": "published_all_six_anonymous_downloads_verified",
+  "public_models_and_statistics_release_completed": true,
+  "complete_prediction_cache_deposit_completed": false,
+  "new_project_wide_license_granted": false,
+  "public_download_verification": "PUBLIC_DOWNLOAD_VERIFICATION.json"
+}

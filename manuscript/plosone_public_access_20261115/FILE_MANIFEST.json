@@ -1,0 +1,27 @@
+[
+  {
+    "path": "Data_Availability.txt",
+    "bytes": 2627,
+    "sha256": "21981e20b3a7c62bc472960e17afb56c5f9b2ece253d7235a317ddeff97a829a"
+  },
+  {
+    "path": "Manuscript.docx",
+    "bytes": 55786,
+    "sha256": "0de87911e981edab4be297ae842d6628af6dfea3db7b7bd17e06139aec5c925a"
+  },
+  {
+    "path": "Manuscript.pdf",
+    "bytes": 249918,
+    "sha256": "7aa66574d836f24a7502cee4c498b195b27928d16161957104c2c0e39a1ebf05"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 1052,
+    "sha256": "e2c7631376aec2fd32997818c49f90eaedb038558b9dc16b7074c6e32d71688d"
+  },
+  {
+    "path": "Review_with_figures.pdf",
+    "bytes": 448485,
+    "sha256": "fbe27e9e42443a464633d185b2e47ab79582792234a071c3948d25c009e08a6c"
+  }
+]

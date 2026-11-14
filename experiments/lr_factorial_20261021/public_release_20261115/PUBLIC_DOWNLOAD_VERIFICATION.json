@@ -1,0 +1,47 @@
+{
+  "status": "all_six_complete_anonymous_downloads_verified",
+  "release_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/tag/plos-one-underlying-outputs-20261115",
+  "authentication_used": false,
+  "files": [
+    {
+      "name": "Documentation_and_verification_20261115.zip",
+      "bytes": 1053578,
+      "sha256": "6609322318064258a93d409fb232ca03db793db4e11c09bf24e08fa346fb3815",
+      "full_anonymous_download_verified": true
+    },
+    {
+      "name": "Preparation_records_20261113.zip",
+      "bytes": 1053970,
+      "sha256": "d44b468ac8c37e373feb0caffc585e533875fc72617af23ebd0e468fb69ef1b5",
+      "full_anonymous_download_verified": true
+    },
+    {
+      "name": "Fixed_gradient_inputs_2.zip",
+      "bytes": 21446541,
+      "sha256": "f4138d6246af864e459d56f46b9dc5c3535ba0cebf14b51222e394e95105b38a",
+      "full_anonymous_download_verified": true
+    },
+    {
+      "name": "Inference_checkpoints_108.zip",
+      "bytes": 1070267913,
+      "sha256": "34c9c1fe2a6064fb87c9e96c19da33be45c022852ad3ba8a0af2e734a50694ca",
+      "full_anonymous_download_verified": true
+    },
+    {
+      "name": "Native_BDD_statistics_108.zip",
+      "bytes": 1185715001,
+      "sha256": "73d390477da0699be07c58d65159dd3818d7b8316fea1408661ea5dfe432b521",
+      "full_anonymous_download_verified": true
+    },
+    {
+      "name": "Final_raw_states_36.zip",
+      "bytes": 1268729057,
+      "sha256": "1b2ca3e2e8811fefd78f8c945fe56d1be1038bf691bb5dfba7bfeee1909081e1",
+      "full_anonymous_download_verified": true
+    }
+  ],
+  "new_inference_or_training": false,
+  "full_original_datasets_downloaded": false,
+  "file_count": 6,
+  "total_bytes": 3548266060
+}

@@ -1,0 +1,41 @@
+{
+  "publication_date": "2026-11-15",
+  "release_tag": "plos-one-underlying-outputs-20261115",
+  "release_url": "https://github.com/qkdlsem-maker/yolo-lightweight-optim/releases/tag/plos-one-underlying-outputs-20261115",
+  "source_commit": "90a7c424e21fa6473e6f84a16814311102ff0aa4",
+  "publication_authorized": true,
+  "inference_checkpoints": 108,
+  "follow_up_endpoints": 84,
+  "additional_historical_endpoints": 24,
+  "raw_final_states": 36,
+  "fixed_gradient_input_archives": 2,
+  "native_statistics_files": 33804,
+  "native_class_iou_AP_values_exactly_reproduced": 10800,
+  "complete_per_image_prediction_cache_included": false,
+  "full_original_datasets_included": false,
+  "fixed_input_archives_contain_BDD_derived_pixels": true,
+  "new_project_wide_license_granted": false,
+  "binary_archives": [
+    {
+      "name": "Inference_checkpoints_108.zip",
+      "bytes": 1070267913,
+      "sha256": "34c9c1fe2a6064fb87c9e96c19da33be45c022852ad3ba8a0af2e734a50694ca"
+    },
+    {
+      "name": "Final_raw_states_36.zip",
+      "bytes": 1268729057,
+      "sha256": "1b2ca3e2e8811fefd78f8c945fe56d1be1038bf691bb5dfba7bfeee1909081e1"
+    },
+    {
+      "name": "Fixed_gradient_inputs_2.zip",
+      "bytes": 21446541,
+      "sha256": "f4138d6246af864e459d56f46b9dc5c3535ba0cebf14b51222e394e95105b38a"
+    },
+    {
+      "name": "Native_BDD_statistics_108.zip",
+      "bytes": 1185715001,
+      "sha256": "73d390477da0699be07c58d65159dd3818d7b8316fea1408661ea5dfe432b521"
+    }
+  ],
+  "historical_metadata_note": "Flags inside the unmodified 13 November binary archives describe their preparation-time state. This dated publication record and the GitHub release identify their subsequent authorized publication."
+}

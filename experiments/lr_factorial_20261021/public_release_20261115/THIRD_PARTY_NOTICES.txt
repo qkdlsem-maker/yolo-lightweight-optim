@@ -1,0 +1,59 @@
+Third-party source and license notes
+Checked 13 November 2026
+
+These notes identify existing third-party terms. They are not a repository-wide
+license or an authorization to relicense third-party code, images or labels.
+
+BDD100K data and annotations
+Copyright: The Regents of the University of California.
+Authoritative terms:
+https://github.com/bdd100k/bdd100k/blob/master/doc/source/license.rst
+The data terms permit educational, research and not-for-profit use, copying,
+modification and distribution subject to retaining the specified notices.
+The commercial permission described there is limited to BDD/BAIR Commons
+members and affiliates; other commercial licensing inquiries go to Berkeley's
+Office of Technology Licensing, otl@berkeley.edu.
+The BSD-3-Clause license in the BDD code repository is a separate code license.
+The research used a legacy mirror; the license label of a mirror does not
+establish that it owns additional rights in the source data.
+
+Mirror metadata observed on 13 November 2026
+SoleSensei/solesensei_bdd100k: version 2, "Other (specified in description)";
+its description links to BDD's license page.
+a7madmostafa/bdd100k-yolo: version 4, "CC BY-SA 4.0" in Kaggle metadata.
+Do not infer that this label overrides the original BDD terms. The study's
+historical distribution tracing was sample based; no original license
+acceptance record has been supplied by the authors.
+
+KITTI object-detection data and benchmark
+Provider: KITTI Vision Benchmark Suite, Karlsruhe Institute of Technology and
+Toyota Technological Institute at Chicago.
+https://www.cvlibs.net/datasets/kitti/
+https://creativecommons.org/licenses/by-nc-sa/3.0/
+The provider states CC BY-NC-SA 3.0: attribution, noncommercial use and
+share-alike conditions. Cite Geiger A, Lenz P, Urtasun R. Are we ready for
+Autonomous Driving? The KITTI Vision Benchmark Suite. CVPR. 2012.
+Original labels/images and adapted annotation views must not be presented as
+the authors' unrestricted CC BY data. Preserve notices in any permitted
+redistribution. Provider login is currently linked from the download page.
+
+Ultralytics
+The recorded framework is Ultralytics 8.2.103.
+https://github.com/ultralytics/ultralytics/blob/v8.2.103/LICENSE
+That version's license is GNU Affero General Public License version 3.
+Preserve applicable copyright/license notices and provide the required
+corresponding source for any distribution governed by that license. This
+project has not supplied evidence of a separate enterprise license.
+Do not label copied or adapted Ultralytics code as MIT-only or CC BY-only.
+The scope of an author-owned project license and trained-model distribution
+must be confirmed by the responsible rightsholders before final release.
+
+Other dependencies and evaluator code
+Retain the actual package versions and source hashes from the study manifests.
+NumPy, PyTorch, torchvision, pycocotools and the KITTI evaluator have their own
+notices. This supplement does not redistribute their binaries or replace their
+licenses. An all-dependency legal clearance is not claimed by this checklist.
+
+Project publication status
+Public release of the prepared project code and model outputs was authorized on 15 November 2026.
+This publication preserves the existing third-party terms and notices. It does not grant a new repository-wide license, relicense third-party assets, or assert that all journal author declarations are complete.

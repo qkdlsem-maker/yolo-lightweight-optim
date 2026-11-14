@@ -1,0 +1,7 @@
+Native BDD AP replay
+
+Use Python 3.12 and NumPy 1.26.4. Extract Documentation_and_verification_20261115.zip beside Native_BDD_statistics_108.zip.
+From that directory run: python replay_native_bdd.py --report native_AP_replay_report.json
+This verifies each statistic and score against its archive and native completion hashes, then recomputes all 10,800 class-by-IoU AP values.
+It selects the original smooth, compute_ap and ap_per_class functions from the hash-pinned metrics.py. It does not import Ultralytics, load model objects, run inference or use a GPU.
+This verifies saved-statistics AP, not a new training run, cached KITTI predictions, or equivalence across training kernels. Original endpoint path mappings are in each archive manifest.

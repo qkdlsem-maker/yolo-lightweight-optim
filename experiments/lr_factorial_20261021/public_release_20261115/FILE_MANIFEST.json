@@ -1,0 +1,37 @@
+[
+  {
+    "path": "PUBLIC_DOWNLOAD_VERIFICATION.json",
+    "bytes": 1727,
+    "sha256": "f85ae1b8420431646221a5841b8cb90120bfb21280798c9f8f19fddc23183129"
+  },
+  {
+    "path": "PUBLICATION_STATUS.json",
+    "bytes": 1753,
+    "sha256": "18052dc6ff65ed90e435ff9d83af24c52286224543f579bcace2fdc84a1c74d7"
+  },
+  {
+    "path": "PUBLISHED_RELEASE.json",
+    "bytes": 2940,
+    "sha256": "2451bef02b1636074a862d135ec4658805f3519e441aa52ddd9e26a5ae3b2cec"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 2447,
+    "sha256": "31f924437c2722658c5bb301b47fb62638fd7ad8e99fb8d4374e0544e6663b0e"
+  },
+  {
+    "path": "REPLAY_INSTRUCTIONS.txt",
+    "bytes": 754,
+    "sha256": "8ff0880f3be77bead4e7586c3264771c2f8133f84f4684669d43b4d036023a4c"
+  },
+  {
+    "path": "replay_native_bdd.py",
+    "bytes": 4367,
+    "sha256": "e06f123e9a0743b6a6a8fa51733104f0d8531c3e7f9053b4a1e78da0c5b83064"
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.txt",
+    "bytes": 3477,
+    "sha256": "8b33c00dc6e611e491a1fc69673d29ef4c353e18f8bf838290229e0fbc17a692"
+  }
+]
